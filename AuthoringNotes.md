@@ -1,6 +1,9 @@
 # Authoring Notes
 
+Sparse authoring notes and more.
 
+
+![write_good](media/write_good.png)
 
 
 
@@ -13,4 +16,38 @@ The following topics describe **markdown** used at Microsoft.
 
 * [How to include code in docs](https://review.docs.microsoft.com/en-us/help/contribute/code-in-docs?branch=master)
 
+## GitHub
+
+### Getting Started
+
+1. Download and install GitHub desktop client at: https://desktop.github.com/ 
+1. Clone https://github.com/Microsoft/BotBuilder-Samples/ 
+1. Clone https://github.com/MicrosoftDocs/bot-docs-pr/  
+1. Download  and install Visual Studio (community version 2017 or higher)
+   * Install ASP.NET and web developer workload. Check  the Visual Studio Installe. 
+1. Download [Bot Framework v4 SDK Templates](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4) for Visual Studio. 
+    * After the download click the .vsix file to install the extension into Visual Studio. 
+
+### Branches
+
+1. In GitHub select the **repository** where to create the branch.
+1. Assure that **master** is selected.
+1. sdasd
+
+## Tools
+
+* test
+* test
+
+
+
+
+
+
+
+
+
+Testing. See Testing a Bot Using the Bot Framework Emulator section
+Deploying. See Deploy a Bot to Azure section.
+Knowledge of ASP.Net Core and asynchronous programming in C#
 

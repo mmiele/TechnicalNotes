@@ -6,7 +6,7 @@
 
 A bot is a **web service** that implements a **conversational interface** and communicates with the **Bot Framework Service** to send and receive messages and events.
 
-![robot icon](media\robot.PNG)
+![robot icon](media/robot.PNG)
 
 The Bot Framework Service is one of the components of the Azure Bot Service and [Bot Framework](https://dev.botframework.com/) .
 Bots allow a user to interact with a computer as she would interact with a human, or at least with an intelligent robot. They are used to perform simple, repetitive tasks, such as taking a dinner reservation or gathering profile information, or to automate systems that may no longer require direct human intervention. 

@@ -34,12 +34,15 @@ The following topics describe **markdown** used at Microsoft.
 1. Assure that **master** is selected.
 1. In the Branch master button, upper left, click the down arrow. 
 1. In the popup dialog, enter the name of the branch.
-1. Click the Create branch button.
+1. Click the **Create branch** button.
 
     ![github_create_branch](media\github_create_branch.PNG)
 
 1. Open your GitHub desktop client, switch to the branch just created.
 1. Clone the master branch into the new branch.
+1. Start working in this branch.
+1. When you reach a meaningful stage, commit the work to the branch.
+1. Click the **Push origin** button.
 
 ## Tools
 

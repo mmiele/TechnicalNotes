@@ -31,7 +31,7 @@ Azure Bot Service and Bot Framework offer:
 
 After the bot is created, you can add intelligence to the bot with Microsoft Cognitive Services such as Language Understanding Service (LUIS), Vision, Speech and many other capabilities so the bot can see, hear, understand and interact in more natural ways.
 
-![bot_architecture](media/bot_architecture.png)
+![bot_architecture](media/bot_architecture.PNG)
 
 ## References
 * [Bot Framework SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) for developing bots

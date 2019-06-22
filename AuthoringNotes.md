@@ -36,25 +36,30 @@ The following topics describe **markdown** used at Microsoft.
 1. In the popup dialog, enter the name of the branch.
 1. Click the **Create branch** button.
 
-    ![github_create_branch](media\github_create_branch.PNG)
+    ![github_create_branch](media/github_create_branch.PNG)
 
 1. Open your GitHub desktop client, switch to the branch just created.
 1. Clone the master branch into the new branch.
 1. Start working in this branch.
 1. When you reach a meaningful stage, commit the work to the branch.
 1. Click the **Push origin** button.
+1. Click the **Create pull request** button. This opens the remote GitHub *Open a pull requet* page. 
+
+    ![github_create_branch](media/create_pr_button.PNG)
+
+1. Enter the needed comments (you can change them later). 
+1. Enter the assignees.
+1. Enter/create related label such as WIP. 
+1. Click the **Create pull request** button. The related pull request page is displayed.
+
+   ![github_create_branch](media/create_pr_button_remote.PNG)
+
+1. Keep the pull request open to continue the work in the branch.
 
 ## Tools
 
 * Windows Snipping. Used to take screenshots. See also [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)
 * test
-
-
-
-
-
-
-
 
 
 Testing. See Testing a Bot Using the Bot Framework Emulator section

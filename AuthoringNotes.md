@@ -3,7 +3,7 @@
 Sparse authoring notes and more.
 
 
-![write_good](media/write_good.png)
+![write_good](media/write_good.PNG)
 
 
 

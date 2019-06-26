@@ -14,7 +14,7 @@ If combined with the services and APIs offered in [Microsoft Cognitive Services]
 ## Bot Framework Architecture
 
 The following picture provides a bird's eye view of the Microsoft Bot Framework architecture.
-![Bot Architecture](media/bot_architecture_2.png)
+![Bot Architecture](media/bot_architecture_2.PNG)
 
 Let's describe the various components.
 

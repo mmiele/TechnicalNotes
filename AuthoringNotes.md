@@ -8,13 +8,13 @@ Sparse authoring notes and more.
 
 
 ## Markdown
+
 The following topics describe **markdown** used at Microsoft.
 
-* [How to use Markdown](https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-use-markdown?branch=master)
-
-* [Markdown Reference for OPS](https://review.docs.microsoft.com/en-us/help/contribute/markdown-reference?branch=master).  Markdown extensions designed to provide richer content on docs.microsoft.com. 
-
-* [How to include code in docs](https://review.docs.microsoft.com/en-us/help/contribute/code-in-docs?branch=master)
+- [How to use Markdown](https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-use-markdown?branch=master)
+- [Markdown Reference for OPS](https://review.docs.microsoft.com/en-us/help/contribute/markdown-reference?branch=master).  Markdown extensions designed to provide richer content in docs.microsoft.com.
+- [How to include code in docs](https://review.docs.microsoft.com/en-us/help/contribute/code-in-docs?branch=master)
+- [VS Code Open In Browser](https://www.bing.com/videos/search?q=preview+visual+code+markdown+in+default+browser&view=detail&mid=C816AE112B86E16599DEC816AE112B86E16599DE&FORM=VIRE)
 
 ## GitHub
 
@@ -59,7 +59,7 @@ The following topics describe **markdown** used at Microsoft.
 ## Tools
 
 * Windows Snipping. Used to take screenshots. See also [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)
-* test
+* [Start a chat in Teams](https://support.office.com/en-us/article/Start-a-chat-in-Teams-0c71b32b-c050-4930-a887-5afbe742b3d8)
 
 
 Testing. See Testing a Bot Using the Bot Framework Emulator section

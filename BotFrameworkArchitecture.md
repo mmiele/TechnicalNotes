@@ -52,4 +52,4 @@ You can also integrate big data analytics and machine learning through technolog
 | Topic | Description |
 | :--- | :--- |
 | [Bot Framework SDK](https://www.appliedis.com/the-bot-framework/)| Architectural notes |
-| [LUIS]((https://azure.microsoft.com/en-us/services/cognitive-services/language-understanding-intelligent-service/))|Language Understanding Intelligent Service|
+| [LUIS](https://azure.microsoft.com/en-us/services/cognitive-services/language-understanding-intelligent-service/)|Language Understanding Intelligent Service|

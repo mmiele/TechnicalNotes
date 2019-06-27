@@ -1,5 +1,3 @@
-<link href="css/custom.css" rel="stylesheet"></link> 
-
 # Bot Framework Notes
 
 ## Overview
@@ -37,7 +35,7 @@ After the bot is created, you can add intelligence to the bot with Microsoft Cog
 * [Bot Framework SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) for developing bots
 * [Bot Framework Tools](https://github.com/Microsoft/botbuilder-tools) to cover end-to-end bot development workflow
 * [Bot Framework Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0) to send and receive messages and events between bots and channels
-* [Azure Bot Service Documentation]((https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0))
+* [Azure Bot Service Documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0)
 * [Bot Framework SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0)
 * [Team Blog](https://dev.botframework.com/)
 * Github repositories:

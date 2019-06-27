@@ -120,18 +120,28 @@ Middleware is a set of components which are executed in a predefined order (pipe
 
 ## Manage Bot Resoures 
 
-> [!div class="op_multi_selector" title1="Platform" title2="Backend"]
-> - [(iOS | .NET)](./mobile-services-dotnet-backend-ios-get-started-push.md)
-> - [(iOS | JavaScript)](./mobile-services-javascript-backend-ios-get-started-push.md)
-> - [(Windows universal C# | .NET)](./mobile-services-dotnet-backend-windows-universal-dotnet-get-started-push.md)
-> - [(Windows universal C# | Javascript)](./mobile-services-javascript-backend-windows-universal-dotnet-get-started-push.md)
-> - [(Windows Phone | .NET)](./mobile-services-dotnet-backend-windows-phone-get-started-push.md)
-> - [(Windows Phone | Javascript)](./mobile-services-javascript-backend-windows-phone-get-started-push.md)
-> - [(Android | .NET)](./mobile-services-dotnet-backend-android-get-started-push.md)
-> - [(Android | Javascript)](./mobile-services-javascript-backend-android-get-started-push.md)
-> - [(Xamarin iOS | Javascript)](./partner-xamarin-mobile-services-ios-get-started-push.md)
-> - [(Xamarin Android | Javascript)](./partner-xamarin-mobile-services-android-get-started-push.md)
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
 
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
 
 
 ## Glossary

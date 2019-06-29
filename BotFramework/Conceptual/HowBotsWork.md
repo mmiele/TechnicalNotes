@@ -63,7 +63,8 @@ The turn context is one of the most important abstractions in the SDK. It mainly
 ## Activity Processing Stack
 Let's analyze the previous diagram focusing on the arrival of a message activity
 
-![echo_bot_sequence_diagram](../media/echo_bot_activity_sequence_diagram.PNG)
+![echo_bot_sequence_diagram](../Media/echo_bot_activity_sequence_diagram.PNG)
+
 
 In the example, the bot replied to the message activity with another message activity containing the same text message.
 

@@ -12,3 +12,16 @@ The following are the prerequisites to build examples using the Bot Framework v4
 
 > [!TIP]
 > You can find the community examples at: [BotBuilder-Samples](https://github.com/Microsoft/BotBuilder-Samples/) on GitHub.
+
+## Test a Bot with the Bot Framework Emulator 
+
+The Bot Framework Emulator is a desktop application that allows developers to test and debug bots on localhost or running remotely through a tunnel.
+
+![bot emulator client](../Media/bot_emulator_client.PNG)
+
+
+1. Install the [Bot Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator/releases) version 4.3.0 or greater.
+1. Connect to the bot using Bot Framework Emulator
+    1. Launch Bot Framework Emulator
+    1. File -> Open Bot
+    1. Enter a Bot URL of `http://localhost:3978/api/messages`

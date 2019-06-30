@@ -61,3 +61,5 @@ Remember that ASP.NET and web developer workload must be installed to be able to
 
 > [!NOTE]
 > Congratulations!! You made it, Close all the apps.
+
+You can fid the complete echo bot code project at this location: [myEchoBot](https://github.com/mmiele/Bot-Samples/tree/master/myEchoBot) on GitHub. 

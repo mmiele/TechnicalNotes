@@ -10,9 +10,8 @@ This example shows
 
 For more information, see [Create a bot with the Bot Framework SDK for .NET](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-sdk-quickstart?view=azure-bot-service-4.0).
 
-## Prerequisites
-
-
+> [!WARNING]
+> Before you execute the next steps, assure that you satisfy the following [Example Prerequisites](../ExamplePrerequisites.md).
 
 1. Launch Visual Studio.
 1. Create a new bot project using the Echo Bot template from the Bot Framework V4.

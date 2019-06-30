@@ -1,4 +1,4 @@
-## Prerequisites
+# Examples Prerequisites
 
 The following are the prerequisites to build examples using the Bot Framework v4 SDK.
 

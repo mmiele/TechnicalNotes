@@ -25,3 +25,8 @@ The Bot Framework Emulator is a desktop application that allows developers to te
     1. Launch Bot Framework Emulator
     1. File -> Open Bot
     1. Enter a Bot URL of `http://localhost:3978/api/messages`
+
+## Deploy Bot to Azure Cloud
+
+1. Create an [Azure account](https://azure.microsoft.com/en-us/account/).
+1. Latest version of the [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest).

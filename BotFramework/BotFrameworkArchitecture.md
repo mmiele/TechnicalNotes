@@ -108,4 +108,5 @@ You can also integrate big data analytics and machine learning through technolog
 |[Overview of the architecture of chatbots](https://bigdata-madesimple.com/how-do-chatbots-work-an-overview-of-the-architecture-of-a-chatbot/)|How do chatbots work? An overview of the architecture of chatbots|
 |[Guide To Chatbot Tech Stack](https://chatbotsmagazine.com/the-ultimate-guide-to-designing-a-chatbot-tech-stack-333eceb431da)|The Ultimate Guide To Designing A Chatbot Tech Stack|
 |[Using Microsoft Bot Framework v3](https://www.udemy.com/using-microsoft-bot-framework-luis-and-cognitive-services/)|Using Microsoft Bot Framework v3, LUIS, Cognitive Services (Udemy) |
-|[]()|TBD|
+|[Getting Started - Building the first Hello Bot](https://social.technet.microsoft.com/wiki/contents/articles/37922.microsoft-bot-framework-getting-started-building-the-first-hello-bot.aspx)|Microsoft Bot Framework : Getting Started - Building the first Hello Bot TechNet|
+|[Bot components: roles, diagrams, overview](https://techcommunity.microsoft.com/t5/IIS-Support-Blog/Bot-components-roles-diagrams-overview/ba-p/393113)|Bot components: roles, diagrams, overview |

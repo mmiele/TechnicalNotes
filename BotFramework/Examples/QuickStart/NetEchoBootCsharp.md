@@ -67,9 +67,9 @@ You can find the complete echo bot code project at this location: [myEchoBot](ht
 ## Deploy the Echo Bot to Azure Cloud
 
 > [!NOTE]
-> When you create a bot using Visual Studio or Yeoman templates, the source code generated contains a deploymentTemplates folder with ARM templates. The deployment process documented here uses the ARM template to provision required resources for the bot in Azure by using the Azure CLI.
+> When you create a bot using Visual Studio or Yeoman templates, the source code generated contains a **deploymentTemplates** folder with ARM templates. The deployment process documented here uses the ARM template to provision required resources for the bot in Azure by using the Azure CLI.
 
-
+[Azure portal](https://ms.portal.azure.com/#home)
 
 ## Glossary
 

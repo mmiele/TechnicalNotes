@@ -154,7 +154,7 @@ The Middleware is a set of components which are executed in a predefined order (
 
 ## State and Persistency
 
-The Middleware component automatically restores the conversation state (e.g., the dialog in which the conversation with the user is in) and also restores any custom user state. In contrast to Bot Framework v3, in v4 you are responsible for manually updating both states. Both Azure Blob and CosmosDB are supported targets for persisting state.
+The Middleware component automatically restores the conversation state (e.g., the dialog in which the conversation with the user is in) and also restores any custom user state. In contrast to Bot Framework v3, in v4 you are responsible for manually updating both states. Both Azure Blob and CosmosDB are supported targets for persisting state. For more information, see the [Managing state](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0)
 
 ## Conversation Flow
 

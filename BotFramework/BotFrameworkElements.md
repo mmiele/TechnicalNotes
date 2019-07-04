@@ -163,13 +163,13 @@ First of all, **Dialogs** are not a “must” in v4. For example, bots and assi
 However, **Dialogs** are necessary for more complex and nested conversations.
 A Dialog is composed of one or more **WaterfallSteps**. This allows for a linear conversation flow, as indicated in this example:
 
-    1. Dialog starts
-       1. Waterfall Step 1: Bot asks something
-          1. User answers
-       1. Waterfall Step 2: Bot processes the response and asks something else
-          1. User answers
-       1. Waterfall Step 3: Bot processes the response and answers
-    1. Dialog ends
+1. Dialog starts
+    1. Waterfall Step 1: Bot asks something
+        1. User answers
+    1. Waterfall Step 2: Bot processes the response and asks something else
+        1. User answers
+    1. Waterfall Step 3: Bot processes the response and answers
+1. Dialog ends
 
     In this example, the Dialog would contain 3 WaterfallStep entries.
     Step 1 and 2 would contain a Prompt. A Prompt is a single-step Dialog that asks the user something. The concept of Prompts is similar its counterpart in v3 and several built-in Prompts are included. However, custom Prompts with custom Validators can be written for better reusability of code.

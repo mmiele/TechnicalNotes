@@ -13,7 +13,7 @@ The 2 activity types illustrated in the picture are: **conversation update** and
 The Bot Framework Service may send a conversation update when a party joins the conversation. For example, on starting a conversation with the Bot Framework Emulator, you will see two **conversation update activities**:
 
 1. User joining the conversation.
-1. Bot joining the conversation. 
+1. Bot joining the conversation.
 
 To distinguish these conversation update activities, check whether the members added property includes a member other than the bot.
 

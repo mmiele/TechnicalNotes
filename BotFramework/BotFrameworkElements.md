@@ -1,6 +1,6 @@
 # Bot Framework Elements
 
-![robot icon](media/robot.PNG)
+![robot icon](Media/robot.PNG)
 
 ## Table of Content
 

@@ -79,6 +79,16 @@ The turn context provides the mechanism for the bot to send outbound activities,
 > [!IMPORTANT]
 > The thread handling the primary bot turn deals with disposing of the context object when it is done. Be sure to await any activity calls so the primary thread will wait on the generated activity before finishing it's processing and disposing of the turn context. Otherwise, if a response (including its handlers)takes any significant amount of time and tries to act on the context object, it may get a *context disposed error*.
 
+## Bot Logic
+
+The bot processes **incoming activities** from one or more channels and generates **outgoing activities** in response. For more information, see [Bot logic](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#bot-logic) official documentation.
+
+The bot controller, following the standard MVC structure, lets you determine the routing of messages and HTTP POST requests. 
+
+- For the echo bot, we pass the incoming request on to the adapter's process async activity method as explained in the activity processing stack section above. In that call, we specify the bot and any other authorization information that may be required.
+- The controller implements `ControllerBase`, holds the adapter and bot that we set in Startup.cs (that are available here through dependency injection), and passes the necessary information on to the bot when it receives an incoming HTTP POST.
+- Here, you'll see the class preceded by route and controller attributes. These assist the framework to route the messages appropriately and know which controller to use. If you change the value in the route attribute, that changes the endpoint the emulator or other channels use to access the bot.
+
 ## Activity Handlers
 
 When the bot receives an activity, it passes it on to its **activity handlers**. Actually, the activity is routed to the base handler, the **turn handler**, which then calls the specific activity handler based on the type of activity received.
@@ -90,7 +100,7 @@ For example, if the bot receives a message activity, the turn handler would see 
 - Your bot logic for handling and responding to messages will go in this `OnMessageActivityAsync` handler.
 - Likewise, the logic for handling members being added to the conversation will go in your `OnMembersAddedAsync` handler, which is called whenever a member is added to the conversation.
 
-To implement your logic, you will override the methods as shown in the [Bot Logic](#bot_logic) section below. For each of these handlers, there is no base implementation, so just add the logic that you want in your override.
+To implement your logic, you will override the methods as shown in the [Bot Logic](#bot_logic) section. For each of these handlers, there is no base implementation, so just add the logic that you want in your override.
 
 There are certain situations where you will want to **override the base turn handler**, such as saving state at the end of a turn. If you do so, be sure to call await `base.OnTurnAsync(turnContext, cancellationToken)` first; this is to make sure the base implementation of `OnTurnAsync` is run before your additional code. The base implementation is, among other things, responsible for calling the rest of the activity handlers such as `OnMessageActivityAsync`.
 
@@ -101,7 +111,7 @@ For example, if the bot receives a message activity, the turn handler would see 
 - Your bot logic for handling and responding to messages will go in this `onMessage` handler. 
 - Likewise, your logic for handling members being added to the conversation will go in your `onMembersAdded` handler, which is called whenever a member is added to the conversation.
 
-To implement your logic for these handlers, you will override these methods in as shown in the [Bot Logic](#bot_logic) section below. For each of these handlers, define your bot logic, then be sure to call `next()` at the end. By calling next() you ensure that the next handler is run.
+To implement your logic for these handlers, you will override these methods in as shown in the [Bot Logic](#bot_logic) section. For each of these handlers, define your bot logic, then be sure to call `next()` at the end. By calling next() you ensure that the next handler is run.
 
 There aren't any common situations where you will want to override the base turn handler, so be careful if you try to do so. For things such as saving state that you want to do at the end of a turn, there is a special handler called `onDialog`. The `onDialog` handler runs at the end, after the rest of the handlers have run, and is not tied to a certain activity type. As with all the above handlers, be sure to call `next()` to ensure the rest of the process wraps up.
 
@@ -132,22 +142,9 @@ To use the .env configuration file, the template needs an extra package included
 
 ```npm install dotenv```
 
-### Bot Logic
-
-The bot processes **incoming activities** from one or more channels and generates **outgoing activities** in response. For more information, see [Bot logic](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp#bot-logic) official documentation.
-
-The bot controller, following the standard MVC structure, lets you determine the routing of messages and HTTP POST requests. 
-
-- For the echo bot, we pass the incoming request on to the adapter's process async activity method as explained in the activity processing stack section above. In that call, we specify the bot and any other authorization information that may be required.
-- The controller implements `ControllerBase`, holds the adapter and bot that we set in Startup.cs (that are available here through dependency injection), and passes the necessary information on to the bot when it receives an incoming HTTP POST.
-- Here, you'll see the class proceeded by route and controller attributes. These assist the framework to route the messages appropriately and know which controller to use. If you change the value in the route attribute, that changes the endpoint the emulator or other channels use access your bot.
-
-
-## Manage Bot Resources 
+## Manage Bot Resources
 
 The bot resources, such as app ID, passwords, keys or secrets for connected services, will need to be managed appropriately. For more information, see [Manage bot resources](https://docs.microsoft.com/en-us/azure/bot-service/bot-file-basics?view=azure-bot-service-4.0) and [Managing state](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0).
-
-
 
 ## Glossary
 

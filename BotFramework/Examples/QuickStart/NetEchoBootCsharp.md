@@ -71,6 +71,7 @@ You can find the complete echo bot code project at this location: [myEchoBot](ht
 
 [Azure portal](https://ms.portal.azure.com/#home)
 
+
 ## Glossary
 
 1. **Azure Resource Manager** (ARM) templates. Azure Resource Manager templates are used to deploy resources into resource groups programatically. ARM provides full Infrastructure as Code capability for Azure. The format is very flexible and enables the configuration of multiple resources and the dependencies between them. For more information, see [Azure Resource Manager overview](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).

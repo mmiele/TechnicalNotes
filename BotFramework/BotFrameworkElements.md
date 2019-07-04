@@ -162,6 +162,7 @@ This is probably the area where the most changes happened in v4.
 First of all, **Dialogs** are not a “must” in v4. For example, bots and assistants that perform single-shot operations, e.g. “turn off the lights” you probably do not need to use any dialogs, but rather just use regular classes and call their methods.
 However, **Dialogs** are necessary for more complex and nested conversations.
 A Dialog is composed of one or more **WaterfallSteps**. This allows for a linear conversation flow, as indicated in this example:
+
     1. Dialog starts
        1. Waterfall Step 1: Bot asks something
           1. User answers

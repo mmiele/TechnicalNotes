@@ -1,5 +1,24 @@
 # Bot Framework Elements
 
+![robot icon](media/robot.PNG)
+
+## Table of Content
+
+- [Overview](#overview)
+- [Activities](#activities)
+  - [HTTP Details](#http-details)
+- [Adapter](#adapter)
+- [Turn](#turn)
+- [Activity Processing Stack](#activity-processing-stack)
+- [Bot Logic](#bot-logic)
+- [Activity Handlers](#activity-handlers)
+- [Middleware](#middleware)
+- [State and Persistency](#state-and-persistency)
+- [Conversation Flow](#conversation-flow)
+- [References](#references)
+
+---
+
 ## Overview
 
 The [Bot Framework](https://dev.botframework.com/) provides a platform for developers to build **intelligent conversation agents**, aka **bots**, and connect them via growing list of **channels** such as Skype, Facebook Messenger,Slack, Telegram and an embed web chat widget.
@@ -155,6 +174,8 @@ The Middleware is a set of components which are executed in a predefined order (
 ## State and Persistency
 
 The Middleware component automatically restores the conversation state (e.g., the dialog in which the conversation with the user is in) and also restores any custom user state. In contrast to Bot Framework v3, in v4 you are responsible for manually updating both states. Both Azure Blob and CosmosDB are supported targets for persisting state. For more information, see the [Managing state](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-state?view=azure-bot-service-4.0)
+
+![bot state](Media/bot-state.PNG) 
 
 ## Conversation Flow
 

@@ -30,3 +30,7 @@ The Bot Framework Emulator is a desktop application that allows developers to te
 
 1. Create an [Azure account](https://azure.microsoft.com/en-us/account/).
 1. Latest version of the [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest).
+
+## References
+
+- [Visual Studio Keyboard Shortcuts](http://visualstudioshortcuts.com/2017/)

@@ -23,26 +23,33 @@ Bots can do the same things other types of software can do - read and write file
 
 Azure Bot Service and Bot Framework offer:
 
-* Core component and hosting environment for creating bots
-* Bot builder SDK for developing
-* Bot connector service to connect the bots to channels
+- Core component and hosting environment for creating bots
+- Bot builder SDK for developing
+- Bot connector service to connect the bots to channels
 
 After the bot is created, you can add intelligence to the bot with Microsoft Cognitive Services such as Language Understanding Service (LUIS), Vision, Speech and many other capabilities so the bot can see, hear, understand and interact in more natural ways.
 
-
 ## References
-* [Bot Framework SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) for developing bots
-* [Bot Framework Tools](https://github.com/Microsoft/botbuilder-tools) to cover end-to-end bot development workflow
-* [Bot Framework Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0) to send and receive messages and events between bots and channels
-* [Azure Bot Service Documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0)
-* [Bot Framework SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0)
-* [Team Blog](https://dev.botframework.com/)
-* Github repositories:
-  * https://github.com/MicrosoftDocs/bot-docs-pr/
-  * https://github.com/Microsoft/BotBuilder-Samples/
-  * https://github.com/Microsoft/botbuilder-tools/
-* [Conversational chatbot for hotel reservations on Azure](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/ai/commerce-chatbot)
-* [Introduction to Microsoft Azure Bot Service & LUIS](https://medium.com/@ashish_fagna/introduction-to-microsoft-azure-bot-service-luis-language-understanding-8826d29d013e)
-* [What is Language Understanding (LUIS)?](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/what-is-luis)
-* [Microsoft Conversational AI tools enable developers to build, connect and manage intelligent bots](https://azure.microsoft.com/en-us/blog/microsoft-conversational-ai-tools-enable-developers-to-build-connect-and-manage-intelligent-bots/)
-* [Bot Framework Stack Overflow](https://stackoverflow.com/questions/tagged/botframework)
+
+- [Bot Framework SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0) for developing bots
+- [Bot Framework Tools](https://github.com/Microsoft/botbuilder-tools) to cover end-to-end bot development workflow
+- [Bot Framework Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0) to send and receive messages and events between bots and channels
+- [Azure Bot Service Documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0)
+- [Bot Framework SDK](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0)
+- [Team Blog](https://dev.botframework.com/)
+- Github repositories:
+  - https://github.com/MicrosoftDocs/bot-docs-pr/
+  - https://github.com/Microsoft/BotBuilder-Samples/
+ - https://github.com/Microsoft/botbuilder-tools/
+ - [Conversational chatbot for hotel reservations on Azure](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/ai/commerce-chatbot)
+- [Introduction to Microsoft Azure Bot Service & LUIS](https://medium.com/@ashish_fagna/introduction-to-microsoft-azure-bot-service-luis-language-understanding-8826d29d013e)
+- [What is Language Understanding (LUIS)?](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/what-is-luis)
+- [Microsoft Conversational AI tools enable developers to build, connect and manage intelligent bots](https://azure.microsoft.com/en-us/blog/microsoft-conversational-ai-tools-enable-developers-to-build-connect-and-manage-intelligent-bots/)
+- [Bot Framework Stack Overflow](https://stackoverflow.com/questions/tagged/botframework)
+- [Logging and Debugging with Azure Bot Service](https://azure.github.io/learnAnalytics-AdvancedFeaturesforMicrosoftBotFramework/lab01-logging_chat_conversations/0_README.html)
+- [Popular Chatbot Frameworks](https://discover.bot/bot-talk/beginners-guide-bots/popular-chatbot-frameworks/?ref=GADW-cpc-y2fxvw5g&pk_campaign=GADW-Search)
+- [Creating a Hello World! Bot (MS Bot Framework V4)](http://aihelpwebsite.com/Blog/EntryId/1030/Creating-a-Hello-World-Bot-MS-Bot-Framework-V4-Preview-Edition)
+- [ASP.NET MVC Tutorial](https://www.tutorialspoint.com/asp.net_mvc/index.htm)
+- [Implement custom storage for your bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-custom-storage?view=azure-bot-service-4.0)
+- [Talking to my Bot](https://github.com/Microsoft/ailab/tree/master/BuildAnIntelligentBot)
+

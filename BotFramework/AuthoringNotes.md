@@ -2,10 +2,9 @@
 
 Sparse authoring notes and more.
 
+![write_good](../Media/Generic/write_good.PNG)
 
-![write_good](Media/write_good.PNG)
-
-
+[How to Write Good](https://www.plainlanguage.gov/resources/humor/how-to-write-good/)
 
 ## Markdown
 

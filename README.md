@@ -1,8 +1,8 @@
 
 # Keep Notes in One Place
 
-![robot icon](Media/robot.PNG)
+![robot icon](Media/Generic/robot.PNG)
 
 While drinking from the fire hose.
 
-![robot icon](Media/firehose.PNG)
+![robot icon](Media/Generic/firehose.PNG)

@@ -24,9 +24,9 @@ The following topics describe **markdown** used at Microsoft.
 1. Clone https://github.com/Microsoft/BotBuilder-Samples/ 
 1. Clone https://github.com/MicrosoftDocs/bot-docs-pr/  
 1. Download  and install Visual Studio (community version 2017 or higher)
-   * Install ASP.NET and web developer workload. Check  the Visual Studio Installe. 
+    1. Install ASP.NET and web developer workload. Check  the Visual Studio Installe. 
 1. Download [Bot Framework v4 SDK Templates](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4) for Visual Studio. 
-    * After the download click the .vsix file to install the extension into Visual Studio. 
+    1. After the download click the .vsix file to install the extension into Visual Studio. 
 
 ### Branches
 
@@ -36,7 +36,7 @@ The following topics describe **markdown** used at Microsoft.
 1. In the popup dialog, enter the name of the branch.
 1. Click the **Create branch** button.
 
-    ![github_create_branch](Media/github_create_branch.PNG)
+    ![github_create_branch](../Media/Github/github_create_branch.PNG)
 
 1. Open your GitHub desktop client, switch to the branch just created.
 1. Clone the master branch into the new branch.
@@ -45,14 +45,14 @@ The following topics describe **markdown** used at Microsoft.
 1. Click the **Push origin** button.
 1. Click the **Create pull request** button. This opens the remote GitHub *Open a pull requet* page. 
 
-    ![github_create_branch](Media/create_pr_button.PNG)
+    ![github_create_branch](../Media/Github/create_pr_button.PNG)
 
 1. Enter the needed comments (you can change them later). 
 1. Enter the assignees.
 1. Enter/create related label such as WIP. 
 1. Click the **Create pull request** button. The related pull request page is displayed.
 
-   ![github_create_branch](Media/create_pr_button_remote.PNG)
+   ![github_create_branch](../Media/Github/create_pr_button_remote.PNG)
 
 1. Keep the pull request open to continue the work in the branch.
 
@@ -63,11 +63,6 @@ The following topics describe **markdown** used at Microsoft.
 - [How to: Add class diagrams to projects](https://docs.microsoft.com/en-us/visualstudio/ide/class-designer/how-to-add-class-diagrams-to-projects?view=vs-2019)
   - [How to add a Class Diagram to an ASP.NET Core project in VS 2017?](https://stackoverflow.com/questions/52760190/how-to-add-a-class-diagram-to-an-asp-net-core-project-in-vs-2017/53799840#53799840)
 
-
-
-
-
-Testing. See Testing a Bot Using the Bot Framework Emulator section
+<!-- Testing. See Testing a Bot Using the Bot Framework Emulator section
 Deploying. See Deploy a Bot to Azure section.
-Knowledge of ASP.Net Core and asynchronous programming in C#
-
+Knowledge of ASP.Net Core and asynchronous programming in C# -->

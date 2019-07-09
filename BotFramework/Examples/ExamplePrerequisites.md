@@ -17,7 +17,7 @@ The following are the prerequisites to build examples using the Bot Framework v4
 
 The Bot Framework Emulator is a desktop application that allows developers to test and debug bots on localhost or running remotely through a tunnel.
 
-![bot emulator client](../Media/bot_emulator_client.PNG)
+![bot emulator client](../../Media/Conceptual/bot_emulator_client.PNG)
 
 
 1. Install the [Bot Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator/releases) version 4.3.0 or greater.

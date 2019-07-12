@@ -55,12 +55,38 @@ The following topics describe **markdown** used at Microsoft.
 
 1. Keep the pull request open to continue the work in the branch.
 
+## Review Process
+
+The review process is a crucial step when authoring a document. This section describes a possible way to proceed.
+We assume that you are using Visual Studio Code to author markdown articles.
+For more information see [How to Compare files in Visual Studio Code ?](https://dailydotnettips.com/how-to-compare-files-in-visual-studio-code/).
+
+1. Open Visual Studio Code.
+1. Author the article. We'll use this file as an example: [Review Test File](ReviewTestFile.md).
+1. Save the file.
+1. Copy the file and mail it for review.
+1. We have made some fictitious changes you can see here: [Review Test File Fixes](ReviewTestFileFixes.md).
+This file contains the review changes that you need to incorporate in the original file. You might reject the changes, by the way.  
+1. Open both the original and the reviewed files.
+1. In the explorer pane, right click on the name of the original file. In the drop-down select **Select for compare**.
+![Select for Compare](Media/Generic/SelectForCompare.PNG)
+1. In the explorer pane, right click on the name of the reviewed file. In the drop-down select **Compare with Selected**.
+![Select Compare with Selected](Media/Generic/CompareWithSelected.PNG)
+
 ## Tools
 
 - Windows Snipping. Used to take screenshots. See also [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)
 - [Start a chat in Teams](https://support.office.com/en-us/article/Start-a-chat-in-Teams-0c71b32b-c050-4930-a887-5afbe742b3d8)
 - [How to: Add class diagrams to projects](https://docs.microsoft.com/en-us/visualstudio/ide/class-designer/how-to-add-class-diagrams-to-projects?view=vs-2019)
   - [How to add a Class Diagram to an ASP.NET Core project in VS 2017?](https://stackoverflow.com/questions/52760190/how-to-add-a-class-diagram-to-an-asp-net-core-project-in-vs-2017/53799840#53799840)
+  - [Class Diagrams in VS 2017](https://stackoverflow.com/questions/42233831/class-diagrams-in-vs-2017)
+- [Lorem Ipsum generator](https://lipsum.com/)
+- [Visual Studio Code](https://code.visualstudio.com/Download)
+
+
+
+
+
 
 <!-- Testing. See Testing a Bot Using the Bot Framework Emulator section
 Deploying. See Deploy a Bot to Azure section.

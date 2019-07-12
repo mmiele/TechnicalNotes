@@ -15,7 +15,6 @@
 
 ![star](../../Media/Generic/star.png)![star](../../Media/Generic/star.png)![star](../../Media/Generic/star.png)![star](../../Media/Generic/star.png)
 
-
 This article describes how to create a .NET (Csharp) bot using Microsoft Bot Framework V4.  It is the classic "Hello World!" approach to make your first steps when learning a new technology.
 
 You will learn:
@@ -26,8 +25,6 @@ You will learn:
 - Test the Bot using **Web Chat**.
 - Connect **Skype channel**.
 - Test the Bot using Skype.
-
-
 
 ## Prerequisites
 

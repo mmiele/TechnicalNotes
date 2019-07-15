@@ -73,6 +73,11 @@ This file contains the review changes that you need to incorporate in the origin
 1. In the explorer pane, right click on the name of the reviewed file. In the drop-down select **Compare with Selected**.
 ![Select Compare with Selected](Media/Generic/CompareWithSelected.PNG)
 
+### Multiple Pull Requests
+
+You cna opme multiple Pull Requests in the same branch.
+
+
 ## Tools
 
 - Windows Snipping. Used to take screenshots. See also [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)

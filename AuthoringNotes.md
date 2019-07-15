@@ -75,7 +75,7 @@ This file contains the review changes that you need to incorporate in the origin
 
 ### Multiple Pull Requests
 
-You cna opme multiple Pull Requests in the same branch.
+You can open multiple Pull Requests in the same branch.
 
 
 ## Tools

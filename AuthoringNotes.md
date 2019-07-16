@@ -73,9 +73,9 @@ This file contains the review changes that you need to incorporate in the origin
 1. In the explorer pane, right click on the name of the reviewed file. In the drop-down select **Compare with Selected**.
 ![Select Compare with Selected](Media/Generic/CompareWithSelected.PNG)
 
-### Multiple Pull Requests
+## Branching
 
-You can open multiple Pull Requests in the same branch. Can you use multiple pull requesta for different releases?
+Let's take a closer look at branching.
 
 
 ## Tools
@@ -87,9 +87,11 @@ You can open multiple Pull Requests in the same branch. Can you use multiple pul
   - [Class Diagrams in VS 2017](https://stackoverflow.com/questions/42233831/class-diagrams-in-vs-2017)
 - [Lorem Ipsum generator](https://lipsum.com/)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
+
 - [Markdown Here](https://github.com/adam-p/markdown-here)
   - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Bot Framework Doc Contributor Guide](https://github.com/MicrosoftDocs/bot-docs-pr/tree/master/contributor-guide)
+
 
 
 

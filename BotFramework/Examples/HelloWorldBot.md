@@ -43,8 +43,8 @@ Before you proceed, assure that the following requirements are satisfied:
 1. Open Visual Studio and **Create a new project**.
 1. A new dialog opens. In the search box enter *Echo Bot*.
 
-    ![select echo bot template](../../../Media/Examples/select_echo_bot_template_VS19.png)
-
+    ![select echo bot template](../../Media/Examples/select_echo_bot_template_VS19.png)
+   
 1. Select the **Echo Bot** template and click the **Next** button.
 1. Name the project **HelloWorld** and click the **Create** button.
 

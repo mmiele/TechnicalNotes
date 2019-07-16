@@ -77,6 +77,7 @@ This file contains the review changes that you need to incorporate in the origin
 
 Let's take a closer look at branching.
 
+
 ## Tools
 
 - Windows Snipping. Used to take screenshots. See also [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)
@@ -86,6 +87,11 @@ Let's take a closer look at branching.
   - [Class Diagrams in VS 2017](https://stackoverflow.com/questions/42233831/class-diagrams-in-vs-2017)
 - [Lorem Ipsum generator](https://lipsum.com/)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
+
+- [Markdown Here](https://github.com/adam-p/markdown-here)
+  - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Bot Framework Doc Contributor Guide](https://github.com/MicrosoftDocs/bot-docs-pr/tree/master/contributor-guide)
+
 
 
 

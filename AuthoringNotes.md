@@ -83,6 +83,7 @@ In order to have the **Architecture** tab in the task bar do the following:
 1. Click the **Individual components** tab
 1. In the *Code tools* section, chek **Live Dependency Validation**
 
+
 ## Tools
 
 - Windows Snipping. Used to take screenshots. See also [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)
@@ -93,6 +94,9 @@ In order to have the **Architecture** tab in the task bar do the following:
 - [Lorem Ipsum generator](https://lipsum.com/)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
 - [Map dependencies with code maps](https://docs.microsoft.com/en-us/visualstudio/modeling/map-dependencies-across-your-solutions?view=vs-2019)
+- [Markdown Here](https://github.com/adam-p/markdown-here)
+  - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Bot Framework Doc Contributor Guide](https://github.com/MicrosoftDocs/bot-docs-pr/tree/master/contributor-guide)
 
 
 <!-- Testing. See Testing a Bot Using the Bot Framework Emulator section

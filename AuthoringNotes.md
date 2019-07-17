@@ -73,9 +73,15 @@ This file contains the review changes that you need to incorporate in the origin
 1. In the explorer pane, right click on the name of the reviewed file. In the drop-down select **Compare with Selected**.
 ![Select Compare with Selected](Media/Generic/CompareWithSelected.PNG)
 
-## Branching
+## Create Class Diagrams
 
-Let's take a closer look at branching.
+You can create class diagrams in VS2019 using the code map tool. For more information,see [Map dependencies with code maps](https://docs.microsoft.com/en-us/visualstudio/modeling/map-dependencies-across-your-solutions?view=vs-2019).
+
+In order to have the **Architecture** tab in the task bar do the following: 
+
+1. Go to **Tools->Get Tools and Featutres...**
+1. Click the **Individual components** tab
+1. In the *Code tools* section, chek **Live Dependency Validation**
 
 ## Tools
 
@@ -86,7 +92,7 @@ Let's take a closer look at branching.
   - [Class Diagrams in VS 2017](https://stackoverflow.com/questions/42233831/class-diagrams-in-vs-2017)
 - [Lorem Ipsum generator](https://lipsum.com/)
 - [Visual Studio Code](https://code.visualstudio.com/Download)
-
+- [Map dependencies with code maps](https://docs.microsoft.com/en-us/visualstudio/modeling/map-dependencies-across-your-solutions?view=vs-2019)
 
 
 <!-- Testing. See Testing a Bot Using the Bot Framework Emulator section

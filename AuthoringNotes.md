@@ -69,9 +69,9 @@ For more information see [How to Compare files in Visual Studio Code ?](https://
 This file contains the review changes that you need to incorporate in the original file. You might reject the changes, by the way.  
 1. Open both the original and the reviewed files.
 1. In the explorer pane, right click on the name of the original file. In the drop-down select **Select for compare**.
-![Select for Compare](Media/Generic/SelectForCompare.PNG)
+![Select for Compare](Media/Generic/select4compare.PNG)
 1. In the explorer pane, right click on the name of the reviewed file. In the drop-down select **Compare with Selected**.
-![Select Compare with Selected](Media/Generic/CompareWithSelected.PNG)
+![Select Compare with Selected](Media/Generic/CompareWithSelected.PNG) 
 
 ## Create Class Diagrams
 
@@ -81,8 +81,7 @@ In order to have the **Architecture** tab in the task bar do the following:
 
 1. Go to **Tools->Get Tools and Featutres...**
 1. Click the **Individual components** tab
-1. In the *Code tools* section, chek **Live Dependency Validation**
-
+1. In the *Code tools* section, check **Live Dependency Validation**
 
 ## Tools
 

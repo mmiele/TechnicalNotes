@@ -59,10 +59,9 @@ The Bot described in the [Hello World Bot](HelloWorldBot.md) example has inheren
 
 Dialogs allow us to solve the previous issues. To add dialog the **HelloWorld** Bot follow these steps:
 
-1. In Visual Studio 2017 or higher, open the project created following the steps described in [Hello World Bot](HelloWorldBot.md) article. 
+1. In Visual Studio 2017 or higher, open the project created following the steps described in [Hello World Bot](HelloWorldBot.md) article.
 1. In the *Solutiuon Explorer*, right-click on the project name and select **Manage NuGet Packages**.
-
-    ![Manage NuGet Packages](../../Media/Examples/Dialogs\NuGetPackages.PNG)
+    ![Manage NuGet Packages](../../Media/Examples/Dialogs\NuGetPackages.png)
 1. In the package manager left pane, click the **Browse** link in the upper left.
 1. In the search box, enter *microsoft bot dialogs*.
 1. Select the **Microsoft.Bot.Builder.Dialogs** package.

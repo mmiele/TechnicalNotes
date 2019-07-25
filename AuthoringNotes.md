@@ -83,9 +83,14 @@ In order to have the **Architecture** tab in the task bar do the following:
 1. Click the **Individual components** tab
 1. In the *Code tools* section, check **Live Dependency Validation**
 
+## Bot Core Content
+
+- [Docs contributor guide](https://review.docs.microsoft.com/help/contribute/index?branch=master)
+- [Onboarding & admin guide](https://review.docs.microsoft.com/help/onboard/?branch=master)
+
 ## Tools
 
-- Windows Snipping. Used to take screenshots. See also [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)
+- [Capture popup menus with the Windows Snipping tool](https://pandlbisset.wordpress.com/2015/09/12/capture-popup-menus-with-the-windows-snipping-tool/)
 - [Start a chat in Teams](https://support.office.com/en-us/article/Start-a-chat-in-Teams-0c71b32b-c050-4930-a887-5afbe742b3d8)
 - [How to: Add class diagrams to projects](https://docs.microsoft.com/en-us/visualstudio/ide/class-designer/how-to-add-class-diagrams-to-projects?view=vs-2019)
   - [How to add a Class Diagram to an ASP.NET Core project in VS 2017?](https://stackoverflow.com/questions/52760190/how-to-add-a-class-diagram-to-an-asp-net-core-project-in-vs-2017/53799840#53799840)

@@ -1,4 +1,4 @@
-# .NET Hello World Bot
+# .NET Echo Bot
 
 ## Table of Content
 
@@ -6,7 +6,7 @@
 - [Prerequisites](#prerequisites)
 - [Create the Project](#create-the-project)
 - [Run Out of the Box](#run-out-of-the-box)
-- [Modify the Bot](#modify-the-bot)
+- [Add direct line extension](#add-direct-line-extension)
 - [Deploy the Bot](#deploy-the-bot)
 - [Connect Skype Channel](#connect-skype-channel)
 
@@ -15,13 +15,14 @@
 
 ![star](../../Media/Generic/star.png)![star](../../Media/Generic/star.png)![star](../../Media/Generic/star.png)![star](../../Media/Generic/star.png)
 
-This article describes how to create a .NET (Csharp) bot using Microsoft Bot Framework V4.  It is the classic "Hello World!" approach to make your first steps when learning a new technology.
+This article describes how to create a **direct line app extension enabled** bot using Microsoft Bot Framework V4, and deploy it in Azure.  
 
 You will learn:
 
-- How to build a simple Hello World! Bot by using a **C# template**
-- Test it using the **Bot Framework Emulator**.
-- Deploy in the **Azure Framework Service**.
+- How to build a simple echo bot by using a **C# template**.
+- Add the **direct line extension**.
+- Deploy the bot in the **Azure Framework Service**.
+
 - Test the Bot using **Web Chat**.
 - Connect **Skype channel**.
 - Test the Bot using Skype.
@@ -43,79 +44,75 @@ Before you proceed, assure that the following requirements are satisfied:
 1. Open Visual Studio and **Create a new project**.
 1. A new dialog opens. In the search box enter *Echo Bot*.
 
-    ![select echo bot template](../../Media/Examples/select_echo_bot_template_VS19.png)
-   
+    ![select echo bot template](../../Media/VisualStudio/select_echo_bot_template_VS19.png)
+
 1. Select the **Echo Bot** template and click the **Next** button.
-1. Name the project **HelloWorld** and click the **Create** button.
+1. Name the project **EchoBotDL**.
 
-    ![create hello world project](../../Media/Examples/HelloWorld/create_hello_world_project.png)
+    ![create hello world project](../../Media/DirectLine/direct_line_echo_botdl_project.png)
 
-C:\Users\v-mimiel\aWork\GitHub\TechnicalNotes\BotFramework\Media\Examples\HelloWorld\create_hello_world_project.png
+1. Click the **Create** button.
 
 ## Run Out of the Box
 
 Let's have the first debug run out of the box.
 
-1. In the top menu bar, assure that Debug is selected and that "HelloWorld" is selected in the run box.
+1. In the top menu bar, assure that Debug is selected and that "EchoBotDL" is selected in the run box.
 
-    ![run hello world project](../../Media/Examples/HelloWorld/run_hello_world.png)
+    ![run echo bot project](../../Media/DirectLine/direct_line_echo_botdl_run.png)
 
 1. If needed, click **Yes** in the popup asking to trust the ASP.NET Core SSL certificate. Install the certificate.
 1. Click the green arrow to run the bot. You can also enter **F5**. If F5 is not working, assure that **FLock** is pressed. 
-1. Your default web browser opens. It displays Hello World bot service splash page.
+1. Your default web browser opens. It displays the EchoBotDL bot service splash page.
 
-    ![hello world splash page](../../Media/Examples/HelloWorld/hello_world_splash_page.png)
-1. This is the `default.htm` page provided by the template.  It contains the bot localhost **end point** (web address): `http://localhost:3978/api/messages`. We'll use it in the emulator to talk to the bot.
-
-    ![hello world default page](../../Media/Examples/HelloWorld/hello_world_default_page.png)
+    ![echo bot default page](../../Media/DirectLine/direct_line_echo_botdl_default_page.png)
 
 1. Open the **Bot Framework Emulator**. It emulates a client application using the HelloWorld Bot (web service) running on the localhost.
 1. In the right pane, click the **Open Bot** button.
 1. In the opened dialog, enter the bot endpoint described earlier.
 
-    ![hello world emulator connect](../../Media/Examples/HelloWorld/hello_world_emulator_connect.png)
+    ![echo bot emulator connect](../../Media/DirectLine/direct_line_echo_botdl_emulator_connect.png)
 
 1. Click the **Connect** button. The emulator connects with the bot which displays the predefined *Hello and Welcome* message.
+1. Enter a nmessage and the bot echoes it back to you.
 
-## Modify the Bot 
+## Add direct line extension
 
-1. Go back to Visual Studio and stop debugging (**Shift+F5**).
-1. In the *Solution Explorer*, expand the *Bots* folder and open the `EchoBot.cs` file. 
-1. Modify the as follows:
+1. In the *Solution Explorer*, right click on the project.
+1. In the drop-down menu, **Manage NuGet Packages**.
+1. In the left pane, under the **Browse** tab, check the box **Include prerelease** to display the preview packages.
+1. In the search box enter **Microsoft.Bot.Builder.StreamingExtensions**.
+1. Select it and click the **Install** button; read and agree to the license agreement.
+
+    ![echo bot dl extesnion](../../Media/DirectLine/direct_line_echo_botdl_extension.png)
+
+1. Allow your app to use the Bot Framework NamedPipe. To do son, open the Startup.cs file.
+1. Add the this namespace reference: `using Microsoft.Bot.Builder.StreamingExtensions;`
+1. In the `Configure` method, add this line: `app.UseBotFrameworkNamedPipe()` as shown next.
 
 ```csharp
-
-// Called at each interaction made by the Bot.
-protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
-    // Read incoming message.
-    string incomingMsg = turnContext.Activity.Text;
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+    else
+    {
+        app.UseHsts();
+    }
 
-    // Create outgoing message.
-    string outgoingMsg = $"You said: {turnContext.Activity.Text}";
+    app.UseDefaultFiles();
+    app.UseStaticFiles();
 
-    // Get user name.
-    if (incomingMsg.ToLower().StartsWith("my name is"))
-        outgoingMsg = $"Your name is: {incomingMsg.Substring(10, (incomingMsg.Length - 10))}";
+    app.UseBotFrameworkNamedPipe();
 
-    await turnContext.SendActivityAsync(MessageFactory.Text(outgoingMsg), cancellationToken);
+    app.UseMvc();
 }
 
 ```
 
-Every time the user enter a message, the function echoes it with the prefix *You said:*.
-If the user enter her name prefixed by *my name is*, the function echoes it with the prefix *Your name is:*.
-
-1. Save the changes.
-1. Enter **F5** to restart the bot deugging.
-1. Go back to the emulator and click the **Restart conversation** button.
-1. Enter your a message. The bot echoes back as follows:
-
-     ![hello world echo msg](../../Media/Examples/HelloWorld/hello_world_echo_msg.png)
-
-1. Enter your name. The bot echoes back as follows:
-
-     ![hello world echo name](../../Media/Examples/HelloWorld/hello_world_echo_name.png)
+For more information, see [02.echo.bot code sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/experimental/directline-app-service-extension/csharp_dotnetcore/02.echo-bot)
 
 ## Deploy the Bot
 

@@ -1,4 +1,4 @@
-# .NET Echo Bot
+# Direct line app extension enabled bot
 
 ## Table of Content
 

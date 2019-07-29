@@ -131,13 +131,13 @@ Let's deploy the HelloWorld bot to the Azure cloud.
      ![echo botdl deploy web app create](../../Media/DirectLine/direct_line_echo_botdl_deploy_webapp_create.PNG) 
 1. Enter configuration info similar to the following. Do not forget to select **Echo Bot C#** template nad click **OK** in the related panel. 
 
-    ![echo botdl deploy web app config](../../Media/Directline/direct_line_echo_botdl_deploy_webapp_config.png)
+    ![echo botdl deploy web app config](../../Media/DirectLine/direct_line_echo_botdl_deploy_webapp_config.png)
 
 1. Click the **Create** button. The bot is created and the deployment begins.
 1. After the deployment is completed, in the left pane select **All Resources**.
 1. In the right pane, enter filter values similar to the one shown next.
 
-    ![echo botdl deploy web app resources](../../Media/Directline/direct_line_echo_botdl_deploy_webapp_resources.png)
+    ![echo botdl deploy web app resources](../../Media/DirectLine/direct_line_echo_botdl_deploy_webapp_resources.png)
 
     Where
     - **Web App Bot** is the Azure resource that will communicate with the bot contained in the App Service. This allows the bot to connect to the **Microsoft Bot Framework service** which allows to connect to users via popular channels.

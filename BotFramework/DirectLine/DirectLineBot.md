@@ -124,12 +124,11 @@ Let's deploy the HelloWorld bot to the Azure cloud.
 1. In the left pane, click **Create a resource**.
 1. In the right pane, in the search box, enter bot. In the selection list, click **Web App Bot**.
 
-    ![echo botdl deploy web app](../../Media/DirectLine/direct_line_echo_botdl_deploy_web_app.png)
+    ![echo botdl deploy web app](../../Media/DirectLine/direct_line_echo_botdl_deploy_webapp.png)
 
 1. In the displayed dialog, click the **Create** button.
 
-     ![echo botdl deploy web app create](../../Media/DirectLine/direct_line_echo_botdl_deploy_web_app_create.png) 
-
+     ![echo botdl deploy web app create](../../Media/DirectLine/direct_line_echo_botdl_deploy_webapp_create.PNG) 
 1. Enter configuration info similar to the following. Do not forget to select **Echo Bot C#** template nad click **OK** in the related panel. 
 
     ![echo botdl deploy web app config](../../Media/Directline/direct_line_echo_botdl_deploy_webapp_config.png)
@@ -144,73 +143,7 @@ Let's deploy the HelloWorld bot to the Azure cloud.
     - **Web App Bot** is the Azure resource that will communicate with the bot contained in the App Service. This allows the bot to connect to the **Microsoft Bot Framework service** which allows to connect to users via popular channels.
     - **App Service** is the Azure resource that contains the bot code. This is the location **where you publish your code**.
 
-### Test deployed bot
-
-This section shows how to test the depoyed bot using a **WebChat** client.
-
-1. In the right pane, click on the App Service link on the left.
-1. In the *Settings* section, click on **Configuration**.
-
-    ![echo botdl deploy app id pwd](../../Media/Directline/direct_line_echo_botdl_deploy_app_id_pwd.png)
-
-1. In the right side, under *Application settings*, un-hide and copy  the **MicrosoftAppId** and **MicrosoftAppPassword**.
-1. Return to Visual Studio.
-1. Open the **appsettings.json** file and paste the above values in the proper locations.  
-1. Save the file.
-1. IN the *Solution Explorer* right-click on the project name and select **Publish**.
-1. In the displayed dialog, select **Create New** and then click the **Advanced** link.
-
-    ![echo botdl deploy publish](../../Media/Directline/direct_line_echo_botdl_deploy_publish.png)
-1. In the displayed dialog, expand the *File Publish* drop-down and select **Remove additional files and destination**.
-
-    ![echo botdl deploy publish advanced](../../Media/Directline/direct_line_echo_botdl_deploy_publish_advanced.png)  
-
-1. Click the **Save** button.
-1. Click the **Publish** button.
-1. In the displayed dialog, enter information similar to the following and then click **OK**. The bot is published in the **App Service**.
-
-    ![echo botdl deploy publish final](../../Media/Directline/direct_line_echo_botdl_deploy_publish_final.png)  
-
-1. Click the **Create** button. Wait for the creation to complete.
-1. In Visual Studio, click the **Publish** button.
-
-    ![echo botdl deploy publish to azure](../../Media/Directline/direct_line_echo_botdl_publish_vs.png)  
-
-    The bot service will be available online at a location similar to this [Echo Bot DL](https://echobotdl20190728022727.azurewebsites.net/).
-
-1. Go to your Azure dashboard.
-1. In the left pane, click the **All Resources"" link.
-1. In the right pane, filter based on the name of the bot.
-1. Click on the Web App Bot link on the left.
-
-    ![echo botdl published test](../../Media/Directline/direct_line_echo_botdl_published_test.png)
-
-1. In the right pane, in the test box, click the **Test your bot online in Web Chat** link.
-
-     ![echo botdl published webchat test](../../Media/Directline/direct_line_echo_botdl_published_webchat_test.png)
-
-1. Start entering your messages for the Bot.
-
-## Create direct line service app extension client
-
-1. In your browser, navigate to the [Azure portal](https://portal.azure.com/).
-1. In the Azure portal, locate your **Web App Bot** resource and click on the  link on the left. 
-    ![echo botdl deploy web app resources](../../Media/Directline/direct_line_echo_botdl_deploy_webapp_resources.png)
-1. In the right pane, click the **Channels** link to configure the bot’s channels.
-1. If it is not already enabled, click the **Direct Line channel** icon to enable it.
-
-    ![echo botdl client](../../Media/Directline/direct_line_echo_botdl_client.png)
-
-    For more information, see [Connect a bot to Direct Line](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-4.0).
-
-1. If it is already enabled, in the Connect to channels table click on the Edit link on the Direct Line row.
-1. Scroll to the Sites section. There is typically a Default Site unless you have deleted or renamed it.
-1. Click on the Show link to reveal one of the keys, then copy its value.
-
-GzZgRohZcs8.-m1zB-2zqqbVMlI6SP98PrlTU5EqxpUEERAQg7PqptI
-
-
-## Connect Skype Channel
+## Connect Skype Channel (temp)
 
 1. Let's go back to the **Web Bot App** dialog. In the right pane, click the **Channels** link.
 

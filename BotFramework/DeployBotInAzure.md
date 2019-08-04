@@ -163,5 +163,6 @@ After the deployment is completed, you can test the bot deployment secrets using
 
 ### Test the bot using Skype
 
+## References
 
-
+1. [Register a bot with Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0)

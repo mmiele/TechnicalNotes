@@ -78,7 +78,7 @@ Let's have the first debug run out of the box.
 
 1. Enter information similar to the following and click the **Create** button.
 
-    ![channels registration config](../Media/Deploy/deploy_echobot_channels_registration_config.png "channels registration configuration")
+    ![channels registration config](../Media/Deploy/deploy_echobot_channels_registration_config.PNG "channels registration configuration")
 
     Wait for the registration to complete.
 1. In the left panel, click **All Resource**, you resource should be listed with the name you used in the previous step, in the example is *DirectLineEchoBot* and here it is:
@@ -122,7 +122,7 @@ The followiong are the final stepps you must perform to deploy the bot in Axure.
 1. Click the **Publish** button.
 1. The **App Service** for the bot is created in Azure which shows in the list of your Azure resources.
 
-    ![echobot deployed app service](../Media/Deploy/deploy_echobot_deploy_app_service.png "echobot deployed app service")
+    ![echobot deployed app service](../Media/Deploy/deploy_echobot_deploy_app_service.PNG "echobot deployed app service")
 
 
 ## Test the bot remotely

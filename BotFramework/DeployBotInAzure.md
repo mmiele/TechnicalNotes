@@ -24,9 +24,7 @@ Before you proceed, assure that the following requirements are satisfied:
 1. [Microsoft Azure Subscription](https://azure.microsoft.com/en-us/free/?v=18.23)
 
 
-## Build echo bot
-
-### Create the Project
+## Create the Project
 
 1. Open Visual Studio and **Create a new project**.
 1. A new dialog opens. In the search box enter *Echo Bot*.
@@ -91,27 +89,28 @@ Let's now get the AppID and password to use in our bot.
 1. Im the resource group blade, click on **Deployments**.
 1. In the right pane, click on the name of your deployment.
 
-    ![echobot resource group](../Media/Deploy/deploy_echobot_resource_group.png "echobot resource group")
+    ![echobot resource group](../Media/Deploy/deploy_echobot_resource_group.PNG "echobot resource group")
 
 1. In the displayed blade, click **Inputs**.
 1. In the right pane, copy the **appid** and the **appSecret** values and store them in safe place.
 
 ### Assign AppId and password
 
-1. Got back to the bot project in Visual Studio.
+1. Go back to the bot project in Visual Studio.
 1. Open the `appsettings.json` file.
 1. Assign the **appid** value to `MicrosoftAppId`.
 1. Assign the **appSecret** value to `MicrosoftAppPassword`.
 1. Save the `appsettings.json` file.
 
-### Perform deployement
+### Perform deployment
 
-The followiong are the final stepps you must perform to deploy the bot in Axure.
+The following are the final steps you must perform to deploy the bot in Azure.
 
 1. In Visual Studio, in the *Solution Explorer*, right-click on the project name.
 1. In the drop-down menu, click **Publish**.  
 1. In the displayed dialog, click the **Advanced** link.
 1. In the next displayed dialog, click the **File Publish Options**, and check the box by **Remove additional files at destination**.  
+
     ![echobot deploy step](../Media/Deploy/deploy_echobot_deploy_final_step.png "echobot deploy step")
 1. Click the **Save** button and then the **Publish** button.
 1. In the final dialog click the **Create** button. This will create the bot **App Service**.
@@ -125,11 +124,18 @@ The followiong are the final stepps you must perform to deploy the bot in Axure.
     ![echobot deployed app service](../Media/Deploy/deploy_echobot_deploy_app_service.PNG "echobot deployed app service")
 
 
-## Test the bot remotely
+## Test the bot deployment secrets
+
+After the deployment is completed, you can test the bot deployment secrets using the echo bot emulator. Follow this steps:
+
+1. Open the **Bot Framework Emulator**.
+1. In the left pane, click the **Configuration** link.
+1. In the opened dialog, enter the bot name, the remote endpoint, the Microsoft App ID and Microsoft App password obtained earlier. The following is an example: 
+1. Click the **Save and connect** button. The emulator connects with the bot which displays the predefined welcome message.
+1. Enter a message and the bot echoes it back to you. This will prove that the bot has been deployed and works as expected.
 
 
 ## Connect Skype channel
-## Connect Skype Channel
 
 1. Let's go back to the **Web Bot App** dialog. In the right pane, click the **Channels** link.
 

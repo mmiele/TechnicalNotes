@@ -52,13 +52,10 @@ Let's have the first debug run out of the box.
 
     ![echo bot default page](../Media/Deploy/deploy_echobot_default_page.png "echo bot default page")
 
-1. Open the **Bot Framework Emulator**. It emulates a client application using the HelloWorld Bot (web service) running on the localhost.
+1. Open the **Bot Framework Emulator**. It emulates a client application using the bot (web service) running on the localhost.
 1. In the right pane, click the **Open Bot** button.
 1. In the opened dialog, enter the bot endpoint described earlier.
-
-    ![echo bot emulator connect](../Media/Deploy/dieploy_echobot_emulator_connect.png "echo bot emulator connect")
-
-1. Click the **Connect** button. The emulator connects with the bot which displays the predefined *Hello and Welcome* message.
+1. Click the **Connect** button. The emulator connects with the bot which displays the customized *Hello I am your bot on a boat* message.
 1. Enter a nmessage and the bot echoes it back to you.
 
 ## Deploy the bot in Azure
@@ -130,38 +127,35 @@ After the deployment is completed, you can test the bot deployment secrets using
 
 1. Open the **Bot Framework Emulator**.
 1. In the left pane, click the **Configuration** link.
-1. In the opened dialog, enter the bot name, the remote endpoint, the Microsoft App ID and Microsoft App password obtained earlier. The following is an example: 
+1. In the opened dialog, enter the bot name, the **remote endpoint**, the **Microsoft App ID** and **Microsoft App password** obtained earlier.
+
+    ![echobot app service local test](../Media/Deploy/deploy_echobot_emulator_connect.png "echobot app service local test")
 1. Click the **Save and connect** button. The emulator connects with the bot which displays the predefined welcome message.
 1. Enter a message and the bot echoes it back to you. This will prove that the bot has been deployed and works as expected.
 
 
 ## Connect Skype channel
 
-1. Let's go back to the **Web Bot App** dialog. In the right pane, click the **Channels** link.
+1. Let's go back to the **Bot Channels Registration** dialog. In the right pane blade, click the **Channels** link. In the right pane, click the **Skype** button.
 
-    ![hello world deploy web app published test web chat channels](../../Media/Examples/HelloWorld/hello_world_deploy_web_app_published_test_web_chat_channels.png)
-1. Click the **Skype** button.
-1. Click the **Publish** button. Enter the required information similar to the one shown next. Then click the **Save** button.
+    ![echobot channels skype](../Media/Deploy/deploy_echobot_channels_skype.png "echobot channels skype publish")
 
-   ![hello world deploy web app published test web chat channels publish](../../Media/Examples/HelloWorld/hello_world_deploy_web_app_published_test_web_chat_channels_publish.png)
+1. In the next window, click the **Publish** button.
+
+    ![echobot channels skype publish](../Media/Deploy/deploy_echobot_channels_skype_publish.png "echobot channels skype")
+
+1. Enter the required information similar to the one shown next. Then click the **Save** button.
 
 1. Accept the **Terms of Service** agreement.
 1. Click the **Cancel** button in the next dialog. This takes you back to the **Connect to channels** page.
-
-    ![hello world deploy web app published test web chat channels skype](../../Media/Examples/HelloWorld/hello_world_deploy_web_app_published_test_web_chat_channels_skype.png)
-
 1. Click the **Skype** link. This will take you to page that allows you to add the Bot to your Skype contacts.
 1. Click the Add to Contacts button.
 
-    ![hello world deploy web app published test web chat channels skype contact](../../Media/Examples/HelloWorld/hello_world_deploy_web_app_published_test_web_chat_channels_skype_contact.png)
+    ![echobot channels skype publish](../Media/Deploy/deploy_echobot_channels_skype_contact.png "echobot channels skype")
 
-1. **Open Skype**, if you have it installed on your computer. Follow the Wizard steps. At the end the Bot is added to your Skype contacts. Then you can start communicating with the Bot.
+1. **Open Skype**, if you have it installed on your computer. Follow the Wizard steps. The Bot is added to your Skype contacts. Then you can start communicating with the Bot.
 
-    ![hello world deploy web app published test web chat channels skype chat](../../Media/Examples/HelloWorld/hello_world_deploy_web_app_published_test_web_chat_channels_skype_chat.png)
-
-
-
-### Test the bot using Skype
+    ![echobot channels skype publish](../Media/Deploy/deploy_echobot_channels_skype_chat.png "echobot channels skype")
 
 ## References
 

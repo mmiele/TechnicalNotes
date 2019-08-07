@@ -6,9 +6,7 @@
 - [Build a simple echo bot](#build-echo-bot)
     - [Test the bot locally](#test-the-bot-locally)
 - [Deploy the bot in Azure](#deploy-the-bot-in-Azure)
-    - [Test the bot remotely](#test-the-bot-remotely)
 - [Connect **Skype channel**](#connect-skype-channel)
-    - [Test the bot using Skype](#test-the-bot-using-skype)
 
 
 ## Prerequisites

@@ -103,6 +103,10 @@ In order to have the **Architecture** tab in the task bar do the following:
 - [Bot Framework Doc Contributor Guide](https://github.com/MicrosoftDocs/bot-docs-pr/tree/master/contributor-guide)
 
 
+## Azure
+
+- [Azure CLI Reference](https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest)
+
 <!-- Testing. See Testing a Bot Using the Bot Framework Emulator section
 Deploying. See Deploy a Bot to Azure section.
 Knowledge of ASP.Net Core and asynchronous programming in C# -->

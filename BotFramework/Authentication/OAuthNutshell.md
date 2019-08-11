@@ -7,9 +7,9 @@ These notes refer to the OAuth 2.0 version, which replaces and obsoletes the OAu
 OAuth stands for **Open Authentication** and can be defined as an **open standard** for implementing **token-based authentication and authorization**.
 The term *open standard* essentially describes a specification that is open to the public and free to be implemented by application developers.
 
-OAuth allows your account information from one application, for example Gmail, to be used by another application for example Linkedin, without having to expose or share the user's credentials between applications. OAuth acts as an intermediary on behalf of the user, negotiating access and authorization between the two applications.
+OAuth allows your account information from one application, for example Gmail, to be used by another application for example Linkedin, without having to expose or share the user's credentials between applications. OAuth acts as an intermediary on behalf of the user, negotiating authentication and authorization between the two applications.
 
-The OAuth 2.0 authorization framework enables a third-party application to obtain limited access to an HTTP service in one of the following ways:
+The OAuth 2.0 authentication framework enables a third-party application to obtain limited access to an HTTP service in one of the following ways:
 
 - On behalf of a resource owner by orchestrating an approval interaction between the resource owner and the service.
 - By allowing the application to obtain access on its own behalf.
@@ -22,9 +22,9 @@ You'll often hear the two words **authentication** and **authorization** sometim
 - Authentication answers the question **Who are you?**.
 - Authorization answers the question **What are you allowed to do?**.
 
-While the OAuth flow handles authorization and permissions as well, its main emphasis is on the authentication process, where you can essentially "log in" to a third-party without giving away your credentials.
+While the OAuth flow handles authorization and permissions as well, its main emphasis is on the authentication process, where you can essentially *log in* to a third-party application without giving away your credentials.
 
-### Token-Based Auth
+### Token-Based Authentication
 
 OAuth is an important part of creating secure applications by acting as an intermediary to negotiate access to other application data. This intermediary role avoids giving away access credentials by providing access tokens instead.
 
@@ -32,8 +32,8 @@ The initial phase of generating a token to identify a user is considered the **a
 And the server checks and writes down the information received, and says:
 *Ok, I trust you on one condition: you must provide me your secret password every time we do business.*
 Then the server gives a token to the client that has encoded all of client's information and permission levels. The client can now use this token as a **keycard** to send and receive data from the server. 
- 
- ## OAuth 2.0 Roles
+
+## OAuth 2.0 Roles
 
 1. **Client**. An application making protected resource requests on behalf of the resource owner and with its authorization.  The term client does not imply any particular implementation characteristics (e.g. whether the application executes on a server, a desktop, or other devices).
 1. **Resource owner**. An entity capable of granting access to a protected resource. When the resource owner is a person, it is referred to as an end-user.

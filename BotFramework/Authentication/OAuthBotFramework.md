@@ -1,6 +1,6 @@
 # OAuth with bot
 
-To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot need to call external service via its REST API.
+To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot needs to call external services, usually via their REST API.
 
 To secure the call to an external service, the bot must ask the user to sign-in in the service, so it can acquire a user's token, based on the user's credentials, for that service.
 
@@ -24,8 +24,8 @@ Let's assume that the user checks her recent emails through a bot which uses her
 
 The run time workflow is as follows:
 
-1. The user send a message to the bot through the **Bot Framework Channel Service** such as *Check my email, please*. 
-1. The *Bot Framework Channel Service* creates ah **activity** which encapsulates the previous message. The channel service assures that the activity `userId` field is set and sends the message to the bot.
+1. The user sends a message to the bot through the **Bot Framework Channel Service** such as *Check my email, please*.
+1. The *Bot Framework Channel Service* creates an **activity** which encapsulates the previous message. The channel service assures that the activity `userId` field is set and sends the message to the bot.
      [!NOTE]
     > User ID's are channel specific, such as the user's facebook ID or their SMS phone number.
 1. The bot asserts that the *intent* of the user is to check her emails. Then it sends a request to the **Bot Framework Token Service** asking if it already has a **token** for the OAuth *EmailConnection* of the specific `userId`. 

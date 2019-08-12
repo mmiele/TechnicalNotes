@@ -1,4 +1,4 @@
-# OAuth in Bot Framework
+# OAuth with bot
 
 To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot need to call external service via its REST API.
 
@@ -13,7 +13,7 @@ Many services support token retrieval via the **OAuth** or **OAuth2** protocol. 
   - Any other connection metadata required by that external service or identity provider.
 - In the bot's code, an OAuth connection setting is used to help sign in a user and get a user token.
 
-## Authentication using a bot scenario
+## OAuth with bot email scenario
 
 Let's assume that the user checks her recent emails through a bot which uses her email service API. The bot needs the user's token to be able to use the API, so this is what happens:
 

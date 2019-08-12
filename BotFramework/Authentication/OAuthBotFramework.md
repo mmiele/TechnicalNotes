@@ -33,8 +33,10 @@ The run time workflow is as follows:
 1. The bot creates an **OAuthCard** with a connection name, *EmailConnection* in our example, associates it with the activity and send the activity back to the *Bot Framework Channel Service*.  
 1. The *Bot Framework Channel Service*, calls into the *Bot Framework Token Service* to create a valid **OAuth sign-in URL** for this request. This sign-in URL is added to the OAuthCard.
 1. The *Bot Framework Channel Service* returns the card to the user. The user is presented with a message to sign-in by clicking on the **OAuthCard's sign-in button**.
-1. When the user clicks the *sign-in button*, the *Bot Framework Channel Service* opens a **web browser** and calls out to the **External Service** to display its sign-in page.
+1. The user clicks the *sign-in button*.
+1. The *Bot Framework Channel Service* opens a **web browser** and calls out to the **External Service** to display its sign-in page.
+1. The **External Service** displays its sign-in page.
 1. The user accesses the page and signs-in for the *External Service*.
-1. The *External Service* completes the *OAuth protocol exchange* with the *Bot Framework Token Service*, resulting in the *External Service* **sending the user token** to the *Bot Framework Token Service*. 
+1. The *External Service* completes the *OAuth protocol exchange* with the *Bot Framework Token Service*, resulting in the *External Service* **sending the user token** to the *Bot Framework Token Service*.
 1. The *Bot Framework Token Service* securely stores this token and sends an activity to the bot with the token.
 1. The bot upon receiving the activity with the token, uses the token to make calls against the email server API to access the user's emails.

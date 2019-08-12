@@ -20,7 +20,7 @@ Let's assume that the user checks her recent emails through a bot which uses her
 - At design time, the bot developer register an Azure Active Directory application with the **Bot Framework Token Service**, via the Azure Portal.
 - Then he configures an **OAuth connection setting**, named *EmailConnection* for example, that the bot will use.
 
-    ![oauth2 flow](../../Media/Conceptual/oauth2-flow-bot.PNG)
+    ![oauth2 flow](../../Media/Conceptual/oauth2-flow-bot.png)
 
 The run time workflow is as follows:
 

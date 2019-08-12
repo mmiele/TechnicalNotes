@@ -14,7 +14,6 @@ The OAuth 2.0 authentication framework enables a third-party application to obta
 - On behalf of a resource owner by orchestrating an approval interaction between the resource owner and the service.
 - By allowing the application to obtain access on its own behalf.
 
-
 ### Authentication vs. Authorization
 
 You'll often hear the two words **authentication** and **authorization** sometimes used interchangeably. They actually have two very different meanings. 
@@ -43,7 +42,6 @@ Then the server gives a token to the client that has encoded all of client's inf
 > [!NOTE]
 > The authorization server may be the same server as the resource server or a separate entity. A single authorization server may issue access tokens accepted by multiple resource servers.
 
-
 ## OAuth 2.0 Protocol Flow
 The following diagram shows the interactions between the various roles involved in the authentication and authorization process.
 
@@ -66,7 +64,6 @@ The following diagram shows the interactions between the various roles involved 
   - **Client credentials**.The client credentials (or other forms of client authentication) can be used as an authorization grant when the authorization scope is limited to the protected resources under the control of the client, or to protected resources previously arranged with the authorization server.
 - **Access Token**. Access tokens are credentials used to access protected resources. An access token is a string representing an authorization issued to the client. The string is usually opaque to the client. Tokens represent specific scopes and durations of access, granted by the resource owner, and enforced by the resource server and authorization server.
 - **Refresh Token**. Refresh tokens are credentials used to obtain access tokens. Refresh tokens are issued to the client by the authorization server and are used to obtain a new access token when the current access token becomes invalid or expires, or to obtain additional access tokens with identical or narrower scope (access tokens may have a shorter lifetime and fewer permissions than authorized by the resource owner). Issuing a refresh token is optional at the discretion of the authorization server.
-
 
 ### More About Refresh Token
 

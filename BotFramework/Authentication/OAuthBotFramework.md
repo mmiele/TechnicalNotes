@@ -1,10 +1,10 @@
 # OAuth in Bot Framework
 
-To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot need to call external services via its REST API.
+To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot need to call external service via its REST API.
 
-To secure the call to an external service, the bot must ask the user to sign-in in the service, so it can acquire the user's token for that service.
+To secure the call to an external service, the bot must ask the user to sign-in in the service, so it can acquire a user's token, based on the user's credentials, for that service.
 
-Many services support token retrieval via the OAuth or OAuth2 protocol. The Azure Bot Service provides specialized sign-in cards and services that work with the OAuth protocol and manage the token life-cycle. A bot can use these features to acquire a user token.
+Many services support token retrieval via the **OAuth** or **OAuth2** protocol. The Azure Bot Service provides specialized **sign-in cards** and services that work with the OAuth protocol and manage the token life-cycle. A bot can use these features to acquire a user token.
 
 - As part of bot configuration, an **OAuth connection setting** is registered within the Azure Bot Service resource in Azure. Each connection setting contains the following:
   - Information about the external service or identity provider to be used

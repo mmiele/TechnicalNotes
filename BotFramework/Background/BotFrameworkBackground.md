@@ -1,4 +1,4 @@
-# Bot Framework Background
+# Bot Framework Architectural Components
 
 ![robot icon](../../Media/Generic/robot.PNG)
 

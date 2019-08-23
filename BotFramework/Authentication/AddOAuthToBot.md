@@ -13,6 +13,8 @@ You will create a sample bot that connects to [Microsoft Graph](https://docs.mic
 
 The completed bot performs a few simple tasks against an Azure AD application, such as checking and sending an email, or displaying who you are and who your manager is. To do this, the bot will use a token from an Azure AD application against the `Microsoft.Graph` library.
 
+test
+
 ## Create an Azure Bot Service resource
 
 You need an **Azure Bot Service** resource to register the bot with Azure and make it available to the users, for example over the web through channels.

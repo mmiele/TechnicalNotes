@@ -22,7 +22,7 @@ The completed bot performs a few simple tasks against an Azure AD application, s
 
 The following picture shows the architecture of an Azure Bot Service which uses an Azure AD for authentication.
 
-![Azure Bot Service architecture](../../Media/Conceptual\oauth2-azure-bot-architecture.PNG)
+![Azure Bot Service architecture](../../Media/Conceptual/oauth2-azure-bot-architecture.PNG)
 
 ## Create an Azure Bot Service app registration
 

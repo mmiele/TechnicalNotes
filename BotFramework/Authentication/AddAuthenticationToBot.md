@@ -4,23 +4,29 @@ This topic shows how to use **Azure Bot Service** authentication to develop a bo
 
 The example in this article shows how the user can check her emails through a bot which uses the user's email service (MSGraph) API. The bot needs a token, based on the user's credentials, to be able to use the mail service API. 
 
-You can download the code at this location: [Bot Authentication MsGraph](https://aka.ms/v4cs-auth-msgraph-sample)
+You can download the code at this location: [Bot Authentication MsGraph](https://aka.ms/v4cs-auth-msgraph-sample).
+
+The current documentation can be found at: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=aadv1%2Ccsharp%2Cbot-oauth).
 
 
 ## Overview
 
-You will create a sample bot that connects to [Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview) using **Azure AD authentication**. You will use code from a GitHub repository, and learn how to 
+You will create a sample bot that connects to [Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview) using **Azure AD authentication**. You will use code from a GitHub repository.
 
-- [Create an Azure Bot Service resource](#Create-an-azure-bot-service-resource)
+- [Create an Azure Bot Service app registration](#Create-an-azure-bot-service-resource-app-registration)
 - [Create an Azure AD application](#Create-an-azure-ad-application)
 - [Prepare the bot sample code](#prepare-the-bot-sample-code)
 - [Use the emulator to test the bot](#use-the-emulator-to-test-the-bot)
 
 The completed bot performs a few simple tasks against an Azure AD application, such as checking and sending an email, or displaying who you are and who your manager is. To do this, the bot will use a token from an Azure AD application against the `Microsoft.Graph` library.
 
+The following picture shows the architecture of an Azure Bot Service which uses an Azure AD for authentication.
+
+![Azure Bot Service architecture](../../Media/Conceptual\oauth2-azure-bot-architecture.PNG)
+
 ## Create an Azure Bot Service app registration
 
-You need an **Azure Bot Service** ap registration to register the bot with Azure and make it available to the users, for example over the web through channels.
+You need an **Azure Bot Service** app registration to register the bot with Azure and make it available to the users, for example over the web through channels.
 
 To create this resource, you must use one of these approaches:
 
@@ -30,17 +36,19 @@ To create this resource, you must use one of these approaches:
 
     ![Ad app](../../Media/Conceptual/oauth2-azure-registration-app.png)  
 
-This resource registers your bot's Azure registration credentials. You need these credentials to use the authentication features, even when running your bot code locally.
+> [!NOTE] This resource registers your bot's Azure registration credentials. You need these credentials to use the authentication features, even when running your bot code locally.
 
-## Create an Azure AD application
+In this article, we are going to use the  **Bot Channels Registration** approach. Remember to save the app ID and the client secret; you are going to need them to deploy the bot. See section[Prepare the bot sample code](#prepare-the-bot-sample-code).
+
+## Create an Azure AD (AAD) application
 
 Whenever you register a bot in Azure, it gets assigned an Azure AD registration app. However, this app secures channel-to-bot access. You need an additional Azure AD (AAD) app for each application that you want the bot to be able to authenticate on behalf of the user.
-This Azure AD app allows your bot to **access an external resource*, such as Office 365.
+This Azure AD app allows your bot to **access an external resource*, such as Office 365 MSGraph. In other words, the AAD is the mechanism to allow the bot to access resources, such as MSGraph, because authenticated based on the user's credentials.
 
 1. In your browser, navigate to the [Azure portal](https://ms.portal.azure.com/). 
 1. In the left pane, select **Azure Active Directory**.
 1. In the displayed blade, select **App registrations**.
-1. In the right panel, click the **New Registration** tab. 
+1. In the right panel, click the **New Registration** tab.
 1. Enter the required information.
     1. The **name** of the application.
     1. Select one of the **Supported account types**, any value works for this example.
@@ -114,9 +122,27 @@ profile, Mail.Read, Mail.Send, User.Read, User.ReadBasic.All**.
 
 You can now use this connection name in your bot code to retrieve user tokens.
 
-
 ## Prepare the bot sample code
 
+1. Clone from the github repository the sample you want to work with: [Bot authentication](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/18.bot-authentication) or [Bot authentication MSGraph](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/24.bot-authentication-msgraph). In this article, we are going to use [Bot authentication MSGraph](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/24.bot-authentication-msgraph).
 
+1. Open the project in Visual Studio.
+1. Edit the file `appsettings.json` and assign the following values:
+    1. **MicrosoftAppId**. The app Id you saved when you created *Azure Bot Service app registration*.
+    1. **MicrosoftAppPassword**. The app secret you saved when you created *Azure Bot Service app registration*.
+    1. **ConnectionName**. The name you assigned to the connection when you created the AAD app.
+1. Save the `appsettings.json` file.
+1. In the *Solution Explorer*, right-click on the project name and select **Publish**.
+1. In the displayed dialog, select ****Create New** and then click the **Advanced** link.
+1. In the displayed dialog, expand the **File Publish** drop-down and select **Remove additional files and destination**.
+1. Click the **Save** button.
+1. Click the **Publish** button.
+1. In the displayed dialog, enter information similar to the following and then click OK. The bot code is published in the **App Service**.
 
 ## Use the emulator to test the bot
+
+
+## References
+
+-  [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=aadv1%2Ccsharp%2Cbot-oauth)
+- [Register a bot with Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0&viewFallbackFrom=azure-bot-service-4.0#bot-channels-registration-password)

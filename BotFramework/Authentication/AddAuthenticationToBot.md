@@ -8,7 +8,7 @@ You can download the code at this location: [Bot Authentication MsGraph](https:/
 
 The current documentation can be found at: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=aadv1%2Ccsharp%2Cbot-oauth).
 
-Let's sidetrack a bit. In order for a bot to access online resources via their REST API, the bot must be authenticated (and authorized). This authentication takes the form of a token that is based on the user's credentials. This user has access to the online resources.
+In order for a bot to access online resources, via their REST API, the bot must be authenticated (and authorized). This authentication takes the form of a token based on the user's credentials. The user has access to the online resources which the bot will access on her behalf. 
 
 This translated in the following **Azure App Services** architecture:
 

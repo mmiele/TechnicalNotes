@@ -1,6 +1,6 @@
 # Add authentication to a bot
 
-This topic shows how to use **Azure Bot Service** authentication to develop a bot which can be authenticated by various identity providers such as Azure Active Directory (Azure AD), GitHub and so on.
+This article shows how to use **Azure Bot Service** authentication to develop a bot which can be authenticated by various identity providers such as Azure Active Directory (Azure AD), GitHub and so on.
 
 The example in this article shows how the user can check her emails through a bot which uses the user's email service (MSGraph) API. The bot needs a token, based on the user's credentials, to be able to use the mail service API. 
 
@@ -8,6 +8,24 @@ You can download the code at this location: [Bot Authentication MsGraph](https:/
 
 The current documentation can be found at: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=aadv1%2Ccsharp%2Cbot-oauth).
 
+Let's sidetrack a bit. In order for a bot to access online resources via their REST API, the bot must be authenticated (and authorized). This authentication takes the form of a token that is based on the user's credentials. This user has access to the online resources.
+
+This translated in the following **Azure App Services** architecture:
+
+1. **Bot Channels Registration**. This is the mechanism that allows the   *integration* of a bot with the Azure infrastructure; allowing the bot to communicate with channels for example. The key elements that allow the integration are the following:
+
+    1. **app ID**.
+    1. **client secret**.
+    1. **bot URL endpoint**.
+    1. **authenticated connection**.
+
+1. **Bot**. The bot can be hosted anywhere including Azure. If hosted in Azure, as in the example shown here, you can build an deploy it.
+
+1. **Azure AD (AAD) application**. The Azure AD (AAD) app is needed for each application that you want the bot to be able to authenticate on behalf of the user. This Azure AD app allows your bot to **access an external resource*, such as Office 365 MSGraph. In other words, the AAD is the mechanism to allow the bot to access resources, such as MSGraph, because authenticated based on the user's credentials.
+
+    The following picture shows the architecture of an Azure Bot Service which uses an Azure AD for authentication.
+
+    ![Azure Bot Service architecture](../../Media/Conceptual/oauth2-azure-bot-architecture.PNG)
 
 ## Overview
 
@@ -19,10 +37,6 @@ You will create a sample bot that connects to [Microsoft Graph](https://docs.mic
 - [Use the emulator to test the bot](#use-the-emulator-to-test-the-bot)
 
 The completed bot performs a few simple tasks against an Azure AD application, such as checking and sending an email, or displaying who you are and who your manager is. To do this, the bot will use a token from an Azure AD application against the `Microsoft.Graph` library.
-
-The following picture shows the architecture of an Azure Bot Service which uses an Azure AD for authentication.
-
-![Azure Bot Service architecture](../../Media/Conceptual/oauth2-azure-bot-architecture.PNG)
 
 ## Create an Azure Bot Service app registration
 

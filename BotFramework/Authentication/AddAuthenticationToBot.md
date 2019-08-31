@@ -1,23 +1,32 @@
 # Add authentication to a bot
 
-This article shows how to use **Azure Bot Service** authentication to develop a bot which can be authenticated by various identity providers such as Azure Active Directory (Azure AD), GitHub and so on.
+## Overview
 
-The example in this article shows how the user can check her emails through a bot which uses the user's email service (MSGraph) API. The bot needs a token, based on the user's credentials, to be able to use the mail service API. 
+This article shows how to use **Azure Bot Service** authentication to allow a bot to access online resources on behalf of the user.
 
-You can download the code at this location: [Bot Authentication MsGraph](https://aka.ms/v4cs-auth-msgraph-sample).
+You will create a sample bot that connects to [Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview) using **Azure AD authentication**.
+The bot performs a few simple tasks on behalf of the user such as checking and sending an email, or displaying who you are and who your manager is.
 
 The current documentation can be found at: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=aadv1%2Ccsharp%2Cbot-oauth).
 
-In order for a bot to access online resources, via their REST API, the bot must be authenticated (and authorized). This authentication takes the form of a token based on the user's credentials. The user has access to the online resources which the bot will access on her behalf. 
+You can download the code at this location: [Bot Authentication MsGraph](https://aka.ms/v4cs-auth-msgraph-sample).
 
-This translated in the following **Azure App Services** architecture:
+- [Create an Azure Bot Service app registration](#Create-an-azure-bot-service-resource-app-registration)
+- [Create Azure AD application](#Create-an-azure-ad-application)
+- [Prepare the bot sample code](#prepare-the-bot-sample-code)
+- [Use the emulator to test the bot](#use-the-emulator-to-test-the-bot)
 
-1. **Bot Channels Registration**. This is the mechanism that allows the   *integration* of a bot with the Azure infrastructure; allowing the bot to communicate with channels for example. The key elements that allow the integration are the following:
 
-    1. **app ID**.
-    1. **client secret**.
-    1. **bot URL endpoint**.
-    1. **authenticated connection**.
+In order for a bot to access online resources on behalf of the user, via their REST API, the bot must be authenticated (and authorized). This authentication takes the form of a token based on the user's credentials. 
+
+This translates in the **Azure App Services** architecture described next.
+
+1. **Bot Channels Registration**. This is the mechanism to *integrate* a bot with the Azure infrastructure, which allows the bot to communicate with channels for example. The key elements that allow the integration are the following:
+
+    1. **app ID**. This is the application ID to configure the bot. It will be assigned to  **MicrosoftAppId** in the `appsettings.json` file. 
+    1. **client secret**. This is the application password to configure the bot. It will be assigned to **MicrosoftAppPassword** in the `appsettings.json` file.
+    1. **bot URL endpoint**. This is the bot URL end point that has the following format `https:\\<your bot path>\api\messages`.
+    1. **authenticated connection**. The name you assigned to the connection when you created the AAD app.
 
 1. **Bot**. The bot can be hosted anywhere including Azure. If hosted in Azure, as in the example shown here, you can build an deploy it.
 
@@ -26,17 +35,6 @@ This translated in the following **Azure App Services** architecture:
     The following picture shows the architecture of an Azure Bot Service which uses an Azure AD for authentication.
 
     ![Azure Bot Service architecture](../../Media/Conceptual/oauth2-azure-bot-architecture.PNG)
-
-## Overview
-
-You will create a sample bot that connects to [Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview) using **Azure AD authentication**. You will use code from a GitHub repository.
-
-- [Create an Azure Bot Service app registration](#Create-an-azure-bot-service-resource-app-registration)
-- [Create an Azure AD application](#Create-an-azure-ad-application)
-- [Prepare the bot sample code](#prepare-the-bot-sample-code)
-- [Use the emulator to test the bot](#use-the-emulator-to-test-the-bot)
-
-The completed bot performs a few simple tasks against an Azure AD application, such as checking and sending an email, or displaying who you are and who your manager is. To do this, the bot will use a token from an Azure AD application against the `Microsoft.Graph` library.
 
 ## Create an Azure Bot Service app registration
 
@@ -48,9 +46,11 @@ To create this resource, you must use one of these approaches:
 
 - **Bot Channels Registration**. If your bot is not hosted in Azure. Please, follow the steps described in this article: [Register a bot with Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0).
 
-    ![Ad app](../../Media/Conceptual/oauth2-azure-registration-app.png)  
+    ![app registration](../../Media/Conceptual/oauth2-azure-registration-app.png)  
 
 > [!NOTE] This resource registers your bot's Azure registration credentials. You need these credentials to use the authentication features, even when running your bot code locally.
+
+![app settings](../../Media/Conceptual/oauth2-azure-registration-app-settings.PNG)  
 
 In this article, we are going to use the  **Bot Channels Registration** approach. Remember to save the app ID and the client secret; you are going to need them to deploy the bot. See section[Prepare the bot sample code](#prepare-the-bot-sample-code).
 

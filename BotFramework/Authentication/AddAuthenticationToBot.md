@@ -4,7 +4,7 @@
 
 This article shows how to use **Azure Bot Service** authentication to allow a bot to access online resources on behalf of the user.
 
-You will create a sample bot that connects to [Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview) using **Azure AD authentication**.
+You will create a sample bot that connects to [Microsoft Graph](https://docs.microsoft.com/en-us/graph/overview) using **Azure Active Directory (AAD) authentication**.
 The bot performs a few simple tasks on behalf of the user such as checking and sending an email, or displaying who you are and who your manager is.
 
 The current documentation can be found at: [Add authentication to your bot via Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=aadv1%2Ccsharp%2Cbot-oauth).
@@ -14,8 +14,8 @@ You can download the code at this location: [Bot Authentication MsGraph](https:/
 - [Create an Azure Bot Service app registration](#Create-an-azure-bot-service-resource-app-registration)
 - [Create Azure AD application](#Create-an-azure-ad-application)
 - [Prepare the bot sample code](#prepare-the-bot-sample-code)
-- [Use the emulator to test the bot](#use-the-emulator-to-test-the-bot)
-
+- [Test the bot with the emulator](#test-the-bot-with-the-emulator)
+- [Test the deployed bot](#test-the-deployed-bot)
 
 In order for a bot to access online resources on behalf of the user, via their REST API, the bot must be authenticated (and authorized). This authentication takes the form of a token based on the user's credentials. 
 
@@ -25,12 +25,12 @@ This translates in the **Azure App Services** architecture described next.
 
     1. **app ID**. This is the application ID to configure the bot. It will be assigned to  **MicrosoftAppId** in the `appsettings.json` file. 
     1. **client secret**. This is the application password to configure the bot. It will be assigned to **MicrosoftAppPassword** in the `appsettings.json` file.
-    1. **bot URL endpoint**. This is the bot URL end point that has the following format `https:\\<your bot path>\api\messages`.
+    1. **bot URL endpoint**. This is the bot URL end point that has the following format `https://<your bot host name>/api/messages`.
     1. **authenticated connection**. The name you assigned to the connection when you created the AAD app.
 
 1. **Bot**. The bot can be hosted anywhere including Azure. If hosted in Azure, as in the example shown here, you can build an deploy it.
 
-1. **Azure AD (AAD) application**. The Azure AD (AAD) app is needed for each application that you want the bot to be able to authenticate on behalf of the user. This Azure AD app allows your bot to **access an external resource*, such as Office 365 MSGraph. In other words, the AAD is the mechanism to allow the bot to access resources, such as MSGraph, because authenticated based on the user's credentials.
+1. **Azure Active Directory (AAD) application**. The Azure AD (AAD) app is needed for each application that you want the bot to be able to authenticate on behalf of the user. This Azure AD app allows your bot to *access an external resource*, such as Office 365 MSGraph. In other words, the AAD is the mechanism to allow the bot to access resources because authenticated based on the user's credentials.
 
     The following picture shows the architecture of an Azure Bot Service which uses an Azure AD for authentication.
 
@@ -130,7 +130,7 @@ profile, Mail.Read, Mail.Send, User.Read, User.ReadBasic.All**.
 
 1. In the *Settings* pane, at the bottom of the page, click on the connection entry to open the connection you just created.
 1. Click **Test Connection** at the top of the *Service Provider Connection Setting* pane. The first time, this should open a new browser tab listing the permissions your app is requesting and prompt you to accept.
-1. Click Accept. This should redirect you to a **Test Connection to "your-connection-name" Succeeded** page.
+1. Click Accept. This should redirect you to a **Test Connection to "your-connection-name" Succeeded** page. 
 
     ![Ad app register](../../Media/Conceptual/oauth2-azure-ad-app-test.PNG)
 
@@ -153,7 +153,25 @@ You can now use this connection name in your bot code to retrieve user tokens.
 1. Click the **Publish** button.
 1. In the displayed dialog, enter information similar to the following and then click OK. The bot code is published in the **App Service**.
 
-## Use the emulator to test the bot
+## Test the bot with the emulator
+
+1. Run the bot on your local machine. For example, run it in debug mode in Visual Studio.
+1. Activate the [Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme).
+1. Click the **Open Bot** button.
+1. Enter the required information, including the **Microsoft App ID** and **Microsoft App password**.
+1. Click the **Connect** button. The bot should come up and display the predefined greetings. 
+1. Type anything to login. 
+1. Click on the displayed **login** box. A pop-up dialog is displayed asking if you want to open the OAuth URL of the AAD connection you created. This is where OAUth comes in to the picture to authenticate the bot based on the user's credentials.
+1. Click the **Confirm** button.  
+1. You are logged in and a list of allowed commands is displayed.
+
+    ![Ad app register](../../Media/Conceptual/oauth2-bot-login.PNG)
+
+1. Enter any of the listed commands to test the bot. At the end enter **logout**.
+1. If you want to repeat the test, you must *login* again.
+
+## Test the deployed bot
+
 
 
 ## References

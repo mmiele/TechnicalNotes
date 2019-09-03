@@ -13,7 +13,7 @@ You can download the code at this location: [Bot Authentication MsGraph](https:/
 
 - [Create an Azure Bot Service app registration](#Create-an-azure-bot-service-resource-app-registration)
 - [Create Azure AD application](#Create-an-azure-ad-application)
-- [Prepare the bot sample code](#prepare-the-bot-sample-code)
+- [Deploy the bot sample code](#deploy-the-bot-sample-code)
 - [Test the bot with the emulator](#test-the-bot-with-the-emulator)
 - [Test the deployed bot](#test-the-deployed-bot)
 
@@ -136,7 +136,7 @@ profile, Mail.Read, Mail.Send, User.Read, User.ReadBasic.All**.
 
 You can now use this connection name in your bot code to retrieve user tokens.
 
-## Prepare the bot sample code
+## Deploy the bot sample code
 
 1. Clone from the github repository the sample you want to work with: [Bot authentication](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/18.bot-authentication) or [Bot authentication MSGraph](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/24.bot-authentication-msgraph). In this article, we are going to use [Bot authentication MSGraph](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/24.bot-authentication-msgraph).
 
@@ -149,9 +149,13 @@ You can now use this connection name in your bot code to retrieve user tokens.
 1. In the *Solution Explorer*, right-click on the project name and select **Publish**.
 1. In the displayed dialog, select ****Create New** and then click the **Advanced** link.
 1. In the displayed dialog, expand the **File Publish** drop-down and select **Remove additional files and destination**.
-1. Click the **Save** button.
+1. Click the **Save** button and then the **Publish** button.
+1. In the final dialog click the **Create** button. This will create the bot **App Service**.
+1. In your default browser, the bot App Service (default) page is displayed.
+1. In Visual Studio the bot deployed information is displayed. Copy and save the site URL (end point) where the App Service is running. You must assign this URL in the **Bot Channels Registration** settings.
 1. Click the **Publish** button.
-1. In the displayed dialog, enter information similar to the following and then click OK. The bot code is published in the **App Service**.
+1. The **App Service** for the bot is created in Azure which shows in the list of your Azure resources.
+
 
 ## Test the bot with the emulator
 
@@ -159,9 +163,9 @@ You can now use this connection name in your bot code to retrieve user tokens.
 1. Activate the [Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme).
 1. Click the **Open Bot** button.
 1. Enter the required information, including the **Microsoft App ID** and **Microsoft App password**.
-1. Click the **Connect** button. The bot should come up and display the predefined greetings. 
-1. Type anything to login. 
-1. Click on the displayed **login** box. A pop-up dialog is displayed asking if you want to open the OAuth URL of the AAD connection you created. This is where OAUth comes in to the picture to authenticate the bot based on the user's credentials.
+1. Click the **Connect** button. The bot starts and displays the predefined greetings.
+1. Type anything to login.
+1. Click on the displayed **login** box. A pop-up dialog is displayed asking if you want to open the OAuth URL of the AAD connection you created. This is where OAUth comes in to the picture to authenticate the bot based on the user's (your)credentials.
 1. Click the **Confirm** button.  
 1. You are logged in and a list of allowed commands is displayed.
 
@@ -172,6 +176,18 @@ You can now use this connection name in your bot code to retrieve user tokens.
 
 ## Test the deployed bot
 
+1. In your browser, navigate to the [Azure portal](https://ms.portal.azure.com/).
+1. In the left pane, select **All Resources**.
+1. In the right pane find your **Bot Channel Registration** resource. 
+1. Click on the resource link. The resource page is displayed.
+1. In the resource blade, click **Test in Web Chat**. The bot starts and displays the predefined greetings.
+1. Type anything to login. This is where OAUth comes into the picture to authenticate the bot based on the user's (your) credentials.
+1. You are logged in and a list of allowed commands is displayed.
+
+    ![Ad app register](../../Media/Conceptual/oauth2-bot-login.PNG)
+
+1. Enter any of the listed commands to test the bot. At the end enter **logout**.
+1. If you want to repeat the test, you must *login* again.
 
 
 ## References

@@ -16,7 +16,7 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
     1. [Middleware](). Middleware is simply a class that sits between the adapter and the bot logic, added to the adapter's middleware collection during initialization.
     1. [User authentication](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0). Explains  authentication so a bot can use external services on behalf of the user.   
     1. [Manage bot resources](https://docs.microsoft.com/en-us/azure/bot-service/bot-file-basics?view=azure-bot-service-4.0&tabs=csharp). Explains managing resources used by a bot.
-1. **How To**. It contains guidelines and examples to perform essential tasks from bot design to development, from debugging to deployment, from management to migration.
+1. **How To**. It contains guidelines and examples to perform essential tasks. From bot design to development, from debugging to deployment, from management to migration.
     1. Design. 
         1. [Principles of bot design](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0). Contains best bot design practices. 
         1. [First interaction](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-first-interaction?view=azure-bot-service-4.0). The first interaction between the user and bot is critical to the user experience. Here you find information that can help to provide effective first steps.  
@@ -26,9 +26,11 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
             1. [Knowledge base](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-pattern-knowledge-base?view=azure-bot-service-4.0). Principles of a knowledge base bot.  
             1. [Handoff to humans](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-pattern-handoff-human?view=azure-bot-service-4.0). Transitioning conversations from bot to humans.
             1. [Bots in apps](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-pattern-embed-app?view=azure-bot-service-4.0). How to embed a bot in an app.
-            1. [Bots in websites](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-pattern-embed-web-site?view=azure-bot-service-4.0). How to embed a bot in a website. 
+            1. [Bots in websites](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-pattern-embed-web-site?view=azure-bot-service-4.0). How to embed a bot in a website.
 
-    1. Develop
+    1. **Develop**
+        1. **Send and receive text message**. Describes techniques to send and receive messages. 
+        1. 
     1. Debug
     1. Deploy
     1. Manage

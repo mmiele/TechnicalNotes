@@ -29,8 +29,25 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
             1. [Bots in websites](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-pattern-embed-web-site?view=azure-bot-service-4.0). How to embed a bot in a website.
 
     1. **Develop**
-        1. **Send and receive text message**. Describes techniques to send and receive messages. 
-        1. 
+        1. [Send and receive text message](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-send-messages?view=azure-bot-service-4.0&tabs=csharp).  Describes techniques to send and receive messages. 
+        1. [Add media to messages](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp). Adding media attachments, such as images, video, audio, and files to messages.
+        1. [Use button for input](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=csharp). Enabling a bot to present buttons that the user can tap to provide input.
+        1. [Save user and conversation data](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-state?view=azure-bot-service-4.0&tabs=csharp). Using state management and storage objects to manage and persist state.
+        1. [Prompt user for input](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-primitive-prompts?view=azure-bot-service-4.0&tabs=csharp). Prompt (ask) the user for information (input).
+        1. [Send welcome message to users](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-send-welcome-message?view=azure-bot-service-4.0&tabs=csharp). Starting a meaningful conversation with the user.
+        1. [Send proactive notifications to users](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp). Sending out of flow messages to the user.
+        1. [Implement sequential conversation flow](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&tabs=csharp). How to implement simple conversation flow by creating prompts and calling them from a waterfall dialog.
+        1. [Add natural language understanding to your bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0&tabs=csharp). Adding LUIS to a flight booking application to recognize different intents and entities contained within user input.
+        1. [Use QnA Maker to answer questions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-qna?view=azure-bot-service-4.0&tabs=cs). Provide a conversational question and answer layer over your data.
+        1. [Use multiple LUIS and QnA models](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs). Determine which LUIS model or QnA Maker knowledge base best matches the user input.
+        1. [Create advanced conversation flow using branches and loops](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-dialog-manage-complex-conversation-flow?view=azure-bot-service-4.0&tabs=csharp). Manage simple and complex conversation flows using the dialogs library.
+        1. [Reuse dialogs](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-compositcontrol?view=azure-bot-service-4.0&tabs=csharp). Create independent dialogs to handle specific scenarios, breaking a large dialog set into more manageable pieces.
+        1. [Handle user interruptions](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-handle-user-interrupt?view=azure-bot-service-4.0&tabs=csharp). Some common ways to handle user interruptions.
+        1. [Write directly to storage](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-storage?view=azure-bot-service-4.0&tabs=csharp). How to read and write data to storage using **Memory Storage**, **Cosmos DB**, **Blob Storage**, and **Azure Blob Transcript Store**.
+        1. [Add authentication to your bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp%2Cbot-oauth). Adding OAuth to a bot to access external resources (services) on behalf of the user.
+        1. [Implement custom storage for your bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-custom-storage?view=azure-bot-service-4.0). Semantics of the bot’s interactions with the **Azure Bot Service** and the **Store**.
+        1. [Add telemetry to your bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0). Enable a bot to send event data to telemetry services.
+        1. [Use Direct Line Speech in your bot](https://docs.microsoft.com/en-us/azure/bot-service/directline-speech-bot?view=azure-bot-service-4.0).  Exchange messages between the **Direct Line Speech** channel and your bot.
     1. Debug
     1. Deploy
     1. Manage

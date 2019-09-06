@@ -17,7 +17,7 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
     1. [User authentication](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0). Explains  authentication so a bot can use external services on behalf of the user.   
     1. [Manage bot resources](https://docs.microsoft.com/en-us/azure/bot-service/bot-file-basics?view=azure-bot-service-4.0&tabs=csharp). Explains managing resources used by a bot.
 1. **How To**. It contains guidelines and examples to perform essential tasks. From bot design to development, from debugging to deployment, from management to migration.
-    1. Design. 
+    1. **Design** 
         1. [Principles of bot design](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-principles?view=azure-bot-service-4.0). Contains best bot design practices. 
         1. [First interaction](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-first-interaction?view=azure-bot-service-4.0). The first interaction between the user and bot is critical to the user experience. Here you find information that can help to provide effective first steps.  
         1. [Design and control conversation flow](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-design-conversation-flow?view=azure-bot-service-4.0). Designing and handling conversation flow.
@@ -48,7 +48,9 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
         1. [Implement custom storage for your bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-custom-storage?view=azure-bot-service-4.0). Semantics of the bot’s interactions with the **Azure Bot Service** and the **Store**.
         1. [Add telemetry to your bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0). Enable a bot to send event data to telemetry services.
         1. [Use Direct Line Speech in your bot](https://docs.microsoft.com/en-us/azure/bot-service/directline-speech-bot?view=azure-bot-service-4.0).  Exchange messages between the **Direct Line Speech** channel and your bot.
-    1. Debug
+    1. **Test** 
+        1. [Unit test bots](https://docs.microsoft.com/en-us/azure/bot-service/unit-test-bots?view=azure-bot-service-4.0&tabs=csharp). Create unit tests for bots. Use assert to check for activities returned by a dialog turn against expected values. Use assert to check the results returned by a dialog. Create different types of data driven tests. Create mock objects for the different dependencies of a dialog (i.e. LUIS recognizers, etc.).
+    1. **Debug**.
     1. Deploy
     1. Manage
     1. Migrate

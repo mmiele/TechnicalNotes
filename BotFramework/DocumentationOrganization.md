@@ -90,7 +90,16 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
         1. [Configure bot settings](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-settings?view=azure-bot-service-4.0). Settings, such as Display name, Icon, and Application Insights, can be viewed and modified on a bot **Settings** blade.
         1. [Configure speech priming](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-speech-priming?view=azure-bot-service-4.0). Speech priming improves the recognition of spoken words and phrases that are commonly used in your bot. 
 
-    1. Migrate
+    1. **Migrate**
+        1. [Migration overview](https://docs.microsoft.com/en-us/azure/bot-service/migration/migration-overview?view=azure-bot-service-4.0&tabs=csharp). Migration from v3 to v4 overview. 
+        1. [Differences between the v3 and v4 .NET SDK](https://docs.microsoft.com/en-us/azure/bot-service/migration/migration-about?view=azure-bot-service-4.0)
+        1. [Differences between the v3 and v4 JavaScript SDK](https://docs.microsoft.com/en-us/azure/bot-service/migration/migration-about-javascript?view=azure-bot-service-4.0)
+        1. [.NET migration quick reference](https://docs.microsoft.com/en-us/azure/bot-service/migration/net-migration-quickreference?view=azure-bot-service-4.0)
+        1. [JavaScript migration quick reference](https://docs.microsoft.com/en-us/azure/bot-service/migration/javascript-migration-quickreference?view=azure-bot-service-4.0)
+        1. [Migrate a .NET v3 bot to a .NET Framework v4 bot](https://docs.microsoft.com/en-us/azure/bot-service/migration/conversion-framework?view=azure-bot-service-4.0)
+        1. [Migrate a .NET v3 bot to a .NET Core v4 bot](https://docs.microsoft.com/en-us/azure/bot-service/migration/conversion-core?view=azure-bot-service-4.0)
+        1. [Using .NET v3 user state in a v4 bot](https://docs.microsoft.com/en-us/azure/bot-service/migration/csharp-user-state-using?view=azure-bot-service-4.0)
+        1. [Migrate a Javascript v3 bot to a v4 bot](https://docs.microsoft.com/en-us/azure/bot-service/migration/conversion-javascript?view=azure-bot-service-4.0)
 1. **Reference**
     1. .NET SDK v4
     1. JavaScript SDK v4
@@ -100,10 +109,16 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
         1. Entities and activity types
 1. **Resources**
     1. Virtual Assistant
+        1. [Overview](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-virtual-assistant-introduction?view=azure-bot-service-4.0). Virtual Assistant solution provides a set of core foundational capabilities and full control over the end user experience.
+        1. [Template Introduction](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-virtual-assistant-template?view=azure-bot-service-4.0). The Virtual Assistant Template brings together a number of best practices we've identified through the building of conversational experiences and automates integration of components that we've found to be highly beneficial to Bot Framework developers. 
     1. Skills
+        1. [Overview](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-skills-overview?view=azure-bot-service-4.0). Developers can compose conversational experiences by stitching together re-usable conversational capabilities, known as Skills.
     1. WebChat
-    1. FAQ
-    1. Get Support
+        1. [Overview](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-webchat-overview?view=azure-bot-service-4.0).
+        The Bot Framework Web Chat component is a highly customizable web-based client for the Bot Framework V4 SDK. The Bot Framework SDK v4 enables developers to model conversation and build sophisticated bot applications.
+        1. [Customization](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-webchat-customization?view=azure-bot-service-4.0).  How to customize the Web Chat samples to fit your bot.
+    1. [FAQ](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-resources-bot-framework-faq?view=azure-bot-service-4.0). Answers to some frequently asked questions about the Bot Framework.
+    1. [Get Support](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-resources-links-help?view=azure-bot-service-4.0). Resources for additional information and support for developing bots with the Bot Framework.
     1. Channel reference
     1. Guide to identifiers
     1. App Insights keys

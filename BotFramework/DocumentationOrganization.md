@@ -50,9 +50,46 @@ The following is the [Azure Bot Service Documentation](https://docs.microsoft.co
         1. [Use Direct Line Speech in your bot](https://docs.microsoft.com/en-us/azure/bot-service/directline-speech-bot?view=azure-bot-service-4.0).  Exchange messages between the **Direct Line Speech** channel and your bot.
     1. **Test** 
         1. [Unit test bots](https://docs.microsoft.com/en-us/azure/bot-service/unit-test-bots?view=azure-bot-service-4.0&tabs=csharp). Create unit tests for bots. Use assert to check for activities returned by a dialog turn against expected values. Use assert to check the results returned by a dialog. Create different types of data driven tests. Create mock objects for the different dependencies of a dialog (i.e. LUIS recognizers, etc.).
-    1. **Debug**.
+    1. **Debug**
+        1. [Debug a bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-bot?view=azure-bot-service-4.0). How to debug your bot using an integrated development environment (IDE) such as Visual Studio or Visual Studio Code and the Bot Framework Emulator.
+        1. [Debug with the emulator](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp). The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely.
+        1. [Debug a bot with inspection middleware](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp). Debug your bot using inspection middleware. This feature allows the Bot Framework Emulator to debug traffic into and out of the bot in addition to looking at the current state of the bot.
+        1. [Debug your bot using transcript files](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-debug-transcript?view=azure-bot-service-4.0). Creation and use of a bot transcript file to provide a detailed set of user interactions and bot responses for testing and debugging.
     1. Deploy
-    1. Manage
+        1. [Deploy your bot to Azure](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-deploy-az-cli?view=azure-bot-service-4.0&tabs=csharp). How to prepare your bot for deployment, deploy your bot to Azure, and test your bot in Web Chat.
+        1. [Set up continuous deployment](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-build-continuous-deployment?view=azure-bot-service-4.0). How to enable continuous deployment to automatically deploy code changes from your source repository to Azure. 
+    1. **Manage**
+        1. [Manage a bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-overview?view=azure-bot-service-4.0). How to manage a bot using the Azure portal.
+        1. [Bot analytics](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-analytics?view=azure-bot-service-4.0).  Provides conversation-level reporting on user, message, and channel data.
+        1. **Channels**
+            1. [Connect a bot to channels](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0). A channel is a connection between the bot and communication apps. You configure a bot to connect to the channels you want it to be available on.
+            1. [Implement channel-specific functionality](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-channeldata?view=azure-bot-service-4.0). Implement channel-specific functionality, you can pass native metadata to a channel in the activity object's *channel data* property.
+            1. [Connect a bot to Cortana](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-cortana?view=azure-bot-service-4.0). Cortana is a speech-enabled channel that can send and receive voice messages in addition to textual conversation. A bot intended to connect to Cortana should be designed for speech as well as text.
+            1. **Direct Line**
+                1. [About Direct Line](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline?view=azure-bot-service-4.0). The Direct Line channel is an easy way to integrate your bot into your mobile app, webpage, or other application.
+                1. [Connect to Direct Line](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-4.0). Enable your own client application to communicate with your bot by using the Direct Line channel.
+                1. [Connect to Direct Line Speech](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directlinespeech?view=azure-bot-service-4.0). Configure your bot to allow client applications to communicate with it through the Direct Line Speech channel.
+                1. **Direct Line App Service Extension**
+                    1. [Direct Line App Service Extension](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline-extension?view=azure-bot-service-4.0). The direct line app service extension allows clients to connect directly with the host, where the bot is located.
+                    1. [Configure .NET bot for extension](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline-extension-net-bot?view=azure-bot-service-4.0). How to update a bot to work with named pipes, and how to enable the direct line app service extension in the Azure App Service resource where the bot is hosted.
+                    1. [Create .NET Client to Connect to Direct Line App Service Extension](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline-extension-net-client?view=azure-bot-service-4.0). How to create a .NET client in C# which connects to the direct line app service extension.
+                    1. [Use WebChat with the direct line app service extension](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline-extension-webchat-client?view=azure-bot-service-4.0). How to use WebChat with the direct line app service extension.
+                    1. [Use direct line app service extension within a VNET](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline-extension-vnet?view=azure-bot-service-4.0). How to use the Direct Line App Service Extension with an Azure Virtual Network (VNET).
+                1. [Email](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-email?view=azure-bot-service-4.0). Connect a bot to an email account.
+                1. [Facebook](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-facebook?view=azure-bot-service-4.0). Connect a bot Facebook.
+                1. [GroupMe](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-groupme?view=azure-bot-service-4.0). Connect a bot to use GroupMe.
+                1. [Kik](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-kik?view=azure-bot-service-4.0).Connect a bot to Kik.
+                1. [LINE](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-line?view=azure-bot-service-4.0). Connect a bot to LINE.
+                1. [Microsoft Teams](https://docs.microsoft.com/en-us/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0). Connect a bot to Microsoft Teams.
+                1. [Skype](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-skype?view=azure-bot-service-4.0). Connect a bot to Skype. 
+                1. [Skype for Business](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-skypeforbusiness?view=azure-bot-service-4.0). Connect a bot to Skype for Business.
+                1. [Slack](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-slack?view=azure-bot-service-4.0). Connect a bot to Slack.
+                1. [Telegram](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-telegram?view=azure-bot-service-4.0). Connect a bot to Telegram.
+                1. [Twilio](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-twilio?view=azure-bot-service-4.0). Connect a bot to Twilio. 
+                1. [Additional Channels](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-additional-channels?view=azure-bot-service-4.0). A few additional channels are available as an adapter. 
+        1. [Configure bot settings](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-settings?view=azure-bot-service-4.0). Settings, such as Display name, Icon, and Application Insights, can be viewed and modified on a bot **Settings** blade.
+        1. [Configure speech priming](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-speech-priming?view=azure-bot-service-4.0). Speech priming improves the recognition of spoken words and phrases that are commonly used in your bot. 
+
     1. Migrate
 1. **Reference**
     1. .NET SDK v4

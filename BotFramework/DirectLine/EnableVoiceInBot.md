@@ -1,6 +1,6 @@
 # Using a voice enabled bot via Direct Line Speech channel 
 
-This tutoria shows you how a client application uses a voice enabled Echo Bot via a **Direct Line Speech** channel. The client app lets you speak to the bot which then responds back to you.
+This tutorial shows how a client application uses a voice enabled Echo Bot via a **Direct Line Speech** channel. The client app lets you speak to the bot which then responds back to you.
 
 At the completion of the steps described in this article, you will accomplish the following:
 
@@ -105,6 +105,8 @@ With the preliminary settings done, let's focus on the creation of the echo bot 
 
 ## Deploy the echo bot to Azure
 
+The following steps allow to create an **Azure App Service** to host the bot.
+
 1. In Visual Studio, in the *Solution Explorer* right-click on the project name.
 1. In the drop-down menu, select **Publish**. 
 1. In the pop-up wizard, select **APP Service** on the left and **Create New** on the right.
@@ -128,6 +130,89 @@ You must make a small change in the bot configuration so it can communicate with
 1. Select the **General settings** tab. 
 1. Set the **Web Sockets** toggle to **On**.
 1. Click **Save**.
+
+## Register the bot with direct line speech channel
+
+### Create a bot channel registration app
+
+After creating the *Azure App Service* to host your bot, you must create a **Bot Channels Registration** app which is needed for registering the bot with the **Direct Line Speech** channel.
+
+1. In your browser navigate to the [**Azure portal**][azure-portal].
+1. In the left navigation panel, select **Create a resource**.
+1. In the right panel selection box enter "bot". And in the drop-down list, select **Bot Channels Registration**. 
+1. Click the **Create** button.
+1. In the **Bot Service** blade, provide the requested information about your bot. For the *Messaging endpoint* enter the URL of the app service followed by `/api/messages`. For example, `https://speechechobotdirectline.azurewebsites.net/api/messages`.
+ The following picture shows an example:
+
+    ![bot app channels registration](../../Media/DirectLine/bot-app-channels-registration.png)
+
+1. Click **Create**.
+
+The registration resource will be added to the resource group as shown in this picture:
+
+ ![bot app channels registration](../../Media/DirectLine/resource-group-list-final.png)
+
+> [!NOTE]
+> The Bot Channels Registration resource will show the **Global** region even though you selected West US. This is expected.
+
+### Register the direct line speech channel with the bot
+
+1. In the Azure portal, open the registration just created.
+1. In the left navigation panel, select **Channels**.
+1. Under *More channels**, select **Direct Line Speech**.
+1. Review the documentation in the linked page. 
+1. Click **Save**.
+1. Two **Secret keys** were generated which are unique for your bot. You need these keys when creating a client app using the [Speech SDK](https://docs.microsoft.com/azure/cognitive-services/speech-service/).  You must provide one of these keys to establish a connection between the client app, the Direct Line Speech channel, and your bot service.
+1. Click **Show** and copy one of the keys to a file and save it.  
+1. In the left navigation panel, click **Settings**. 
+1. Check the box labeled **Enable Streaming Endpoint**. This enables a web sockets protocol between the bot and the Direct Line Speech channels. 
+1. Click **Save**.
+
+## Create Direct Line Speech client
+
+1. Navigate to the GitHub repository for the [Direct Line Speech Client](https://github.com/Azure-Samples/Cognitive-Services-Direct-Line-Speech-Client/blob/master/README.md).
+1. Follow the instructions provided. In particular, follow the steps below.
+1. In your browser navigate to the [**Azure portal**][azure-portal].
+1. In the left navigation panel, select **Create a resource**.
+1. In the search box, type *Speech*. Select the **Speech** card from the search results.
+
+    ![create voice bot client](../../Media/DirectLine/create-voice-bot-client.png)
+
+1. Click **Create**. Enter the required information. The following picture shows an example:
+
+    ![create voice bot client](../../Media/DirectLine/create-voice-bot-client-parameters.png)
+
+1. Click **Create**.
+1. Select the resource just created. 
+1. In the left blade, select **QuickStart**.
+1. In the right panel, copy the subscription key and save it to a file. This key is used to access the Cognitive Services API. 
+
+### Run the client
+
+1. In Visual Studio, build the client app using **Release x64** modality.
+1. If you have problems with NuGet packages, follow the steps described in: [Restore packages manually using Visual Studio](https://docs.microsoft.com/en-us/nuget/Consume-Packages/package-restore#restore-packages-manually-using-visual-studio). 
+1. Bring a command terminal and change the directory to where the client app executable is.
+1. Run the executable. A setting page is displayed. Enter the required information.
+1. For the region use one of the applicable value from [Speech-to-text, text-to-speech, and translation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/regions#speech-to-text-text-to-speech-and-translation).
+1. Update the Language field as needed to select a different language code from the [Speech-to-text list](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support).
+
+The following picture shows an example:
+
+    ![create voice bot client](../../Media/DirectLine/bot-speech-service-configuration.png)
+1. Click **OK**.
+1. In the main window, enter your **bot secret key**. This is one of the two channel secret keys provided when you registered the bot with the Direct Line Speech channel.
+1. Click the **Reconnect** button in the upper right. The application will try to connect to your bot via Direct Line Speech channel. The message New conversation started -- type or press the microphone button will appear below the text bar if the connection succeeded.
+1. You'll be prompted to allow microphone access. If you want to use the microphone, allow access.
+1. Press the microphone icon to begin recording. While speaking, intermediate recognition results will be shown in the application. The microphone icon will turn red while recording is in progress. It will automatically detect end of speech and stop recording.
+1. If everything works, you should see the bot's response on the screen and hear it speaks the response. 
+1. You can click on lines in the Activity Log window to see the full activity payload from the bot in JSON. Note: You'll only hear the bot's voice response if the Speak field in the bot's output activity was set.
+
+
+## References
+1. [ Connect a bot to channels](https://docs.microsoft.com/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0)
+1. [Connect a bot to Direct Line Speech (Preview)](https://docs.microsoft.com/azure/bot-service/bot-service-channel-connect-directlinespeech?view=azure-bot-service-4.0)
+
+For more information, see [Register a bot with Azure Bot Service](../bot-service-quickstart-registration.md).
 
 
 <!-- Footnote-style links -->

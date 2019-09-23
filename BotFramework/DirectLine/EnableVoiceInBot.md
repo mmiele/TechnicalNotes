@@ -150,7 +150,7 @@ After creating the *Azure App Service* to host your bot, you must create a **Bot
 
 The registration resource will be added to the resource group as shown in this picture:
 
- ![bot app channels registration](../../Media/DirectLine/resource-group-list-final.png)
+ ![bot app channels registration](../../Media/DirectLine/resource-group-list-final.PNG)
 
 > [!NOTE]
 > The Bot Channels Registration resource will show the **Global** region even though you selected West US. This is expected.
@@ -176,11 +176,11 @@ The registration resource will be added to the resource group as shown in this p
 1. In the left navigation panel, select **Create a resource**.
 1. In the search box, type *Speech*. Select the **Speech** card from the search results.
 
-    ![create voice bot client](../../Media/DirectLine/create-voice-bot-client.png)
+    ![create voice bot client](../../Media/DirectLine/create-voice-bot-client.PNG)
 
 1. Click **Create**. Enter the required information. The following picture shows an example:
 
-    ![create voice bot client parameters](../../Media/DirectLine/create-voice-bot-client-parameters.png)
+    ![create voice bot client parameters](../../Media/DirectLine/create-voice-bot-client-parameters.PNG)
 
 1. Click **Create**.
 1. Select the resource just created. 
@@ -196,7 +196,7 @@ The registration resource will be added to the resource group as shown in this p
 1. For the region use one of the applicable value from [Speech-to-text, text-to-speech, and translation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/regions#speech-to-text-text-to-speech-and-translation).
 1. Update the Language field as needed to select a different language code from the [Speech-to-text list](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support).The following picture shows an example:
 
-    ![create voice bot client configuration](../../Media/DirectLine/bot-speech-service-configuration.png)
+    ![create voice bot client configuration](../../Media/DirectLine/bot-speech-service-configuration.PNG)
 
 1. Click **OK**.
 1. In the main window, enter your **bot secret key**. This is one of the two channel secret keys provided when you registered the bot with the Direct Line Speech channel.

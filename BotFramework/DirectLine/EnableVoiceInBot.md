@@ -180,7 +180,7 @@ The registration resource will be added to the resource group as shown in this p
 
 1. Click **Create**. Enter the required information. The following picture shows an example:
 
-    ![create voice bot client](../../Media/DirectLine/create-voice-bot-client-parameters.png)
+    ![create voice bot client parameters](../../Media/DirectLine/create-voice-bot-client-parameters.png)
 
 1. Click **Create**.
 1. Select the resource just created. 
@@ -194,11 +194,10 @@ The registration resource will be added to the resource group as shown in this p
 1. Bring a command terminal and change the directory to where the client app executable is.
 1. Run the executable. A setting page is displayed. Enter the required information.
 1. For the region use one of the applicable value from [Speech-to-text, text-to-speech, and translation](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/regions#speech-to-text-text-to-speech-and-translation).
-1. Update the Language field as needed to select a different language code from the [Speech-to-text list](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support).
+1. Update the Language field as needed to select a different language code from the [Speech-to-text list](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support).The following picture shows an example:
 
-The following picture shows an example:
+    ![create voice bot client configuration](../../Media/DirectLine/bot-speech-service-configuration.png)
 
-    ![create voice bot client](../../Media/DirectLine/bot-speech-service-configuration.png)
 1. Click **OK**.
 1. In the main window, enter your **bot secret key**. This is one of the two channel secret keys provided when you registered the bot with the Direct Line Speech channel.
 1. Click the **Reconnect** button in the upper right. The application will try to connect to your bot via Direct Line Speech channel. The message New conversation started -- type or press the microphone button will appear below the text bar if the connection succeeded.

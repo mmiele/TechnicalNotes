@@ -13,14 +13,14 @@ You can use the example code on GitHub at this location: [Teams echo bot](https:
 1. Enter the following  info:
     1. **Short name**. Enter *TeamsEchoBot*.  
     1. Click the **Generate** button under **App ID**. You an ID similar to this *772998ff-7fed-4275-b4e3-485cbf312850*. 
-    1. **Package Name**. Enter *com.teams.devap*.
+    1. **Package Name**. Enter *com.teams.devapp*.
     1. **Version** Enter *1.0.0*.
     1. **Short Description**. Enter *Testing simple teams echo bot*.
     1. **Long Description**. Enter *Testing simple teams echo bot*.
     1. **Developer name**. Your name.
-    1. **Website**. The name of your website. For example, *https://www.acloudysky.com*
-    1. **Privacy statement** web address. For example, *https://www.acloudysky.com/privacy*
-    1. **Terms of use** web address. For example, *https://www.acloudysky.com/termsofuse*
+    1. **Website**. The name of your website. For example, *https://www.microsoft.com*
+    1. **Privacy statement** web address. For example, *https://www.teams.com/privacy*
+    1. **Terms of use** web address. For example, *https://www.teams.com/termsofuse*
 1. In the left panel, in the **Capabilities** section, click the **Bots** link.
 1. Click the **Set up** button. 
 1. In the **New bot** tab, enter the following informatin:
@@ -28,10 +28,9 @@ You can use the example code on GitHub at this location: [Teams echo bot](https:
     1. **Scope**. Check all 3 boxes.
     1. Click the **Create** button.
 1. Copy the **Bot ID** (string under TeamsEchoBot) and save it to a file. You will need it later
-   For example *111d7db5-ea22-4cde-a890-c0fdc664d02f*.
-1. Click the **Generate new password** button, copy the password and save it to a file. You will need it later. For example *M@XlmJPuYNjFmE:[h2AvMBOzNBuP9=43*.
+1. Click the **Generate new password** button, copy the password and save it to a file. You will need it later. 
 1. In a terminal window execute the following command: `ngrok http -host-header=rewrite 3978`.
-1. Copy the https forwarding address to a file. You will need it later. For example *https://d1dbb0d8.ngrok.io*
+1. Copy the https forwarding address to a file.
 1. Keep **ngrok** running.  
 1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by */api/messages*. For example: *https://d1dbb0d8.ngrok.io/api/messages*. 
 1. Press **Enter** (on your keyboard) to save the address. 
@@ -41,7 +40,7 @@ You can use the example code on GitHub at this location: [Teams echo bot](https:
 
 1. Clone the repository at [botbuilder-dotnet](https://github.com/microsoft/botbuilder-dotnet/tree/josh/echo/tests/Teams).
 1. In Visual Studio, navigate to the `52.teams-echo-bot` folder and open the `appsettings.json` file.
-1. Assign the **App ID** and **Password** you saved earlier. For example:
+1. Assign the bot **App ID** and **Password** you saved earlier. For example:
 
 ```json
 {

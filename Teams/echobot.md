@@ -65,8 +65,37 @@ You can use the example code on GitHub at this location: [Teams echo bot](https:
 
 1. In Teams click **Test and distribute** in the left panel in the **Finish** section.
 1. Click the **Install** button.
-1. In the drop down list, click **Add to a team**.
-1. Search and select your team. 
-1. Click the **Set up a bot** button.
 
-
+    <table>
+    <thead>
+    <tr>
+    <th align="left">To install bot in a personal chat...</th>
+    <th align="left">To install in a group chat...</th>
+    <th align="left">To install in team chat...</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td align="left">1. Click <code>Add</code> button</td>
+    <td align="left">1. Click the down arrow to the right of the <code>Add</code> button <br> 2. Click <code>Add to Chat</code> <br> 3. Search for and select your group chat <br> 4. Click the <code>Set up bot</code> button <br> <strong>Note:</strong> There must be at least 1 message in a group chat for it to be searchable</td>
+    <td align="left">1. Click the down arrow to the right of the <code>Add</code> button <br> 2. Click <code>Add to Team</code> <br> 3. Search for and select your team <br> 4. Click the <code>Set up a bot</code> button</td>
+    </tr>
+    </tbody>
+    </table>
+    <p><strong>Note:</strong> If you send an unsupported string in a group chat or personal chat the bot will respond with an error message. This is because it's missing data that comes with messages that orignates from a team or group chat.</p>
+    <table>
+    <thead>
+    <tr>
+    <th align="left">Supported strings in personal chat</th>
+    <th align="left">Supported strings in group chat</th>
+    <th align="left">supported strings in team chat</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td align="left">N/A</td>
+    <td align="left"><code>show members</code></td>
+    <td align="left"><code>show members</code> <br> <code>show channels</code> <br> <code>show details</code></td>
+    </tr>
+    </tbody>
+    </table>

@@ -1,7 +1,7 @@
-# Teams Conversational Bot
+# Teams conversation Bot
 
-This article shows how to install a conversational bot in Teams using App Studio.
-You can use the example code on GitHub at this location: [conversational bot](https://github.com/microsoft/botbuilder-python/tree/josh/samples/samples/57.teams-conversation-bot).
+This article shows how to install a conversation bot in Teams using App Studio.
+You can use the example code on GitHub at this location: [conversation bot](https://github.com/microsoft/botbuilder-python/tree/josh/samples/samples/57.teams-conversation-bot).
 
 ## Teams Setup
 
@@ -10,12 +10,12 @@ You can use the example code on GitHub at this location: [conversational bot](ht
 1. In the left panel, click the **Create a new app** button.
 1. In the **Details** section, click the **App details**.
 1. Enter the following  info:
-    1. **Short name**. Enter *ConversationalBot*.  
+    1. **Short name**. Enter *conversationBot*.  
     1. Click the **Generate** button under **App ID**. You an ID similar to this *772998ff-7fed-4275-b4e3-485cbf312850*. `Why do we need this?`
     1. **Package Name**. Enter *com.teams.devapp*.
     1. **Version** Enter *1.0.0*.
-    1. **Short Description**. Enter *Testing conversational bot*.
-    1. **Long Description**. Enter *Testing conversational bot*.
+    1. **Short Description**. Enter *Testing conversation bot*.
+    1. **Long Description**. Enter *Testing conversation bot*.
     1. **Developer name**. Your name.
     1. **Website**. The name of your website. For example, *https://www.microsoft.com*
     1. **Privacy statement** web address. For example, *https://www.teams.com/privacy*
@@ -23,10 +23,10 @@ You can use the example code on GitHub at this location: [conversational bot](ht
 1. In the left panel, in the **Capabilities** section, click the **Bots** link.
 1. Click the **Set up** button. 
 1. In the **New bot** tab, enter the following information:
-    1. **Name**. Enter *ConversationalBot*.
+    1. **Name**. Enter *conversationBot*.
     1. **Scope**. Check all 3 boxes.
     1. Click the **Create** button.
-1. Copy the **Bot ID** (string under ConversationalBot) and save it to a file to use it later.
+1. Copy the **Bot ID** (string under conversationBot) and save it to a file to use it later.
 1. Click the **Generate new password** button, copy the password and save it to a file to use it later.
 1. In a terminal window execute the following command: `ngrok http -host-header=rewrite 3978`.
 Make sure that the port number is set properly in the `config.py` file such as `PORT = 3978`. This is the number to use in the ngrok command.

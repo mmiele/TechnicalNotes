@@ -30,10 +30,10 @@ You can use the example code on GitHub at this location: [conversation bot](http
 1. Click the **Generate new password** button, copy the password and save it to a file to use it later.
 1. In a terminal window execute the following command: `ngrok http -host-header=rewrite 3978`.
 Make sure that the port number is set properly in the `config.py` file such as `PORT = 3978`. This is the number to use in the ngrok command.
-1. Copy the https forwarding address to a file. Notice this forwarding address changes every time you restart ngrok.  
+1. Copy the **https** forwarding address to a file. Notice this forwarding address changes every time you restart ngrok.  
 1. Keep **ngrok** running.  
 1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by */api/messages*. For example: *https://d1dbb0d8.ngrok.io/api/messages*. 
-1. Press **Enter** (on your keyboard) to save the address. 
+1. Press **Enter** (on your keyboard) to save the address.
 
 ## Bot Setup
 
@@ -78,19 +78,7 @@ APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "JPyQW:3sq2DD.2d[2:a?5L2h_
     </tbody>
     </table>
     <p><strong>Note:</strong> If you send an unsupported string in a group chat or personal chat the bot will respond with an error message. This is because it's missing data that comes with messages that orignates from a team or group chat.</p>
-    <table>
-    <thead>
-    <tr>
-    <th align="left">Supported strings in personal chat</th>
-    <th align="left">Supported strings in group chat</th>
-    <th align="left">supported strings in team chat</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td align="left">N/A</td>
-    <td align="left"><code>Show Welcome</code></td>
-    <td align="left"><code>Show Welcome</code> <br> <code>MentionMe</code> <br> <code>MessageAllMembers</code></td>
-    </tr>
-    </tbody>
-    </table>
+
+|Personal|Group|Team|
+|----|----|----|
+| N/A |Show Welcome ![show welcome card](../Media/Python/conversation-bot-welcome-card.PNG)|Show Welcome ![show welcome card](../Media/Python/conversation-bot-welcome-card.PNG) <br/> Mention Me ![MentionMe](../Media/Python/conversation-bot-mention-me.PNG) <br/>  Message All Members ![message all members](../Media/Python/conversation-bot-message-all-members.PNG) |

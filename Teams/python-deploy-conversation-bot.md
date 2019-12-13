@@ -41,10 +41,10 @@ Make sure that the port number is set properly in the `config.py` file such as `
 1. In Visual Studio, navigate to the `52.teams-echo-bot` folder and open the `config.py` file.
 1. Assign the bot **Bot ID**, which is called APP_ID in the settings as shown next, and **Password** you saved earlier. This is an example:
 
-```python
-APP_ID = os.environ.get("MicrosoftAppId", "ea9c01e0-52fd-47ea-8c69-89d38c0e805b")
-APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "JPyQW:3sq2DD.2d[2:a?5L2h_/77P9E4")
-```
+    ```python
+    APP_ID = os.environ.get("MicrosoftAppId", "ea9c01e0-52fd-47ea-8c69-89d38c0e805b")
+    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "JPyQW:3sq2DD.2d[2:a?5L2h_/77P9E4")
+    ```
 
 1. **Save** the `config.py` file.
 
@@ -55,6 +55,51 @@ APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "JPyQW:3sq2DD.2d[2:a?5L2h_
 1. Navigate to the `57.teams-conversation-bot` folder.
 1. Execute `python app.py`.
 1. The bot start running at the location `localhost:3978`. 
+
+## Deploy bot to Azure
+
+After you have tested the bot, it is time to deploy it to Azure following  the steps shown below.
+
+
+1. Open a terminal window and log into Azure portal:
+
+    ```cmd
+        az login
+    ```
+
+1. Set the subscription
+
+    ```cmd
+    az account set --subscription "FUSE Temporary"
+    ```
+
+1. Create app registration
+
+```cmd
+az ad app create --display-name "mm-conversation-bot" --password "@mm-conversation-bot-22499" --available-to-other-tenants
+```
+
+1. Deploy via ARM template
+Create a new resource group in Azure and then use the ARM template to create the resources specified in it. In this case, we are providing App Service Plan, Web App, and Bot Channels Registration.
+
+```cmd
+az deployment create --name "mm-conversation-bot" --template-file "C:\Users\v-mimiel\aWork\GitHub\botbuilder-samples-python-josh\samples\57.teams-conversation-bot\template-with-new-rg.json" --location "westus" --parameters appId="<msa-app-guid>" appSecret="@mm-conversation-bot-22499" botId="mm-conversation-bot" botSku=F0 newAppServicePlanName="mm-python-service-plan" newWebAppName="mm-conversation-bot" groupName="mm-python-group" groupLocation="westus" newAppServicePlanLocation="westus"
+```
+
+1. Check App Id and Password
+Optionally, check if App Id and Password have been set correctly.  
+
+```cmd
+az webapp config appsettings list -g mm-python-group -n mm-conversation-bot --subscription 174c5021-8109-4087-a3e2-a1de20420569
+```
+
+1. Deply the bot
+At this point we are ready to deploy the bot to Azure.
+
+```cmd
+az webapp deployment source config-zip --resource-group "mm-echo-bot-group" --name "mm-echo-bot" --src "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\python\02.echo-bot\app.zip"
+
+```
 
 ## Finish Teams Setup
 

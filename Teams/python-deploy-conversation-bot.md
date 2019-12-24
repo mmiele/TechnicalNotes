@@ -1,8 +1,6 @@
 # Bot Framework v4 Conversation Bot sample for Teams
 
-This article shows how to incorporate a conversational bot into [Microsoft Teams](https://products.office.com/en-us/microsoft-teams/group-chat-software).
-
-In this article you will learn the following:
+This article shows how to incorporate a conversational bot into [Microsoft Teams](https://products.office.com/en-us/microsoft-teams/group-chat-software). You will learn the following:
 
 1. Deploy the conversation bot to Azure.
 1. Test the bot running on your local machine using the Bot Emulator.
@@ -59,16 +57,16 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         az ad app create --display-name "TeamsConversation" --password "<<your password>>" --available-to-other-tenants
         ```
 
-    1. Deploy via ARM template. This step also produces the subscription id to use in the next step.
+    1. Start deployment via ARM template. This step also produces the subscription id to use in the next step.
     
         ```cmd
         az deployment create --name "TeamsConversation" --template-file "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="<<get it from previous step>>" appSecret="<<your password>>" botId="TeamsConversation" botSku=F0 newAppServicePlanName="<<your plan name>>" newWebAppName="TeamsConversation" groupName="<<your group name>>" groupLocation="westus" newAppServicePlanLocation="westus"
         ```
 
-    1. Optionally, check App Id and Password
+    1. Optionally, check App Id and Password settings
 
         ```cmd
-        az webapp config appsettings list -g mm-python-group -n TeamsConversationNew --subscription  your subscription id
+        az webapp config appsettings list -g mm-python-group -n TeamsConversationNew --subscription  <<your subscription id>>
         ```
 
     1. Before performing the deployment step, you must prepare the bot code as described below.
@@ -90,8 +88,10 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         ```cmd
         az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsConversation" --src "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\app.zip"
         ```
+        if you navigate to the Azure portal, you should see the bot app registration and app service listed as shown below. 
+        ![test](,,/Media/Python/teams-conversation-deployed.PNG).
 
-    You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli).  
+    You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli).  See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 
 
 ## Testing teams bot

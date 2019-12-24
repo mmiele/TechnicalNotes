@@ -61,33 +61,38 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 
     1. Deploy via ARM template. This step also produces the subscription id to use in the next step.
     
-    ```cmd
+        ```cmd
         az deployment create --name "TeamsConversation" --template-file "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="<<get it from previous step>>" appSecret="<<your password>>" botId="TeamsConversation" botSku=F0 newAppServicePlanName="<<your plan name>>" newWebAppName="TeamsConversation" groupName="<<your group name>>" groupLocation="westus" newAppServicePlanLocation="westus"
-    ```
+        ```
 
     1. Optionally, check App Id and Password
 
-    ```cmd
-    az webapp config appsettings list -g mm-python-group -n TeamsConversationNew --subscription  your subscription id
-    ```
+        ```cmd
+        az webapp config appsettings list -g mm-python-group -n TeamsConversationNew --subscription  your subscription id
+        ```
 
     1. Before performing the deployment step, you must prepare the bot code as described below.
 
-        1. Navigate to `BotBuilder-Samples\samples\python\57.teams-conversation-bot\teams_app_manifest` directory.
-        1. In your editor, open the `manifest.json` file.  Assign the `id` and `bot Id` variables assign the **app id** obtained before.
-        1. Save the file.
-        1. Select all the files in the directory and zipped them up in a file such as `manifest.zip`.
+        1. Create `manifest.zip` file
+            1. Navigate to `BotBuilder-Samples\samples\python\57.teams-conversation-bot\teams_app_manifest` directory.
+            1. In your editor, open the `manifest.json` file.  Assign the `id` and `bot Id` variables assign the **app id** obtained before.
+            1. Save the file.
+            1. Select all the files in the directory and zipped them up in a file such as `manifest.zip`.
 
-        1. Navigate to `BotBuilder-Samples\samples\python\57.teams-conversation-bot` directory.
-        1. In your editor, open the `config.py` file.  Assign the **app Id** and the **password** values from the previous step.
-        1. Save the file. 
-        1. Select all the files in the directory and zipped them up in a file such as `app.zip`.
+        1. Create `app.zip` file
+            1. Navigate to `BotBuilder-Samples\samples\python\57.teams-conversation-bot` directory.
+            1. In your editor, open the `config.py` file.  Assign the **app Id** and the **password** values from the previous step.
+            1. Save the file. 
+            1. Select all the files in the directory and zipped them up in a file such as `app.zip`.
 
     1. Deploy the bot
 
-    ```cmd
-    az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsConversation" --src "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\app.zip"
-    ```
+        ```cmd
+        az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsConversation" --src "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\app.zip"
+        ```
+
+    You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli).  
+
 
 ## Testing teams bot
 

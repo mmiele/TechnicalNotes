@@ -17,6 +17,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 - Microsoft Teams is installed and you have an account
 - [Python SDK](https://www.python.org/downloads/) min version 3.6
 - [ngrok](https://ngrok.com/) or equivalent tunnelling solution
+- [Bot Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator/blob/master/README.md)
 
 
 ## Deploy the conversation bot to Azure
@@ -92,6 +93,43 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         ![teams conversation bot deployed](../Media/Python/teams-conversation-bot-deployed.PNG).
 
     You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli).  See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
+
+
+## Test the bot running on your local machine using the Bot Emulator
+
+1. In a terminal window, navigate to `..BotBuilder-Samples\samples\python\57.teams-conversation-bot`.
+1. Execute this command:
+
+    ```cmd
+    python app.py
+    ```
+
+    The following message is displayed:
+    ![teams conversation app emulator](../Media/Python/teams-conversation-app-emulator.PNG)
+
+1. Open a new terminal window and execute this command:
+
+    ```cmd
+    ngrok http -host-header=rewrite 3978
+    ```
+
+    You get the following output:
+    ![teams conversation app ngrok](../Media/Python/teams-conversation-app-ngrok.PNG) 
+
+1. Copy the **https forwarding** address which is similar to this: `https://e075240a.ngrok.io`. 
+1. Copy the address to a file and add to it `api/messages`, so the address is similar to this `https://e075240a.ngrok.io/api/messages`.
+   This the **end point** to connect with the bot running locally.
+1. Activate the Bot Framework Emulator. 
+1. Click the **Open Bot** button.
+1. In the **Bot URL** box, enter the end point address you saved before such as `https://e075240a.ngrok.io/api/messages`. 
+1. In the **Microsoft App ID** box enter the same app id value you entered earlier in `config.py` and `manifest.json`.  
+1. In the **Microsoft App  password** box enter the same password value you entered earlier in `config.py`. 
+1. Click the **Connect** button.
+1. Wait for the emulator to connect to the bot. You should see a *201 Created* message in the ngrok terminal window,
+1. Enter any text in the emulator box, for example *hello*.
+1. The welcome card is displayed. This means that the bot is working correctly.
+    ![teams conversation app welcome card](../Media/Python/teams-conversation-app-welcone-card.PNG) 
+
 
 
 ## Testing teams bot

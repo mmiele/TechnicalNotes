@@ -151,7 +151,13 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 
     ![teams conversation bot wizard](../Media/Python/teams-conversation-bot-wizard.PNG) 
 
-1.  
+1. In the next window, select the team or chat where to add the bot.
+1. Click the **Setup a bot** button.
+1. After the bot is set, you can start entering the allowed request. 
+1. If you enter *Show Welcome*, the welcome card is displayed.
+
+     ![teams conversation bot welcome card](../Media/Python/teams-conversation-bot-welcome-card.PNG) 
+
 
 
 

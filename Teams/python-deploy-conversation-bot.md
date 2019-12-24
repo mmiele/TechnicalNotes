@@ -105,6 +105,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
     ```
 
     The following message is displayed:
+    
     ![teams conversation app emulator](../Media/Python/teams-conversation-app-emulator.PNG)
 
 1. Open a new terminal window and execute this command:
@@ -114,6 +115,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
     ```
 
     You get the following output:
+
     ![teams conversation app ngrok](../Media/Python/teams-conversation-app-ngrok.PNG) 
 
 1. Copy the **https forwarding** address which is similar to this: `https://e075240a.ngrok.io`. 
@@ -128,7 +130,8 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 1. Wait for the emulator to connect to the bot. You should see a *201 Created* message in the ngrok terminal window,
 1. Enter any text in the emulator box, for example *hello*.
 1. The welcome card is displayed. This means that the bot is working correctly.
-    ![teams conversation app welcome card](../Media/Python/teams-conversation-app-welcone-card.PNG) 
+
+    ![teams conversation app welcome card](../Media/Python/teams-conversation-app-welcome-card.PNG) 
 
 
 

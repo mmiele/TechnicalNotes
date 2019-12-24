@@ -4,7 +4,6 @@ This article shows how to incorporate a conversational bot into [Microsoft Teams
 
 1. Deploy the conversation bot to Azure.
 1. Test the bot running on your local machine using the Bot Emulator.
-1. Upload the bot to Teams
 1. Test the bot running on your local machine using Teams.
 1. In Teams, use the bot running in Azure. 
 
@@ -35,9 +34,12 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         pip install azure-storage-blob>=2.1.0 # do we need this?
     ```
 
+    Install dependencies.
+
     ```bash
-        pip install -r requirements.txt 
+        pip install -r requirements.txt
     ```
+
  1. Deploy the bot to Azure using the latest [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest). For more information, see [Tutorial: Create and deploy a basic bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp). The following is an example of the steps to follow:
 
     1. Login into Azure
@@ -125,7 +127,9 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 1. Click the **Open Bot** button.
 1. In the **Bot URL** box, enter the end point address you saved before such as `https://e075240a.ngrok.io/api/messages`. 
 1. In the **Microsoft App ID** box enter the same app id value you entered earlier in `config.py` and `manifest.json`.  
-1. In the **Microsoft App  password** box enter the same password value you entered earlier in `config.py`. 
+1. In the **Microsoft App  password** box enter the same password value you entered earlier in `config.py`.
+    > NOTE
+    > If you restart ngrok, the end point URL changes and you must restart the emulator and enter the new URL.
 1. Click the **Connect** button.
 1. Wait for the emulator to connect to the bot. You should see a *201 Created* message in the ngrok terminal window,
 1. Enter any text in the emulator box, for example *hello*.
@@ -135,9 +139,28 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 
 
 
-## Testing teams bot
+## Test the bot running on your local machine using Teams
 
-### Teams Setup
+1. Activate your Microsoft Teams.
+1. In the lower left, left panel, click the **Apps** icon.
+1. In the right panel, click the **Upload a custom app** link.
+1. Navigate to the directory `..BotBuilder-Samples\samples\python\57.teams-conversation-bot\teams_app_manifest`.
+1. Select the `manifest.zip` file.
+1. Click the **Open** button.
+1. In the Teams wizard window, click the arrow in the **Add** button and select *Add to a team* or *Add to a chat*.
+
+    ![teams conversation bot wizard](../Media/Python/teams-conversation-bot-wizard.PNG) 
+
+1. In the next window, select the team or chat where to add the bot.
+1. Click the **Setup a bot** button.
+1. After the bot is set, you can start entering the allowed request. 
+1. If you enter *Show Welcome*, the welcome card is displayed.
+
+     ![teams conversation bot welcome card](../Media/Python/teams-conversation-bot-welcome-card.PNG) 
+
+
+
+
 
 1. In Teams, open **App Studio**.
 1. Click the **Manifest editor** tab.

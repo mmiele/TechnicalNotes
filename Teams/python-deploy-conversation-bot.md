@@ -89,7 +89,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsConversation" --src "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\app.zip"
         ```
         if you navigate to the Azure portal, you should see the bot app registration and app service listed as shown below. 
-        ![test](,,/Media/Python/teams-conversation-deployed.PNG).
+        ![teams conversation bot deployed](../Media/Python/teams-conversation-bot-deployed.PNG).
 
     You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli).  See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 

@@ -62,9 +62,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
     1. Deploy via ARM template. This step also produces the subscription id to use in the next step.
     
     ```cmd
-        az deployment create --name "TeamsConversation" --template-file "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\deploymentTemplates\template-with-new-rg.json" 
-        --location "westus" 
-        --parameters appId="<<get it from previous step>>" appSecret="<<your password>>" botId="TeamsConversation" botSku=F0 newAppServicePlanName="<<your plan name>>" newWebAppName="TeamsConversation" groupName="<<your group name>>" groupLocation="westus" newAppServicePlanLocation="westus"
+        az deployment create --name "TeamsConversation" --template-file "..BotBuilder-Samples\samples\python\57.teams-conversation-bot\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="<<get it from previous step>>" appSecret="<<your password>>" botId="TeamsConversation" botSku=F0 newAppServicePlanName="<<your plan name>>" newWebAppName="TeamsConversation" groupName="<<your group name>>" groupLocation="westus" newAppServicePlanLocation="westus"
     ```
 
     1. Optionally, check App Id and Password

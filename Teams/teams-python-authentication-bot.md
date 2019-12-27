@@ -65,7 +65,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         Creating the application registration allows the bot to access the Bot Framework Service for sending and receiving authenticated messages.
 
         ```cmd
-        az ad app create --display-name "TeamsAuthentication-AppRegistration" --password "<<your password>>" --available-to-other-tenants
+        az ad app create --display-name "TeamsAuthenticationBot" --password "<<your password>>" --available-to-other-tenants
         ```
 
         |Parameter|Description|Notes|
@@ -80,7 +80,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         This connects the bot to channels and facilitates communication between bot and the user.
 
         ```cmd
-        az deployment create --name "TeamsAuthentication-ChannelRegistration" --template-file "..BotBuilder-Samples\samples\python\57.teams-auth\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="<<get it from previous step>>" appSecret="<<your password>>" botId="MM-TeamsAuthenticationBot" botSku=F0 newAppServicePlanName="<<your plan name>>" newWebAppName="TeamsAuthentication-WebApp" groupName="<<your group name>>" groupLocation="westus" newAppServicePlanLocation="westus"
+        az deployment create --name "TeamsAuthenticationBot" --template-file "..BotBuilder-Samples\samples\python\57.teams-auth\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="<<get it from previous step>>" appSecret="<<your password>>" botId="TeamsAuthenticationBot" botSku=F0 newAppServicePlanName="<<your plan name>>" newWebAppName="TeamsAuthenticationWebApp" groupName="<<your group name>>" groupLocation="westus" newAppServicePlanLocation="westus"
         ```
 
         |Parameter|Description|Notes|
@@ -95,7 +95,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
     1. Optionally, check app id and password settings
 
         ```cmd
-        az webapp config appsettings list -g <<your group name>> -n TeamsAuthentication-ChannelRegistration --subscription  <<your subscription id>>
+        az webapp config appsettings list -g <<your group name>> -n TeamsAuthenticationWebApp --subscription  <<your subscription id>>
         ```
 
     You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli). See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
@@ -172,11 +172,11 @@ Copy and save the connection name you used to a file.
     1. Deploy the bot
 
         ```cmd
-        az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthentication-WebApp" --src "..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
+        az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthenticationWebApp" --src "..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
         ```
 
         if you navigate to the Azure portal, you should see the bot app registration and app service listed as shown below. 
-        ![teams Authentication bot deployed](*/Media/Python/teams-conversation-bot-deployed.PNG).
+        ![teams Authentication bot deployed](../Media/Python/teams-conversation-bot-deployed.PNG).
 
 At this point the bot is ready to be used from within Teams.
 

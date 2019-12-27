@@ -93,7 +93,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
     1. Optionally, check app id and password settings
 
         ```cmd
-        az webapp config appsettings list -g mm-python-group -n TeamsAuthenticationNew --subscription  <<your subscription id>>
+        az webapp config appsettings list -g mm-python-group -n TeamsAuthentication-ChannelRegistration --subscription  <<your subscription id>>
         ```
 
     You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli). See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).

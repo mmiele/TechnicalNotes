@@ -68,8 +68,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 
         |Parameter|Description|Notes|
         |:---|:---|:---|
-        |<img width=100/>|<img width=500/>|<img width=200/>|
-        |display-name|The name to display in the resources list||
+        |display-name &nbsp;&nbsp;&nbsp;|The name to display in the resources list|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
         |password|App password, aka 'client secret'. The password must be at least 16 characters long, contain at least 1 upper or lower case alphabetical character, and contain at least 1 special character.|Copy and save to a file. To be used later.|
 
     Set Azure Active Directory Graph entities needed for role based access. This step also produces the **app id** to use in the next step.

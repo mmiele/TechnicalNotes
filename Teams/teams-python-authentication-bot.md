@@ -31,7 +31,6 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 1. Make sure that the `requirements.txt` file contains the following dependencies
 
     ```text
-
     aiohttp
     botbuilder-core>=4.7.0
     botbuilder-dialogs>=4.7.0 
@@ -57,11 +56,24 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         az account set --subscription "<<your subscription>>"
         ```
 
-    1. Set Azure Active Directory Graph entities needed for role based access. This step also produces the **app id** to use in the next step.
+        If you are not sure which subscription to use for deploying the bot, you can view the list of subscriptions for your account by using the `az account list` command.
+
+    1. Create the application registration
+
+        Creating the application registration allows the use of Azure Active Directory to authenticate users and to request access to user resources. The registered app provides the bot access to the Bot Framework Service for sending and receiving authenticated messages. 
 
         ```cmd
-        az ad app create --display-name "TeamsAuthentication" --password "<<your password>>" --available-to-other-tenants
+        az ad app create --display-name "TeamsAuthenticationRegistration" --password "<<your password>>" --available-to-other-tenants
         ```
+
+        |Parameter|Description|Notes|
+        |:---|:---|:---|
+        |display-name|The name to display in the resources list|<img src="" width="300"/>|
+        |password|App password, aka 'client secret'. The password must be at least 16 characters long, contain at least 1 upper or lower case alphabetical character, and contain at least 1 special character.|Copy and save to a file. To be used later.|
+
+    Set Azure Active Directory Graph entities needed for role based access. This step also produces the **app id** to use in the next step.
+
+         
 
     Save the **app id** and **password** to a file.
 

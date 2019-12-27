@@ -75,7 +75,9 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 
         Copy and save to a file the **app id** obtained, to use in the next step.
 
-    1. Create bot channel registration via ARM template. This connects the bot to channels and facilitates communication between bot and the user.
+    1. Create bot channel registration via ARM template
+
+        This connects the bot to channels and facilitates communication between bot and the user.
 
         ```cmd
         az deployment create --name "TeamsAuthentication-ChannelRegistration" --template-file "..BotBuilder-Samples\samples\python\57.teams-auth\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="<<get it from previous step>>" appSecret="<<your password>>" botId="MM-TeamsAuthenticationBot" botSku=F0 newAppServicePlanName="<<your plan name>>" newWebAppName="TeamsAuthentication-WebApp" groupName="<<your group name>>" groupLocation="westus" newAppServicePlanLocation="westus"
@@ -93,7 +95,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
     1. Optionally, check app id and password settings
 
         ```cmd
-        az webapp config appsettings list -g mm-python-group -n TeamsAuthentication-ChannelRegistration --subscription  <<your subscription id>>
+        az webapp config appsettings list -g <<your group name>> -n TeamsAuthentication-ChannelRegistration --subscription  <<your subscription id>>
         ```
 
     You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli). See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
@@ -170,11 +172,11 @@ Copy and save the connection name you used to a file.
     1. Deploy the bot
 
         ```cmd
-        az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsAuthentication" --src "..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
+        az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthentication-WebApp" --src "..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
         ```
 
         if you navigate to the Azure portal, you should see the bot app registration and app service listed as shown below. 
-        ![teams Authentication bot deployed](../Media/Python/teams-conversation-bot-deployed.PNG).
+        ![teams Authentication bot deployed](*/Media/Python/teams-conversation-bot-deployed.PNG).
 
 At this point the bot is ready to be used from within Teams.
 

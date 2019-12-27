@@ -21,30 +21,11 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 
 ## Deployment to Azure preparatory steps
 
-1. Clone the latest bot builder samples:
+ 1. Deploy the bot to Azure using the latest [Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest). For more information, see [Tutorial: Create and deploy a basic bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp). 
+ 
+    You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli). See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
 
-    ```bash
-    git clone https://github.com/Microsoft/botbuilder-samples.git
-    ```
-
-1. Open a terminal window and change directory to `*\BotBuilder-Samples\samples\python\46.teams-auth`.
-1. Make sure that the `requirements.txt` file contains the following dependencies
-
-    ```text
-    aiohttp
-    botbuilder-core>=4.7.0
-    botbuilder-dialogs>=4.7.0 
-    ```
-
-    Install the dependencies.
-
-    ```cmd
-    pip install -r requirements.txt
-    ```
-    > Note.
-    > To find out the if a specific package is installed you can run a command similar to this (in Windows) `pip freeze | findstr botbuilder-dialogs`. To get the list of all the packages run this command `pip freeze`.  
-
- 1. Deploy the bot to Azure using the latest [Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest). For more information, see [Tutorial: Create and deploy a basic bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp). The following is an example of the steps to follow:
+    The following is an example of the steps to follow:
 
     1. Login into Azure
 
@@ -98,7 +79,9 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
         az webapp config appsettings list -g <<your group name>> -n TeamsAuthenticationWebApp --subscription  <<your subscription id>>
         ```
 
-    You can run the az cli commands from within Visual Studio Code using the [AZ CLI extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli). See also [The Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest).
+    If you navigate to the Azure portal, you should see the bot channel registration and the web app service listed as shown below.
+
+    ![teams auth bot deploy preliminaries](../Media/Python/teams-auth-bot-deployment-preliminaries.PNG)
 
 ## Test the bot using the Bot Emulator
 
@@ -149,7 +132,30 @@ You need an identity provider that can be used for authentication. In this proce
 At this time you will also configure the identity provider connection and register it with the bot channel registration created earlier. 
 Copy and save the connection name you used to a file.  
 
-## Deploy the bot to Azure
+## Prepare the bot code
+
+1. Clone the latest bot builder samples:
+
+    ```bash
+    git clone https://github.com/Microsoft/botbuilder-samples.git
+    ```
+
+1. Open a terminal window and change directory to `*\BotBuilder-Samples\samples\python\46.teams-auth`.
+1. Make sure that the `requirements.txt` file contains the following dependencies
+
+    ```text
+    aiohttp
+    botbuilder-core>=4.7.0
+    botbuilder-dialogs>=4.7.0 
+    ```
+
+    Install the dependencies.
+
+    ```cmd
+    pip install -r requirements.txt
+    ```
+
+    > Note. To find out the if a specific package is installed you can run a command similar to this (in Windows) `pip freeze | findstr botbuilder-dialogs`. To get the list of all the packages run this command `pip freeze`.  
 
  1. Before performing the deployment step, you must prepare the bot code as described below.
 
@@ -169,14 +175,13 @@ Copy and save the connection name you used to a file.
         1. Save the file.
         1. Select all the files in the directory and zipped them up in a file such as `app.zip`.
 
-    1. Deploy the bot
+## Deploy the bot to Azure
 
-        ```cmd
-        az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthenticationWebApp" --src "..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
-        ```
+In a terminal window, execute the following command:
 
-        if you navigate to the Azure portal, you should see the bot app registration and app service listed as shown below. 
-        ![teams Authentication bot deployed](../Media/Python/teams-conversation-bot-deployed.PNG).
+```cmd
+az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthenticationWebApp" --src "*\BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
+```
 
 At this point the bot is ready to be used from within Teams.
 

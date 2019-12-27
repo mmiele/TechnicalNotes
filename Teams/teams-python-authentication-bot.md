@@ -182,3 +182,47 @@ You can interact with the bot by sending it a message, or selecting a command fr
 |Personal|Group|Team|Result|
 |:---|:---|:---|:---|
 |Show Welcome<br/>Mention Me<br/>Message All Members|Show Welcome<br/>Mention Me<br/>Message All Members|Show Welcome<br/>Mention Me<br/>Message All Members|Welcome card for you to interact with<br/>Mention the user<br/>1-on-1 message to each member in the current Authentication|
+
+## Appendix
+
+### Test the bot running on your local machine using Teams
+
+1. Activate your Microsoft Teams.
+1. In the lower left, left panel, click the **Apps** icon.
+1. In the right panel, click the **Upload a custom app** link.
+1. Navigate to the directory `*\BotBuilder-Samples\samples\python\47.teams-auth\teams_app_manifest`.
+1. Select the `manifest.zip` file.
+1. Click the **Open** button.
+1. In the Teams wizard window, click the arrow in the **Add** button and select *Add to a team* or *Add to a chat*.
+
+    ![teams conversation bot wizard](../Media/Python/teams-conversation-bot-wizard.PNG) 
+
+1. In Teams, open **App Studio**.
+1. Click the **Manifest editor** tab.
+1. In the left panel, click the **Create a new app** button.
+1. In the **Details** section, click the **App details**.
+1. Enter the following  info:
+    1. **Short name**. Enter *conversationBot*.  
+    1. Click the **Generate** button under **App ID**. You an ID similar to this *772998ff-7fed-4275-b4e3-485cbf312850*. `Why do we need this?`
+    1. **Package Name**. Enter *com.teams.devapp*.
+    1. **Version** Enter *1.0.0*.
+    1. **Short Description**. Enter *Testing conversation bot*.
+    1. **Long Description**. Enter *Testing conversation bot*.
+    1. **Developer name**. Your name.
+    1. **Website**. The name of your website. For example, *https://www.microsoft.com*.
+    1. **Privacy statement** web address. For example, *https://www.teams.com/privacy*.
+    1. **Terms of use** web address. For example, *https://www.teams.com/termsofuse*.
+1. In the left panel, in the **Capabilities** section, click the **Bots** link.
+1. Click the **Set up** button. 
+1. In the **New bot** tab, enter the following information:
+    1. **Name**. Enter *conversationBot*.
+    1. **Scope**. Check all 3 boxes.
+    1. Click the **Create** button.
+1. Copy the **Bot ID** (string under conversationBot) and save it to a file to use it later.
+1. Click the **Generate new password** button, copy the password and save it to a file to use it later.
+1. In a terminal window execute the following command: `ngrok http -host-header=rewrite 3978`.
+Make sure that the port number is set properly in the `config.py` file such as `PORT = 3978`. This is the number to use in the ngrok command.
+1. Copy the **https** forwarding address to a file. Notice this forwarding address changes every time you restart ngrok.  
+1. Keep **ngrok** running.  
+1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by */api/messages*. This is an example: `https://d1dbb0d8.ngrok.io/api/messages`. 
+1. Press **Enter** (on your keyboard) to save the address.

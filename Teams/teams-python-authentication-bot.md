@@ -19,7 +19,7 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 - [Bot Framework Emulator](https://github.com/Microsoft/BotFramework-Emulator/blob/master/README.md)
 
 
-## Deployment to Azure preparatory steps
+## Prepare bot deployment to Azure
 
  1. Deploy the bot to Azure using the latest [Azure Command-Line Interface (CLI)](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest). For more information, see [Tutorial: Create and deploy a basic bot](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp). 
  
@@ -83,48 +83,6 @@ The bot has been created using [Bot Framework v4](https://dev.botframework.com).
 
     ![teams auth bot deploy preliminaries](../Media/Python/teams-auth-bot-deployment-preliminaries.PNG)
 
-## Test the bot using the Bot Emulator
-
-Before deploying the bot to Azure let's test it on the local machine.
-
-1. In a terminal window, navigate to `*\BotBuilder-Samples\samples\python\46.teams-auth`.
-1. Launch the application.
-
-    ```cmd
-    python app.py
-    ```
-
-    The following message is displayed:
-
-    ![teams Authentication app emulator](../Media/Python/teams-app-emulator.PNG)
-
-1. Open a new terminal window and execute this command:
-
-    ```cmd
-    ngrok http -host-header=rewrite 3978
-    ```
-
-    You get an output similar to this:
-
-    ![teams Authentication app ngrok](../Media/Python/teams-app-ngrok.PNG) 
-
-1. Copy the **https forwarding** address which is similar to this: `https://e075240a.ngrok.io`. 
-1. Add to it `api/messages`, so the address is similar to this `https://e075240a.ngrok.io/api/messages`. Save the address to a file. 
-This the **end point** to connect with the bot running locally.
-1. Activate the Bot Framework Emulator. 
-1. Click the **Open Bot** button.
-1. In the **Bot URL** box, enter the end point address you saved before such as `https://e075240a.ngrok.io/api/messages`.
-1. In the **Microsoft App ID** box enter the *app id* you saved earlier.  
-1. In the **Microsoft App  password** box enter same *password* you saved earlier.
-    > NOTE
-    > If you restart ngrok, the end point URL changes and you must restart the emulator and enter the new URL.
-1. Click the **Connect** button.
-1. Wait for the emulator to connect to the bot. You should see a *201 Created* message in the ngrok terminal window,
-1. Enter any text in the emulator box, for example *hello*.
-1. The welcome card is displayed. This means that the bot is working correctly.
-
-    ![teams Authentication app emulator welcome card](../Media/Python/teams-conversation-app-emulator-welcome-card.PNG) 
-
 ## Create the identity provider
 
 You need an identity provider that can be used for authentication. In this procedure you'll use an Azure Active Directory provider. Follow the steps described in [Create the identity provider](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/authentication/add-authentication#create-the-identity-provider).
@@ -134,7 +92,7 @@ Copy and save the connection name you used to a file.
 
 ## Prepare the bot code
 
-1. Clone the latest bot builder samples:
+1. If you have not done it yet, clone the latest bot builder samples:
 
     ```bash
     git clone https://github.com/Microsoft/botbuilder-samples.git
@@ -161,7 +119,7 @@ Copy and save the connection name you used to a file.
 
     1. Create `manifest.zip` file
         1. Navigate to `*\BotBuilder-Samples\samples\python\46.teams-auth\teams_app_manifest` directory.
-        1. In your editor, open the `manifest.json` file.  To the `id` and `bot Id` variables assign the **app id** obtained before.
+        1. In your editor, open the `manifest.json` file.  To the `id` and `bot Id` variables assign the bot channel registration **app id** you saved before.
         1. Save the file.
         1. Select all the files in the directory and zipped them up in a file such as `manifest.zip`.
 
@@ -175,6 +133,63 @@ Copy and save the connection name you used to a file.
         1. Save the file.
         1. Select all the files in the directory and zipped them up in a file such as `app.zip`.
 
+## Test the bot using the Bot Emulator
+
+Before deploying the bot to Azure let's test it on the local machine.
+
+1. In a terminal window, navigate to `*\BotBuilder-Samples\samples\python\46.teams-auth`.
+1. Launch the application.
+
+    ```cmd
+    python app.py
+    ```
+
+    The following message is displayed:
+
+    ![teams Authentication app emulator](../Media/Python/teams-app-emulator.PNG)
+
+1. Open a new terminal window and execute this command:
+
+    ```cmd
+    ngrok http -host-header=rewrite 3978
+    ```
+
+    > Note.
+    > The port number 3978 is defined in the `configg.py` file. Make sure that the values match.  
+
+    You get an output similar to this:
+
+    ![teams Authentication app ngrok](../Media/Python/teams-app-ngrok.PNG)
+
+1. Copy the **https forwarding** address which is similar to this: `https://e075240a.ngrok.io`.
+1. Add to it `api/messages`, so the address is similar to this `https://e075240a.ngrok.io/api/messages`. Save the address to a file.
+This is the **end point** to connect with the bot running locally.
+1. 
+1. Activate the Bot Framework Emulator.
+1. Click the **Open Bot** button.
+1. In the **Bot URL** box, enter the end point address you saved before such as `https://e075240a.ngrok.io/api/messages`.
+1. In the **Microsoft App ID** box enter the *app id* you saved earlier.  
+1. In the **Microsoft App  password** box enter same *password* you saved earlier.
+    > NOTE
+    > If you restart ngrok, the end point URL changes and you must restart the emulator and enter the new URL.
+1. Click the **Connect** button.
+1. Wait for the emulator to connect to the bot. The following welcome message is displayed:
+
+    ![teams authentication emulator welcome message](../Media/Python/teams-auth-bot-emulator-welcome-message.PNG)
+
+1. Enter any text in the emulator box, for example *hi*.
+1. The login card is displayed.
+
+    ![teams authentication emulator signin card](../Media/Python/teams-auth-bot-emulator-signin-card.PNG)
+
+1. Click the Sign in link. The following popup dialog window is displayed asking your permission to redirect the request to the authentication location (this is how OAuth works). 
+
+    ![teams authentication emulator welcome message](../Media/Python/teams-auth-bot-emulator-signin-authentication.PNG)
+
+1. Click the **Confirm** button. You will be redirected to the login page. 
+
+
+
 ## Deploy the bot to Azure
 
 In a terminal window, execute the following command:
@@ -182,6 +197,15 @@ In a terminal window, execute the following command:
 ```cmd
 az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthenticationWebApp" --src "*\BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
 ```
+
+You can test the bot using the WebChat client in Azure. 
+
+1. Navigate to the [Azure portal](https://ms.portal.azure.com/).
+1. Go to the bot channel registration, in this example is *TeamsAuthenticationBot*. 
+1. Click the **Test in Web Chat** link.
+1. Follow the bot instructions. The following picture shows an example.
+
+    ![teams authentication testing in web chat](../Media/Python/teams-auth-bot-test-in-webchat.PNG) 
 
 At this point the bot is ready to be used from within Teams.
 
@@ -193,22 +217,23 @@ At this point the bot is ready to be used from within Teams.
 1. Navigate to the directory `..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\teams_app_manifest`.
 1. Select the `manifest.zip` file.
 1. Click the **Open** button.
-1. In the Teams wizard window, click the arrow in the **Add** button and select *Add to a team* or *Add to a chat*.
-
-    ![teams Authentication bot wizard](../Media/Python/teams-conversation-bot-wizard.PNG) 
-
-1. In the next window, select the team or chat where to add the bot.
-1. Click the **Setup a bot** button.
+1. In the Teams wizard window, click the arrow in the **Add** button.
 1. After the bot is set, you can start entering the allowed requests 
-1. If you enter *Show Welcome*, the welcome card is displayed. This means that the bot is working correctly and can be used within Teams.
+1. If you enter *hi*, the sign in card is displayed. 
+1. Click the **Sign In** button and select the sign-in account to use.
+    You will been asked if you want to display your authentication token.
 
-     ![teams Authentication bot welcome card](../Media/Python/teams-conversation-bot-welcome-card.PNG) 
+     ![teams bot authentication sign in](../Media/Python/teams-auth-bot-signin.PNG) 
 
-You can interact with the bot by sending it a message, or selecting a command from the command list. The bot will respond to the following strings.
+1. If you click *Yes* your authentication token is displayed.
 
-|Personal|Group|Team|Result|
-|:---|:---|:---|:---|
-|Show Welcome<br/>Mention Me<br/>Message All Members|Show Welcome<br/>Mention Me<br/>Message All Members|Show Welcome<br/>Mention Me<br/>Message All Members|Welcome card for you to interact with<br/>Mention the user<br/>1-on-1 message to each member in the current Authentication|
+The bot will respond to the following commands
+
+|Personal|Description|Result|
+|:---|:---|:---|
+|Any string|The user starts conversation with the bot|The bot displays sign-in card|
+|Click **Sign In** button|The user logs into the bot|The bot performs authentication. If successful, the bot logs the user in and displays a card asking if the user wants to view the authentication token |
+|Click **Yes** or **No** button|The user accepts or declines to view the token|If the **Yes** buton is clicked the bot displays the token|
 
 ## Appendix
 

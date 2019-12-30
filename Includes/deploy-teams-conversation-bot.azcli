@@ -1,0 +1,18 @@
+# Login into Azure
+az login
+
+#Set the subscription
+az account set --subscription "FUSE Temporary"
+
+# Create AD app registration
+az ad app create --display-name "TeamsConversationBotAzure" --password "0_3Y0/a5IkkPq@mw.QuGHMVSIG6pn@K0" --available-to-other-tenants
+
+#Deploy via ARM template
+az deployment create --name "TeamsConversationBotAzure" --template-file "C:\Users\v-mimiel\aWork\GitHub\botbuilder-samples-python-josh\samples\57.teams-conversation-bot\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="38cbdd08-6f48-4980-b8d0-088fd129c47f" appSecret="0_3Y0/a5IkkPq@mw.QuGHMVSIG6pn@K0" botId="TeamsConversationBotAzure" botSku=F0 newAppServicePlanName="mm-python-service-plan" newWebAppName="TeamsConversationBotAzure" groupName="mm-python-group" groupLocation="westus" newAppServicePlanLocation="westus"
+
+# Check App Id and Password
+az webapp config appsettings list -g mm-python-group -n TeamsConversationBotAzure --subscription 174c5021-8109-4087-a3e2-a1de20420569
+
+# Deploy the bot
+az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsConversationBotAzure" --src "C:\Users\v-mimiel\aWork\GitHub\botbuilder-samples-python-josh\samples\57.teams-conversation-bot\app.zip"
+

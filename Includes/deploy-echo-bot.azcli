@@ -1,0 +1,20 @@
+# Deply simple echo bot
+
+# Log into Azure portal
+az login
+
+# Set subscription
+az account set --subscription "FUSE Temporary"
+
+# Manage Azure Active Directory Graph entities needed for Role Based Access 
+# This also produces the app id to use in the next step.
+az ad app create --display-name "TeamsAuthentication" --password "@mm-authentication-bot-22499" --available-to-other-tenants
+
+# Start deployment
+az deployment create --name "TeamsAuthentication" --template-file "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\python\02.echo-bot\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="1caf0963-a6d7-4823-beee-4f2b2e50115d" appSecret="@mm-authentication-bot-22499" botId="TeamsAuthentication" botSku=F0 newAppServicePlanName="mm-python-service-plan" newWebAppName="TeamsAuthentication" groupName="mm-python-group" groupLocation="westus" newAppServicePlanLocation="westus"
+
+# Check App Id and Password
+az webapp config appsettings list -g mm-python-group -n TeamsAuthentication --subscription 174c5021-8109-4087-a3e2-a1de20420569
+
+# Deply the bot
+az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsAuthentication" --src "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\python\02.echo-bot\app.zip"

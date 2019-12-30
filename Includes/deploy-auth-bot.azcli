@@ -1,0 +1,35 @@
+# Deply simple echo bot
+
+# Log into Azure portal
+az login
+
+# Set subscription
+az account set --subscription "FUSE Temporary"
+
+# Create the application registration
+# Creating the application registration allows the bot to access the Bot Framework Service for sending and receiving authenticated messages.
+# This also produces the app id to use in the next step.
+az ad app create --display-name "TeamsAuthenticationBot" --password "@mm-authentication-bot-22499" --available-to-other-tenants
+
+# Copy the the app id obtained in the previous step and save it in a file. 
+# Also assign it in the next step.
+# Copy the password and save it in a file.
+# Create bot channel registration via ARM template. 
+# This connects the bot to channels and facilitates communication between bot and the user.
+# Copy the subscription id obtained to use in the next step.
+az deployment create --name "TeamsAuthenticationBot" --template-file "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\python\46.teams-auth\deploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="71bc5ebc-84f3-4062-a39a-c7b954a544ff" appSecret="@mm-authentication-bot-22499" botId="TeamsAuthenticationBot" botSku=F0 newAppServicePlanName="mm-python-service-plan" newWebAppName="TeamsAuthenticationWebApp" groupName="mm-python-group" groupLocation="westus" newAppServicePlanLocation="westus"
+
+
+# Optionally step. Check App Id and Password
+az webapp config appsettings list -g mm-python-group -n TeamsAuthenticationWebApp --subscription 174c5021-8109-4087-a3e2-a1de20420569
+
+# Before deploying the bot you must do the following:
+# 1) Create an Identity Provider via UI name it TeamsAuthentication-Identity
+# 2) Register the indentity provider connection with the bot channel registration
+# 3) Add the app id value to the manifest.json file.
+# 4) Zip all the files in the folder and create a manifest.zip
+# 5) Add the app id, the password values and the identity provider connecion  to the config,py file.
+# 6) Zip all the files in the folder and create an app.zip
+
+# Deploy the bot
+az webapp deployment source config-zip --resource-group "mm-python-group" --name "TeamsAuthenticationWebApp" --src "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\python\46.teams-auth\app.zip"

@@ -133,7 +133,54 @@ Copy and save the connection name you used to a file.
         1. Save the file.
         1. Select all the files in the directory and zipped them up in a file such as `app.zip`.
 
-## Test the bot using the Bot Emulator
+## Deploy the bot to Azure
+
+In a terminal window, execute the following command:
+
+```cmd
+az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthenticationWebApp" --src "*\BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
+```
+
+You can test the bot using the WebChat client in Azure. 
+
+1. Navigate to the [Azure portal](https://ms.portal.azure.com/).
+1. Go to the bot channel registration, in this example is *TeamsAuthenticationBot*. 
+1. Click the **Test in Web Chat** link.
+1. Follow the bot instructions. The following picture shows an example.
+
+    ![teams authentication testing in web chat](../Media/Python/teams-auth-bot-test-in-webchat.PNG) 
+
+At this point the bot is ready to be used from within Teams.
+
+## Using the bot within Teams
+
+1. Activate your Microsoft Teams.
+1. In the lower left, left panel, click the **Apps** icon.
+1. In the right panel, click the **Upload a custom app** link.
+1. Navigate to the directory `..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\teams_app_manifest`.
+1. Select the `manifest.zip` file.
+1. Click the **Open** button.
+1. In the Teams wizard window, click the arrow in the **Add** button.
+1. After the bot is set, you can start entering the allowed requests 
+1. If you enter *hi*, the sign in card is displayed. 
+1. Click the **Sign In** button and select the sign-in account to use.
+    You will been asked if you want to display your authentication token.
+
+     ![teams bot authentication sign in](../Media/Python/teams-auth-bot-signin.PNG) 
+
+1. If you click *Yes* your authentication token is displayed.
+
+The bot will respond to the following commands
+
+|Personal|Description|Result|
+|:---|:---|:---|
+|Any string|The user starts conversation with the bot|The bot displays sign-in card|
+|Click **Sign In** button|The user logs into the bot|The bot performs authentication. If successful, the bot logs the user in and displays a card asking if the user wants to view the authentication token |
+|Click **Yes** or **No** button|The user accepts or declines to view the token|If the **Yes** buton is clicked the bot displays the token|
+
+## Appendix
+
+### Test the bot using the Bot Emulator
 
 Before deploying the bot to Azure let's test it on the local machine.
 
@@ -187,55 +234,6 @@ This is the **end point** to connect with the bot running locally.
     ![teams authentication emulator welcome message](../Media/Python/teams-auth-bot-emulator-signin-authentication.PNG)
 
 1. Click the **Confirm** button. You will be redirected to the login page. 
-
-
-
-## Deploy the bot to Azure
-
-In a terminal window, execute the following command:
-
-```cmd
-az webapp deployment source config-zip --resource-group "<<your group name>>" --name "TeamsAuthenticationWebApp" --src "*\BotBuilder-Samples\samples\python\57.teams-Authentication-bot\app.zip"
-```
-
-You can test the bot using the WebChat client in Azure. 
-
-1. Navigate to the [Azure portal](https://ms.portal.azure.com/).
-1. Go to the bot channel registration, in this example is *TeamsAuthenticationBot*. 
-1. Click the **Test in Web Chat** link.
-1. Follow the bot instructions. The following picture shows an example.
-
-    ![teams authentication testing in web chat](../Media/Python/teams-auth-bot-test-in-webchat.PNG) 
-
-At this point the bot is ready to be used from within Teams.
-
-## Using the bot within Teams
-
-1. Activate your Microsoft Teams.
-1. In the lower left, left panel, click the **Apps** icon.
-1. In the right panel, click the **Upload a custom app** link.
-1. Navigate to the directory `..BotBuilder-Samples\samples\python\57.teams-Authentication-bot\teams_app_manifest`.
-1. Select the `manifest.zip` file.
-1. Click the **Open** button.
-1. In the Teams wizard window, click the arrow in the **Add** button.
-1. After the bot is set, you can start entering the allowed requests 
-1. If you enter *hi*, the sign in card is displayed. 
-1. Click the **Sign In** button and select the sign-in account to use.
-    You will been asked if you want to display your authentication token.
-
-     ![teams bot authentication sign in](../Media/Python/teams-auth-bot-signin.PNG) 
-
-1. If you click *Yes* your authentication token is displayed.
-
-The bot will respond to the following commands
-
-|Personal|Description|Result|
-|:---|:---|:---|
-|Any string|The user starts conversation with the bot|The bot displays sign-in card|
-|Click **Sign In** button|The user logs into the bot|The bot performs authentication. If successful, the bot logs the user in and displays a card asking if the user wants to view the authentication token |
-|Click **Yes** or **No** button|The user accepts or declines to view the token|If the **Yes** buton is clicked the bot displays the token|
-
-## Appendix
 
 ### Test the bot running on your local machine using Teams
 

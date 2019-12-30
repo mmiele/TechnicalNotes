@@ -231,7 +231,7 @@ This is the **end point** to connect with the bot running locally.
 
 1. Click the Sign in link. The following popup dialog window is displayed asking your permission to redirect the request to the authentication location (this is how OAuth works). 
 
-    ![teams authentication emulator welcome message](../Media/Python/teams-auth-bot-emulator-signin-authentication.PNG)
+    ![teams authentication emulator oauth](../Media/Python/teams-auth-bot-emulator-signin-authentication.PNG)
 
 1. Click the **Confirm** button. You will be redirected to the login page. 
 
@@ -245,7 +245,7 @@ This is the **end point** to connect with the bot running locally.
 1. Click the **Open** button.
 1. In the Teams wizard window, click the arrow in the **Add** button and select *Add to a team* or *Add to a chat*.
 
-    ![teams conversation bot wizard](../Media/Python/teams-conversation-bot-wizard.PNG) 
+    ![teams bot auth wizard](../Media/Python/teams-auth-bot-wizard.PNG) 
 
 1. In Teams, open **App Studio**.
 1. Click the **Manifest editor** tab.
@@ -276,3 +276,5 @@ Make sure that the port number is set properly in the `config.py` file such as `
 1. Keep **ngrok** running.  
 1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by */api/messages*. This is an example: `https://d1dbb0d8.ngrok.io/api/messages`. 
 1. Press **Enter** (on your keyboard) to save the address.
+
+[!INCLUDE [deploy-auth-bot.azcli](../Includes\deploy-auth-bot.azcli)]

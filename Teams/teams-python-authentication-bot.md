@@ -277,4 +277,4 @@ Make sure that the port number is set properly in the `config.py` file such as `
 1. In the **Messaging endpoint** section in the **Bot endpoint address** enter the ngrok address you saved earlier followed by */api/messages*. This is an example: `https://d1dbb0d8.ngrok.io/api/messages`. 
 1. Press **Enter** (on your keyboard) to save the address.
 
-[!INCLUDE [deploy-auth-bot.azcli](../Includes\deploy-auth-bot.azcli)]
+[!INCLUDE [deploy-auth-bot.azcli](../Includes/deploy-auth-bot.azcli)]

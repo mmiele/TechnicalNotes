@@ -12,22 +12,9 @@ An environment consists of:
 - a library (typically the Python Standard Library)
 - a set of installed packages
 
-```diff
-- text in red
-+ text in green
-! text in orange
-! text in yellow
-```
+> Note.
+> These components together determine which language constructs and syntax are valid, what operating-system functionality you can access, and which packages you can use.
 
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
-- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `#c5f015`
-- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `#1589F0`
-
-- ![](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
-- ![#c5f015](https://placehold.it/15/c5f015/000000?text=+) `These components together determine which language constructs and syntax are valid, what operating-system functionality you can access, and which packages you can use`
-- ![#1589F0](https://placehold.it/15/1589F0/000000?text=+) `These components together determine which language constructs and syntax are valid, what operating-system functionality you can access, and which packages you can use`
-
-These components together determine which language constructs and syntax are valid, what operating-system functionality you can access, and which packages you can use.
 In Visual Studio on Windows, you use the Python Environments window, as described in this article, to manage environments and select one as the default for new projects. Other aspects of environments are found in the following articles:
 For any given project, you can select a specific environment rather than use the default.
 For details on creating and using virtual environments for Python projects, see Use virtual environments.

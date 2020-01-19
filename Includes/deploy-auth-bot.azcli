@@ -1,4 +1,4 @@
-# Deplou authentication bot
+# Deploy authentication bot
 
 # Log into Azure portal
 az login

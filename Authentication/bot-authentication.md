@@ -11,10 +11,10 @@ ms.date: 05/31/2019
 monikerRange: 'azure-bot-service-4.0'
 ---
 
-# Bot authentication
+# User authentication in a comversation
 
 To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot will need to call an external service, such as the Microsoft Graph, GitHub, or a company's REST service.
-Each external services has a way of securing those calls, and a common way to secure such a call is to issue those requests using a _user token_ that uniquely identifies the user on that external service (sometimes referred to as a [JSON Web Toke](https://jwt.io/introduction/) (JWT)).
+Each external services has a way of securing those calls, and a common way is to issue those requests using a **user token** that uniquely identifies the user on that external service (sometimes referred to as a [JSON Web Token](https://jwt.io/introduction/) (JWT)).
 
 To secure the call to an external service, the bot must ask the user to sign-in, so it can acquire the user's token for that service.
 Many services support token retrieval via the **OAuth** or **OAuth2** protocol.
@@ -25,11 +25,11 @@ The Azure Bot Service provides specialized **sign-in** cards and services that w
 
     The connection contains information about the **identity provider** to use, along with a valid OAuth client id and secret, the OAuth scopes to enable, and any other connection metadata required by that identity provider.
 
-- In the bot's code, the OAuth connection is used to help sign0in the user and get the user token.
+- In the bot's code, the OAuth connection is used to help sign-in the user and get the user token.
 
-These services are involved in the sign-in workflow.
+The following image shows the elements involved in the authentication process.
 
-![authentication flow](../Media/Authentication/auth-flow.PNG)
+![authentication elements](../Media/Authentication/auth-elements.png)
 
 ## About the Bot Framework Token Service
 
@@ -43,14 +43,21 @@ The Bot Framework Token Service is responsible for:
     >    - Log the user out
     >    - Initiate the sign in flow again
 
-For example, a bot that can check a user's recent emails, using the Microsoft Graph API, will require an Azure Active Directory user token. At design time, the bot developer would register an Azure Active Directory application with the Bot Framework Token Service (via the Azure Portal), and then configure an OAuth connection setting ( named `GraphConnection`) for the bot. When a user interacts with the bot, the workflow would be:
+For example, a bot that can check a user's recent emails, using the Microsoft Graph API, requires an user token from an **Identity Provider**, in this case **Azure Active Directory**. At design time, the bot developer performs these 2 important steps:
 
-1. The user asks the bot, "please check my email".
+1. Registers an Azure Active Directory application i.e., an Identity Provider, with the Bot Framework Token Service, via the Azure Portal.
+1. Configures an OAuth connection (named for example `GraphConnection`) for the bot.
+
+The following steps describe the work flow of a user's interaction with a bot when an email request is made using the Microsoft Graph service.
+
+![authentication flow](../Media/Authentication/auth-flow.PNG)
+
+1. The user makes an email request to the bot.
 1. An activity with this message is sent from the user to the Bot Framework channel service. The channel service ensures that the `userid` field within the activity has been set and the message is sent to the bot.
 
     User ID's are channel specific, such as the user's facebook ID or their SMS phone number.
 
-1. The bot receives the message activity and determines that the intent is to check the user's email. The bot makes a request to the Bot Framework Token Service asking if it already has a token for the UserId for the OAuth connection setting `GraphConnection`.
+1. The bot makes a request to the Bot Framework Token Service asking if it already has a token for the UserId for the OAuth connection `GraphConnection`.
 1. Since this is the first time this user has interacted with the bot, the Bot Framework Token Service does not yet have a token for this user, and returns a _NotFound_ result to the bot.
 1. The bot creates an OAuthCard with a connection name of `GraphConnection` and replies to the user asking them to sign-in using this card.
 1. The activity passes through the Bot Framework Channel Service, which calls into the Bot Framework Token Service to create a valid OAuth sign-in URL for this request. This sign-in URL is added to the OAuthCard and the card is returned to the user.

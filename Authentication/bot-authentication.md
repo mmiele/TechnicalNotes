@@ -48,7 +48,7 @@ For example, a bot that can check a user's recent emails, using the Microsoft Gr
 1. Registers an Azure Active Directory application i.e., an Identity Provider, with the Bot Framework Token Service, via the Azure Portal.
 1. Configures an OAuth connection (named for example `GraphConnection`) for the bot.
 
-The following steps describe the work flow of a user's interaction with a bot when an email request is made using the Microsoft Graph service.
+The following image show the work flow of the user's interaction with a bot when an email request is made using the Microsoft Graph service.
 
 ![authentication flow](../Media/Authentication/auth-flow.PNG)
 
@@ -58,13 +58,17 @@ The following steps describe the work flow of a user's interaction with a bot wh
     User ID's are channel specific, such as the user's facebook ID or their SMS phone number.
 
 1. The bot makes a request to the Bot Framework Token Service asking if it already has a token for the UserId for the OAuth connection `GraphConnection`.
-1. Since this is the first time this user has interacted with the bot, the Bot Framework Token Service does not yet have a token for this user, and returns a _NotFound_ result to the bot.
+1. Since this is the first time this user has interacted with the bot, the Bot Framework Token Service does not yet have a token for this user, and returns a *NotFound* result to the bot.
+
+    > [!NOTE]
+    > If the token is found, the authentication steps are skipped and the bot can make the email request using the stored token.
+
 1. The bot creates an OAuthCard with a connection name of `GraphConnection` and replies to the user asking them to sign-in using this card.
 1. The activity passes through the Bot Framework Channel Service, which calls into the Bot Framework Token Service to create a valid OAuth sign-in URL for this request. This sign-in URL is added to the OAuthCard and the card is returned to the user.
 1. The user is presented with a message to sign-in by clicking on the OAuthCard's sign-in button.
 1. When the user clicks the sign-in button, the channel service opens a web browser and calls out to the external service to load its sign-in page.
 1. The user signs-in to this page for the external service. Once complete, the external service completes the OAuth protocol exchange with the Bot Framework Token Service, resulting in the external service sending the Bot Framework Token Service the user token. The Bot Framework Token Service securely stores this token and sends an activity to the bot with this token.
-1. The bot receives the activity with the token and is able to use it to make calls against the Graph API.
+1. The bot receives the activity with the token and is able to use it to make calls against the MS Graph API.
 
 ## Securing the sign-in URL
 

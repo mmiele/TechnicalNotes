@@ -236,41 +236,67 @@ You must assign this URL in the Azure bot channels registration **Settings** in 
 
 ### Deploy a bot using the Azure Command-Line Interface (CLI)
 
-This section contains an example of deploying a bot to Azure using
+This section describes how to deploy a bot to Azure using
 the [Azure Command-Line Interface](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest) (CLI).
+
 
 You can run the steps shown next in Visual Studio code.
 
-1. In Visual Studio code install the **Azure CLI Tools**.
-1. In Visual Studio code, create an "azcli* file and name it for example *deploy-bot-auth.azcli*.
-1. In the file enter the following command lines:
+#### Csharp
 
-<!-- Log into Azure portal -->
-az login
+1. In a command terminal, navigate to the project diectory.
+For example: C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_dotnetcore\18.bot-authentication,
 
-<!-- Set subscription -->
-az account set --subscription "FUSE Temporary"
+1. Log into Azure portal.
 
-<!-- Create the application registration.
-Copy the app id and password obtained and save them in a file. -->
-az ad app create --display-name "EchoBotAuthentication" --password "@mm-authentication-bot-22499" --available-to-other-tenants
+    ```cmd
+    az login
+    ```
 
-<!-- Create bot channel registration via ARM template.
-This connects the bot to channels and facilitates communication between bot and the user. Copy the subscription id obtained to use in the next step.-->
+1. Set subscription.
 
-az deployment create --name "EchoBotAuthentication" --template-file "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_dotnetcore\18.bot-authentication\DeploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="71bc5ebc-84f3-4062-a39a-c7b954a544ff" appSecret="@mm-authentication-bot-22499" botId="EchoBotAuthentication" botSku=F0 newAppServicePlanName="mm-bot-service-plan" newWebAppName="EchoBotAuthenticationApp" groupName="mm-bot-resource-group" groupLocation="westus" newAppServicePlanLocation="westus"
+    ```cmd
+    az account set --subscription "FUSE Temporary"
+    ```
 
+1. Create the bot channels registration. Then copy the app id and password obtained and save them in a file  to use in the next step.
 
-<!-- Optionally step. Check App Id and Password -->
-az webapp config appsettings list -g mm-bot-service-group -n EchoBotAuthenticationApp --subscription 174c5021-8109-4087-a3e2-a1de20420569
+    ```cmd
+    az ad app create --display-name "EchoBotAuthReg" --password "@mm-authentication-bot-22499" --available-to-other-tenants
+    ```
 
-<!-- Before deploying the bot you must do the following:
-# 1) Create an Identity Provider via UI name it TeamsAuthentication-Identity
-# 2) Register the identity provider connection with the bot channel registration
-# 3) Add the app id value to the manifest.json file.
-# 4) Zip all the files in the folder and create a manifest.zip
-# 5) Add the app id, the password values and the identity provider connection  to the config,py file.
-# 6) Zip all the files in the folder and create an app.zip -->
+1. Set the deployment using ARM template, service plan and resource group. Copy the subscription id obtained to use in the next step.-->
+
+    ```cmd
+    az deployment create --name "EchoBotAuthReg" --template-file "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_dotnetcore\18.bot-authentication\DeploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="71bc5ebc-84f3-4062-a39a-c7b954a544ff" appSecret="@mm-authentication-bot-22499" botId="EchoBotAuthReg" botSku=F0 newAppServicePlanName="mm-bot-service-plan" newWebAppName="EchoBotAuthWebApp" groupName="mm-bot-resource-group" groupLocation="westus" newAppServicePlanLocation="westus"
+    ```
+
+1. Optionally, check app Id and password.
+
+    ```cmd
+    az webapp config appsettings list -g mm-bot-service-group -n EchoBotAuthRegWebApp --subscription 174c5021-8109-4087-a3e2-a1de20420569
+    ```
+
+1. Before deploying the bot you must do the following:
+    1. Create an identity provider application via the [Azure portal][azure-portal]  name it `EchoBotAuthIdentity`.
+    1. Create a connection using the identity provider app Id and client secret and using one of the OAuth generic settings.
+    1. Add this connection to the bot channels registration.
+    1. Add the app id value to the manifest.json file.
+    1. Create a deployment file within the bot project folder:
+
+        ```cmd
+        az bot prepare-deploy --lang Csharp --code-dir "." --proj-file-path "EchoBot.csproj"This produces a .deployment file in the project directory.
+        ```
+
+    1. In the project directory zip up all the files and folders. This produces an `<ProjectName>.zip`. file.
+
+    1. `Deploy the zip file:
+
+        ```cmd
+        az webapp deployment source config-zip --resource-group "mm-echo-bot-deployment-group" --name "mm-echo-bot-deploy-cli" --src "<ProjectName>.zip"
+         ```
+
+    1. If you change the code you must repeat steps 5 to 7.
 
 <!-- Deploy the bot -->
 az webapp deployment source config-zip --resource-group "mm-bot-service-group" --name "EchoBotAuthenticationApp" --src "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\python\46.teams-auth\app.zip"

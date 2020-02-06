@@ -265,7 +265,7 @@ For example: C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_do
     az ad app create --display-name "EchoBotAuthReg" --password "@mm-authentication-bot-22499" --available-to-other-tenants
     ```
 
-1. Set the deployment using ARM template, service plan and resource group. Copy the subscription id obtained to use in the next step.-->
+1. Set the deployment using ARM template, service plan and resource group. Copy the subscription id obtained to use in the next step.
 
     ```cmd
     az deployment create --name "EchoBotAuthReg" --template-file "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_dotnetcore\18.bot-authentication\DeploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="71bc5ebc-84f3-4062-a39a-c7b954a544ff" appSecret="@mm-authentication-bot-22499" botId="EchoBotAuthReg" botSku=F0 newAppServicePlanName="mm-bot-service-plan" newWebAppName="EchoBotAuthWebApp" groupName="mm-bot-resource-group" groupLocation="westus" newAppServicePlanLocation="westus"
@@ -281,25 +281,26 @@ For example: C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_do
     1. Create an identity provider application via the [Azure portal][azure-portal]  name it `EchoBotAuthIdentity`.
     1. Create a connection using the identity provider app Id and client secret and using one of the OAuth generic settings.
     1. Add this connection to the bot channels registration.
-    1. Add the app id value to the manifest.json file.
-    1. Create a deployment file within the bot project folder:
+    1. Add the the bot channel registration app id, client secret and the name of the connection to the `appsettings.json` file.
 
-        ```cmd
-        az bot prepare-deploy --lang Csharp --code-dir "." --proj-file-path "EchoBot.csproj"This produces a .deployment file in the project directory.
-        ```
+1. Create a deployment file within the bot project folder:
 
-    1. In the project directory zip up all the files and folders. This produces an `<ProjectName>.zip`. file.
+    ```cmd
+    az bot prepare-deploy --lang Csharp --code-dir "." --proj-file-path "EchoBot.csproj"This produces a .deployment file in the project directory.
+    ```
 
-    1. `Deploy the zip file:
+1. In the project directory zip up all the files and folders. This produces an `<ProjectName>.zip`. file.
 
-        ```cmd
-        az webapp deployment source config-zip --resource-group "mm-echo-bot-deployment-group" --name "mm-echo-bot-deploy-cli" --src "<ProjectName>.zip"
-         ```
+1. `Deploy the zip file:
 
-    1. If you change the code you must repeat steps 5 to 7.
+    ```cmd
+    az webapp deployment source config-zip --resource-group "mm-echo-bot-deployment-group" --name "mm-echo-bot-deploy-cli" --src "<ProjectName>.zip"
+    ```
 
-<!-- Deploy the bot -->
-az webapp deployment source config-zip --resource-group "mm-bot-service-group" --name "EchoBotAuthenticationApp" --src "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\python\46.teams-auth\app.zip"
+1. If you change the code you must repeat steps 5 to 7.
+
+1. Deploy the bot
+az webapp deployment source config-zip --resource-group "mm-bot-service-group" --name "EchoBotAuthenticationApp" --src "`<ProjectName>.zip`"
 
 
 [!INCLUDE [oauth-prompt-to-get-token](../includes/authentication/oauth-prompt-to-get-token.md)]

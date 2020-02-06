@@ -225,7 +225,7 @@ You must assign this URL in the Azure bot channels registration **Settings** in 
 1. Follow the log in steps.
 1. Enter any of the allowed commands to test the bot. The following picture shows the output.
 
-    ![echo bot web chat test](../Media/Authentication/echo-bot-auth-web-chat-test.PNG)
+    ![echo bot web chat test](../Media/Authentication/echo-bot-auth-web-chat-test.png)
 
 1. At the end enter **logout**. Click **OK**.
 1. If you want to repeat the test, you must *login* again.

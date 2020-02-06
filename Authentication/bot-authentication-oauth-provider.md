@@ -54,7 +54,7 @@ You can skip this section if you already have a registration.
     1. **Pricing Tier**. Make sure that *Standard S1* is selected. This should be the default value.
     1. **Messaging endpoint**. Leave it blank for now. You will insert the correct value after you have deployed the bot application. The following picture shows an example of the registration settings:
 
-         ![bot channels registration](../Media/Authentication/echo-bot-chnls-reg.PNG)
+         ![bot channels registration](../Media/Authentication/echo-bot-auth-chnls-reg.PNG)
 
 
 ### Get the bot channels registration credentials
@@ -63,7 +63,7 @@ You can skip this section if you already have a registration.
 1. In the *Create Microsoft App ID* panel, click **Create New**.
 1. In the *Create new Microsoft App...* panel, click **Create App ID in the App Registration Portal** link.
 
-    ![bot channels registration credentials](../Media/Authentication/echo-bot-chnls-reg-credentials.PNG)
+    ![bot channels registration credentials](../Media/Authentication/echo-bot-auth-chnls-reg-credentials.PNG)
 
 1. In the displayed *App registration* window, click the **New registration** tab in the upper left.
 1. Enter the name of the bot application you are registering. We used *EchoAuthBotRegistration* but you need to select your own unique name.
@@ -157,11 +157,11 @@ This identity service provider can be used with any generic OAuth 2 service prov
 1. In the *Settings* pane, at the bottom of the page, click on the connection entry to open the connection you just created.
 1. Click **Test Connection** at the top of the *Service Provider Connection Setting* pane. The first time, this opens a new browser window listing the permissions your registration app is requesting and prompt you to accept.
 
-    ![test connection permission](../Media/Authentication/test-connection-permission-requested.PNG)
+    ![test connection permission](../Media/Authentication/echo-bot-auth-test-connection-permission-requested.PNG)
 
 1. Click **Accept**. This redirects you to a **Test Connection to "your-connection-name" Succeeded** page.
 
-    ![connection tested](../Media/Authentication/test-connection-succeeded.PNG)
+    ![connection tested](../Media/Authentication/echo-bot-auth-test-connection-succeeded.PNG)
 
 You can now use this connection name in your bot to obtain the authentication token.
 
@@ -225,7 +225,7 @@ You must assign this URL in the Azure bot channels registration **Settings** in 
 1. Follow the log in steps.
 1. Enter any of the allowed commands to test the bot. The following picture shows the output.
 
-    ![echo bot web chat test](../Media/Authentication/echo-bot-web-chat-test.PNG)
+    ![echo bot web chat test](../Media/Authentication/echo-bot-auth-web-chat-test.PNG)
 
 1. At the end enter **logout**. Click **OK**.
 1. If you want to repeat the test, you must *login* again.

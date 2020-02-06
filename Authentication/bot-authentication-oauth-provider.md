@@ -254,52 +254,66 @@ For example: C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_do
 1. Set subscription.
 
     ```cmd
-    az account set --subscription "FUSE Temporary"
+    az account set --subscription "<azure subscription>"
     ```
 
-1. Create the bot channels registration. Then copy the app id and password obtained and save them in a file  to use in the next step.
+1. Create the bot channels registration. Save the app id and password to use in the next step.
 
     ```cmd
-    az ad app create --display-name "EchoBotAuthReg" --password "@mm-authentication-bot-22499" --available-to-other-tenants
+    az ad app create --display-name "<name to register in Azure>" --password "<registration password" --available-to-other-tenants
     ```
 
-1. Set the deployment using ARM template, service plan and resource group. Copy the subscription id obtained to use in the next step.
+1. Set the deployment using ARM template, service plan and resource group. Copy the registration subscription id obtained to use in the next step.
+You have one of these 2 choices:
+
+    1. New resource group and new service plan
+
+        ```cmd
+        az deployment create --name "<name of the bot app service in Azure>" --template-file "<cloned sample 18.bot-authentication location>\DeploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="<bot channels registration app Id>" appSecret="<bot channels registration client secret>" botId="<name of the bot app service in Azure>" botSku=F0 newAppServicePlanName="<new-service-plan>" newWebAppName="<name of the bot app service in Azure>" groupName="<new-resource-group>" groupLocation="<location>" newAppServicePlanLocation="<location>"
+        ```
+
+    1. Existing resource group
+
+        1. Existing service plan
+
+            ```cmd
+            az group deployment create --name "<name of the bot app service in Azure>" --resource-group "<existing-resource-group>" --template-file "<cloned sample 18.bot-authentication location>\DeploymentTemplates\template-with-preexisting-rg.json" --parameters appId="<bot channels registration app Id>" appSecret="<bot channels registration client secret>" botId="<name of the bot app service in Azure>" newWebAppName="<name of the bot app service in Azure>" existingAppServicePlan="<name-of-app-service-plan>" appServicePlanLocation="<location>"
+            ```
+
+        1. New service plan
+
+            ```cmd
+            az group deployment create --name "<name of the bot app service in Azure>" --resource-group "<existing-resource-group>" --template-file "<cloned sample 18.bot-authentication location>\DeploymentTemplates\template-with-preexisting-rg.json" --parameters appId="<bot channels registration app Id>" appSecret="<bot channels registration client secret>" botId="<bot channels registration client secret>" newWebAppName="<name of the bot app service in Azure>" newAppServicePlanName="<new-service-plan>" appServicePlanLocation="<location>"
+
+            ```
+
+1. Optionally, check app Id and password. We recommend to perform this step for sanity check and to obtain
+the app id and the secret values in the `appsettings.json` file.
 
     ```cmd
-    az deployment create --name "EchoBotAuthReg" --template-file "C:\Users\v-mimiel\aWork\GitHub\BotBuilder-Samples\samples\csharp_dotnetcore\18.bot-authentication\DeploymentTemplates\template-with-new-rg.json" --location "westus" --parameters appId="71bc5ebc-84f3-4062-a39a-c7b954a544ff" appSecret="@mm-authentication-bot-22499" botId="EchoBotAuthReg" botSku=F0 newAppServicePlanName="mm-bot-service-plan" newWebAppName="EchoBotAuthWebApp" groupName="mm-bot-resource-group" groupLocation="westus" newAppServicePlanLocation="westus"
-    ```
-
-1. Optionally, check app Id and password.
-
-    ```cmd
-    az webapp config appsettings list -g mm-bot-service-group -n EchoBotAuthRegWebApp --subscription 174c5021-8109-4087-a3e2-a1de20420569
+    az webapp config appsettings list -g mm-bot-service-group -n <name of the bot app service in Azure> --subscription <registration subscription Id>
     ```
 
 1. Before deploying the bot you must do the following:
-    1. Create an identity provider application via the [Azure portal][azure-portal]  name it `EchoBotAuthIdentity`.
-    1. Create a connection using the identity provider app Id and client secret and using one of the OAuth generic settings.
-    1. Add this connection to the bot channels registration.
+    1. Create an identity provider application via the [Azure portal][azure-portal]. See section [Create OAuth connection](#create-oauth-connection).
+    1. Create a connection using the identity provider app Id and client secret and using one of the OAuth generic settings. See section [Create OAuth connection](#create-oauth-connection). Add this connection to the bot channels registration.
     1. Add the the bot channel registration app id, client secret and the name of the connection to the `appsettings.json` file.
 
-1. Create a deployment file within the bot project folder:
+1. Create a deployment file within the bot project folder. This produces a `.deployment` file in the project directory.
 
     ```cmd
-    az bot prepare-deploy --lang Csharp --code-dir "." --proj-file-path "EchoBot.csproj"This produces a .deployment file in the project directory.
+    az bot prepare-deploy --lang Csharp --code-dir "<cloned sample 18.bot-authentication location>" --proj-file-path "AuthenticationBot.csproj"
     ```
 
-1. In the project directory zip up all the files and folders. This produces an `<ProjectName>.zip`. file.
-
-1. `Deploy the zip file:
-
-    ```cmd
-    az webapp deployment source config-zip --resource-group "mm-echo-bot-deployment-group" --name "mm-echo-bot-deploy-cli" --src "<ProjectName>.zip"
-    ```
-
-1. If you change the code you must repeat steps 5 to 7.
+1. In the project directory zip up all the files and folders. Name the archive `AuthenticationBot.zip` for example, but you can use any name.
 
 1. Deploy the bot
-az webapp deployment source config-zip --resource-group "mm-bot-service-group" --name "EchoBotAuthenticationApp" --src "`<ProjectName>.zip`"
 
+    ```cmd
+    az webapp deployment source config-zip --resource-group "<resource-group>" --name "<name of the bot app service in Azure>" --src "cloned sample 18.bot-authentication location>\AuthenticationBot.zip"
+    ```
+
+If you change the code you must repeat steps 9 and 7.
 
 [!INCLUDE [oauth-prompt-to-get-token](../includes/authentication/oauth-prompt-to-get-token.md)]
 

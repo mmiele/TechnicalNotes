@@ -86,7 +86,7 @@ After Azure has created the bot channels registration resource, it will be inclu
 
 This section shows how to create an OAuth connection the bot can use to access a protected resource.
 > [!WARNING]
-> To use the example listed previously and get some concrete results, we are going to use an Active Directory application to obtain Client ID and Client secret to configure the connection. In a real world situation, you would use your own application.
+> In order to use the example listed above and show concrete results, this topic uses an Active Directory application to obtain a client Id and a client secret to configure the OAuth connection. In a real world situation, you would use your own application client Id and client secret instead.
 
 1. In the [Azure portal][azure-portal] left panel, click **Azure Active Directory**.
 1. In the displayed blade, select **App registrations**.
@@ -136,8 +136,6 @@ This identity service provider can be used with any generic OAuth2 service that 
 |**Refresh URL** | | https://login.microsoftonline.com/common/oauth2/v2.0/token |
 |*Refresh Body Template* | Body to send with the token refresh | *refresh_token={RefreshToken}&redirect_uri={RedirectUrl}&grant_type=refresh_token&client_id={ClientId}&client_secret={ClientSecret}* |
 |**Scopes** | Comma separated list of the API permissions you granted earlier to the Azure AD authentication app | Values such as **openid, profile, Mail.Read, Mail.Send, User.Read, User.ReadBasic.All**|
-
-
 
 1. Click the **Save** button.
 

@@ -63,7 +63,7 @@ You can skip this section if you already have a registration.
 1. In the *Create Microsoft App ID* panel, click **Create New**.
 1. In the *Create new Microsoft App...* panel, click **Create App ID in the App Registration Portal** link.
 
-    ![bot channels registration credentials](../Media/Authentication/echo-bot-auth-chnls-reg-credentials.PNG)
+    ![bot channels registration credentials](../Media/Authentication/echo-bot-auth-chnls-reg-credentials.png)
 
 1. In the displayed *App registration* window, click the **New registration** tab in the upper left.
 1. Enter the name of the bot application you are registering. We used *EchoAuthBotRegistration* but you need to select your own unique name.

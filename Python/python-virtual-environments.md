@@ -32,10 +32,7 @@ where python3
 
 You get an output similar to the following: `C:\Users\<user name>\AppData\Local\Programs\Python\Python37\python.exe`.
 
-
-## Using virtual environment
-
-### Create a virtual environment
+## Create a virtual environment
 
 1. Open a terminal window and navigate to the project directory where you want to create your virtual environment.
 

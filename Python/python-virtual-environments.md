@@ -74,3 +74,4 @@ You get an output similar to the following: `C:\Users\<user name>\AppData\Local\
 ## References
 
 - [A Guide to Python’s Virtual Environments](https://towardsdatascience.com/virtual-environments-104c62d48c54) - What they are, how to use them, and how they really work.
+- [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/)

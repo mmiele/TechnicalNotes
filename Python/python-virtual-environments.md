@@ -56,9 +56,12 @@ You get an output similar to the following: `C:\Users\<user name>\AppData\Local\
     venv\Scripts\activate
     ```
 
-    In the terminal window, you get the path prefixed with the name of your environment in parenthesis.
+    In the terminal window, you get the path prefixed with the name of your environment in parenthesis, for example:
+    `(venv) C:\Users\<user name>\Python\vtest-project>`
 
-    At this point, you can work on your project which is completely isolated from the rest of the machine. Inside the environment you cannot access machine-wide site packages and any package installed in the environment cannot be accessible outside of the environment.
+    At this point, you can work on your project which is completely isolated from the rest of the machine.
+    Inside the environment you **cannot access machine-wide site packages** and
+    **any package installed in the environment cannot be accessible outside of the environment**.
 
     When done working on the project, you can exit the environment as shown next.
 
@@ -67,6 +70,21 @@ You get an output similar to the following: `C:\Users\<user name>\AppData\Local\
     ```cmd
     deactivate
     ```
+
+## Install packages
+
+By default, only `pip` and `setuptools` are installed in a new environment.
+You can verify this by executing the following command inside the virtual environment:
+
+```cmd
+pip list
+```
+
+This is the result:
+
+![default venv packages](../Media/Python/env/default-venv-packages.PNG)
+
+
 
 ## References
 

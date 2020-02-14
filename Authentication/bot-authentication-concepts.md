@@ -13,6 +13,7 @@ monikerRange: 'azure-bot-service-4.0'
 
 # User authentication in a comversation
 
+<!-- work in progress -->
 To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot will need to call an external service, such as the Microsoft Graph, GitHub, or a company's REST service.
 Each external services has a way of securing those calls, and a common way is to issue those requests using a **user token** that uniquely identifies the user on that external service (sometimes referred to as a [JSON Web Token](https://jwt.io/introduction/) (JWT)).
 

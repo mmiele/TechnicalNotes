@@ -11,7 +11,7 @@ ms.date: 05/31/2019
 monikerRange: 'azure-bot-service-4.0'
 ---
 
-# User authentication in a comversation
+# User authentication in a conversation
 
 <!-- work in progress -->
 To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot will need to call an external service, such as the Microsoft Graph, GitHub, or a company's REST service.

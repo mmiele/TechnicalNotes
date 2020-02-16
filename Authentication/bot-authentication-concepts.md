@@ -11,9 +11,29 @@ ms.date: 05/31/2019
 monikerRange: 'azure-bot-service-4.0'
 ---
 
-# User authentication in a conversation
+# Bot authentication
 
 <!-- work in progress -->
+In order for a bot to access protected online resources on behalf of the user, the bot must be authenticated. This authentication takes the form of a token based on the user's credentials. All this is accomplished by a set of components that are part of the **Azure Bot Service** architecture described below.
+
+1. **Bot Channels Registration**. This is the mechanism to *integrate* a bot within the Azure infrastructure, which allows the user to ommunicate with the bot to communicate via channels. The key elements that allow the integration are the following:
+
+    1. **app ID**. This is the application ID to configure the bot. In a Csharp bot it will be assigned to  **MicrosoftAppId** in the `appsettings.json` file.
+    1. **client secret**. This is the application password to configure the bot. In a Csharp bot, it will be assigned to **MicrosoftAppPassword** in the `appsettings.json` file.
+    1. **bot URL endpoint**. This is the URL used to exchange messages with the bot. It has the following format `https://<your bot host name>/api/messages`.
+    1. **authentication connection**. The name you assigned to the connection when you create the Azure Active Directory (AAD) application to use as the identity provider.
+
+1. **Bot**. The bot can be hosted anywhere including Azure. If hosted in Azure, you can build an deploy it.
+
+1. **Azure Active Directory (AAD) application**. This AAD app is needed for each application that you want the bot to be able to authenticate on behalf of the user. It is the **identity provider** which allows the bot to *access an external protected resource*, such as Office 365 MSGraph.
+
+The following picture shows the architecture of the Azure Bot Service which uses the Azure AD for as the identity provider for authentication.
+
+![Azure Bot Service architecture](../Media/Authentication/azure-bot-service-architecture.png)
+
+
+## User authentication in a conversation
+
 To perform certain operations on behalf of a user, such as checking email, referencing a calendar, checking on flight status, or placing an order, the bot will need to call an external service, such as the Microsoft Graph, GitHub, or a company's REST service.
 Each external services has a way of securing those calls, and a common way is to issue those requests using a **user token** that uniquely identifies the user on that external service (sometimes referred to as a [JSON Web Token](https://jwt.io/introduction/) (JWT)).
 

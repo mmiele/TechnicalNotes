@@ -16,18 +16,11 @@ monikerRange: 'azure-bot-service-4.0'
 <!-- work in progress -->
 In order for a bot to access protected online resources on behalf of the user, the bot must be authenticated. This authentication takes the form of a token based on the user's credentials. All this is accomplished by a set of components that are part of the **Azure Bot Service** architecture described below.
 
-1. **Bot Channels Registration**. This is the mechanism to *integrate* a bot within the Azure infrastructure, which allows the user to ommunicate with the bot to communicate via channels. The key elements that allow the integration are the following:
-
-    1. **app ID**. This is the application ID to configure the bot. In a Csharp bot it will be assigned to  **MicrosoftAppId** in the `appsettings.json` file.
-    1. **client secret**. This is the application password to configure the bot. In a Csharp bot, it will be assigned to **MicrosoftAppPassword** in the `appsettings.json` file.
-    1. **bot URL endpoint**. This is the URL used to exchange messages with the bot. It has the following format `https://<your bot host name>/api/messages`.
-    1. **authentication connection**. The name you assigned to the connection when you create the Azure Active Directory (AAD) application to use as the identity provider.
-
+1. **Bot Channels Registration application**. This is the mechanism to *integrate* a bot within the Azure infrastructure, which allows the user to communicate via channels with the bot.
 1. **Bot**. The bot can be hosted anywhere including Azure. If hosted in Azure, you can build an deploy it.
+1. **Identity provider application**. This application is needed for each protected resource the bot must access on behalf of the user. It is the **identity provider** which allows the bot to *access an external protected resource*, such as Office 365 MSGraph. The Azure Active Directory (AAD) is the identity provider to access Microsoft protected resources. Many other identity providers exist, for example GitHub, to access their protected resources.
 
-1. **Azure Active Directory (AAD) application**. This AAD app is needed for each application that you want the bot to be able to authenticate on behalf of the user. It is the **identity provider** which allows the bot to *access an external protected resource*, such as Office 365 MSGraph.
-
-The following picture shows the architecture of the Azure Bot Service which uses the Azure AD for as the identity provider for authentication.
+The following picture shows the architecture of the Azure Bot Service which uses the Azure AD as the identity provider for authentication.
 
 ![Azure Bot Service architecture](../Media/Authentication/azure-bot-service-architecture.png)
 

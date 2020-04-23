@@ -46,7 +46,7 @@ You get an output similar to the following: `C:\Users\<user name>\AppData\Local\
     python -m venv venv/
     ```
 
-    > [!NOTE] you cna use any name for the environment different from `venv`.
+    > [!NOTE] you can use any name for the environment different from `venv`.
 
     The `venv` is created, which is itself a directory. If you run the `tree` command, you can see the structure of this directory.
 

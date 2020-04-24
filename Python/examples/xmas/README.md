@@ -7,4 +7,6 @@ More than anything this sample shows the steps to use the virtual environment to
 1. Make sure to install the required packages by executing this command:
 `pip install -r requirements.txt`.
 1. Run the sample, by executing this command: `python xmas-tree.py`.
-You get the following output: ![xmas-tree](~/Media/Python/env\xmas-tree.PNG).
+You get the following output:
+
+    ![xmas-tree](../../../Media/Python/env/xmas-tree.PNG).

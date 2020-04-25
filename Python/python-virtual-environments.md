@@ -34,34 +34,33 @@ You get an output similar to the following: `C:\Users\<user name>\AppData\Local\
 
 ## Create a virtual environment
 
-1. Open a terminal window and navigate to the project directory where you want to create your virtual environment.
+1. Open a terminal window and navigate to the directory where you want to create your virtual environment.
 
     ```cmd
-    cd vtest-project
+    cd Users\<user name>\Python
     ```
 
 1. Create the virtual environment `venv`.
 
     ```cmd
-    python -m venv venv/
+    python -m venv learn-venv/
     ```
 
-    > [!NOTE] you cna use any name for the environment different from `venv`.
+    > [!NOTE] you can use any name for the environment different from `learn-venv`.
 
-    The `venv` is created, which is itself a directory. If you run the `tree` command, you can see the structure of this directory.
+    The `learn-venv` is created, which is itself a directory. If you run the `tree` command, you can see the structure of this directory.
 
-1. To activate the virtual environment just created, from he v-test-project director execute the following command (in Windows):
+1. To activate the virtual environment just created, from he `Users\<user name>\Python` directory execute the following command (in Windows):
 
     ```cmd
-    venv\Scripts\activate
+    learn-venv\Scripts\activate
     ```
 
     In the terminal window, you get the path prefixed with the name of your environment in parenthesis, for example:
-    `(venv) C:\Users\<user name>\Python\vtest-project>`
+    `(learn-venv) Users\<user name>\Python`
 
-    At this point, you can work on your project which is completely isolated from the rest of the machine.
-    Inside the environment you **cannot access machine-wide site packages** and
-    **any package installed in the environment cannot be accessible outside of the environment**.
+    At this point, you can navigate to your project directory and work on your project which is completely isolated from the rest of the machine.
+    Inside the environment you **cannot access machine-wide site packages** and **any package installed in the environment cannot be accessible outside of the environment**.
 
     When done working on the project, you can exit the environment as shown next.
 

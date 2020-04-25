@@ -40,7 +40,7 @@ You get an output similar to the following: `C:\Users\<user name>\AppData\Local\
     cd Users\<user name>\Python
     ```
 
-1. Create the virtual environment `venv`.
+1. Create the virtual environment `learn-venv`.
 
     ```cmd
     python -m venv learn-venv/

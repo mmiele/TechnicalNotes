@@ -17,3 +17,7 @@
 1. Upload a logo.
 1. Click the **Update application** button.
 1. Notice the *Client Id* and *Client Secret*. We'll need them when setting the bot OAuth connection string.
+
+## Testing in WebChat
+
+![WebChat testing](../Media/Authentication/bot-auth-webchat-test.PNG)

@@ -18,6 +18,11 @@
 1. Click the **Update application** button.
 1. Notice the *Client Id* and *Client Secret*. We'll need them when setting the bot OAuth connection string.
 
-## Testing in WebChat
+## Testing
 
-![WebChat testing](../Media/Authentication/bot-auth-webchat-test.PNG)
+![WebChat testing](../Media/Authentication/bot-auth-github-webchat-test.PNG)
+
+![Emulator testing](../Media/Authentication/bot-auth-github-emulator-test.PNG)
+
+
+![Githug sign in](../Media/Authentication/bot-auth-github-sign-in.PNG)

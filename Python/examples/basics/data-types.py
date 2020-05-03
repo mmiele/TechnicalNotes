@@ -11,7 +11,7 @@
     There are various data types in Python.
 
     Run it:
-    In a terminal winodow at the command prompt enter: > python simple_calculator.py.
+    In a terminal winodow at the command prompt enter: > python data-types.py.
     Enter the operation selection, then the first and second operand.
 
 """
@@ -35,7 +35,7 @@ def number_types():
     print(a, "is complex number?", isinstance(1+2j,complex))
 
 
-def list_types():
+def list_type():
     ''' Shows list type.
 
     .. note::

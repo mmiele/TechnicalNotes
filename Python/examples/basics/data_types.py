@@ -1,5 +1,5 @@
-"""
-.. module:: data-types
+'''
+.. module:: data_types
     :platform: OS X
     :synopsis: Shows how to use important data types
 
@@ -14,7 +14,7 @@
     In a terminal winodow at the command prompt enter: > python data-types.py.
     Enter the operation selection, then the first and second operand.
 
-"""
+'''
 
 def number_types():
     ''' Shows types of numbers.
@@ -60,29 +60,31 @@ def list_type():
     print("a[5:] = ", a[5:])
 
 
-# Display menu.
-print("Select operation.")
-print("n Numbers")
-print("l Lists")
+def main():
+    # Display menu.
+    print("Select operation.")
+    print("n Numbers")
+    print("l Lists")
+    print("quit")
 
-print("quit")
 
+    # Perform operations until the user quits.
+    while True:
+        # Take input from the user
+        choice = input("Enter choice(n quit): ")
 
-
-# Perform operations until the user quits.
-while True:
-    # Take input from the user
-    choice = input("Enter choice(n quit): ")
-
-    # Check if choice is one of the four options
-    if choice in ('n', 'l'):
-        if choice == 'n':
-            number_types()
-        elif choice == 'l':
-            list_types()
-    else:
-        if choice == 'quit':
-            print("Bye")
-            break
+        # Check if choice is one of the four options
+        if choice in ('n', 'l'):
+            if choice == 'n':
+                number_types()
+            elif choice == 'l':
+                list_type()
         else:
-            print("Invalid Input")
+            if choice == 'quit':
+                print("Bye")
+                break
+            else:
+                print("Invalid Input")
+
+if __name__ == "__main__":
+    main()

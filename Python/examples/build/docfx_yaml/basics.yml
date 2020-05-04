@@ -1,0 +1,46 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basics.calculator
+  - basics.data_types
+  - basics.language
+  - basics.simple_calculator
+  fullName: basics
+  kind: import
+  langs:
+  - python
+  module: basics
+  name: basics
+  source:
+    id: basics
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\__init__.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\__init__.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Contains basics package code.
+  type: package
+  uid: basics
+references:
+- fullName: basics.calculator
+  isExternal: false
+  name: calculator
+  parent: basics.calculator
+  uid: basics.calculator
+- fullName: basics.data_types
+  isExternal: false
+  name: data_types
+  parent: basics.data_types
+  uid: basics.data_types
+- fullName: basics.language
+  isExternal: false
+  name: language
+  parent: basics.language
+  uid: basics.language
+- fullName: basics.simple_calculator
+  isExternal: false
+  name: simple_calculator
+  parent: basics.simple_calculator
+  uid: basics.simple_calculator

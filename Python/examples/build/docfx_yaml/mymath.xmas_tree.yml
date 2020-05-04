@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - mymath.xmas_tree.main
+  - mymath.xmas_tree.xmas_tree_1
+  - mymath.xmas_tree.xmas_tree_2
+  - mymath.xmas_tree.xmas_tree_3
+  fullName: mymath.xmas_tree
+  langs:
+  - python
+  module: mymath.xmas_tree
+  name: xmas_tree
+  source:
+    id: xmas_tree
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: ".. module:: xmas_tree\n    :platform: OS X\n    :synopsis: Shows how to\
+    \ use important data types\n\n\n.. note::\n    It shows how to use numpy\n\n\n\
+    \    How to run it:\n        In a terminal winodow at the command prompt enter:\
+    \ > python xmas-tree.py.\n        Enter the operation selection, then the first\
+    \ and second operand.\n\n\n.. moduleauthor:: Michael <milexm@gmail.com>"
+  type: module
+  uid: mymath.xmas_tree
+- fullName: mymath.xmas_tree.main
+  langs:
+  - python
+  module: mymath.xmas_tree
+  name: main()
+  source:
+    id: main
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 53
+  syntax:
+    content: main()
+  type: function
+  uid: mymath.xmas_tree.main
+- fullName: mymath.xmas_tree.xmas_tree_1
+  langs:
+  - python
+  module: mymath.xmas_tree
+  name: xmas_tree_1()
+  source:
+    id: xmas_tree_1
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 19
+  syntax:
+    content: xmas_tree_1()
+  type: function
+  uid: mymath.xmas_tree.xmas_tree_1
+- fullName: mymath.xmas_tree.xmas_tree_2
+  langs:
+  - python
+  module: mymath.xmas_tree
+  name: xmas_tree_2()
+  source:
+    id: xmas_tree_2
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 28
+  syntax:
+    content: xmas_tree_2()
+  type: function
+  uid: mymath.xmas_tree.xmas_tree_2
+- fullName: mymath.xmas_tree.xmas_tree_3
+  langs:
+  - python
+  module: mymath.xmas_tree
+  name: xmas_tree_3()
+  source:
+    id: xmas_tree_3
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 41
+  syntax:
+    content: xmas_tree_3()
+  type: function
+  uid: mymath.xmas_tree.xmas_tree_3
+references:
+- fullName: mymath.xmas_tree.main
+  isExternal: false
+  name: main()
+  parent: mymath.xmas_tree
+  uid: mymath.xmas_tree.main
+- fullName: mymath.xmas_tree.xmas_tree_1
+  isExternal: false
+  name: xmas_tree_1()
+  parent: mymath.xmas_tree
+  uid: mymath.xmas_tree.xmas_tree_1
+- fullName: mymath.xmas_tree.xmas_tree_2
+  isExternal: false
+  name: xmas_tree_2()
+  parent: mymath.xmas_tree
+  uid: mymath.xmas_tree.xmas_tree_2
+- fullName: mymath.xmas_tree.xmas_tree_3
+  isExternal: false
+  name: xmas_tree_3()
+  parent: mymath.xmas_tree
+  uid: mymath.xmas_tree.xmas_tree_3

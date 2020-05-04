@@ -1,0 +1,140 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basics.data_types.list_type
+  - basics.data_types.main
+  - basics.data_types.number_types
+  fullName: basics.data_types
+  langs:
+  - python
+  module: basics.data_types
+  name: data_types
+  source:
+    id: data_types
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: ".. module:: data_types\n    :platform: OS X\n    :synopsis: Shows how\
+    \ to use important data types\n\n\n.. moduleauthor:: Michael <milexm@gmail.com>\n\
+    \n\n.. note::\n    Every value in Python has a datatype. Because everything is\
+    \ an object in Python,\n    data types are classes and variables are instances\
+    \ (object) of these classes.\n    There are various data types in Python.\n\n\n\
+    \    Run it:\n    In a terminal winodow at the command prompt enter: > python\
+    \ data-types.py.\n    Enter the operation selection, then the first and second\
+    \ operand."
+  type: module
+  uid: basics.data_types
+- fullName: basics.data_types.list_type
+  langs:
+  - python
+  module: basics.data_types
+  name: list_type()
+  source:
+    id: list_type
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 38
+  summary: 'Shows list type.
+
+
+
+    > [!NOTE]
+
+    > List is an ordered sequence of items. It is one of the most used datatype in
+    Python and is very flexible.
+
+    >
+
+    > All the items in a list do not need to be of the same type.
+
+    >
+
+    > Declaring a list is pretty straight forward. Items separated by commas are enclosed
+    within brackets [ ].
+
+    >'
+  syntax:
+    content: list_type()
+  type: function
+  uid: basics.data_types.list_type
+- fullName: basics.data_types.main
+  langs:
+  - python
+  module: basics.data_types
+  name: main()
+  source:
+    id: main
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 63
+  syntax:
+    content: main()
+  type: function
+  uid: basics.data_types.main
+- fullName: basics.data_types.number_types
+  langs:
+  - python
+  module: basics.data_types
+  name: number_types()
+  source:
+    id: number_types
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\data_types.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 19
+  summary: 'Shows types of numbers.
+
+
+
+    > [!NOTE]
+
+    > Integers, floating point numbers and complex numbers fall under Python numbers
+    category.
+
+    >
+
+    > They are defined as int, float and complex classes in Python.
+
+    >
+
+    > We can use the type() function to know which class a variable or a value belongs
+    to.
+
+    >
+
+    > Similarly, the isinstance() function is used to check if an object belongs to
+    a particular class.
+
+    >'
+  syntax:
+    content: number_types()
+  type: function
+  uid: basics.data_types.number_types
+references:
+- fullName: basics.data_types.list_type
+  isExternal: false
+  name: list_type()
+  parent: basics.data_types
+  uid: basics.data_types.list_type
+- fullName: basics.data_types.main
+  isExternal: false
+  name: main()
+  parent: basics.data_types
+  uid: basics.data_types.main
+- fullName: basics.data_types.number_types
+  isExternal: false
+  name: number_types()
+  parent: basics.data_types
+  uid: basics.data_types.number_types

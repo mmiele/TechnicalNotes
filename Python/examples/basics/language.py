@@ -1,3 +1,12 @@
+'''
+.. module:: language
+    :platform: OS X
+    :synopsis: Shows how to use important data types
+
+.. moduleauthor:: Michael <milexm@gmail.com>
+
+'''
+
 import re
 
 # For loop

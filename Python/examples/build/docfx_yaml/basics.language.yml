@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basics.language.for_loop
+  - basics.language.print_people
+  - basics.language.use_regex
+  - basics.language.while_loop
+  fullName: basics.language
+  langs:
+  - python
+  module: basics.language
+  name: language
+  source:
+    id: language
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: ".. module:: language\n    :platform: OS X\n    :synopsis: Shows how to\
+    \ use important data types\n\n\n.. moduleauthor:: Michael <milexm@gmail.com>"
+  type: module
+  uid: basics.language
+- fullName: basics.language.for_loop
+  langs:
+  - python
+  module: basics.language
+  name: for_loop()
+  source:
+    id: for_loop
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 13
+  syntax:
+    content: for_loop()
+  type: function
+  uid: basics.language.for_loop
+- fullName: basics.language.print_people
+  langs:
+  - python
+  module: basics.language
+  name: print_people(*people)
+  source:
+    id: print_people
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 39
+  syntax:
+    content: print_people(*people)
+  type: function
+  uid: basics.language.print_people
+- fullName: basics.language.use_regex
+  langs:
+  - python
+  module: basics.language
+  name: use_regex()
+  source:
+    id: use_regex
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 49
+  syntax:
+    content: use_regex()
+  type: function
+  uid: basics.language.use_regex
+- fullName: basics.language.while_loop
+  langs:
+  - python
+  module: basics.language
+  name: while_loop()
+  source:
+    id: while_loop
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 23
+  syntax:
+    content: while_loop()
+  type: function
+  uid: basics.language.while_loop
+references:
+- fullName: basics.language.for_loop
+  isExternal: false
+  name: for_loop()
+  parent: basics.language
+  uid: basics.language.for_loop
+- fullName: basics.language.print_people
+  isExternal: false
+  name: print_people(*people)
+  parent: basics.language
+  uid: basics.language.print_people
+- fullName: basics.language.use_regex
+  isExternal: false
+  name: use_regex()
+  parent: basics.language
+  uid: basics.language.use_regex
+- fullName: basics.language.while_loop
+  isExternal: false
+  name: while_loop()
+  parent: basics.language
+  uid: basics.language.while_loop

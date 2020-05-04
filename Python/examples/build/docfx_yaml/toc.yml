@@ -1,0 +1,14 @@
+- items:
+  - items:
+    - name: basics.calculator
+      uid: basics.calculator
+    - name: basics.data_types
+      uid: basics.data_types
+    - name: basics.language
+      uid: basics.language
+    - name: basics.simple_calculator
+      uid: basics.simple_calculator
+    name: basics
+    uid: basics
+  name: python_language
+  uid: project-python_language

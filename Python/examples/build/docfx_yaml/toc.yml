@@ -1,14 +1,37 @@
 - items:
   - items:
-    - name: basics.calculator
-      uid: basics.calculator
-    - name: basics.data_types
-      uid: basics.data_types
-    - name: basics.language
-      uid: basics.language
-    - name: basics.simple_calculator
-      uid: basics.simple_calculator
-    name: basics
-    uid: basics
+    - items:
+      - items:
+        - name: basic_samples.basics.calculator.Calculator
+          uid: basic_samples.basics.calculator.Calculator
+        name: basic_samples.basics.calculator
+        uid: basic_samples.basics.calculator
+      - items:
+        - name: basic_samples.basics.data_types.DataTypes
+          uid: basic_samples.basics.data_types.DataTypes
+        name: basic_samples.basics.data_types
+        uid: basic_samples.basics.data_types
+      - items:
+        - name: basic_samples.basics.language.LanguageClass
+          uid: basic_samples.basics.language.LanguageClass
+        name: basic_samples.basics.language
+        uid: basic_samples.basics.language
+      - items:
+        - name: basic_samples.basics.simple_calculator.SimpleCalculator
+          uid: basic_samples.basics.simple_calculator.SimpleCalculator
+        name: basic_samples.basics.simple_calculator
+        uid: basic_samples.basics.simple_calculator
+      name: basic_samples.basics
+      uid: basic_samples.basics
+    name: basic_samples
+    uid: basic_samples
+  - items:
+    - items:
+      - name: math_samples.mymath.xmas_tree
+        uid: math_samples.mymath.xmas_tree
+      name: math_samples.mymath
+      uid: math_samples.mymath
+    name: math_samples
+    uid: math_samples
   name: python_language
   uid: project-python_language

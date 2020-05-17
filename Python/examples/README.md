@@ -7,7 +7,7 @@ On a separate topic: in order to create sub-folders in GitHub, you must have at 
 
 ## Building the documentation
 
-1. In the terminal window, navigate to the directory that contains the code directory, in this case `C:\Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python`.
+1. In the terminal window, navigate to the directory that contains the code directory, in this case `C:\Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples`.
 1. Enter the command `sphinx-quickstart`.
     1. Assure to create a **source** folder by answering `y` to the question *Separate source and build directories (y/n) [n]: y*.
     1. Also enter the name of the code directory:
@@ -17,7 +17,7 @@ On a separate topic: in order to create sub-folders in GitHub, you must have at 
     1. `import sys`
     1. `sys.path.insert(0, os.path.abspath('.'))`
     1. `extensions = ['sphinx.ext.autodoc', 'docfx_yaml.extension']`
-1. Navigate to the code directory, in this case `examples` and execute the command `sphinx-apidoc -o source .` to generate the `.rst` files.
+1. Execute the command `sphinx-apidoc -o source .` to generate the `.rst` files.
 1. Execute the command  `sphinx-build source build` to generate the documentation in the `build` folder.
 1. Execute the command: `"C:\Program Files\docfx\docfx.exe" init -q`. This creates a new `docfx_project` folder.
 1. Copy the YAML files previously generated via Sphinx in `_build/docfx_yaml` into the `docfx_project/api folder`.

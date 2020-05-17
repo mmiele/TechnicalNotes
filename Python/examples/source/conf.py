@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # python_language documentation build configuration file, created by
-# sphinx-quickstart on Sun May  3 20:46:13 2020.
+# sphinx-quickstart on Wed May  6 16:54:54 2020.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -128,7 +128,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'python_language.tex', 'python\\_language Documentation',
-     '1.0', 'manual'),
+     'michael', 'manual'),
 ]
 
 

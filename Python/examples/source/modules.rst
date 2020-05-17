@@ -4,5 +4,5 @@ examples
 .. toctree::
    :maxdepth: 4
 
-   basics
-   mymath
+   basic_samples
+   math_samples

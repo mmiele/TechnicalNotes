@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.basics
+  fullName: basic_samples
+  kind: import
+  langs:
+  - python
+  module: basic_samples
+  name: basic_samples
+  source:
+    id: basic_samples
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\__init__.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\__init__.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Contains basics package code.
+  type: package
+  uid: basic_samples
+references:
+- fullName: basic_samples.basics
+  isExternal: false
+  name: basics
+  parent: basic_samples
+  uid: basic_samples.basics

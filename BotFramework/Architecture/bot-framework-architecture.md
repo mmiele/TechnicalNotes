@@ -29,5 +29,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis
 ## Third layer
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
 
-## Bottom Layer
+## Bottom layer
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.

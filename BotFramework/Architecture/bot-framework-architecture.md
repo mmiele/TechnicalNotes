@@ -5,7 +5,7 @@
 The [Bot Framework](https://dev.botframework.com/) provides a platform for developers to build **intelligent conversation agents**, aka **bots**, and connect them via a growing list of **channels** such as Facebook Messenger, Slack, Telegram and an embedded web chat widget.
 If combined with the services and APIs offered in [Microsoft Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/), such as [Language Understanding Intelligent Service (LUIS)](https://azure.microsoft.com/en-us/services/cognitive-services/language-understanding-intelligent-service/), bots have the potential to provide rich and useful interactions with users.
 
-A bot is a web app and users interact with it in a conversational way via **text**, **graphics** (such as cards or images), or **speech**.
+The users interact with a bot in a conversational way via **text**, **graphics** (such as cards or images), or **speech**.
 Every interaction between the user and the bot generates an **activity**.
 
 Typically, a bot is implemented as a **standard Web service which exposes a REST API**. You can implement it with any web technology stack you prefer.
@@ -20,13 +20,13 @@ The following picture provides a view of the Microsoft Bot Framework architectur
 ![Bot Framework Context](../../Media/Conceptual/bot-framework-architecture.PNG)
 
 
-## Application layer
+## Top layer
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
 
-## Abstraction layer
+## Second layer
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
 
-## Utility layer
+## Third layer
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
 
 ## Bottom Layer

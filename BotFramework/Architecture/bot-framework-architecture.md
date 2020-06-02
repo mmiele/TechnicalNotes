@@ -1,4 +1,4 @@
-# Bot Framework Architectural Components
+# Bot Framework Architecture
 
 ## Overview
 

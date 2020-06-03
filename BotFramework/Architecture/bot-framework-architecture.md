@@ -30,7 +30,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis
 
 ## Building blocks layer
 
-This layer contains components performing macro functions needed by a bot. They include functions like connector, streaming, authentication, language generation and so on.
+This layer contains components performing macro functions needed by a bot. They include elements like connector, streaming, authentication, language generation and so on.
 
 ### Language generation
 
@@ -55,7 +55,7 @@ This layer contains components performing macro functions needed by a bot. They 
 
 ## Infrastructure layer
 
-This layer contains infrastructural components performing a support and important role for the components in the upper layers. They include functions like OAuth, JSON handling, REST API, and so on.
+This layer contains infrastructural components performing a support and important role for the components in the upper layers. They include elements like OAuth, JSON handling, REST API, and so on.
 
 
 ### Azure

@@ -20,14 +20,59 @@ The following picture provides a view of the Microsoft Bot Framework architectur
 ![Bot Framework Context](../../Media/Conceptual/bot-framework-architecture.PNG)
 
 
-## Top layer
+## Application  layer
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
 
-## Second layer
+## Abstraction layer
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
 
-## Third layer
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
+## Building blocks layer
 
-## Bottom layer
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam maximus quam quis suscipit varius. Vestibulum non finibus justo, in convallis massa. Nulla sit amet convallis sem.
+This layer contains components performing macro functions needed by a bot. They include functions like connector, streaming, authentication, language generation and so on.
+
+### Language generation
+
+
+### Adaptive expressions
+
+
+### Connector
+
+
+### Streaming
+
+
+### Configuration
+
+
+### Memory
+
+
+### Authentication
+
+
+## Infrastructure layer
+
+This layer contains infrastructural components performing a support and important role for the components in the upper layers. They include functions like OAuth, JSON handling, REST API, and so on.
+
+
+### Azure
+
+
+### Application Insights
+
+
+### OAuth
+
+
+### REST API
+
+
+### Direct Line
+
+
+### JSON
+
+

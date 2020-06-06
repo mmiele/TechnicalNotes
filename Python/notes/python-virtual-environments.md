@@ -45,7 +45,7 @@ You get an output similar to the following: `C:\Users\<user name>\AppData\Local\
     ```cmd
     python -m venv learn-venv/
     ```
-    > [!NOTE] 
+    > [!NOTE]
     > You can use any name for the environment different from `learn-venv`.
 
     The `learn-venv` is created, which is itself a directory. If you run the `tree` command, you can see the structure of this directory.
@@ -81,8 +81,7 @@ pip list
 
 This is the result:
 
-![default venv packages](../Media/Python/env/default-venv-packages.PNG)
-
+![default venv packages](../../Media/Python/env/default-venv-packages.PNG)
 
 
 ## References

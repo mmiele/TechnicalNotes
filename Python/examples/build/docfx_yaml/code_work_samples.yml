@@ -1,0 +1,22 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children: []
+  fullName: code_work_samples
+  kind: import
+  langs:
+  - python
+  module: code_work_samples
+  name: code_work_samples
+  source:
+    id: code_work_samples
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_work_samples\__init__.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_work_samples\__init__.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Contains basics package code.
+  type: package
+  uid: code_work_samples
+references: []

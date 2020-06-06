@@ -1,0 +1,34 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - code_basic_samples.basics.calculator.Calculator
+  fullName: code_basic_samples.basics.calculator
+  langs:
+  - python
+  module: code_basic_samples.basics.calculator
+  name: calculator
+  source:
+    id: calculator
+<<<<<<< Updated upstream:Python/examples/build/docfx_yaml/basic_samples.basics.calculator.yml
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
+=======
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\calculator.py
+>>>>>>> Stashed changes:Python/examples/build/docfx_yaml/code_basic_samples.basics.calculator.yml
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Test in calculator.py.
+  type: module
+  uid: code_basic_samples.basics.calculator
+references:
+- fullName: code_basic_samples.basics.calculator.Calculator
+  isExternal: false
+  name: Calculator
+  parent: code_basic_samples.basics.calculator
+  uid: code_basic_samples.basics.calculator.Calculator

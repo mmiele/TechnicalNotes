@@ -1,0 +1,46 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.basics.calculator
+  - basic_samples.basics.data_types
+  - basic_samples.basics.language
+  - basic_samples.basics.simple_calculator
+  fullName: basic_samples.basics
+  kind: import
+  langs:
+  - python
+  module: basic_samples.basics
+  name: basics
+  source:
+    id: basics
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\__init__.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\__init__.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Some doc here for basics.
+  type: package
+  uid: basic_samples.basics
+references:
+- fullName: basic_samples.basics.calculator
+  isExternal: false
+  name: calculator
+  parent: basic_samples.basics.calculator
+  uid: basic_samples.basics.calculator
+- fullName: basic_samples.basics.data_types
+  isExternal: false
+  name: data_types
+  parent: basic_samples.basics.data_types
+  uid: basic_samples.basics.data_types
+- fullName: basic_samples.basics.language
+  isExternal: false
+  name: language
+  parent: basic_samples.basics.language
+  uid: basic_samples.basics.language
+- fullName: basic_samples.basics.simple_calculator
+  isExternal: false
+  name: simple_calculator
+  parent: basic_samples.basics.simple_calculator
+  uid: basic_samples.basics.simple_calculator

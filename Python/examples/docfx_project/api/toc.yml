@@ -1,5 +1,4 @@
 - items:
-<<<<<<< Updated upstream
   - items:
     - items:
       - items:
@@ -37,9 +36,5 @@
       uid: math_samples.mymath
     name: math_samples
     uid: math_samples
-=======
-  - name: code_work_samples
-    uid: code_work_samples
->>>>>>> Stashed changes
   name: python_language
   uid: project-python_language

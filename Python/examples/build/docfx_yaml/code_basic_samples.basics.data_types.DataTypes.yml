@@ -1,0 +1,171 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - code_basic_samples.basics.data_types.DataTypes.list_type
+  - code_basic_samples.basics.data_types.DataTypes.main
+  - code_basic_samples.basics.data_types.DataTypes.number_types
+  class: code_basic_samples.basics.data_types.DataTypes
+  fullName: code_basic_samples.basics.data_types.DataTypes
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: code_basic_samples.basics.data_types
+  name: DataTypes
+  source:
+    id: DataTypes
+<<<<<<< Updated upstream:Python/examples/build/docfx_yaml/basic_samples.basics.data_types.DataTypes.yml
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+=======
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+>>>>>>> Stashed changes:Python/examples/build/docfx_yaml/code_basic_samples.basics.data_types.DataTypes.yml
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 5
+  summary: Shows Python data types.
+  syntax: {}
+  type: class
+  uid: code_basic_samples.basics.data_types.DataTypes
+- class: code_basic_samples.basics.data_types.DataTypes
+  fullName: code_basic_samples.basics.data_types.DataTypes.list_type
+  langs:
+  - python
+  module: code_basic_samples.basics.data_types
+  name: list_type()
+  source:
+    id: list_type
+<<<<<<< Updated upstream:Python/examples/build/docfx_yaml/basic_samples.basics.data_types.DataTypes.yml
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+=======
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+>>>>>>> Stashed changes:Python/examples/build/docfx_yaml/code_basic_samples.basics.data_types.DataTypes.yml
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 28
+  summary: 'Shows list type.
+
+
+
+    > [!NOTE]
+
+    > List is an ordered sequence of items. It is one of the most used datatype in
+    Python and is very flexible.
+
+    >
+
+    > All the items in a list do not need to be of the same type.
+
+    >
+
+    > Declaring a list is pretty straight forward. Items separated by commas are enclosed
+    within brackets [ ].
+
+    >'
+  syntax:
+    content: list_type()
+  type: method
+  uid: code_basic_samples.basics.data_types.DataTypes.list_type
+- class: code_basic_samples.basics.data_types.DataTypes
+  fullName: code_basic_samples.basics.data_types.DataTypes.main
+  langs:
+  - python
+  module: code_basic_samples.basics.data_types
+  name: main()
+  source:
+    id: main
+<<<<<<< Updated upstream:Python/examples/build/docfx_yaml/basic_samples.basics.data_types.DataTypes.yml
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+=======
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+>>>>>>> Stashed changes:Python/examples/build/docfx_yaml/code_basic_samples.basics.data_types.DataTypes.yml
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 53
+  summary: 'Main function,
+
+    It displays the menu. Then enter a loop until the user exit.'
+  syntax:
+    content: main()
+  type: method
+  uid: code_basic_samples.basics.data_types.DataTypes.main
+- class: code_basic_samples.basics.data_types.DataTypes
+  fullName: code_basic_samples.basics.data_types.DataTypes.number_types
+  langs:
+  - python
+  module: code_basic_samples.basics.data_types
+  name: number_types()
+  source:
+    id: number_types
+<<<<<<< Updated upstream:Python/examples/build/docfx_yaml/basic_samples.basics.data_types.DataTypes.yml
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+=======
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\data_types.py
+>>>>>>> Stashed changes:Python/examples/build/docfx_yaml/code_basic_samples.basics.data_types.DataTypes.yml
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 9
+  summary: 'Shows types of numbers.
+
+
+
+    > [!NOTE]
+
+    > Integers, floating point numbers and complex numbers fall under Python numbers
+    category.
+
+    >
+
+    > They are defined as int, float and complex classes in Python.
+
+    >
+
+    > We can use the type() function to know which class a variable or a value belongs
+    to.
+
+    >
+
+    > Similarly, the isinstance() function is used to check if an object belongs to
+    a particular class.
+
+    >'
+  syntax:
+    content: number_types()
+  type: method
+  uid: code_basic_samples.basics.data_types.DataTypes.number_types
+references:
+- fullName: code_basic_samples.basics.data_types.DataTypes.list_type
+  isExternal: false
+  name: list_type()
+  parent: code_basic_samples.basics.data_types.DataTypes
+  uid: code_basic_samples.basics.data_types.DataTypes.list_type
+- fullName: code_basic_samples.basics.data_types.DataTypes.main
+  isExternal: false
+  name: main()
+  parent: code_basic_samples.basics.data_types.DataTypes
+  uid: code_basic_samples.basics.data_types.DataTypes.main
+- fullName: code_basic_samples.basics.data_types.DataTypes.number_types
+  isExternal: false
+  name: number_types()
+  parent: code_basic_samples.basics.data_types.DataTypes
+  uid: code_basic_samples.basics.data_types.DataTypes.number_types

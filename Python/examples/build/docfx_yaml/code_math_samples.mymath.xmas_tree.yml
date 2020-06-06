@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - code_math_samples.mymath.xmas_tree.main
+  - code_math_samples.mymath.xmas_tree.xmas_tree_1
+  - code_math_samples.mymath.xmas_tree.xmas_tree_2
+  - code_math_samples.mymath.xmas_tree.xmas_tree_3
+  fullName: code_math_samples.mymath.xmas_tree
+  langs:
+  - python
+  module: code_math_samples.mymath.xmas_tree
+  name: xmas_tree
+  source:
+    id: xmas_tree
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Test in xmas_tree.py
+  type: module
+  uid: code_math_samples.mymath.xmas_tree
+- fullName: code_math_samples.mymath.xmas_tree.main
+  langs:
+  - python
+  module: code_math_samples.mymath.xmas_tree
+  name: main()
+  source:
+    id: main
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 42
+  syntax:
+    content: main()
+  type: function
+  uid: code_math_samples.mymath.xmas_tree.main
+- fullName: code_math_samples.mymath.xmas_tree.xmas_tree_1
+  langs:
+  - python
+  module: code_math_samples.mymath.xmas_tree
+  name: xmas_tree_1()
+  source:
+    id: xmas_tree_1
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 8
+  syntax:
+    content: xmas_tree_1()
+  type: function
+  uid: code_math_samples.mymath.xmas_tree.xmas_tree_1
+- fullName: code_math_samples.mymath.xmas_tree.xmas_tree_2
+  langs:
+  - python
+  module: code_math_samples.mymath.xmas_tree
+  name: xmas_tree_2()
+  source:
+    id: xmas_tree_2
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 17
+  syntax:
+    content: xmas_tree_2()
+  type: function
+  uid: code_math_samples.mymath.xmas_tree.xmas_tree_2
+- fullName: code_math_samples.mymath.xmas_tree.xmas_tree_3
+  langs:
+  - python
+  module: code_math_samples.mymath.xmas_tree
+  name: xmas_tree_3()
+  source:
+    id: xmas_tree_3
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_math_samples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 30
+  syntax:
+    content: xmas_tree_3()
+  type: function
+  uid: code_math_samples.mymath.xmas_tree.xmas_tree_3
+references:
+- fullName: code_math_samples.mymath.xmas_tree.main
+  isExternal: false
+  name: main()
+  parent: code_math_samples.mymath.xmas_tree
+  uid: code_math_samples.mymath.xmas_tree.main
+- fullName: code_math_samples.mymath.xmas_tree.xmas_tree_1
+  isExternal: false
+  name: xmas_tree_1()
+  parent: code_math_samples.mymath.xmas_tree
+  uid: code_math_samples.mymath.xmas_tree.xmas_tree_1
+- fullName: code_math_samples.mymath.xmas_tree.xmas_tree_2
+  isExternal: false
+  name: xmas_tree_2()
+  parent: code_math_samples.mymath.xmas_tree
+  uid: code_math_samples.mymath.xmas_tree.xmas_tree_2
+- fullName: code_math_samples.mymath.xmas_tree.xmas_tree_3
+  isExternal: false
+  name: xmas_tree_3()
+  parent: code_math_samples.mymath.xmas_tree
+  uid: code_math_samples.mymath.xmas_tree.xmas_tree_3

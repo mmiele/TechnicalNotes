@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - code_basic_samples.basics.simple_calculator.SimpleCalculator
+  fullName: code_basic_samples.basics.simple_calculator
+  langs:
+  - python
+  module: code_basic_samples.basics.simple_calculator
+  name: simple_calculator
+  source:
+    id: simple_calculator
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\simple_calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\simple_calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Test in simple_calculator.py
+  type: module
+  uid: code_basic_samples.basics.simple_calculator
+references:
+- fullName: code_basic_samples.basics.simple_calculator.SimpleCalculator
+  isExternal: false
+  name: SimpleCalculator
+  parent: code_basic_samples.basics.simple_calculator
+  uid: code_basic_samples.basics.simple_calculator.SimpleCalculator

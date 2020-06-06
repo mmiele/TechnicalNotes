@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - math_samples.mymath
+  fullName: math_samples
+  kind: import
+  langs:
+  - python
+  module: math_samples
+  name: math_samples
+  source:
+    id: math_samples
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\__init__.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\__init__.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: mymath package
+  type: package
+  uid: math_samples
+references:
+- fullName: math_samples.mymath
+  isExternal: false
+  name: mymath
+  parent: math_samples
+  uid: math_samples.mymath

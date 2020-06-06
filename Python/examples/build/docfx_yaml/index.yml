@@ -1,8 +1,7 @@
 ### YamlMime:UniversalReference
 items:
 - children:
-  - basic_samples
-  - math_samples
+  - code_work_samples
   fullName: python_language
   kind: distribution
   langs:
@@ -12,11 +11,7 @@ items:
   type: package
   uid: project-python_language
 references:
-- fullname: basic_samples
+- fullname: code_work_samples
   isExternal: false
-  name: basic_samples
-  uid: basic_samples
-- fullname: math_samples
-  isExternal: false
-  name: math_samples
-  uid: math_samples
+  name: code_work_samples
+  uid: code_work_samples

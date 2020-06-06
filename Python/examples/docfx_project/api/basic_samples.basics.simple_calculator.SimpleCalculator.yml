@@ -1,0 +1,213 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.basics.simple_calculator.SimpleCalculator.add
+  - basic_samples.basics.simple_calculator.SimpleCalculator.divide
+  - basic_samples.basics.simple_calculator.SimpleCalculator.main
+  - basic_samples.basics.simple_calculator.SimpleCalculator.multiply
+  - basic_samples.basics.simple_calculator.SimpleCalculator.subtract
+  class: basic_samples.basics.simple_calculator.SimpleCalculator
+  fullName: basic_samples.basics.simple_calculator.SimpleCalculator
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: basic_samples.basics.simple_calculator
+  name: SimpleCalculator
+  source:
+    id: SimpleCalculator
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 4
+  summary: Docstring for simple calculator.
+  syntax: {}
+  type: class
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator
+- class: basic_samples.basics.simple_calculator.SimpleCalculator
+  exceptions:
+  - description: if could not convert operand to float
+    type: ValueError
+  fullName: basic_samples.basics.simple_calculator.SimpleCalculator.add
+  langs:
+  - python
+  module: basic_samples.basics.simple_calculator
+  name: add(x, y)
+  source:
+    id: add
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 8
+  summary: Adds two numbers
+  syntax:
+    content: add(x, y)
+    parameters:
+    - description: first operand
+      id: x
+      type:
+      - int
+    - description: second operand
+      id: y
+      type:
+      - int
+    return:
+      description: the operation result
+      type:
+      - int
+  type: method
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.add
+- class: basic_samples.basics.simple_calculator.SimpleCalculator
+  exceptions:
+  - description: if could not convert operand to float
+    type: ValueError
+  fullName: basic_samples.basics.simple_calculator.SimpleCalculator.divide
+  langs:
+  - python
+  module: basic_samples.basics.simple_calculator
+  name: divide(x, y)
+  source:
+    id: divide
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 46
+  summary: Divides two numbers
+  syntax:
+    content: divide(x, y)
+    parameters:
+    - description: first operand
+      id: x
+      type:
+      - int
+    - description: second operand
+      id: y
+      type:
+      - int
+    return:
+      description: the operation result
+      type:
+      - int
+  type: method
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.divide
+- class: basic_samples.basics.simple_calculator.SimpleCalculator
+  fullName: basic_samples.basics.simple_calculator.SimpleCalculator.main
+  langs:
+  - python
+  module: basic_samples.basics.simple_calculator
+  name: main()
+  source:
+    id: main
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 58
+  syntax:
+    content: main()
+  type: method
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.main
+- class: basic_samples.basics.simple_calculator.SimpleCalculator
+  exceptions:
+  - description: if could not convert operand to float
+    type: ValueError
+  fullName: basic_samples.basics.simple_calculator.SimpleCalculator.multiply
+  langs:
+  - python
+  module: basic_samples.basics.simple_calculator
+  name: multiply(x, y)
+  source:
+    id: multiply
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 33
+  summary: Multiplies two numbers
+  syntax:
+    content: multiply(x, y)
+    parameters:
+    - description: first operand
+      id: x
+      type:
+      - int
+    - description: second operand
+      id: y
+      type:
+      - int
+    return:
+      description: the operation result
+      type:
+      - int
+  type: method
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.multiply
+- class: basic_samples.basics.simple_calculator.SimpleCalculator
+  exceptions:
+  - description: if could not convert operand to float
+    type: ValueError
+  fullName: basic_samples.basics.simple_calculator.SimpleCalculator.subtract
+  langs:
+  - python
+  module: basic_samples.basics.simple_calculator
+  name: subtract(x, y)
+  source:
+    id: subtract
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 20
+  summary: Subtracts two numbers
+  syntax:
+    content: subtract(x, y)
+    parameters:
+    - description: first operand
+      id: x
+      type:
+      - int
+    - description: second operand
+      id: y
+      type:
+      - int
+    return:
+      description: the operation result
+      type:
+      - int
+  type: method
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.subtract
+references:
+- fullName: basic_samples.basics.simple_calculator.SimpleCalculator.add
+  isExternal: false
+  name: add(x, y)
+  parent: basic_samples.basics.simple_calculator.SimpleCalculator
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.add
+- fullName: basic_samples.basics.simple_calculator.SimpleCalculator.divide
+  isExternal: false
+  name: divide(x, y)
+  parent: basic_samples.basics.simple_calculator.SimpleCalculator
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.divide
+- fullName: basic_samples.basics.simple_calculator.SimpleCalculator.main
+  isExternal: false
+  name: main()
+  parent: basic_samples.basics.simple_calculator.SimpleCalculator
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.main
+- fullName: basic_samples.basics.simple_calculator.SimpleCalculator.multiply
+  isExternal: false
+  name: multiply(x, y)
+  parent: basic_samples.basics.simple_calculator.SimpleCalculator
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.multiply
+- fullName: basic_samples.basics.simple_calculator.SimpleCalculator.subtract
+  isExternal: false
+  name: subtract(x, y)
+  parent: basic_samples.basics.simple_calculator.SimpleCalculator
+  uid: basic_samples.basics.simple_calculator.SimpleCalculator.subtract

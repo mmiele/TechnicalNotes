@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - code_basic_samples.basics.language.LanguageClass.for_loop
+  - code_basic_samples.basics.language.LanguageClass.print_people
+  - code_basic_samples.basics.language.LanguageClass.use_regex
+  - code_basic_samples.basics.language.LanguageClass.while_loop
+  class: code_basic_samples.basics.language.LanguageClass
+  fullName: code_basic_samples.basics.language.LanguageClass
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: code_basic_samples.basics.language
+  name: LanguageClass
+  source:
+    id: LanguageClass
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 6
+  summary: Shows language constructs.
+  syntax: {}
+  type: class
+  uid: code_basic_samples.basics.language.LanguageClass
+- class: code_basic_samples.basics.language.LanguageClass
+  fullName: code_basic_samples.basics.language.LanguageClass.for_loop
+  langs:
+  - python
+  module: code_basic_samples.basics.language
+  name: for_loop()
+  source:
+    id: for_loop
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 9
+  summary: Shows the use of a for loop.
+  syntax:
+    content: for_loop()
+  type: method
+  uid: code_basic_samples.basics.language.LanguageClass.for_loop
+- class: code_basic_samples.basics.language.LanguageClass
+  fullName: code_basic_samples.basics.language.LanguageClass.print_people
+  langs:
+  - python
+  module: code_basic_samples.basics.language
+  name: print_people(*people)
+  source:
+    id: print_people
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 36
+  syntax:
+    content: print_people(*people)
+  type: method
+  uid: code_basic_samples.basics.language.LanguageClass.print_people
+- class: code_basic_samples.basics.language.LanguageClass
+  fullName: code_basic_samples.basics.language.LanguageClass.use_regex
+  langs:
+  - python
+  module: code_basic_samples.basics.language
+  name: use_regex()
+  source:
+    id: use_regex
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 46
+  syntax:
+    content: use_regex()
+  type: method
+  uid: code_basic_samples.basics.language.LanguageClass.use_regex
+- class: code_basic_samples.basics.language.LanguageClass
+  fullName: code_basic_samples.basics.language.LanguageClass.while_loop
+  langs:
+  - python
+  module: code_basic_samples.basics.language
+  name: while_loop()
+  source:
+    id: while_loop
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_basic_samples\basics\language.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 19
+  summary: Shows the use of a while loop.
+  syntax:
+    content: while_loop()
+  type: method
+  uid: code_basic_samples.basics.language.LanguageClass.while_loop
+references:
+- fullName: code_basic_samples.basics.language.LanguageClass.for_loop
+  isExternal: false
+  name: for_loop()
+  parent: code_basic_samples.basics.language.LanguageClass
+  uid: code_basic_samples.basics.language.LanguageClass.for_loop
+- fullName: code_basic_samples.basics.language.LanguageClass.print_people
+  isExternal: false
+  name: print_people(*people)
+  parent: code_basic_samples.basics.language.LanguageClass
+  uid: code_basic_samples.basics.language.LanguageClass.print_people
+- fullName: code_basic_samples.basics.language.LanguageClass.use_regex
+  isExternal: false
+  name: use_regex()
+  parent: code_basic_samples.basics.language.LanguageClass
+  uid: code_basic_samples.basics.language.LanguageClass.use_regex
+- fullName: code_basic_samples.basics.language.LanguageClass.while_loop
+  isExternal: false
+  name: while_loop()
+  parent: code_basic_samples.basics.language.LanguageClass
+  uid: code_basic_samples.basics.language.LanguageClass.while_loop

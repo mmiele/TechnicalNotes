@@ -17,10 +17,10 @@ items:
   name: SimpleCalculator
   source:
     id: SimpleCalculator
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 4
   summary: Docstring for simple calculator.
@@ -38,10 +38,10 @@ items:
   name: add(x, y)
   source:
     id: add
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 8
   summary: Adds two numbers
@@ -73,10 +73,10 @@ items:
   name: divide(x, y)
   source:
     id: divide
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 46
   summary: Divides two numbers
@@ -105,10 +105,10 @@ items:
   name: main()
   source:
     id: main
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 58
   syntax:
@@ -126,10 +126,10 @@ items:
   name: multiply(x, y)
   source:
     id: multiply
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 33
   summary: Multiplies two numbers
@@ -161,10 +161,10 @@ items:
   name: subtract(x, y)
   source:
     id: subtract
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\simple_calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\simple_calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 20
   summary: Subtracts two numbers

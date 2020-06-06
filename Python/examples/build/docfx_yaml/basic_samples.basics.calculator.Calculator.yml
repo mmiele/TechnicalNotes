@@ -14,10 +14,10 @@ items:
   name: Calculator
   source:
     id: Calculator
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 6
   summary: Calculator class.
@@ -32,10 +32,10 @@ items:
   name: main()
   source:
     id: main
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 34
   syntax:
@@ -50,10 +50,10 @@ items:
   name: performCalculation()
   source:
     id: performCalculation
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\calculator.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\calculator.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 10
   summary: This is the performCalculation docstring.

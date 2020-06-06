@@ -10,10 +10,10 @@ items:
   name: data_types
   source:
     id: data_types
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 0
   summary: Test in data_types.py.

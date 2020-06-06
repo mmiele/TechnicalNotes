@@ -11,13 +11,13 @@ items:
   name: math_samples
   source:
     id: math_samples
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\math_samples\__init__.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\__init__.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\math_samples\__init__.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\__init__.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 0
-  summary: Contains mymath package code.
+  summary: mymath package
   type: package
   uid: math_samples
 references:

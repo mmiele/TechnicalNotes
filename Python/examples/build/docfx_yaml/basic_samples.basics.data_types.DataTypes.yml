@@ -15,10 +15,10 @@ items:
   name: DataTypes
   source:
     id: DataTypes
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 5
   summary: Shows Python data types.
@@ -33,10 +33,10 @@ items:
   name: list_type()
   source:
     id: list_type
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 28
   summary: 'Shows list type.
@@ -70,10 +70,10 @@ items:
   name: main()
   source:
     id: main
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 53
   summary: 'Main function,
@@ -91,10 +91,10 @@ items:
   name: number_types()
   source:
     id: number_types
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\data_types.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 9
   summary: 'Shows types of numbers.

@@ -16,10 +16,10 @@ items:
   name: LanguageClass
   source:
     id: LanguageClass
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 6
   summary: Shows language constructs.
@@ -34,10 +34,10 @@ items:
   name: for_loop()
   source:
     id: for_loop
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 9
   summary: Shows the use of a for loop.
@@ -53,10 +53,10 @@ items:
   name: print_people(*people)
   source:
     id: print_people
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 36
   syntax:
@@ -71,10 +71,10 @@ items:
   name: use_regex()
   source:
     id: use_regex
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 46
   syntax:
@@ -89,10 +89,10 @@ items:
   name: while_loop()
   source:
     id: while_loop
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\basic_samples\basics\language.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\language.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 19
   summary: Shows the use of a while loop.

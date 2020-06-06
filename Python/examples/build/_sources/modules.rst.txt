@@ -1,5 +1,5 @@
-examples
-========
+code_samples
+============
 
 .. toctree::
    :maxdepth: 4

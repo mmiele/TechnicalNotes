@@ -11,10 +11,10 @@ items:
   name: mymath
   source:
     id: mymath
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\math_samples\mymath\__init__.py
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\mymath\__init__.py
     remote:
       branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\math_samples\mymath\__init__.py
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\mymath\__init__.py
       repo: https://github.com/mmiele/TechnicalNotes.git
     startLine: 0
   summary: Some doc here for mymath.

@@ -2,7 +2,8 @@
 api_name: []
 items:
 - children:
-  - math_samples.mymath.xmas_tree.xmas_tree
+  - math_samples.mymath.xmas_tree.XmasTree
+  - math_samples.mymath.xmas_tree.main
   fullName: math_samples.mymath.xmas_tree
   langs:
   - python
@@ -19,9 +20,34 @@ items:
   summary: Test in xmas_tree.py
   type: module
   uid: math_samples.mymath.xmas_tree
+- fullName: math_samples.mymath.xmas_tree.main
+  langs:
+  - python
+  module: math_samples.mymath.xmas_tree
+  name: main()
+  source:
+    id: main
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\mymath\xmas_tree.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\mymath\xmas_tree.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 57
+  summary: 'Main function,
+
+    It displays the menu. Then enter a loop until the user exit.'
+  syntax:
+    content: main()
+  type: function
+  uid: math_samples.mymath.xmas_tree.main
 references:
-- fullName: math_samples.mymath.xmas_tree.xmas_tree
+- fullName: math_samples.mymath.xmas_tree.XmasTree
   isExternal: false
-  name: xmas_tree
+  name: XmasTree
   parent: math_samples.mymath.xmas_tree
-  uid: math_samples.mymath.xmas_tree.xmas_tree
+  uid: math_samples.mymath.xmas_tree.XmasTree
+- fullName: math_samples.mymath.xmas_tree.main
+  isExternal: false
+  name: main()
+  parent: math_samples.mymath.xmas_tree
+  uid: math_samples.mymath.xmas_tree.main

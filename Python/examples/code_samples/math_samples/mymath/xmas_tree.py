@@ -2,16 +2,15 @@
 Test in xmas_tree.py
 """
 
-import numpy as np
-
 class XmasTree(object):
-    """ Shows how to use numpy package
-        ..remarks::
+
+    """ Shows how to use numpy package.
+
+        .. remarks::
             The class `XmasTree` creates 3 Xmas trees
             with different shapes and colors.
 
     """
-
 
     def xmas_tree_1(self):
 
@@ -22,6 +21,7 @@ class XmasTree(object):
         for sp in range(3):
             print(('||').center(20))
         print(('\====/').center(20))
+
 
     def xmas_tree_2(self):
 

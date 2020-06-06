@@ -2,27 +2,31 @@
 Test in xmas_tree.py
 """
 
-# import numpy as np
+import numpy as np
 
-class xmas_tree:
-    """Displays xmas-tree
-
-    .. remarks::
-        Uses mumpy
+class XmasTree(object):
+    """ Shows how to use numpy package
+        ..remarks::
+            The class `XmasTree` creates 3 Xmas trees
+            with different shapes and colors.
 
     """
 
-    # Method:1
-    def xmas_tree_1():
+
+    def xmas_tree_1(self):
+
+        """ Builds a simple tree. """
+
         for i in range(1,20,2):
             print(('*'*i).center(20))
         for sp in range(3):
             print(('||').center(20))
         print(('\====/').center(20))
 
+    def xmas_tree_2(self):
 
-    ### Method: 2 ###
-    def xmas_tree_2():
+        """ Builds a more colorful tree. """
+
         b = 34
         c = 0
         while b > 0 and c < 33 :
@@ -34,8 +38,11 @@ class xmas_tree:
         print(' '*32, end = '\====/')
         print('')
 
-    ### Method:3 ###
-    def xmas_tree_3():
+
+    def xmas_tree_3(self):
+
+        """ Builds a simple tree. """
+
         x = np.arange(7,16)
         y = np.arange(1,18,2)
         z = np.column_stack((x[::-1],y))
@@ -47,10 +54,16 @@ class xmas_tree:
         print('')
 
 
-    def main():
-        xmas_tree_1()
-        xmas_tree_2()
-        xmas_tree_3()
+def main():
+    ''' Main function,
+        It displays the menu. Then enter a loop until the user exit.
+    '''
+    tree = XmasTree()
 
-    if __name__ == "__main__":
-        main()
+    tree.xmas_tree_1()
+    tree.xmas_tree_2()
+    tree.xmas_tree_3()
+
+
+if __name__ == "__main__":
+    main()

@@ -4,192 +4,12 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.calculator.Calculator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.calculator.Calculator.html",
-          "hash": "GKbDFUDtYszFKxC/r823gQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.calculator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.calculator.html",
-          "hash": "DM+W5CEzZw77ohpiz6RG5A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.data_types.DataTypes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.data_types.DataTypes.html",
-          "hash": "l3N74AN+9EZR0UCpYTh6SQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.data_types.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.data_types.html",
-          "hash": "l857ezO6MJ4IhrQGnKcAmQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.language.LanguageClass.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.language.LanguageClass.html",
-          "hash": "CebZKHqPBr+jkGS+uEK6lw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.language.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.language.html",
-          "hash": "mgH0uI2fozycwAcgH0+Lzw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.simple_calculator.SimpleCalculator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.simple_calculator.SimpleCalculator.html",
-          "hash": "tFjxR+GDxI9HrXnmb+7zmQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.simple_calculator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.simple_calculator.html",
-          "hash": "VXb20bulbrCWEP2qY3bdyg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.basics.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.basics.html",
-          "hash": "Ab22J+ANbdmNJHGVgMPEeA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/basic_samples.html",
-          "hash": "dageecEzW9X3tPUEXawqCg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "1IrSMAdJZIA8OHleugZgnw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/math_samples.mymath.xmas_tree.xmas_tree.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/math_samples.mymath.xmas_tree.xmas_tree.html",
-          "hash": "dheZ4SplpHk/6prajkMVWQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/math_samples.mymath.xmas_tree.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/math_samples.mymath.xmas_tree.html",
-          "hash": "REMSF/G3C2X4mABTZoFzrA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/math_samples.mymath.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/math_samples.mymath.html",
-          "hash": "HRRNyPZoZAXYnxBhHtG9RA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "UniversalReference",
-      "source_relative_path": "api/math_samples.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/math_samples.html",
-          "hash": "mOVlLD+B5oT6F1Yb1r9AJw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "EuYb1wrViP/SfzsFp6mBIg=="
+          "hash": "UBzEKG+X4ggOyLGk41kXKA=="
         }
       },
       "is_incremental": false,
@@ -237,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+          "hash": "IGK1ZSYI4NbShXZSeUUd6Q=="
         }
       },
       "is_incremental": false,
@@ -262,13 +82,6 @@
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "UniversalReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor UniversalReferenceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0

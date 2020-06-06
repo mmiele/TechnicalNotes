@@ -1,17 +1,17 @@
-code\_math\_samples package
-===========================
+math\_samples package
+=====================
 
 Subpackages
 -----------
 
 .. toctree::
 
-    code_math_samples.mymath
+    math_samples.mymath
 
 Module contents
 ---------------
 
-.. automodule:: code_math_samples
+.. automodule:: math_samples
     :members:
     :undoc-members:
     :show-inheritance:

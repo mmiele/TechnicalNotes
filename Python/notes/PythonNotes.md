@@ -13,4 +13,4 @@
 |[Programiz](https://www.programiz.com/)| Learning Python for free :check: :star: :star2: |
 |[Python Tutorial](https://www.geeksforgeeks.org/python-tutorial/?ref=leftbar-rightbar)| GeeksForGeeks :check: :star: :star2:|
 |[Python Main Function](https://www.guru99.com/learn-python-main-function-with-examples-understand-main.html)| What is Python Main Function? |
-|[Markdown emoji](https://github.com/StylishThemes/GitHub-Dark/wiki/Emoji)| List of GitHub emoji; mouse over images to get the code|
+|[GitHub Markdown emoji :octocat:](https://github.com/StylishThemes/GitHub-Dark/wiki/Emoji)| List of GitHub emoji; mouse over images to get the code|

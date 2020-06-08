@@ -139,12 +139,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "UidNotFound"
+      ],
       "type": "UniversalReference",
-      "source_relative_path": "api/basic_samples.yml",
+      "source_relative_path": "api/basic_samples.date_time.evaluatedatetime.MyDateTime.yml",
       "output": {
         ".html": {
-          "relative_path": "api/basic_samples.html",
-          "hash": "dageecEzW9X3tPUEXawqCg=="
+          "relative_path": "api/basic_samples.date_time.evaluatedatetime.MyDateTime.html",
+          "hash": "i5YOEXTTkHG0kk7+B3AcoQ=="
         }
       },
       "is_incremental": false,
@@ -152,14 +155,50 @@
     },
     {
       "type": "UniversalReference",
-      "source_relative_path": "api/index.yml",
+      "source_relative_path": "api/basic_samples.date_time.evaluatedatetime.yml",
       "output": {
         ".html": {
-          "relative_path": "api/index.html",
-          "hash": "ht+aMozLbfqNs+9zDIua8A=="
+          "relative_path": "api/basic_samples.date_time.evaluatedatetime.html",
+          "hash": "GVrLtEbzSOdR6CsG9B8YIQ=="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "UniversalReference",
+      "source_relative_path": "api/basic_samples.date_time.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/basic_samples.date_time.html",
+          "hash": "9UaASafT1oOJvIpARtyFDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "UniversalReference",
+      "source_relative_path": "api/basic_samples.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/basic_samples.html",
+          "hash": "c+YaV5cDwzn+HWtsE+SXuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "1IrSMAdJZIA8OHleugZgnw=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -216,7 +255,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "az2LpD/vvsxXY0hp0tB3cw=="
+          "hash": "zlv5KKg3vFzhtmpwXLCCFg=="
         }
       },
       "is_incremental": false,

@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.date_time.evaluatedatetime
+  fullName: basic_samples.date_time
+  kind: import
+  langs:
+  - python
+  module: basic_samples.date_time
+  name: date_time
+  source:
+    id: date_time
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\__init__.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\__init__.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: basics package
+  type: package
+  uid: basic_samples.date_time
+references:
+- fullName: basic_samples.date_time.evaluatedatetime
+  isExternal: false
+  name: evaluatedatetime
+  parent: basic_samples.date_time.evaluatedatetime
+  uid: basic_samples.date_time.evaluatedatetime

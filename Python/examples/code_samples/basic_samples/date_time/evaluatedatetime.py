@@ -15,9 +15,6 @@ class MyDateTime(object):
         Displays the current time. It also calculates the related time stamp.
         Then converts the time stamp to date and time.
 
-        :param choice: The user's selection
-        :type choice: str
-
         .. remarks::
             This function imports the :class:`datetime` from the datetime module. Then, it uses the :meth: `now()`
             to get a datetime object containing current date and time.

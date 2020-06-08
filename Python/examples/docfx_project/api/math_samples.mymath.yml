@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - math_samples.mymath.xmas_tree
+  fullName: math_samples.mymath
+  kind: import
+  langs:
+  - python
+  module: math_samples.mymath
+  name: mymath
+  source:
+    id: mymath
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\mymath\__init__.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\math_samples\mymath\__init__.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Some doc here for mymath.
+  type: package
+  uid: math_samples.mymath
+references:
+- fullName: math_samples.mymath.xmas_tree
+  isExternal: false
+  name: xmas_tree
+  parent: math_samples.mymath.xmas_tree
+  uid: math_samples.mymath.xmas_tree

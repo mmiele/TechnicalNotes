@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
     basic_samples.basics
+    basic_samples.date_time
 
 Module contents
 ---------------

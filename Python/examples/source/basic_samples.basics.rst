@@ -20,6 +20,14 @@ basic\_samples\.basics\.data\_types module
     :undoc-members:
     :show-inheritance:
 
+basic\_samples\.basics\.doc\_sample module
+------------------------------------------
+
+.. automodule:: basic_samples.basics.doc_sample
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 basic\_samples\.basics\.language module
 ---------------------------------------
 

@@ -1,0 +1,135 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.basics.doc_sample.MyClass.my_func
+  - basic_samples.basics.doc_sample.MyClass.my_other_func
+  class: basic_samples.basics.doc_sample.MyClass
+  fullName: basic_samples.basics.doc_sample.MyClass
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: basic_samples.basics.doc_sample
+  name: MyClass
+  remarks: "This is where you put the meat of your documentation. **The preceding\
+    \ empty line and\nindentation are critical** or your documentation won't work.\n\
+    \nRemember that your summary line will show as well, so the remarks section should\
+    \ follow\nnaturally, or at least relate well to your summary line.\n\nIn the remarks\
+    \ section you should be very verbose about how your class works and include\n\
+    inline code samples, see also, and other relevant examples. For example:\n\n*\
+    \ Bulleted lists! \n\n* Numbered lists using numbers or # \n\n* Most Markdown\
+    \ syntax works just great! \n\n<!-- literal_block {\"ids\": [], \"classes\": [],\
+    \ \"names\": [], \"dupnames\": [], \"backrefs\": [], \"xml:space\": \"preserve\"\
+    , \"language\": \"python\", \"linenos\": false, \"highlight_args\": {}} -->\n\n\
+    ````python\n\n   # This is a code block\n   my_class = MyClass(a, b, c)\n\n  \
+    \ # If things don't render correctly, check the spacing around documentation blocks\n\
+    \   ````\n\nParameters for the __init__ method need to be documented on the class\
+    \ construct to appear\nin the documentation. Write meaningful docstrings that\
+    \ help the user! If there are explicit\nvalues that are required, supply the ranges,\
+    \ list, or a link to where the user can find the\ninformation!\n"
+  source:
+    id: MyClass
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\doc_sample.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\doc_sample.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 11
+  summary: 'Put a one or two line summary here. It will show up in a list as well
+    so it
+
+    should be terse and informative.'
+  syntax:
+    content: MyClass(name, description=None)
+    parameters:
+    - description: The name of the object
+      id: name
+      type:
+      - str
+    - description: An optional description
+      id: description
+      type:
+      - str
+  type: class
+  uid: basic_samples.basics.doc_sample.MyClass
+- class: basic_samples.basics.doc_sample.MyClass
+  fullName: basic_samples.basics.doc_sample.MyClass.my_func
+  langs:
+  - python
+  module: basic_samples.basics.doc_sample
+  name: my_func()
+  remarks: "This is where you put the interesting part of the documentation including\n\
+    \n\n> [!NOTE]\n> This is a highlighted note in a box\n>\n\nand\n\n<!-- literal_block\
+    \ {\"ids\": [], \"classes\": [], \"names\": [], \"dupnames\": [], \"backrefs\"\
+    : [], \"xml:space\": \"preserve\", \"language\": \"python\", \"linenos\": false,\
+    \ \"highlight_args\": {}} -->\n\n````python\n\n   # This is a code sample\n  \
+    \ result = my_class.my_func()\n   ````\n\nAlso a great opportunity to add links\
+    \ to other functions like <xref:basic_samples.basics.doc_sample.my_other_func>\
+    \ and\nother classes like <xref:my_other_module.MyOtherClass>\n"
+  source:
+    id: my_func
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\doc_sample.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\doc_sample.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 64
+  summary: 'This is a summary string that gives a basic description that shows in
+    a list.
+
+    Only use one or two lines of text.'
+  syntax:
+    content: my_func()
+    parameters: []
+    return:
+      description: Another class
+      type:
+      - my_other_module.MyOtherClass
+  type: method
+  uid: basic_samples.basics.doc_sample.MyClass.my_func
+- class: basic_samples.basics.doc_sample.MyClass
+  fullName: basic_samples.basics.doc_sample.MyClass.my_other_func
+  langs:
+  - python
+  module: basic_samples.basics.doc_sample
+  name: my_other_func(my_public_param, _my_private_param=1)
+  source:
+    id: my_other_func
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\doc_sample.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\doc_sample.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 96
+  summary: Summary string is sometimes sufficient if the function is simple
+  syntax:
+    content: my_other_func(my_public_param, _my_private_param=1)
+    parameters:
+    - description: Description of the parameter
+      id: my_public_param
+      type:
+      - int
+    - defaultValue: '1'
+      description: Private parameters (with _) are not rendered in documentation by
+        default
+      id: _my_private_param
+      type:
+      - int
+    return:
+      description: A value
+      type:
+      - int
+  type: method
+  uid: basic_samples.basics.doc_sample.MyClass.my_other_func
+references:
+- fullName: basic_samples.basics.doc_sample.MyClass.my_func
+  isExternal: false
+  name: my_func()
+  parent: basic_samples.basics.doc_sample.MyClass
+  uid: basic_samples.basics.doc_sample.MyClass.my_func
+- fullName: basic_samples.basics.doc_sample.MyClass.my_other_func
+  isExternal: false
+  name: my_other_func(my_public_param, _my_private_param=1)
+  parent: basic_samples.basics.doc_sample.MyClass
+  uid: basic_samples.basics.doc_sample.MyClass.my_other_func

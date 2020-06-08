@@ -115,6 +115,107 @@ Similarly, the isinstance() function is used to check if an object belongs to a 
 </dd></dl>
 
 </div>
+<div class="section" id="module-basic_samples.basics.doc_sample">
+<span id="basic-samples-basics-doc-sample-module"></span><h2>basic_samples.basics.doc_sample module<a class="headerlink" href="#module-basic_samples.basics.doc_sample" title="Permalink to this headline">¶</a></h2>
+<p>This is the module summary. Only add one or two lines of documentation
+here as it shows up in a list. Remarks are ignored here, so don&#8217;t include them.</p>
+<dl class="class">
+<dt id="basic_samples.basics.doc_sample.MyClass">
+<em class="property">class </em><code class="descclassname">basic_samples.basics.doc_sample.</code><code class="descname">MyClass</code><span class="sig-paren">(</span><em>name</em>, <em>description=None</em><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.basics.doc_sample.MyClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="basic_samples.basics.doc_sample.object"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Put a one or two line summary here. It will show up in a list as well so it
+should be terse and informative.</p>
+<p><p>This is where you put the meat of your documentation. <strong>The preceding empty line and
+indentation are critical</strong> or your documentation won&#8217;t work.</p>
+<p>Remember that your summary line will show as well, so the remarks section should follow
+naturally, or at least relate well to your summary line.</p>
+<p>In the remarks section you should be very verbose about how your class works and include
+inline code samples, see also, and other relevant examples. For example:</p>
+<ul class="simple">
+<li>Bulleted lists!</li>
+<li>Numbered lists using numbers or #</li>
+<li>Most Markdown syntax works just great!</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># This is a code block</span>
+<span class="n">my_class</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="c1"># If things don&#39;t render correctly, check the spacing around documentation blocks</span>
+</pre></div>
+</div>
+<p>Parameters for the __init__ method need to be documented on the class construct to appear
+in the documentation. Write meaningful docstrings that help the user! If there are explicit
+values that are required, supply the ranges, list, or a link to where the user can find the
+information!</p>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<a class="reference internal" href="str.html#"><em>str</em></a>) &#8211; The name of the object</li>
+<li><strong>description</strong> (<a class="reference internal" href="str.html#"><em>str</em></a>) &#8211; An optional description</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="basic_samples.basics.doc_sample.MyClass.my_func">
+<code class="descname">my_func</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.basics.doc_sample.MyClass.my_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a summary string that gives a basic description that shows in a list.
+Only use one or two lines of text.</p>
+<p><p>This is where you put the interesting part of the documentation including</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is a highlighted note in a box</p>
+</div>
+<p>and</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># This is a code sample</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">my_class</span><span class="o">.</span><span class="n">my_func</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Also a great opportunity to add links to other functions like <a class="reference internal" href="basic_samples.basics.doc_sample.my_other_func"><code class="xref py py-func docutils literal"><span class="pre">my_other_func()</span></code></a> and
+other classes like <a class="reference internal" href="my_other_module.MyOtherClass"><code class="xref py py-class docutils literal"><span class="pre">my_other_module.MyOtherClass</span></code></a></p>
+</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Another class</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="my_other_module.MyOtherClass.html#">my_other_module.MyOtherClass</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="basic_samples.basics.doc_sample.MyClass.my_other_func">
+<code class="descname">my_other_func</code><span class="sig-paren">(</span><em>my_public_param</em>, <em>_my_private_param=1</em><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.basics.doc_sample.MyClass.my_other_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Summary string is sometimes sufficient if the function is simple</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>my_public_param</strong> (<a class="reference internal" href="int.html#"><em>int</em></a>) &#8211; Description of the parameter</li>
+<li><strong>_my_private_param</strong> (<a class="reference internal" href="int.html#"><em>int</em></a>) &#8211; Private parameters (with _) are not rendered in documentation by default</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A value</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="int.html#">int</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-basic_samples.basics.language">
 <span id="basic-samples-basics-language-module"></span><h2>basic_samples.basics.language module<a class="headerlink" href="#module-basic_samples.basics.language" title="Permalink to this headline">¶</a></h2>
 <p>Test in language.py.</p>
@@ -291,6 +392,7 @@ Similarly, the isinstance() function is used to check if an object belongs to a 
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-basic_samples.basics.calculator">basic_samples.basics.calculator module</a></li>
 <li><a class="reference internal" href="#module-basic_samples.basics.data_types">basic_samples.basics.data_types module</a></li>
+<li><a class="reference internal" href="#module-basic_samples.basics.doc_sample">basic_samples.basics.doc_sample module</a></li>
 <li><a class="reference internal" href="#module-basic_samples.basics.language">basic_samples.basics.language module</a></li>
 <li><a class="reference internal" href="#module-basic_samples.basics.simple_calculator">basic_samples.basics.simple_calculator module</a></li>
 <li><a class="reference internal" href="#module-basic_samples.basics">Module contents</a></li>

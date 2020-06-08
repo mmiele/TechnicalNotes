@@ -6,7 +6,6 @@
 
 ## References
 
-[!div class="mx-tdBreakAll"]
 |Link <img width=200\>|Description|
 |-------------|----------|
 |[Python documentation](https://docs.python.org/3/contents.html)|Python official documentation|

@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.date_time.evaluatedatetime.MyDateTime
+  - basic_samples.date_time.evaluatedatetime.main
+  fullName: basic_samples.date_time.evaluatedatetime
+  langs:
+  - python
+  module: basic_samples.date_time.evaluatedatetime
+  name: evaluatedatetime
+  source:
+    id: evaluatedatetime
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: In this module, you will learn to manipulate date and time in Python.
+  type: module
+  uid: basic_samples.date_time.evaluatedatetime
+- fullName: basic_samples.date_time.evaluatedatetime.main
+  langs:
+  - python
+  module: basic_samples.date_time.evaluatedatetime
+  name: main()
+  source:
+    id: main
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 58
+  summary: 'Main function,
+
+    It displays the menu. Then enter a loop until the user exit.'
+  syntax:
+    content: main()
+  type: function
+  uid: basic_samples.date_time.evaluatedatetime.main
+references:
+- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime
+  isExternal: false
+  name: MyDateTime
+  parent: basic_samples.date_time.evaluatedatetime
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime
+- fullName: basic_samples.date_time.evaluatedatetime.main
+  isExternal: false
+  name: main()
+  parent: basic_samples.date_time.evaluatedatetime
+  uid: basic_samples.date_time.evaluatedatetime.main

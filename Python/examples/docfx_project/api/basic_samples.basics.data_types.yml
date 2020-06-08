@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.basics.data_types.DataTypes
+  fullName: basic_samples.basics.data_types
+  langs:
+  - python
+  module: basic_samples.basics.data_types
+  name: data_types
+  source:
+    id: data_types
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\data_types.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Test in data_types.py.
+  type: module
+  uid: basic_samples.basics.data_types
+references:
+- fullName: basic_samples.basics.data_types.DataTypes
+  isExternal: false
+  name: DataTypes
+  parent: basic_samples.basics.data_types
+  uid: basic_samples.basics.data_types.DataTypes

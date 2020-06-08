@@ -1,0 +1,27 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.basics.calculator.Calculator
+  fullName: basic_samples.basics.calculator
+  langs:
+  - python
+  module: basic_samples.basics.calculator
+  name: calculator
+  source:
+    id: calculator
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\basics\calculator.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 0
+  summary: Test in calculator.py.
+  type: module
+  uid: basic_samples.basics.calculator
+references:
+- fullName: basic_samples.basics.calculator.Calculator
+  isExternal: false
+  name: Calculator
+  parent: basic_samples.basics.calculator
+  uid: basic_samples.basics.calculator.Calculator

@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+api_name: []
+items:
+- children:
+  - basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  - basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+  class: basic_samples.date_time.evaluatedatetime.MyDateTime
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime
+  inheritance:
+  - type: builtins.object
+  langs:
+  - python
+  module: basic_samples.date_time.evaluatedatetime
+  name: MyDateTime
+  source:
+    id: MyDateTime
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 11
+  summary: ''
+  syntax: {}
+  type: class
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime
+- class: basic_samples.date_time.evaluatedatetime.MyDateTime
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  langs:
+  - python
+  module: basic_samples.date_time.evaluatedatetime
+  name: current_date_time(choice)
+  remarks: 'This function imports the <xref:basic_samples.date_time.evaluatedatetime.datetime>
+    from the datetime module. Then, it uses the :meth: *now()*
+
+    to get a datetime object containing current date and time.
+
+    Using datetime.strftime() method, it then creates a string representing the current
+    time.
+
+    '
+  source:
+    id: current_date_time
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 13
+  summary: 'Displays the current time. It also calculates the related time stamp.
+
+    Then converts the time stamp to date and time.'
+  syntax:
+    content: current_date_time(choice)
+    parameters:
+    - id: choice
+  type: method
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+- class: basic_samples.date_time.evaluatedatetime.MyDateTime
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+  langs:
+  - python
+  module: basic_samples.date_time.evaluatedatetime
+  name: menu()
+  source:
+    id: menu
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 48
+  syntax:
+    content: menu()
+    parameters: []
+  type: method
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+references:
+- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  isExternal: false
+  name: current_date_time(choice)
+  parent: basic_samples.date_time.evaluatedatetime.MyDateTime
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+  isExternal: false
+  name: menu()
+  parent: basic_samples.date_time.evaluatedatetime.MyDateTime
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.menu

@@ -113,6 +113,30 @@ references:
   name: subtract(x, y)
   href: api/basic_samples.basics.simple_calculator.SimpleCalculator.html#basic_samples_basics_simple_calculator_SimpleCalculator_subtract
   fullName: basic_samples.basics.simple_calculator.SimpleCalculator.subtract
+- uid: basic_samples.date_time
+  name: date_time
+  href: api/basic_samples.date_time.html#basic_samples_date_time
+  fullName: basic_samples.date_time
+- uid: basic_samples.date_time.evaluatedatetime
+  name: evaluatedatetime
+  href: api/basic_samples.date_time.evaluatedatetime.html#basic_samples_date_time_evaluatedatetime
+  fullName: basic_samples.date_time.evaluatedatetime
+- uid: basic_samples.date_time.evaluatedatetime.main
+  name: main()
+  href: api/basic_samples.date_time.evaluatedatetime.html#basic_samples_date_time_evaluatedatetime_main
+  fullName: basic_samples.date_time.evaluatedatetime.main
+- uid: basic_samples.date_time.evaluatedatetime.MyDateTime
+  name: MyDateTime
+  href: api/basic_samples.date_time.evaluatedatetime.MyDateTime.html#basic_samples_date_time_evaluatedatetime_MyDateTime
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime
+- uid: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  name: current_date_time(choice)
+  href: api/basic_samples.date_time.evaluatedatetime.MyDateTime.html#basic_samples_date_time_evaluatedatetime_MyDateTime_current_date_time
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+- uid: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+  name: menu()
+  href: api/basic_samples.date_time.evaluatedatetime.MyDateTime.html#basic_samples_date_time_evaluatedatetime_MyDateTime_menu
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
 - uid: math_samples
   name: math_samples
   href: api/math_samples.html#math_samples

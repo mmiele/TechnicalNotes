@@ -6,7 +6,7 @@
 here as it shows up in a list. Remarks are ignored here, so don't include them.
 """
 
-from my_other_module import *
+# from my_other_module import *
 
 class MyClass:
     """
@@ -47,15 +47,16 @@ class MyClass:
     """
 
     def __init__(self, name, description=None):
-    """
-    The docstring for __init__ is  ignored by the documentation system but you still
-    need to write it or build will generate PEP warnings
+        """
+        The docstring for __init__ is  ignored by the documentation system but you still
+        need to write it or build will generate PEP warnings
 
-    :param name: The name of the object
-    :type name: str
-    :param description: An optional description
-    :type description: str
-    """
+        :param name: The name of the object
+        :type name: str
+        :param description: An optional description
+        :type description: str
+
+        """
 
         self.name = name
         self.description = description
@@ -85,6 +86,7 @@ class MyClass:
 
         :return: Another class
         :rtype: my_other_module.MyOtherClass
+
         """
 
         value = self.my_other_func(3, _my_private_param = 2)
@@ -101,6 +103,7 @@ class MyClass:
         :type _my_private_param: int
         :return: A value
         :rtype: int
+
         """
 
         return my_public_param * _my_private_param
@@ -114,6 +117,7 @@ class MyClass:
         :type my_value: int
         :return: A new other object
         :rtype: my_other_module.MyOtherClass
+
         """
 
-        return my_other_module.MyOtherClass(my_value)
+        return self._my_private_func(my_value)

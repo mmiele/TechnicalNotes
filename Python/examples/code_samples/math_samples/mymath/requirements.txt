@@ -1,0 +1,5 @@
+# This assure that the numpy package is installed.
+# Before running the xmas_tree programm, execute this command:
+# pip install -r requirements.txt
+
+numpy>=1.18.cd 3

@@ -4,6 +4,7 @@ items:
 - children:
   - basic_samples.basics.calculator
   - basic_samples.basics.data_types
+  - basic_samples.basics.doc_sample
   - basic_samples.basics.language
   - basic_samples.basics.simple_calculator
   fullName: basic_samples.basics
@@ -34,6 +35,11 @@ references:
   name: data_types
   parent: basic_samples.basics.data_types
   uid: basic_samples.basics.data_types
+- fullName: basic_samples.basics.doc_sample
+  isExternal: false
+  name: doc_sample
+  parent: basic_samples.basics.doc_sample
+  uid: basic_samples.basics.doc_sample
 - fullName: basic_samples.basics.language
   isExternal: false
   name: language

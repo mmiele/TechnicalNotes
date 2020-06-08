@@ -12,6 +12,11 @@
         name: basic_samples.basics.data_types
         uid: basic_samples.basics.data_types
       - items:
+        - name: basic_samples.basics.doc_sample.MyClass
+          uid: basic_samples.basics.doc_sample.MyClass
+        name: basic_samples.basics.doc_sample
+        uid: basic_samples.basics.doc_sample
+      - items:
         - name: basic_samples.basics.language.LanguageClass
           uid: basic_samples.basics.language.LanguageClass
         name: basic_samples.basics.language

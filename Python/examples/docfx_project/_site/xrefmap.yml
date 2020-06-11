@@ -137,6 +137,10 @@ references:
   name: menu()
   href: api/basic_samples.date_time.evaluatedatetime.MyDateTime.html#basic_samples_date_time_evaluatedatetime_MyDateTime_menu
   fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+- uid: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
+  name: my_other_func(my_public_param, _my_private_param=1)
+  href: api/basic_samples.date_time.evaluatedatetime.MyDateTime.html#basic_samples_date_time_evaluatedatetime_MyDateTime_my_other_func
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
 - uid: math_samples
   name: math_samples
   href: api/math_samples.html#math_samples

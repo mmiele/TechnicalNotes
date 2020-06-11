@@ -32,7 +32,7 @@ items:
       branch: mm-python
       path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
       repo: https://github.com/mmiele/TechnicalNotes.git
-    startLine: 58
+    startLine: 83
   summary: 'Main function,
 
     It displays the menu. Then enter a loop until the user exit.'

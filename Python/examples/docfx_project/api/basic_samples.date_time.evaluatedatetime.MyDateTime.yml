@@ -4,6 +4,7 @@ items:
 - children:
   - basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
   - basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+  - basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
   class: basic_samples.date_time.evaluatedatetime.MyDateTime
   fullName: basic_samples.date_time.evaluatedatetime.MyDateTime
   inheritance:
@@ -31,12 +32,21 @@ items:
   module: basic_samples.date_time.evaluatedatetime
   name: current_date_time(choice)
   remarks: 'This function imports the <xref:basic_samples.date_time.evaluatedatetime.datetime>
-    from the datetime module. Then, it uses the :meth: *now()*
+    from the datetime module.
 
-    to get a datetime object containing current date and time.
+    Then, it uses the :meth: *now()* to get a datetime object containing
 
-    Using datetime.strftime() method, it then creates a string representing the current
-    time.
+    current date and time. Using datetime.strftime() method, it then creates
+
+    a string representing the current time.
+
+
+
+    > [!NOTE]
+
+    > This is a highlighted note in a box
+
+    >
 
     '
   source:
@@ -53,7 +63,10 @@ items:
   syntax:
     content: current_date_time(choice)
     parameters:
-    - id: choice
+    - description: The user's selection
+      id: choice
+      type:
+      - str
   type: method
   uid: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
 - class: basic_samples.date_time.evaluatedatetime.MyDateTime
@@ -69,12 +82,47 @@ items:
       branch: mm-python
       path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
       repo: https://github.com/mmiele/TechnicalNotes.git
-    startLine: 48
+    startLine: 72
+  summary: Display menu.
   syntax:
     content: menu()
     parameters: []
   type: method
   uid: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+- class: basic_samples.date_time.evaluatedatetime.MyDateTime
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
+  langs:
+  - python
+  module: basic_samples.date_time.evaluatedatetime
+  name: my_other_func(my_public_param, _my_private_param=1)
+  source:
+    id: my_other_func
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 57
+  summary: Summary string is sometimes sufficient if the function is simple
+  syntax:
+    content: my_other_func(my_public_param, _my_private_param=1)
+    parameters:
+    - description: Description of the parameter
+      id: my_public_param
+      type:
+      - int
+    - defaultValue: '1'
+      description: Private parameters (with _) are not rendered in documentation by
+        default
+      id: _my_private_param
+      type:
+      - int
+    return:
+      description: A value
+      type:
+      - int
+  type: method
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
 references:
 - fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
   isExternal: false
@@ -86,3 +134,8 @@ references:
   name: menu()
   parent: basic_samples.date_time.evaluatedatetime.MyDateTime
   uid: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
+- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
+  isExternal: false
+  name: my_other_func(my_public_param, _my_private_param=1)
+  parent: basic_samples.date_time.evaluatedatetime.MyDateTime
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func

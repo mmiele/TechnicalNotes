@@ -10,7 +10,7 @@ from datetime import datetime
 
 class MyDateTime(object):
 
-    def current_date_time(self, choice):
+    def get_current_date_time(self, choice):
         """
         Displays the current time. It also calculates the related time stamp.
         Then converts the time stamp to date and time.
@@ -54,20 +54,35 @@ class MyDateTime(object):
         else:
             print("invalid choice")
 
-    def my_other_func(self, my_public_param, _my_private_param = 1):
+
+    def get_datetime_from_string(self, date_string):
         """
-        Summary string is sometimes sufficient if the function is simple
+        Get a datetime object from a string.
 
-        :param my_public_param: Description of the parameter
-        :type my_public_param: int
-        :param _my_private_param: Private parameters (with _) are not rendered in documentation by default
-        :type _my_private_param: int
-        :return: A value
-        :rtype: int
+        .. remarks::
+            This function use the :meth:`datetime.now().strftime() method which takes two arguments:
+                - string (to be converted to datetime)
+                - format code
+            Based on the string and format code, the method returns its equivalent datetime object.
+            For more information, see `Python strptime() <https://www.programiz.com/python-programming/datetime/strptime>`
+
+            .. note::
+                You cannot create datetime object from every string. The string needs to be in a certain format.
+
+            :param date: The string containing date and time
+            :type my_public_param: str
+
+            :return: datetime object
+            :rtype: :class:`datetime.datetime` object
 
         """
+        print("date_string =", date_string)
+        print("type of date_string =", type(date_string))
 
-        return my_public_param * _my_private_param
+        date_object = datetime.strptime(date_string, "%d %B, %Y")
+
+        return date_object
+
 
     def menu(self):
         """ Display menu."""
@@ -75,6 +90,7 @@ class MyDateTime(object):
         print("1 - Date & Time")
         print("2 - Time Stamp")
         print("3 - Date & Time from Time Stamp")
+        print("4 - Date & Time from String")
         print("m - Display Menu")
         print("q - Quit")
 
@@ -92,10 +108,14 @@ def main():
     # Perform operations until the user quits.
     while True:
         try:
-            choice = input("Enter your choice: ")
+            choice = input("Enter your choice: ").lower()
             # Check if choice is one of the four options
             if choice in ('1', '2', '3'):
-                date_time.current_date_time(choice)
+                date_time.get_current_date_time(choice)
+            elif choice == '4':
+                date_object = date_time.get_datetime_from_string("21 June, 2018, 09:15:32")
+                print("date_object =", date_object)
+                print("type of date_object =", type(date_object))
             elif choice == 'm':
                 # Display menu:
                 date_time.menu()

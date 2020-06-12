@@ -20,9 +20,9 @@ class MyDateTime(object):
 
         .. remarks::
 
-            This function imports the :class:`datetime` from the datetime module.
-            Then, it uses the :meth: `now()` to get a datetime object containing
-            current date and time. Using datetime.strftime() method, it then creates
+            This function imports the :py:class:`datetime` from the datetime module.
+            Then, it uses the :py:func:`now()` to get a datetime object containing
+            current date and time. Using :py:func:datetime.strftime() method, it then creates
             a string representing the current time.
 
             .. note::
@@ -58,22 +58,27 @@ class MyDateTime(object):
     def get_datetime_from_string(self, date_string):
         """
         Get a datetime object from a string.
+        Example from `<https://www.programiz.com/python-programming/datetime/strptime>`
+
 
         .. remarks::
-            This function use the :meth:`datetime.now().strftime() method which takes two arguments:
+            This function use the :py:func:`datetime.now().strftime()` method which takes two arguments
+
                 - string (to be converted to datetime)
                 - format code
+
             Based on the string and format code, the method returns its equivalent datetime object.
-            For more information, see `Python strptime() <https://www.programiz.com/python-programming/datetime/strptime>`
+            For more information, see `title <https://www.programiz.com/python-programming/datetime/strptime>`
 
             .. note::
                 You cannot create datetime object from every string. The string needs to be in a certain format.
 
             :param date: The string containing date and time
-            :type my_public_param: str
+            :type date: str
 
             :return: datetime object
-            :rtype: :class:`datetime.datetime` object
+            :rtype: :py:class:`datetime` object
+
 
         """
         print("date_string =", date_string)

@@ -2,9 +2,9 @@
 api_name: []
 items:
 - children:
-  - basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  - basic_samples.date_time.evaluatedatetime.MyDateTime.get_current_date_time
+  - basic_samples.date_time.evaluatedatetime.MyDateTime.get_datetime_from_string
   - basic_samples.date_time.evaluatedatetime.MyDateTime.menu
-  - basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
   class: basic_samples.date_time.evaluatedatetime.MyDateTime
   fullName: basic_samples.date_time.evaluatedatetime.MyDateTime
   inheritance:
@@ -26,17 +26,18 @@ items:
   type: class
   uid: basic_samples.date_time.evaluatedatetime.MyDateTime
 - class: basic_samples.date_time.evaluatedatetime.MyDateTime
-  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.get_current_date_time
   langs:
   - python
   module: basic_samples.date_time.evaluatedatetime
-  name: current_date_time(choice)
+  name: get_current_date_time(choice)
   remarks: 'This function imports the <xref:basic_samples.date_time.evaluatedatetime.datetime>
     from the datetime module.
 
-    Then, it uses the :meth: *now()* to get a datetime object containing
+    Then, it uses the <xref:basic_samples.date_time.evaluatedatetime.now> to get a
+    datetime object containing
 
-    current date and time. Using datetime.strftime() method, it then creates
+    current date and time. Using :py:func:datetime.strftime() method, it then creates
 
     a string representing the current time.
 
@@ -50,7 +51,7 @@ items:
 
     '
   source:
-    id: current_date_time
+    id: get_current_date_time
     path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
     remote:
       branch: mm-python
@@ -61,14 +62,45 @@ items:
 
     Then converts the time stamp to date and time.'
   syntax:
-    content: current_date_time(choice)
+    content: get_current_date_time(choice)
     parameters:
     - description: The user's selection
       id: choice
       type:
       - str
   type: method
-  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.get_current_date_time
+- class: basic_samples.date_time.evaluatedatetime.MyDateTime
+  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.get_datetime_from_string
+  langs:
+  - python
+  module: basic_samples.date_time.evaluatedatetime
+  name: get_datetime_from_string(date_string)
+  remarks: "This function use the <xref:datetime.now().strftime> method which takes\
+    \ two arguments\n\n   * string (to be converted to datetime) \n\n   * format code\
+    \ \n\nBased on the string and format code, the method returns its equivalent datetime\
+    \ object.\nFor more information, see *title <https://www.programiz.com/python-programming/datetime/strptime>*\n\
+    \n\n> [!NOTE]\n> You cannot create datetime object from every string. The string\
+    \ needs to be in a certain format.\n>\n\nparam date:\n   The string containing\
+    \ date and time\n\ntype date:\n   str\n\nreturn:\n   datetime object\n\nrtype:\n\
+    \   <xref:basic_samples.date_time.evaluatedatetime.datetime> object\n"
+  source:
+    id: get_datetime_from_string
+    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+    remote:
+      branch: mm-python
+      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
+      repo: https://github.com/mmiele/TechnicalNotes.git
+    startLine: 58
+  summary: 'Get a datetime object from a string.
+
+    Example from *<https://www.programiz.com/python-programming/datetime/strptime>*'
+  syntax:
+    content: get_datetime_from_string(date_string)
+    parameters:
+    - id: date_string
+  type: method
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.get_datetime_from_string
 - class: basic_samples.date_time.evaluatedatetime.MyDateTime
   fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
   langs:
@@ -82,60 +114,26 @@ items:
       branch: mm-python
       path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
       repo: https://github.com/mmiele/TechnicalNotes.git
-    startLine: 72
+    startLine: 92
   summary: Display menu.
   syntax:
     content: menu()
     parameters: []
   type: method
   uid: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
-- class: basic_samples.date_time.evaluatedatetime.MyDateTime
-  fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
-  langs:
-  - python
-  module: basic_samples.date_time.evaluatedatetime
-  name: my_other_func(my_public_param, _my_private_param=1)
-  source:
-    id: my_other_func
-    path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
-    remote:
-      branch: mm-python
-      path: C:Users\v-mimiel\aWork\GitHub\TechnicalNotes\Python\examples\code_samples\basic_samples\date_time\evaluatedatetime.py
-      repo: https://github.com/mmiele/TechnicalNotes.git
-    startLine: 57
-  summary: Summary string is sometimes sufficient if the function is simple
-  syntax:
-    content: my_other_func(my_public_param, _my_private_param=1)
-    parameters:
-    - description: Description of the parameter
-      id: my_public_param
-      type:
-      - int
-    - defaultValue: '1'
-      description: Private parameters (with _) are not rendered in documentation by
-        default
-      id: _my_private_param
-      type:
-      - int
-    return:
-      description: A value
-      type:
-      - int
-  type: method
-  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
 references:
-- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.get_current_date_time
   isExternal: false
-  name: current_date_time(choice)
+  name: get_current_date_time(choice)
   parent: basic_samples.date_time.evaluatedatetime.MyDateTime
-  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.get_current_date_time
+- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.get_datetime_from_string
+  isExternal: false
+  name: get_datetime_from_string(date_string)
+  parent: basic_samples.date_time.evaluatedatetime.MyDateTime
+  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.get_datetime_from_string
 - fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
   isExternal: false
   name: menu()
   parent: basic_samples.date_time.evaluatedatetime.MyDateTime
   uid: basic_samples.date_time.evaluatedatetime.MyDateTime.menu
-- fullName: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func
-  isExternal: false
-  name: my_other_func(my_public_param, _my_private_param=1)
-  parent: basic_samples.date_time.evaluatedatetime.MyDateTime
-  uid: basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func

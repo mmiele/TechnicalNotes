@@ -58,8 +58,8 @@
 <em class="property">class </em><code class="descclassname">basic_samples.date_time.evaluatedatetime.</code><code class="descname">MyDateTime</code><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.MyDateTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="basic_samples.date_time.evaluatedatetime.object"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
 <dl class="method">
-<dt id="basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time">
-<code class="descname">current_date_time</code><span class="sig-paren">(</span><em>choice</em><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.MyDateTime.current_date_time" title="Permalink to this definition">¶</a></dt>
+<dt id="basic_samples.date_time.evaluatedatetime.MyDateTime.get_current_date_time">
+<code class="descname">get_current_date_time</code><span class="sig-paren">(</span><em>choice</em><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.MyDateTime.get_current_date_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Displays the current time. It also calculates the related time stamp.
 Then converts the time stamp to date and time.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -71,8 +71,8 @@ Then converts the time stamp to date and time.</p>
 </tbody>
 </table>
 <p><p>This function imports the <a class="reference internal" href="basic_samples.date_time.evaluatedatetime.datetime"><code class="xref py py-class docutils literal"><span class="pre">datetime</span></code></a> from the datetime module.
-Then, it uses the :meth: <cite>now()</cite> to get a datetime object containing
-current date and time. Using datetime.strftime() method, it then creates
+Then, it uses the <a class="reference internal" href="basic_samples.date_time.evaluatedatetime.now"><code class="xref py py-func docutils literal"><span class="pre">now()</span></code></a> to get a datetime object containing
+current date and time. Using :py:func:datetime.strftime() method, it then creates
 a string representing the current time.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -82,33 +82,44 @@ a string representing the current time.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="basic_samples.date_time.evaluatedatetime.MyDateTime.menu">
-<code class="descname">menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.MyDateTime.menu" title="Permalink to this definition">¶</a></dt>
-<dd><p>Display menu.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func">
-<code class="descname">my_other_func</code><span class="sig-paren">(</span><em>my_public_param</em>, <em>_my_private_param=1</em><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.MyDateTime.my_other_func" title="Permalink to this definition">¶</a></dt>
-<dd><p>Summary string is sometimes sufficient if the function is simple</p>
+<dt id="basic_samples.date_time.evaluatedatetime.MyDateTime.get_datetime_from_string">
+<code class="descname">get_datetime_from_string</code><span class="sig-paren">(</span><em>date_string</em><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.MyDateTime.get_datetime_from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a datetime object from a string.
+Example from <cite>&lt;https://www.programiz.com/python-programming/datetime/strptime&gt;</cite></p>
+<p><p>This function use the <a class="reference internal" href="datetime.now().strftime"><code class="xref py py-func docutils literal"><span class="pre">datetime.now().strftime()</span></code></a> method which takes two arguments</p>
+<blockquote>
+<div><ul class="simple">
+<li>string (to be converted to datetime)</li>
+<li>format code</li>
+</ul>
+</div></blockquote>
+<p>Based on the string and format code, the method returns its equivalent datetime object.
+For more information, see <cite>title &lt;https://www.programiz.com/python-programming/datetime/strptime&gt;</cite></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You cannot create datetime object from every string. The string needs to be in a certain format.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>my_public_param</strong> (<a class="reference internal" href="int.html#"><em>int</em></a>) &#8211; Description of the parameter</li>
-<li><strong>_my_private_param</strong> (<a class="reference internal" href="int.html#"><em>int</em></a>) &#8211; Private parameters (with _) are not rendered in documentation by default</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">param date:</th><td class="field-body">The string containing date and time</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A value</p>
-</td>
+<tr class="field-even field"><th class="field-name">type date:</th><td class="field-body">str</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="int.html#">int</a></p>
-</td>
+<tr class="field-odd field"><th class="field-name">return:</th><td class="field-body">datetime object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">rtype:</th><td class="field-body"><a class="reference internal" href="basic_samples.date_time.evaluatedatetime.datetime"><code class="xref py py-class docutils literal"><span class="pre">datetime</span></code></a> object</td>
 </tr>
 </tbody>
 </table>
+</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="basic_samples.date_time.evaluatedatetime.MyDateTime.menu">
+<code class="descname">menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.MyDateTime.menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display menu.</p>
 </dd></dl>
 
 </dd></dl>
@@ -116,8 +127,8 @@ a string representing the current time.</p>
 <dl class="function">
 <dt id="basic_samples.date_time.evaluatedatetime.main">
 <code class="descclassname">basic_samples.date_time.evaluatedatetime.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#basic_samples.date_time.evaluatedatetime.main" title="Permalink to this definition">¶</a></dt>
-<dd><p>Main function,
-It displays the menu. Then enter a loop until the user exit.</p>
+<dd><p>Main function.
+It displays the menu. Then enter a loop until the user exits.</p>
 </dd></dl>
 
 </div>

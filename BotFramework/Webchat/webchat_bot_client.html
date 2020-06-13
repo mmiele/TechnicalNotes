@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Interact with a bot via Web Chat client</h2>
+
+    This page shows how to interact with a bot via Web Chat.<br/>
+    It creates a token based on the Bot App Service secret.
+    This is <span style="background-color:yellow">important to avoid security breaches</span>. <br/>
+
+    <hr style="border-top: 3px dashed red;"/>
+
+    Enter the following Bot App Service information: <br/><br/>
+
+    <form id="reqFormId" method="GET">
+      <label for="secret" style="padding-right: 0px;">Bot Secret:</label>
+      <input type="password" id="secretId" name="secret" style="width: 25%" placeholder="Enter secret"> <br/>
+      <label for="bot name">Bot Name:</label>
+      <input type="text" id="botId" name="bot" size="30" placeholder="Enter bot app service name"> <br/>
+      <input type="button" value="Submit" onClick="getToken(this.form)">
+    </form>
+
+    <h3>Interact with the bot</h3>
+
+    <iframe id="ifrmId" src='' style='min-width: 400px; width: 40%; min-height: 600px;'></iframe>
+
+
+
+</body>
+<script>
+
+    // Create an HTTP request object.
+    var xhr = new XMLHttpRequest();
+
+    /*
+      Process the response.
+    **/
+    function processResponse(e) {
+      if (xhr.readyState == 4  && xhr.status == 200) {
+        var token = JSON.parse(xhr.responseText);
+        var botname = document.getElementById('reqFormId')['botId'].value
+        // alert("The bot name is " + botname);
+        var url = 'https://webchat.botframework.com/embed/' + botname + '?t=' + token
+        var el = document.getElementById('ifrmId');
+        el.src = url; // assign url to src property
+
+      }
+    }
+
+
+    /*
+      Request the token based on the secret.
+    **/
+    function getToken(formElement)
+    {
+
+      var secret = formElement['secretId'].value;
+
+      // alert("The secret is " + secret);
+
+      // Issue an HTTP request to generate the token from the secret.
+      xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+      xhr.setRequestHeader('Authorization', 'BotConnector ' + secret);
+      xhr.send();
+
+      // Process the response
+      xhr.onreadystatechange = processResponse;
+
+      return false;
+    }
+
+  </script>
+</html>

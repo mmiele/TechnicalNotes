@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Get Token</h2>
+    This page creates a token from the Web Chat bot secret.<br/>
+    <span style="background-color:yellow">WARNING! To avoid security breach, <b>do not use the bot secret</b>; use a token instead.</span> <br/>
+
+
+    <h3>Token</h3>
+    Copy the following token and use it in <a href="webchat_client_token.html">webchat_client_token.html</a>.
+
+    <hr style="border-top: 3px dashed red;"/>
+
+    <div id="tokenID" style="background-color:ghostwhite">token</div>
+
+
+</body>
+<script>
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+    xhr.setRequestHeader('Authorization', 'BotConnector ' + '1ujWQWlxB2M.su4ivDGeIVkSx4pXZXzvsqDtcXE27rUh5VdJhu9do_4');
+    xhr.send();
+    xhr.onreadystatechange = processRequest;
+
+    function processRequest(e) {
+      if (xhr.readyState == 4  && xhr.status == 200) {
+        var response = JSON.parse(xhr.responseText);
+        var token = document.getElementById("tokenID");
+        token.innerHTML = response;
+
+      }
+    }
+
+  </script>
+</html>

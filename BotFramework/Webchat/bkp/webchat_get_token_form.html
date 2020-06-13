@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Get Token</h2>
+    This page creates a token from the Web Chat bot secret.<br/>
+    <span style="background-color:yellow">WARNING! To avoid security breach, <b>do not use the bot secret</b>; use a token instead.</span> <br/>
+
+
+    <h3>Token</h3>
+    Copy the following token and use it in <a href="webchat_client_token.html">webchat_client_token.html</a>.
+
+    <hr style="border-top: 3px dashed red;"/>
+
+    <textarea id="textId" cols="100" rows="12" wrap="hard">initial text</textarea>
+
+
+    <form method="post" id="formId" action="get token" onSubmit="return getToken(this);" >
+      <!-- 1ujWQWlxB2M.R1ZXZkU90ykje2rsHxxky-kvmwldHrh-xSmxU--43Lg -->
+      <input type="text" name="secret" size="50" placeholder="Enter secret"> <br/>
+      <input type="submit" value="Submit">
+    </form>
+
+</body>
+<script>
+
+    var xhr = new XMLHttpRequest();
+
+
+    function displayToken(e) {
+      if (xhr.readyState == 4  && xhr.status == 200) {
+        var response = JSON.parse(xhr.responseText);
+        var token = document.getElementById("textId");
+        token.innerHTML = response;
+
+      }
+    }
+
+
+    /**
+
+    ***/
+    function getToken(formElement)
+    {
+
+      let secret = formElement['secret'].value;
+      alert("The secret is " + secret);
+
+      xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+      xhr.setRequestHeader('Authorization', 'BotConnector ' + secret);
+      xhr.send();
+
+      xhr.onreadystatechange = displayToken;
+
+      return false;
+    }
+
+  </script>
+</html>

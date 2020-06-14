@@ -4,13 +4,13 @@
 
     <h2>Web Chat bot client</h2>
 
-    This page shows how to interact with a bot via a Web Chat client.<br/>
+    This page is a Web Chat client shows how to interact with a bot.<br/>
     It creates a token based on the Bot App Service secret.
     This is <span style="background-color:yellow">important to avoid security breaches</span>. <br/>
 
     <hr style="border-top: 3px dashed red;"/>
 
-    <h3>Bot App Service information</h3>
+    <h3>Enter Bot App Service information</h3>
 
     <form id="reqFormId" method="GET">
       <label for="secret" style="padding-right: 0px;">Bot Secret:</label>
@@ -38,18 +38,24 @@
     function processResponse(e) {
       if (xhr.readyState == 4  && xhr.status == 200) {
         var token = JSON.parse(xhr.responseText);
-        var botname = document.getElementById('reqFormId')['botId'].value
+
+        // Get the bot app service name
+        var botname = document.getElementById('botId').value
+
         // alert("The bot name is " + botname);
+
+        // Evaluate the bot url.
         var url = 'https://webchat.botframework.com/embed/' + botname + '?t=' + token
+        // Assign url to iframe src property
         var el = document.getElementById('ifrmId');
-        el.src = url; // assign url to src property
+        el.src = url;
 
       }
     }
 
 
     /*
-      Request the token based on the secret.
+      Request the token based on the bot secret.
     **/
     function getToken(formElement)
     {
@@ -63,7 +69,7 @@
       xhr.setRequestHeader('Authorization', 'BotConnector ' + secret);
       xhr.send();
 
-      // Process the response
+      // Process the response asynchronously.
       xhr.onreadystatechange = processResponse;
 
       return false;

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    </head>
+   <body>
+        <h2>Web Chat custom bot client</h2>
+
+        This page is a customized Web Chat client shows how to interact with a bot.<br/>
+        It creates a token based on the Bot App Service secret.
+        This is <span style="background-color:yellow">important to avoid security breaches</span>. <br/>
+
+        <hr style="border-top: 3px dashed red;"/>
+
+        <h3>Enter Bot App Service information</h3>
+
+        <form id="reqFormId" method="GET">
+            <label for="secret" style="padding-right: 0px;">Bot Secret:</label>
+            <input type="password" id="secretId" name="secret" style="width: 25%" placeholder="Enter secret"> <br/>
+            <label for="bot name">Bot Name:</label>
+            <input type="text" id="botId" name="bot" size="30" placeholder="Enter bot app service name"> <br/>
+            <input type="button" value="Submit" onClick="getToken(this.form)">
+        </form>
+
+        <hr style="border-top: 3px dashed rgb(55, 0, 255);"/>
+
+        <h3>Interact with the bot</h3>
+
+        <div id="webchat" role="main">Web Chat is rendered here, after you submit the bot information.</div>
+
+   </body>
+
+   <script>
+
+
+      // "styleSet" is a set of CSS rules which are generated from "styleOptions"
+      const styleSet = window.WebChat.createStyleSet({
+         bubbleBackground: 'rgba(0, 0, 255, .1)',
+         bubbleFromUserBackground: 'rgba(0, 255, 0, .1)',
+
+         botAvatarImage: './bot.PNG',
+         botAvatarInitials: 'BF',
+         userAvatarImage: './me.PNG',
+         userAvatarInitials: 'WC',
+         rootHeight: '100%',
+         rootWidth: '30%'
+      });
+
+      // After generated, you can modify the CSS rules
+      styleSet.textContent = {
+         ...styleSet.textContent,
+         fontFamily: "'Comic Sans MS', 'Arial', sans-serif",
+         fontWeight: 'bold'
+      };
+
+
+
+    // Create an HTTP request object.
+    var xhr = new XMLHttpRequest();
+
+    /*
+        Process the response an render the Web Chat.
+    **/
+    function processResponse(e) {
+        if (xhr.readyState == 4  && xhr.status == 200) {
+
+            // Get the token value.
+            var tokenValue = JSON.parse(xhr.responseText);
+
+            // Render Web Chat.
+            window.WebChat.renderWebChat(
+                {
+                    directLine: window.WebChat.createDirectLine({
+                        token: tokenValue }),
+                    username: 'Web Chat User',
+                    locale: 'en-US',
+                    // Passing 'styleSet' when rendering Web Chat
+                    styleSet
+                },
+                document.getElementById('webchat')
+            );
+        }
+    };
+
+
+    /*
+        Request the token based on the bot secret.
+    **/
+    function getToken(formElement)
+    {
+
+        var secret = formElement['secretId'].value;
+
+        // alert("The secret is " + secret);
+
+        // Issue an HTTP request to generate the token from the secret.
+        xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+        xhr.setRequestHeader('Authorization', 'BotConnector ' + secret);
+        xhr.send();
+
+        // Process the response asynchronously.
+        xhr.onreadystatechange = processResponse;
+
+        return false;
+    }
+
+   </script>
+
+</html>

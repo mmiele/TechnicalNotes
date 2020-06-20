@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+  </head>
+  <body>
+    <h2>Web Chat bot client using Direct Line</h2>
+    For more information, see <a href="https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-concepts?view=azure-bot-service-4.0" target="_blank">Key concepts in Direct Line API 3.0</a>,
+    and <a href="https://github.com/Microsoft/BotFramework-WebChat" target="_blank">Bot Framework Web Chat</a>.
+
+    <div id="webchat" role="main">results here</div>
+    <script>
+
+     // "styleSet" is a set of CSS rules which are generated from "styleOptions"
+     const styleSet = window.WebChat.createStyleSet({
+         bubbleBackground: 'rgba(0, 0, 255, .1)',
+         bubbleFromUserBackground: 'rgba(0, 255, 0, .1)',
+
+         botAvatarImage: './bot.PNG',
+         botAvatarInitials: 'BF',
+         userAvatarImage: './me.PNG',
+         userAvatarInitials: 'WC',
+         rootHeight: '100%',
+         rootWidth: '30%'
+      });
+
+      // After generated, you can modify the CSS rules
+      styleSet.textContent = {
+         ...styleSet.textContent,
+         fontFamily: "'Comic Sans MS', 'Arial', sans-serif",
+         fontWeight: 'bold'
+      };
+
+
+      window.WebChat.renderWebChat(
+        {
+          directLine: window.WebChat.createDirectLine({
+            token: 'sZ7wlrWRrps.XxJimWgzMJf_aUkJkjftF_lbCN10JIG1GBrKh-1hdyI'
+          }),
+          userID: 'WebChat_UserId',
+          locale: 'en-US',
+          username: 'Web Chat User',
+          locale: 'en-US',
+          // Passing 'styleSet' when rendering Web Chat
+          styleSet
+        },
+        document.getElementById('webchat')
+      );
+    </script>
+  </body>
+</html>

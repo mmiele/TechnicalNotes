@@ -43,10 +43,13 @@
         // Get the bot app service name
         var botname = document.getElementById('botId').value
 
-        // alert("The bot name is " + botname);
+        alert("The bot name is " + botname);
 
         // Evaluate the bot url.
         var url = 'https://webchat.botframework.com/embed/' + botname + '?t=' + token
+
+        alert("The url is " + url);
+
         // Assign url to iframe src property
         var el = document.getElementById('ifrmId');
         el.src = url;
@@ -63,7 +66,7 @@
 
       var secret = formElement['secretId'].value;
 
-      // alert("The secret is " + secret);
+      alert("The secret is " + secret);
 
       // Issue an HTTP request to generate the token from the secret.
       xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);

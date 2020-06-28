@@ -1,71 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script>
-
-      // Create an HTTP request object.
-      var xhr = new XMLHttpRequest();
-
-      /*
-        Process the response.
-      **/
-      function processResponse(e) {
-        if (xhr.readyState == 4  && xhr.status == 200) {
-          var token = JSON.parse(xhr.responseText);
-
-          // Get the bot app service name
-          var botname = document.getElementById('botId').value
-
-          // Evaluate the bot url.
-          var url = 'https://webchat.botframework.com/embed/' + botname + '?t=' + token
-
-          alert("The bot url is " + url);
-
-          var elUrl = document.getElementById('urlId');
-          elUrl.innerText = url;
-
-        }
-      }
-
-
-      /*
-        Request the token based on the bot secret.
-      **/
-      function getToken(formElement)
-      {
-
-        var secret = formElement['secretId'].value;
-
-        // alert("The secret is " + secret);
-
-        // Issue an HTTP request to generate the token from the secret.
-        xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
-        xhr.setRequestHeader('Authorization', 'BotConnector ' + secret);
-        xhr.send();
-
-        // Process the response asynchronously.
-        xhr.onreadystatechange = processResponse;
-
-        return false;
-      }
-
-    </script>
-
-  </head>
   <body>
 
       <h2>Generate URL based on token and bot name</h2>
 
-      This page generates a URL based on a token created from a Web Chat channel secret.
-      The channel is associated with a bot to embed in a web page using the <b>iframe</b> element.<br/>
+      <span style="background-color:yellow; color:red; font-weight: bold;">Private Page</span><br/>
 
+      This page generates a URL from the Web Chat channel secret and the bot App Service name. <br/>
+      The Web Chat channel is associated with the bot to embed in a web page using the <b>iframe</b> element.<br/>
       The use of a token instead of the secret is <span style="background-color:yellow">important to avoid security breaches</span>. <br/>
 
       <p>
-        Before you lunch this page make sure that you have the following information ready (obtained from the <a href="https://ms.portal.azure.com/">Azure portal</a>)
+        Make sure to have the following information ready, obtained from the <a href="https://ms.portal.azure.com/">Azure portal</a>:
         <ol>
-          <li>Bot secret</li>
-          <li>Bot name</li>
+          <li><b>Bot secret</b>. The Web Chat channel secret.</li>.
+          <li><b>Bot name</b>. The bot App Service name.</li>.
         </ol>
       </p>
 
@@ -83,11 +32,59 @@
 
       <hr style="border-top: 3px dashed rgb(55, 0, 255);"/>
 
-      The following URL is created using the bot name and the generated token. <br/>
-      Assign it to the <b>src</b> attribute of the <b>iframe</b> element in your web page to allow the user to interact with the bot. <br/> <br/>
+      Assign the following URL to the <b>src</b> attribute of the <b>iframe</b> element in the web page. It allows the user to interact with the bot. <br/> <br/>
 
       <div id="urlId" style="width: 600px; height: 200px; border: 1px solid black; padding: 2px 4px; overflow: auto; word-spacing: normal">URL here</div>
 
   </body>
+
+  <script>
+
+    // Create an HTTP request object.
+    var xhr = new XMLHttpRequest();
+
+    /*
+      Process the response. Get the URL.
+    **/
+    function processResponse(e) {
+      if (xhr.readyState == 4  && xhr.status == 200) {
+        var token = JSON.parse(xhr.responseText);
+
+        // Get the bot app service name
+        var botname = document.getElementById('botId').value
+
+        // Evaluate the bot url.
+        var url = 'https://webchat.botframework.com/embed/' + botname + '?t=' + token
+
+        // alert("The bot url is " + url);
+
+        var elUrl = document.getElementById('urlId');
+        elUrl.innerText = url;
+
+      }
+    }
+
+    /*
+      Request the token based on the bot secret.
+    **/
+    function getToken(formElement)
+    {
+
+      var secret = formElement['secretId'].value;
+
+      // alert("The secret is " + secret);
+
+      // Issue an HTTP request to generate the token from the secret.
+      xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+      xhr.setRequestHeader('Authorization', 'BotConnector ' + secret);
+      xhr.send();
+
+      // Process the response asynchronously.
+      xhr.onreadystatechange = processResponse;
+
+      return false;
+    }
+
+  </script>
 
 </html>

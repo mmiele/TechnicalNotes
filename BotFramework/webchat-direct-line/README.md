@@ -1,6 +1,6 @@
 # Web Chat with Direct Line
 
-This example demonstrates how to embed a Web Chat in a web page in a way that does not expose the **Direct Line secret** in the client browser page.
+This example demonstrates how to embed a Web Chat in an HTML page in a way that does not expose the **Direct Line secret**.
 
 The following figure shows the components involved:
 
@@ -8,7 +8,7 @@ The following figure shows the components involved:
 1. The **client HTML page** that contains the Web Chat.
 1. The **bot** the Web Chat communicates with.
 
-![webchat directline token](media/webchat-directline-token.png)
+![webchat directline token](media/webchat-directline-token.PNG)
 
 ## Web Chat secret
 

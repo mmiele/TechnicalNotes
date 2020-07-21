@@ -18,7 +18,7 @@ When embedding Web Chat in an HTML page, you can provide either a **Direct Line 
 - The Direct Line token can only be used to access a single conversation, and it does expire.
  For more information, see the [Direct Line Authentication](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-4.0).
 
-> [!WARNNG] The use of the Direct Line secret in an HTML page is strongly discouraged. The recommended approach is to exchange the secret for a token on the server side.
+> [!WARNNG] The use of the Direct Line secret in an HTML page is strongly discouraged. The recommended approach is to exchange the secret for a token with the help of a Direct Line token generator server.
 
 ## User impersonation
 

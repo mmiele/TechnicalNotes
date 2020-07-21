@@ -1,21 +1,28 @@
 # Web Chat with Direct Line
 
-This example demonstrates how to implement Web Chat in a way that does not expose the Direct Line secret to the client browser.
+This example demonstrates how to embed a Web Chat in a web page in a way that does not expose the **Direct Line secret** in the client browser page.
+
+The following figure shows the components involved:
+
+1. The **server** that generates the token from the **Direct Line secret**.
+1. The **client HTML page** that contains the Web Chat.
+1. The **bot** the Web Chat communicates with.
+
+![webchat directline token](media/webchat-directline-token.png)
 
 ## Web Chat secret
 
-When embedding Web Chat in a web site page, you must provide either a Direct Line secret or a Direct Line token for the Web Chat to communicate with the bot.
+When embedding Web Chat in an HTML page, you can provide either a **Direct Line secret** or a **Direct Line token** so the Web Chat can communicate with the bot.
 
 - The Direct Line secret can be used to access all of the bot's conversations, and it doesn't expire.
-- A Direct Line token can only be used to access a single conversation, and it does expire.
- For more information, see the [Direct Line Authentication documentation](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-4.0).
+- The Direct Line token can only be used to access a single conversation, and it does expire.
+ For more information, see the [Direct Line Authentication](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-4.0).
 
-> [!WARNNG] The use of the Direct Line secret on the client side is strongly discouraged.
-The recommended approach is to exchange the secret for a **Direct Line token** on the server side.
+> [!WARNNG] The use of the Direct Line secret in an HTML page is strongly discouraged. The recommended approach is to exchange the secret for a token on the server side.
 
 ## User impersonation
 
-The Web Chat allows to specify a **user ID** on the client-side, which is sent to the bot. This approach allows potential **user impersonation** by hackers because the user ID typically isn't verified. This is a security risk if the bot stores sensitive data based on user ID. For example, the built-in [user authentication support in Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0) associates access tokens with user IDs.
+The Web Chat allows to specify a **user ID**, which is sent to the bot. This allows potential **user impersonation** by hackers, because the user ID typically is not verified. This is a security risk if the bot stores sensitive data based on user ID. For example, the built-in [user authentication support in Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0) associates access tokens with user IDs.
 
 To avoid impersonation, the recommended approach is for the server to bind a user ID to the Direct Line token. Then any conversation using that token will send the bound user ID to the bot. However, if the client is going to provide the user ID to the server, it is important for the server to validate the ID somehow (see below). Otherwise, a malicious user could still modify the user ID being sent by the client.
 

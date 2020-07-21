@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Web Chat: Direct Line Token Sample</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      This CDN points to the latest official release of Web Chat. If you need to test against Web Chat's latest bits, please refer to pointing to Web Chat's MyGet feed:
+      https://github.com/microsoft/BotFramework-WebChat#how-to-test-with-web-chats-latest-bits
+    -->
+    <script crossorigin="anonymous" src="https://cdn.botframework.com/botframework-webchat/4.9.1/webchat.js"></script>
+    <style>
+      html,
+
+      body {
+        background-color: #e9f3f3;
+        height: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+      }
+
+
+
+       body {
+         margin: 0;
+       }
+
+       #webchat {
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+         height: 60%;
+         margin: 30px 50px 75px 50px;
+         max-width: 480px;
+         min-width: 500px;
+       }
+     </style>
+  </head>
+  <body>
+    <h2><img src="./web-chat.png" alt="web chat icon"/> Custom Web Chat client</h2>
+
+    This page contains a fully customized Web Chat client which allows user to interact with a bot.<br/>
+    It creates a token based on the bot Direct Line secret.
+    This is <span style="background-color:yellow">important to avoid security breaches</span>. <br/>
+
+    <hr style="border-top: 3px dashed blue;"/>
+
+    <h3><img src="./bot.png" alt="bot icon"/> Talk to the bot</h3>
+
+    <div style="width:50%; border: 2px solid #73AD21;"  id="webchat" role="main"></div>
+
+    <script>
+
+      // "styleSet" is a set of CSS rules which are generated from "styleOptions"
+      const styleSet = window.WebChat.createStyleSet({
+         bubbleBackground: 'rgba(0, 0, 255, .1)',
+         bubbleFromUserBackground: 'rgba(0, 255, 0, .1)',
+
+         botAvatarImage: './bot.PNG',
+         botAvatarInitials: 'BF',
+         userAvatarImage: './man.PNG',
+         userAvatarInitials: 'WC',
+         rootHeight: '100%',
+         rootWidth: '100%'
+      });
+
+      // After generated, you can modify the CSS rules
+      styleSet.textContent = {
+         ...styleSet.textContent,
+         fontFamily: "'Comic Sans MS', 'Arial', sans-serif",
+         fontWeight: 'bold'
+      };
+
+
+      (async function() {
+        // Get a Direct Line token from our token API
+        const res = await fetch('http://localhost:3000/api/direct-line-token', { method: 'POST' });
+        const { token } = await res.json();
+
+        window.WebChat.renderWebChat(
+          {
+            directLine: window.WebChat.createDirectLine({ token }),
+            username: 'michael',
+            locale: 'en-US',
+            // Passing 'styleSet' when rendering Web Chat
+            styleSet
+          },
+          document.getElementById('webchat')
+        );
+
+        document.querySelector('#webchat > *').focus();
+      })().catch(err => console.error(err));
+    </script>
+  </body>
+</html>

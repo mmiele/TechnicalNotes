@@ -12,7 +12,7 @@ The following figure shows the components involved:
 
 ## Web Chat secret
 
-When embedding Web Chat in an HTML page, you can provide either a **Direct Line secret** or a **Direct Line token** so the Web Chat can communicate with the bot.
+When embedding a Web Chat in an HTML page, you can provide either a **Direct Line secret** or a **Direct Line token** so the Web Chat can communicate with the bot.
 
 - The Direct Line secret can be used to access all of the bot's conversations; it doesn't expire.
 - The Direct Line token can only be used to access a single conversation; it does expire.

@@ -2,18 +2,24 @@
 
 This example demonstrates how to embed a Web Chat in an HTML page in a way that does not expose the **Direct Line secret**.
 
-The following figure shows the components involved:
-
-1. The **server** that generates the token from the **Direct Line secret**.
-1. The **client HTML page** that contains the Web Chat.
-1. The **bot** the Web Chat communicates with.
-
-![webchat directline token](media/webchat-directline-token.PNG)
-
-
 ## Prerequisites
 
 A registered bot. For more information, see [Register a bot with Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0).
+
+
+## Architecture
+
+The following figure shows the example components:
+
+![webchat directline token](media/webchat-directline-token.PNG)
+
+1. **Direct Line Server**. Also known as the **API** it generates the Direct Line token acquisition and a random user ID that is bound to the token.
+1. **Client**. A static HTML page that can be hosted using any web server. It makes a POST request to the server (API) and uses the resulting Direct Line token to render the Web Chat.
+1. **Bot** The example assumes that you already have a bot deployed in Azure. For more information, see [Tutorial: Create and deploy a basic bot](https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
+
+After receiving the Direct Line token, the client uses it to render the Web Chat. The bot will receive the randomly-generated user ID on every activity.
+
+
 
 ## Web Chat secret
 
@@ -35,16 +41,6 @@ However, if the client provides the user ID to the server, it is important for t
 
 In this example the server generates a random user ID and binds it to the Direct Line token. This mitigates impersonation concerns but the users will have a different ID every time they talk to the bot.
 For a consistent and validated user ID, see the [Direct Line user token sample](https://github.com/navzam/user-direct-line-token-sample).
-
-## Architecture
-
-This sample contains three components:
-
-- **Direct Line Server**. It generates the Direct Line token acquisition and a random user ID that is bound to the token.
-- **Client**. It contains a static HTML page that can be hosted using any web server. It makes a POST request to the backend API and uses the resulting Direct Line token to render WebChat.
-- **Bot** The example assumes that you already have a bot deployed on Azure. For more information, see [Tutorial: Create and deploy a basic bot](https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
-
-After receiving the Direct Line token, the client uses it to render the Web Chat. The bot will receive the randomly-generated user ID on every activity.
 
 ## Code highlights
 

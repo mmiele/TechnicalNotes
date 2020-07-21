@@ -10,6 +10,11 @@ The following figure shows the components involved:
 
 ![webchat directline token](media/webchat-directline-token.PNG)
 
+
+## Prerequisites
+
+A registered bot. For more information, see [Register a bot with Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0).
+
 ## Web Chat secret
 
 When embedding a Web Chat in an HTML page, you can provide either a **Direct Line secret** or a **Direct Line token** so the Web Chat can communicate with the bot.
@@ -22,26 +27,30 @@ When embedding a Web Chat in an HTML page, you can provide either a **Direct Lin
 
 ## User impersonation
 
-The Web Chat allows to specify a **user ID**, which is sent to the bot. This allows potential **user impersonation** by hackers, because the user ID typically is not verified. This is a security risk if the bot stores sensitive data based on user ID. For example, the built-in [user authentication support in Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0) associates access tokens with user IDs.
+The Web Chat allows to specify a **user ID**, which is sent to the bot.
+Typically, the user ID is not verified an that potentially may allow **user impersonation** by hackers. This is a security risk if the bot stores sensitive data based on user ID. For example, the built-in [user authentication support in Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0) associates access tokens with user IDs.
 
-To avoid impersonation, the recommended approach is for the server to bind a user ID to the Direct Line token. Then any conversation using that token will send the bound user ID to the bot. However, if the client is going to provide the user ID to the server, it is important for the server to validate the ID somehow (see below). Otherwise, a malicious user could still modify the user ID being sent by the client.
+To avoid impersonation, the recommended approach is for the server to **bind a user ID to the Direct Line token**. Then any conversation using that token will send the bound user ID to the bot.
+However, if the client provides the user ID to the server, it is important for the server to validate the ID.
 
-To keep things simple, this sample generates a random user ID on the server-side and binds it to the Direct Line token. While this mitigates impersonation concerns, the downside is that users will have a different ID every time they talk to the bot. If you need a consistent and validated user ID, see the [Direct Line user token sample](https://github.com/navzam/user-direct-line-token-sample).
+In this example the server generates a random user ID and binds it to the Direct Line token. This mitigates impersonation concerns but the users will have a different ID every time they talk to the bot.
+For a consistent and validated user ID, see the [Direct Line user token sample](https://github.com/navzam/user-direct-line-token-sample).
 
 ## Architecture
 
 This sample contains three components:
-- **The backend API** performs the Direct Line token acquisition. It generates a random user ID that will be bound to the Direct Line token.
-- **The UI** is static HTML/JS that could be hosted using any web server. It makes a POST request to the backend API and uses the resulting Direct Line token to render WebChat.
-- **The bot** is a bare-bones bot that responds to every activity by sending the user's ID.
 
-Depending on the scenario, the backend API could be called from a client (such as a single-page application) or a server (such as a more traditional web app). After receiving the Direct Line token, the caller can then use it to render Web Chat, and the bot will receive the randomly-generated user ID on every activity.
+- **Direct Line Server**. It generates the Direct Line token acquisition and a random user ID that is bound to the token.
+- **Client**. It contains a static HTML page that can be hosted using any web server. It makes a POST request to the backend API and uses the resulting Direct Line token to render WebChat.
+- **Bot** The example assumes that you already have a bot deployed on Azure. For more information, see [Tutorial: Create and deploy a basic bot](https://docs.microsoft.com/azure/bot-service/bot-builder-tutorial-basic-deploy?view=azure-bot-service-4.0&tabs=csharp%2Cvs)
+
+After receiving the Direct Line token, the client uses it to render the Web Chat. The bot will receive the randomly-generated user ID on every activity.
 
 ## Code highlights
 
 ### Constructing the user ID
 
-In this sample, the user is anonymous, so the API randomly generates a user ID:
+In this example, the user is anonymous, so the server randomly generates a user ID:
 
 <details><summary>JavaScript</summary>
 
@@ -145,10 +154,9 @@ Note that we do *not* specify a user ID when initiating WebChat. Direct Line wil
 
 ## Running the sample locally
 
-### Prerequisites
-- A registered Bot Framework bot (see [documentation on registering a bot with Azure Bot Service](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-registration?view=azure-bot-service-3.0))
 
 ### Run the bot
+
 1. Navigate to the `bot` directory.
 1. Fill in the environment variables in the `.env` file, according to the following table:
     | Variable | Description | Example value |

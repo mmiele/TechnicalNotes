@@ -19,8 +19,6 @@ The following figure shows the example components:
 
 After receiving the Direct Line token, the client uses it to render the Web Chat. The bot will receive the randomly-generated user ID on every activity.
 
-
-
 ## Web Chat secret
 
 When embedding a Web Chat in an HTML page, you can provide either a **Direct Line secret** or a **Direct Line token** so the Web Chat can communicate with the bot.
@@ -128,9 +126,9 @@ var fetchTokenResponse = await _httpClient.SendAsync(fetchTokenRequest, cancella
 
 The resulting Direct Line token is bound to the passed user ID.
 
-### Calling the API and rendering WebChat
+### Call the Direct Line API and render Web Chat
 
-The UI calls the API and uses the resulting Direct Line token to render WebChat:
+The client HTML page calls the Direct Line API and uses the resulting Direct Line token to render Web Chat.
 
 ```js
 // index.html
@@ -146,35 +144,33 @@ window.WebChat.renderWebChat(
 );
 ```
 
-Note that we do *not* specify a user ID when initiating WebChat. Direct Line will handle sending the user ID to the bot based on the token.
+> [!NOTE] There is no need to specify a user ID when initiating the Web Chat. Direct Line will handle sending the user ID to the bot based on the token.
 
-## Running the sample locally
-
+## Running the example locally
 
 ### Run the bot
 
-1. Navigate to the `bot` directory.
-1. Fill in the environment variables in the `.env` file, according to the following table:
+1. In your IDE environment, open the bot project.
+1. Assure that the file `.env` in JavaScript or `appsettings.json` in C# contains these values:
     | Variable | Description | Example value |
     | -------- | ----------- | ------------- |
-    | `PORT` | The port on which the bot server will run. | 3978 |
-    | `MICROSOFT_APP_ID` | The app ID of the registered Bot Framework bot. Can be found in the Azure Bot Channels Registration resource. | |
-    | `MICROSOFT_APP_SECRET` | The app secret of the registered Bot Framework Bot. Issued during registration. | |
-1. Run `npm install` to install the required dependencies.
-1. Run `npm start` to start the bot.
+    | `port` | The port on which the bot server will run. | 3978 |
+    | `MicrosoftAppId` | The app registration ID of the registered bot. | |
+    | `MicrosoftAppPassword` | The app secret of the registered bot.  | |
+1. Run the bot locally.
 1. Run `ngrok` to expose your bot to a public URL. For example:
     ```bash
     ngrok http -host-header=rewrite 3978
     ```
-1. Update the messaging endpoint in your Bot Channels Registration to the ngrok URL. For example: `https://abcdef.ngrok.io/api/messages`
+1. Update the messaging endpoint in your bot registration to the ngrok URL. For example: `https://abcdef.ngrok.io/api/messages`
 
-### Run the API
+### Run the server API
 
-The sample API is available in multiple languages. Choose one and expand the corresponding section for specific steps.
+The server API is available in multiple languages. Choose one and expand the corresponding section for specific steps.
 
 <details><summary>JavaScript API</summary>
 
-1. Navigate to the `api/javascript` directory.
+1. Navigate to the `server/javascript` directory.
 1. Fill in the environment variables in the `.env` file. See the table below for descriptions.
 1. Run `npm install` to install the required dependencies.
 1. Run `npm start` to start the server.
@@ -188,13 +184,15 @@ The sample API is available in multiple languages. Choose one and expand the cor
 
 <details><summary>C# API</summary>
 
-1. Add the required secrets to the .NET Core secret manager. See the table below for descriptions.
+1. Add the required secrets to the .NET Core secret manager. In a command window run the following commands:
+
     ```bash
-    cd ./api/csharp
-    dotnet user-secrets set "DirectLine:DirectLineSecret" "YOUR-DIRECT-LINE-SECRET-HERE"
+    > cd ./server/csharp
+    > dotnet user-secrets set "DirectLine:DirectLineSecret" "YOUR-DIRECT-LINE-SECRET-HERE"
     ```
-1. (optional) Change the port specified in `./Properties/launchSettings.json`.
-1. Run `dotnet run` to start the server. (Alternatively, open and run the project in Visual Studio.)
+
+1. Optionally, change the port on which to run the server and specified in `./Properties/launchSettings.json`.
+1. Run `dotnet run` to start the server.
 
 | Variable | Description | Example value |
 | -------- | ----------- | ------------- |
@@ -202,6 +200,8 @@ The sample API is available in multiple languages. Choose one and expand the cor
 
 </details>
 
-### Run the UI
-1. Navigate to the `ui` directory.
-1. Open `index.html` in a browser. (Alternatively, you can serve `index.html` on `localhost` using a web server, or use a local development server such as the [Live Server Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).)
+### Run the client web page
+
+1. In your browser, navigate to the `client` directory.
+1. Open `webchat-simple.html` or `webchat-custom.html`.
+    Alternatively, you can serve the web page on `localhost` using a web server, or a local development server such as the [Live Server Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).)

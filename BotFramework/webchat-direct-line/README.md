@@ -78,11 +78,11 @@ private static string GenerateRandomUserId()
 
 </details>
 
-The user ID is prefixed with "dl_" as required by the [Direct Line token API](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-4.0#generate-token).
+The user ID is prefixed with "dl_" as required by [Generate a Direct Line token](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-4.0#generate-token).
 
-### Retrieving a user-specific Direct Line token
+### Retrieving a user specific Direct Line token
 
-The API calls the Direct Line API to retrieve a Direct Line token. Notice that we pass the user ID in the body of the request:
+The Direct Line API is called to retrieve a Direct Line token. Notice that the user ID is passed in the body of the request:
 
 <details><summary>JavaScript</summary>
 
@@ -126,7 +126,7 @@ var fetchTokenResponse = await _httpClient.SendAsync(fetchTokenRequest, cancella
 
 </details>
 
-The resulting Direct Line token will be bound to the passed user ID.
+The resulting Direct Line token is bound to the passed user ID.
 
 ### Calling the API and rendering WebChat
 

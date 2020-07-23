@@ -146,9 +146,9 @@ window.WebChat.renderWebChat(
 
 > [!NOTE] There is no need to specify a user ID when initiating the Web Chat. Direct Line will handle sending the user ID to the bot based on the token.
 
-## Running the example locally
+## Running the example
 
-### Run the bot
+### Run the bot locally
 
 1. In your IDE environment, open the bot project.
 1. Assure that the file `.env` in JavaScript or `appsettings.json` in C# contains these values:
@@ -163,6 +163,10 @@ window.WebChat.renderWebChat(
     ngrok http -host-header=rewrite 3978
     ```
 1. Update the messaging endpoint in your bot registration to the ngrok URL. For example: `https://abcdef.ngrok.io/api/messages`
+
+### Run the bot remotely
+
+In this case, you have the bot running in Azure for example, and leave the messaging end point unchanged. For example `https://<your bot app registration name>.azurewebsites.net/api/messages`.
 
 ### Run the server API
 
@@ -194,14 +198,17 @@ The server API is available in multiple languages. Choose one and expand the cor
 1. Optionally, change the port on which to run the server and specified in `./Properties/launchSettings.json`.
 1. Run `dotnet run` to start the server.
 
-| Variable | Description | Example value |
+| Name | Description | Example value |
 | -------- | ----------- | ------------- |
-| `DirectLine:DirectLineSecret` | The Direct Line secret issued by Bot Framework. Can be found in the Azure Bot Channels Registration resource after enabling the Direct Line channel. |  |
+| `YOUR-DIRECT-LINE-SECRET-HERE` | This is the Direct Line secret issued by Bot Framework.|Found in the Azure Bot Channels Registration resource in the Direct Line channel. |
 
 </details>
 
 ### Run the client web page
 
 1. In your browser, navigate to the `client` directory.
-1. Open `webchat-simple.html` or `webchat-custom.html`.
-    Alternatively, you can serve the web page on `localhost` using a web server, or a local development server such as the [Live Server Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).)
+1. Open `webchat-simple.html` or `webchat-custom.html`. Alternatively, you can serve the web page on `localhost` using a web server, or a local development server such as the [Live Server Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+The Web Chat is rendered and the user can communicate with the bot. The following picture shows the customized Web Chat.
+
+![webchat directline token](media/webchat-client-custom.png)

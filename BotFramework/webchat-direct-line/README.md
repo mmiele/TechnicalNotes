@@ -168,9 +168,9 @@ window.WebChat.renderWebChat(
 
 In this case, you have the bot running in Azure for example, and leave the messaging end point unchanged. For example `https://<your bot app registration name>.azurewebsites.net/api/messages`.
 
-### Run the server API
+### Run the server
 
-The server API is available in multiple languages. Choose one and expand the corresponding section for specific steps.
+The server API is available in multiple languages. Choose one and expand the corresponding section for specific steps. This allows the generation of the token from the Direct Line secret.
 
 <details><summary>JavaScript API</summary>
 
@@ -188,7 +188,7 @@ The server API is available in multiple languages. Choose one and expand the cor
 
 <details><summary>C# API</summary>
 
-1. Add the required secrets to the .NET Core secret manager. In a command window run the following commands:
+1. Add the required secrets to the **.NET Core secret manager**. In a command window execute the following commands:
 
     ```bash
     > cd ./server/csharp

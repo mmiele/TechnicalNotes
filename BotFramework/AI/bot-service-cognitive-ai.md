@@ -18,8 +18,16 @@ The QnA Maker imports your content into a knowledge base of question and answer 
 
 ### How to start
 
-1. [Create a QnA Maker service](https://docs.microsoft.com/azure/cognitive-services/qnamaker/how-to/set-up-qnamaker-service-azure#create-a-new-qna-maker-service) in the [Azure portal](https://portal.azure.com/).
-1. [Create a **knowledge base**](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/create-publish-knowledge-base#create-your-first-qna-maker-knowledge-base) in the [QnA Maker portal](https://qnamaker.ai/). Add [files and URLs](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/content-types) to create the knowledge base.
+1. [Create a **knowledge base**](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/create-publish-knowledge-base#create-your-first-qna-maker-knowledge-base) in the [QnA Maker portal](https://qnamaker.ai/) click **Create a knowledge base** in the top menu bar. Add [files and URLs](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/concepts/content-types) to create the knowledge base.
+    1. **Steps 1 - Create a QnA service in Microsoft Azure.**. If needed, click the **Create a QnA service** button to [Create a QnA Maker service](https://docs.microsoft.com/azure/cognitive-services/qnamaker/how-to/set-up-qnamaker-service-azure#create-a-new-qna-maker-service) in the [Azure portal](https://portal.azure.com/).
+    This is an example:
+
+        ![bot qna faqs](../../Media/Cognitive/botqnafaq-settings.PNG)
+
+        Click the **Create** button and wait for the deployment to finish. You should see the *BotQnaFaq* service listed in the resource group.
+
+    1. **Step 2 - Connect your QnA service to your KB.**. I had to toggle between tenants to be able to select the service created in step 1 (in the example *BotQnaFaq*.)
+
 1. Publish your knowledge base and test from your custom endpoint using [cURL or Postman](https://docs.microsoft.com/en-us/azure/cognitive-services/qnamaker/quickstarts/get-answer-from-knowledge-base-using-url-tool).
 1. From your client application, programmatically call your knowledge base's endpoint. The client application processes the JSON response to show the best answer to the user.
 
@@ -38,7 +46,7 @@ The QnA Maker imports your content into a knowledge base of question and answer 
     1. Check *Enable multi-turn extraction from URLs, .pdf or .docx files*.
     1. Default answer: *Default answer not found*.
     1. URL: `https://docs.microsoft.com/azure/cognitive-services/qnamaker/troubleshooting`.
-    1. Add file: `smartLightFAQ.tsv`.
+    1. Add the FAQ index page URL: `https://docs.microsoft.com/en-us/azure/bot-service/bot-service-resources-bot-framework-faq?view=azure-bot-service-4.0`.
     1. Chit-chat: *Professional*.
 1. In step 5 click **Create your KB**.
 1. Click the **Save and train** button.

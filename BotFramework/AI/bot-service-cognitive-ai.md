@@ -55,6 +55,10 @@ The QnA Maker imports your content into a knowledge base of question and answer 
     1. POST /knowledgebases/\<knowledge-base-id>/generateAnswer
     1. Host: \<your-hostname>  // NOTE - this is a URL ending in /qnamaker.
     1. Authorization: EndpointKey <qna-maker-resource-key>
+1. After the service has been deployed, click the **Create Bot** button. You will be redirected to the Azure portal. This is an example:
+
+      ![bot qna faqs](../../Media/Cognitive/botqnafaq-bot.PNG)
+
 
 ## Test QnA with the bot
 

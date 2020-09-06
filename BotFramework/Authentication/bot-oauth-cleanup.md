@@ -26,7 +26,7 @@ When a bot sends a request to the Bot Connector Service, it must include informa
 - [Authentication](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) as it applies to bot/connector connection
 - [BotFrameworkAdapter class](https://docs.microsoft.com/en-us/javascript/api/botbuilder/botframeworkadapter?view=botbuilder-ts-latest)
 
-![Bot Framework architecture](../../Media/Authentication/azure-bot-service-architecture.PNG)
+![Bot Framework architecture](../../Media/Authentication/azure-bot-service-architecture.png)
 
 
 

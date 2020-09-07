@@ -43,15 +43,16 @@ When the Bot Connector service sends a request to a bot, it specifies a **signed
 
 For more information, see [Authenticate requests from the Bot Connector service to your bot](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0#connector-to-bot).
 
-
+> [!NOTE]
+> Rename the article **Connector authentication**.
 
 ### Channels
 
-Channels communicates with a bot via the **Bot Connector service** this means that the previous authentication principles generally apply. You may want to notice the particularities of the channels described next.
+Channels communicate with a bot via the **Bot Connector service** this means that the previous authentication principles generally apply. You may want to notice the particularities of the channels described next.
 
 #### Direct Line
 
-A client application can authenticate requests to Direct Line API 3.0 either by using a **secret** that you obtain from the [Direct Line channel configuration](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-4.0) page in the Bot Framework Portal or better by using a **token** that you obtain at runtime. The secret or token should be specified in the Authorization header of each request.
+A client application can authenticate requests to Direct Line API 3.0 either by using a **secret** that you obtain from the [Direct Line channel configuration](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-4.0) page in the Bot Framework Portal or, better, by using a **token** that you obtain at runtime. The secret or token should be specified in the Authorization header of each request.
 
 > [!NOTE]
 > A Direct Line secret is a master key that can be used to **access any conversation** that belongs to the associated bot. A secret can also be used to obtain a token. **Secrets do not expire**.
@@ -63,10 +64,42 @@ For more information, see [Authentication](https://docs.microsoft.com/en-us/azur
 > Change title to **Direct Line Authentication**.
 
 
-
 #### Web Chat
 
+When embedding a Web Chat control in a web page, you can use a either a **secret** or, better, a **token** you obtain at runtime.
+For more information, see [Connect a bot to Web Chat](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-webchat?view=azure-bot-service-4.0).
 
+
+## User authentication
+
+At times a bot must access secured online resources on behalf of the user. To do that the bot must be authorized. This is because to perform certain operations such as checking email, checking on flight status, or placing an order, the bot will need to call an external service such as Microsoft Graph, GitHub, or a company's REST service. OAuth is used to authenticate the user and authorize the bot.
+
+> [!NOTE]
+> Two macro-steps are involved for a bot to access a user's resources.
+>
+> - **Authentication**. The process of verifying the user's identity.
+> - **Authorization**. The process of verifying that the bot can access the user's resources.
+> If the first step is successful then a token based on the user's credentials is issued. In the second step, the bot uses the token to access the user's resources.
+
+For more information, see [User authentication](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0).
+
+
+### Identity providers
+
+An identity provider authenticates user or client identities and issues consumable security tokens. It provides user authentication as a service.
+
+Client applications, such as web applications, delegate authentication to a trusted identity provider.
+
+A trusted identity provider:
+
+- Enables single sign-on (SSO) features, allowing an application to access multiple secured resources.
+- Facilitates connections between cloud computing resources and users, decreasing the need for users to re-authenticate.
+
+For more information, see [Identity providers](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-identity-providers?view=azure-bot-service-4.0&tabs=adv1%2Cga2).
+
+
+> [!NOTE]
+> The token issued during **Bot authentication** is not the same token issued during **User authentication**. The first is used to establish secure communication between a bot, channels and, ultimately, client applications. The second is used to authorize the bot to access secured resource on behalf of the user.
 
 
 ## Appendix

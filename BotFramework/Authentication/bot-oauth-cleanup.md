@@ -2,24 +2,10 @@
 
 ## Overview
 
-This article tries to shed a light on several elements that drive customers crazy when dealing with authentication within the Bot Framework ecosystem.
+This notes try to shed some light on authentication within the Bot Framework ecosystem.
 From the outset let's say that there are 2 broad authentication categories:
 **bot authentication** and **user authentication**.
-The token is a key element applicable to both categories, we intend to follow the token to make sense of the authentication intricacies.
-
-## Definitions
-
-Before we get into bot and user authentication details, let's define some terminology for later use.
-
-- **Bot framework service**. The framework is an Azure cloud service and *translates* the data from the APIs of multiple channels into the bot framework protocol in a form that a bot understands. This allows the bot to communicate with multiple channels, without having to understand which channel the data is coming from. The framework handles both inbound and outbound requests.
-- **Bot connector service**. This Azure cloud service forwards information from a bot to a channel (user) in the form of activity objects. When a bot sends a request to the connector service, it must include information that the connector service can use to **verify its identity**. The connector handles only outbound requests.
-- **Bot framework adapter**. The bot adapter encapsulates **authentication processes** and sends activities to and receives activities from the bot connector service. When a bot receives an activity, the adapter creates a turn context object, passes it to the bot application logic, and sends responses back to the connector (user's channel).
-- **Middleware**. The adapter processes and directs incoming activities through the bot middleware pipeline to the bot logic and then back out again. As each activity flows in and out of the bot, each piece of middleware can inspect or act upon the activity, both before and after the bot logic runs.
-
-See the following diagram depicting the main bot logic.
-
-![main bot logic](../../Media/Authentication/main-bot-logic.png)
-
+The **token** is a key element applicable to both categories, we intend to *follow the token* to make sense of the authentication intricacies.
 
 ## Bot authentication
 
@@ -105,11 +91,32 @@ The following figure shows the elements involved in both Bot and User authentica
 
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture.PNG)
 
+> [!NOTE]
+> **Questions**
+>
+> Q1: Are the channels the only way to interact with a bot? I can see the user doing that. But what about programmatically from an app?
+> Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
+> Q3: What is the role of the adapter? What is its relevance in authentication?
+
 ## Appendix
 
-The following architecture highlights the **Bot Connector** position between the **Bot** and the **Channels**.
+The following simplified architecture highlights the **Bot Connector** position between the **Bot** and the **Channels**.
 
 ![Bot Framework architecture](../../Media/Authentication/bot-framework-architecture-simple.PNG)
+
+## Definitions
+
+Before we get into bot and user authentication details, let's define some terminology for later use.
+
+- **Bot framework service**. The framework is an Azure cloud service and *translates* the data from the APIs of multiple channels into the bot framework protocol in a form that a bot understands. This allows the bot to communicate with multiple channels, without having to understand which channel the data is coming from. The framework handles both inbound and outbound requests.
+- **Bot connector service**. This Azure cloud service forwards information from a bot to a channel (user) in the form of activity objects. When a bot sends a request to the connector service, it must include information that the connector service can use to **verify its identity**. The connector handles only outbound requests.
+- **Bot framework adapter**. The bot adapter encapsulates **authentication processes** and sends activities to and receives activities from the bot connector service. When a bot receives an activity, the adapter creates a turn context object, passes it to the bot application logic, and sends responses back to the connector (user's channel).
+- **Middleware**. The adapter processes and directs incoming activities through the bot middleware pipeline to the bot logic and then back out again. As each activity flows in and out of the bot, each piece of middleware can inspect or act upon the activity, both before and after the bot logic runs.
+
+See the following diagram depicting the main bot logic.
+
+![main bot logic](../../Media/Authentication/main-bot-logic.png)
+
 
 
 ## References

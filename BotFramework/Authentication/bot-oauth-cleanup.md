@@ -91,9 +91,7 @@ The following figure shows the elements involved in both Bot and User authentica
 
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture.PNG)
 
-> [!NOTE]
 > **Questions**
->
 > Q1: Are the channels the only way to interact with a bot? I can see the user doing that. But what about programmatically from an app?
 > Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
 > Q3: What is the role of the adapter? What is its relevance in authentication?

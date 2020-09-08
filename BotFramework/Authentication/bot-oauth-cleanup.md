@@ -101,18 +101,15 @@ For more information, see [Identity providers](https://docs.microsoft.com/en-us/
 > [!NOTE]
 > The token issued during **Bot authentication** is not the same token issued during **User authentication**. The first is used to establish secure communication between a bot, channels and, ultimately, client applications. The second is used to authorize the bot to access secured resource on behalf of the user.
 
+The following figure shows the elements involved in both Bot and User authentication.
+
+![bot auth architecture](../../Media/Authentication/bot-auth-architecture.png)
 
 ## Appendix
 
 The following architecture highlights the **Bot Connector** position between the **Bot** and the **Channels**.
 
 ![Bot Framework architecture](../../Media/Authentication/bot-framework-architecture-simple.PNG)
-
-Another architecture diagram
-
-![Bot Framework architecture](../../Media/Authentication/azure-bot-service-architecture.png)
-
-
 
 
 ## References

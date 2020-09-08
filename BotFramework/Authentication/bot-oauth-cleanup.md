@@ -40,6 +40,8 @@ Channels communicate with a bot via the **Bot Connector service** this means tha
 
 A client application can authenticate requests to Direct Line API 3.0 either by using a **secret** that you obtain from the [Direct Line channel configuration](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-directline?view=azure-bot-service-4.0) page in the Bot Framework Portal or, better, by using a **token** that you obtain at runtime. The secret or token should be specified in the Authorization header of each request.
 
+You can connect the bot to a custom app by using the Direct Line channel.
+
 > [!NOTE]
 > A Direct Line secret is a master key that can be used to **access any conversation** that belongs to the associated bot. A secret can also be used to obtain a token. **Secrets do not expire**.
 > A Direct Line token is a key that can be used to **access a single conversation**. **A token expires but can be refreshed**.
@@ -55,10 +57,14 @@ For more information, see [Authentication](https://docs.microsoft.com/en-us/azur
 When embedding a Web Chat control in a web page, you can use a either a **secret** or, better, a **token** you obtain at runtime.
 For more information, see [Connect a bot to Web Chat](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-webchat?view=azure-bot-service-4.0).
 
+When you create a bot with Azure Bot Service, the Web Chat channel is automatically configured. This channel allows users to interact with your bot directly in a web page.
+
 
 ## User authentication
 
 At times a bot must access secured online resources on behalf of the user. To do that the bot must be authorized. This is because to perform certain operations such as checking email, checking on flight status, or placing an order, the bot will need to call an external service such as Microsoft Graph, GitHub, or a company's REST service. OAuth is used to authenticate the user and authorize the bot.
+The user's identity is used to provide role-based access control, as well as to serve personalized content.
+
 
 > [!NOTE]
 > Two macro-steps are involved for a bot to access a user's resources.
@@ -83,6 +89,8 @@ A trusted identity provider:
 
 For more information, see [Identity providers](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-concept-identity-providers?view=azure-bot-service-4.0&tabs=adv1%2Cga2).
 
+The users authenticate themselves using whatever mechanism is provided by their channel of communication with the bot.
+
 
 > [!NOTE]
 > The token issued during **Bot authentication** is not the same token issued during **User authentication**. The first is used to establish secure communication between a bot, channels and, ultimately, client applications. The second is used to authorize the bot to access secured resource on behalf of the user.
@@ -92,7 +100,8 @@ The following figure shows the elements involved in both Bot and User authentica
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture.PNG)
 
 **Questions**
-- [ ] Q1: Are the channels the only way to interact with a bot? I can see the user doing that. But what about programmatically from an app?
+- [ x ] Q1: Are the channels the only way to interact with a bot? I can see the user doing that. But what about programmatically from an app?
+Yes the channels are the only way both for the users and custom apps. You can connect the bot to a custom app by using the **Direct Line channel**.
 - [ ] Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
 - [ ] Q3: What is the role of the adapter? What is its relevance in authentication?
 

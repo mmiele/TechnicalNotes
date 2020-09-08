@@ -19,7 +19,7 @@ A bot is identified by the **MicrosoftAppID** and **MicrosoftAppPassword** which
 Register a bot with Azure, for example via the **Bot Channels Registration**. Azure creates an Active Directory registration application. This application has an application ID (`MicrosoftAppID`) and client secret (`MicrosoftAppPassword`). Use these two values to request an **access token**. If the bot is deployed in Azure the two values are used to implicitly generate the token.
 Independently from where the bot is deployed, can be Azure or another hosting service, the application ID and tne secret are used to generate the **token**.
 
-- [] Q: Should we use this? If the **Certificate Authentication** is in use then, the `MicrosoftAppId`, `certificate` and `thumbprint` are used to generate the token. We need to specify what `certificate` and `thumbprint` are.
+- [ ] Q: Should we use this? If the **Certificate Authentication** is in use then, the `MicrosoftAppId`, `certificate` and `thumbprint` are used to generate the token. We need to specify what `certificate` and `thumbprint` are.
 
 
 When the bot sends a request to the **Bot Connector service**, it must specify the **access token** in the **Authorization header** of the request.
@@ -34,7 +34,7 @@ When the Bot Connector service sends a request to a bot, it specifies a **signed
 For more information, see [Authenticate requests from the Bot Connector service to your bot](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0#connector-to-bot).
 
 **TO DO**
-- [] Rename the article **Connector authentication**.
+- [ ] Rename the article **Connector authentication**.
 
 ### Channels
 
@@ -53,7 +53,7 @@ You can connect the bot to a custom app by using the Direct Line channel.
 For more information, see [Authentication](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-4.0).
 
 **TO DO**
-- [] Change title to **Direct Line Authentication**.
+- [ ] Change title to **Direct Line Authentication**.
 
 
 #### Web Chat
@@ -120,8 +120,8 @@ The following figure shows the elements involved in both Bot and User authentica
     - Even if you are using most of the Bot Framework you could still potentially build a bot that could be accessed through its endpoint directly (**no token**).
     - The emulator has its own auth flow, and its own tokens.  (**emulator token**)
 
-- [] Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
-- [] Q3: What is the role of the adapter? What is its relevance in authentication?
+- [ ] Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
+- [ ] Q3: What is the role of the adapter? What is its relevance in authentication?
 
 - The channel connector services are separate web services from the bot running on separate servers and hosted by Microsoft. They forward messages from third-party channels to the bot.
 If you do use the channel connector services then the bot will receive Bot Framework activities. The Bot Framework adapter used in that case will not need to translate the incoming messages into Bot Framework activities because the channel connector services will have already done that translation, so the Bot Framework adapter just creates a turn context, etc.

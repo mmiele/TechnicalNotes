@@ -103,7 +103,7 @@ For more information, see [Identity providers](https://docs.microsoft.com/en-us/
 
 The following figure shows the elements involved in both Bot and User authentication.
 
-![bot auth architecture](../../Media/Authentication/bot-auth-architecture.png)
+![bot auth architecture](../../Media/Authentication/bot-auth-architecture.PNG)
 
 ## Appendix
 

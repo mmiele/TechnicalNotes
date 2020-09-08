@@ -11,8 +11,8 @@ The **token** is a key element applicable to both categories, we intend to *foll
 
 A bot is identified by the **MicrosoftAppID** and **MicrosoftAppPassword** which are kept within the bot's settings files: `appsettings.json` (.NET), `.env` (JavaScript), `web.config` (Python), or the **Azure Key Vault**. For more information, see [MicrosoftAppID and MicrosoftAppPassword](https://docs.microsoft.com/azure/bot-service/bot-service-manage-overview?view=azure-bot-service-4.0#microsoftappid-and-microsoftapppassword).
 
-> [!NOTE]
-> Update the article [Connect a bot to channels](https://docs.microsoft.com/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0). Show the connector and mention bot/connector authentication.
+**TO DO**
+- [ ] Update the article [Connect a bot to channels](https://docs.microsoft.com/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0). Show the connector and mention bot/connector authentication.
 
 ### Bot to connector authentication
 
@@ -29,8 +29,8 @@ When the Bot Connector service sends a request to a bot, it specifies a **signed
 
 For more information, see [Authenticate requests from the Bot Connector service to your bot](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0#connector-to-bot).
 
-> [!NOTE]
-> Rename the article **Connector authentication**.
+**TO DO**
+- [ ] Rename the article **Connector authentication**.
 
 ### Channels
 
@@ -46,8 +46,8 @@ A client application can authenticate requests to Direct Line API 3.0 either by 
 
 For more information, see [Authentication](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-authentication?view=azure-bot-service-4.0).
 
-> [!NOTE]
-> Change title to **Direct Line Authentication**.
+**TO DO**
+- [ ] Change title to **Direct Line Authentication**.
 
 
 #### Web Chat
@@ -91,10 +91,10 @@ The following figure shows the elements involved in both Bot and User authentica
 
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture.PNG)
 
-> **Questions**
-> Q1: Are the channels the only way to interact with a bot? I can see the user doing that. But what about programmatically from an app?
-> Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
-> Q3: What is the role of the adapter? What is its relevance in authentication?
+**Questions**
+- [ ] Q1: Are the channels the only way to interact with a bot? I can see the user doing that. But what about programmatically from an app?
+- [ ] Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
+- [ ] Q3: What is the role of the adapter? What is its relevance in authentication?
 
 ## Appendix
 

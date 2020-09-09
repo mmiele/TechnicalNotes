@@ -103,10 +103,10 @@ Notice that user's authentication is performed by a channel using an identity pr
 - [x] Q2: As corollary to the first question, is the bot connector the only way to *connect* to a bot? What is its relevance in authentication?
 - [x] Q3: What is the role of the adapter? What is its relevance in authentication?
 
-- The channel connector services are separate web services from the bot running on separate servers and hosted by Microsoft. They forward messages from third-party channels to the bot.
-If you do use the channel connector services then the bot will receive Bot Framework activities. The Bot Framework adapter used in that case will not need to translate the incoming messages into Bot Framework activities because the channel connector services will have already done that translation, so the Bot Framework adapter just creates a turn context, etc.
-- A channel adapter will allow your bot to receive messages from a third-party channel directly.
-The channel adapters like the Slack adapter need to do everything the Bot Framework adapter does and also translate the incoming Slack messages into Bot Framework activities on top of that.
+    - The channel connector services are separate web services from the bot running on separate servers and hosted by Microsoft. They forward messages from third-party channels to the bot.
+    If you do use the channel connector services then the bot will receive Bot Framework activities. The Bot Framework adapter used in that case will not need to translate the incoming messages into Bot Framework activities because the channel connector services will have already done that translation, so the Bot Framework adapter just creates a turn context, etc.
+    - A channel adapter will allow your bot to receive messages from a third-party channel directly.
+    The channel adapters like the Slack adapter need to do everything the Bot Framework adapter does and also translate the incoming Slack messages into Bot Framework activities on top of that.
 
 
 ## Appendix

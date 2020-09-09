@@ -4,24 +4,24 @@
 
 In the Bot Framework, two broad authentication categories exist: **bot authentication** and **user authentication**. Each has an associated **token** to allow access to secured resources. The following figure shows the elements involved in both bot and user authentication. It is assumed that the bot is deployed in Azure where it is listed as an **application service**.
 
-![bot auth architecture](../../Media/Authentication/bot-auth-architecture.PNG)
-
+![bot auth architecture](../../Media/Authentication/bot-auth-architecture-2.PNG)
 
 ## Bot authentication
 
 A bot is identified by the **MicrosoftAppID** and **MicrosoftAppPassword** which are kept within the bot's settings files: `appsettings.json` (.NET), `.env` (JavaScript), `config.py` (Python), or the **Azure Key Vault**. For more information, see [MicrosoftAppID and MicrosoftAppPassword](https://docs.microsoft.com/azure/bot-service/bot-service-manage-overview?view=azure-bot-service-4.0#microsoftappid-and-microsoftapppassword).
 
+When you register a bot with Azure, for example via the **Bot Channels Registration**, Azure creates an Active Directory registration application if you perform the registration using the Azure portal. If you use the CLI, you must create it in a separate step. The registration application has an application ID (`MicrosoftAppID`) and client secret (`MicrosoftAppPassword`). These values are used to generate a **token** to allow the bot to access secure resources.
 
-When you register a bot with Azure, for example via the **Bot Channels Registration**, Azure creates an Active Directory registration application. This application has an application ID (`MicrosoftAppID`) and client secret (`MicrosoftAppPassword`). If registered a bot with Azure, that is you are using Azure Active Directory as an identity provider, the Azure Bot Service generates a **token** from these two values. The Bot Framework SDK performs this process for the bot; otherwise, whatever you are using as identity provider needs to generate the token.
+When a channel sends a request to a bot, via the Bot Connector service, it specifies a **token** in the **Authorization header** of the request. The bot authenticates calls from the Bot Connector service by verifying the authenticity of the token.
+
+For more information, see [Authenticate requests from the Bot Connector service to your bot](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0#connector-to-bot).
 
 When the bot sends a request to a channel via the **Bot Connector service**, it must specify the **token** in the **Authorization header** of the request.
 All requests must include the access token which is verified by the Bot Connector service to authorize the request.
 
 For more information, see [Authenticate requests from your bot to the Bot Connector service](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0#bot-to-connector).
 
-Conversely, when a channel sends a request to a bot, via the Bot Connector service, it specifies a **token** in the **Authorization header** of the request. The bot authenticates calls from the Bot Connector service by verifying the authenticity of the token.
-
-For more information, see [Authenticate requests from the Bot Connector service to your bot](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0#connector-to-bot).
+The described operations are automatically performed by the Bot Framework SDK.
 
 ### Channels
 
@@ -91,7 +91,7 @@ Notice that user's authentication is performed by a channel using an identity pr
 > [!NOTE]
 > The token issued during **Bot authentication** is not the same token issued during **User authentication**. The first is used to establish secure communication between a bot, channels and, ultimately, client applications. The second is used to authorize the bot to access secured resource on behalf of the user.
 
-
+<!--
 **Questions**
 - [x] Q1: Are the channels the only way to interact with a bot? No!
 
@@ -108,8 +108,8 @@ Notice that user's authentication is performed by a channel using an identity pr
     If you do use the channel connector services then the bot will receive Bot Framework activities. The Bot Framework adapter used in that case will not need to translate the incoming messages into Bot Framework activities because the channel connector services will have already done that translation, so the Bot Framework adapter just creates a turn context, etc.
     - A channel adapter will allow your bot to receive messages from a third-party channel directly.
     The channel adapters like the Slack adapter need to do everything the Bot Framework adapter does and also translate the incoming Slack messages into Bot Framework activities on top of that.
-
-
+-->
+<!--
 ## Appendix
 
 ### Definitions
@@ -118,6 +118,9 @@ Notice that user's authentication is performed by a channel using an identity pr
 - **Bot connector service**. This Azure cloud service forwards information from a bot to a channel (user) in the form of activity objects. When a bot sends a request to the connector service, it must include information that the connector service can use to **verify its identity**. The connector handles only outbound requests.
 - **Bot framework adapter**. The bot adapter encapsulates **authentication processes** and sends activities to and receives activities from the bot connector service. When a bot receives an activity, the adapter creates a turn context object, passes it to the bot application logic, and sends responses back to the connector (user's channel).
 - **Middleware**. The adapter processes and directs incoming activities through the bot middleware pipeline to the bot logic and then back out again. As each activity flows in and out of the bot, each piece of middleware can inspect or act upon the activity, both before and after the bot logic runs.
+
+
+
 
 ## References
 
@@ -130,3 +133,5 @@ Notice that user's authentication is performed by a channel using an identity pr
 - [The Bot Framework](https://www.ais.com/the-bot-framework/) - Bot architecture simple
 - [Bot Framework Service vs Bot Connector Service](https://stackoverflow.com/questions/59984775/bot-framework-service-vs-bot-connector-service)
 - [azure bot framework architecture](https://www.google.com/search?rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02L17FDl9D6GVx2BwVes4VPYdZ5Iw:1599328888923&source=univ&tbm=isch&q=azure+bot+framework+architecture&sa=X&ved=2ahUKEwj09bWyzNLrAhWpIjQIHamNAYgQsAR6BAgKEAE&biw=1920&bih=937#imgrc=N3d6QINPtzp4QM) - Google search
+
+-->

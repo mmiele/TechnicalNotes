@@ -2,9 +2,10 @@
 
 ## Overview
 
-In the Bot Framework, two broad authentication categories exist: **bot authentication** and **user authentication**. Each has an associated **token** to allow access to secured resources. The following figure shows the elements involved in both bot and user authentication.
+In the Bot Framework, two broad authentication categories exist: **bot authentication** and **user authentication**. Each has an associated **token** to allow access to secured resources. The following figure shows the elements involved in both bot and user authentication. It is assumed that the bot is deployed in Azure where it is listed as an **application service**.
 
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture.PNG)
+
 
 ## Bot authentication
 

@@ -6,6 +6,11 @@ In the Bot Framework, two broad authentication categories exist: **bot authentic
 
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture-2.PNG)
 
+To help understanding the previous figure, notice the following:
+
+ - **Channel connector services** exist that are **web services** separate from the bot. They run on separate servers and are hosted by Microsoft. They forward messages from third-party **channels** to the bot. When using channel connector services the bot receives Bot Framework activities. The Bot (Framework) adapter in this case will not need to translate the incoming messages into Bot Framework activities because the channel connector services already have done that translation. The Bot adapter just creates a turn context, and so forth. This is shown in the previous figure.
+- A **channel adapter** instead allows a bot to receive messages from a third-party channel directly. The channel adapters need to do everything the Bot Framework adapter does and also translate the incoming messages into Bot Framework activities.
+
 ## Bot authentication
 
 A bot is identified by the **MicrosoftAppID** and **MicrosoftAppPassword** which are kept within the bot's settings files: `appsettings.json` (.NET), `.env` (JavaScript), `config.py` (Python), or the **Azure Key Vault**. For more information, see [MicrosoftAppID and MicrosoftAppPassword](https://docs.microsoft.com/azure/bot-service/bot-service-manage-overview?view=azure-bot-service-4.0#microsoftappid-and-microsoftapppassword).

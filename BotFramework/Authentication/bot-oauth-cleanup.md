@@ -7,11 +7,18 @@ In the Bot Framework, two broad authentication categories exist: **bot authentic
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture-2.PNG)
 
 To help understanding the previous figure, notice the following:
- - **Host platform**. A bot can be dployed in Azure or on any host platform chosen by the customer.
- - **Bot connector service**. It represents **web services** separate from the bot, running on different servers and hosted by Microsoft. They forward messages from third-party **channels** to the bot. This is shown in the previous figure.
-- **Bot adapter**. There are two kinds of adapters:
-    - **Bot Framework adapter**. When using channel connector services the bot receives Bot Framework activities. The Bot Framework adapter in this case does not translate the incoming messages into Bot Framework activities because the channel connector services already have done the translation. The Bot adapter just creates a turn context, and so forth. This is shown in the previous figure.
-    - **Custom adapter**. A custom adapter allows a bot to receive messages from third-party channels directly. The channel adapter does everything the Bot Framework adapter does and also translates the incoming messages into Bot Framework activities.
+
+ - **Host Platform**. It is the bot hosting platform. It can be Azure or any host platform chosen by the customer. In the picture the host platform is Azure.
+ - **Bot Connector Service**. It represents **web services** separate from the bot, running on different servers and hosted by Microsoft. They convert messages received from channels into Activity objects, and sent them to the bot's messaging endpoint. They also convert Activity objects received from the bot into messages and sent them to the channels.
+- **Bot Adapter**. This is the default Bot Framework adapter. It performs these tasks:
+    - Converts the JSON payload into an object; at this point, it is already an activity object, thanks to ABS.
+    - Creates a turn context and adds the activity object to it.
+    - Runs middleware, if any.
+    - Forwards the turn context to the bot.
+
+> [!NOTE]
+> When a custom channel adapter is used, the adapter itself performs the tasks that the Bot Connector Service and the default Bot Adapter do. Also, they provide the authentication mechanism for their web hook API. For an example, see [slack](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-slack?view=azure-bot-service-4.0&tabs=adapter#add-slack-app-settings-to-your-bots-configuration-file).
+
 
 ## Bot authentication
 

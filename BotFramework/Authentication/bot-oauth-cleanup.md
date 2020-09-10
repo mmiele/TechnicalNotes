@@ -8,8 +8,8 @@ In the Bot Framework, two broad authentication categories exist: **bot authentic
 
 To help understanding the previous figure, notice the following:
 
- - **Channel connector services** exist that are **web services** separate from the bot. They run on separate servers and are hosted by Microsoft. They forward messages from third-party **channels** to the bot. When using channel connector services the bot receives Bot Framework activities. The Bot (Framework) adapter in this case will not need to translate the incoming messages into Bot Framework activities because the channel connector services already have done that translation. The Bot adapter just creates a turn context, and so forth. This is shown in the previous figure.
-- A **channel adapter** instead allows a bot to receive messages from a third-party channel directly. The channel adapters need to do everything the Bot Framework adapter does and also translate the incoming messages into Bot Framework activities.
+ - **Channel connector services**. They are **web services** separate from the bot, running on different servers and hosted by Microsoft. They forward messages from third-party **channels** to the bot. When using channel connector services the bot receives Bot Framework activities. The Bot (Framework) adapter in this case does not translate the incoming messages into Bot Framework activities because the channel connector services already have done the translation. The Bot adapter just creates a turn context, and so forth. This is shown in the previous figure.
+- **Channel adapters**. They allow a bot to receive messages from third-party channels directly. The channel adapters do everything the Bot adapter does and also translate the incoming messages into Bot Framework activities.
 
 ## Bot authentication
 

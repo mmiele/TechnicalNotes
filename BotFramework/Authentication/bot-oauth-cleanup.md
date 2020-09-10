@@ -17,7 +17,7 @@ To help understanding the previous figure, notice the following:
     - Forwards the turn context to the bot.
 
 > [!NOTE]
-> When a custom channel adapter is used, the adapter itself performs the tasks that the Bot Connector Service and the default Bot Adapter do. Also, it provides the authentication mechanism for the related web hook API. For an example, see [slack](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-slack?view=azure-bot-service-4.0&tabs=adapter#add-slack-app-settings-to-your-bots-configuration-file).
+> When a custom channel adapter is used, the adapter itself performs the tasks that the Bot Connector Service and the default Bot Adapter do. Also, it provides the authentication mechanism for the related web hook API. For an example, see [Add Slack app settings to your bot's configuration file](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-connect-slack?view=azure-bot-service-4.0&tabs=adapter#add-slack-app-settings-to-your-bots-configuration-file).
 
 
 ## Bot authentication

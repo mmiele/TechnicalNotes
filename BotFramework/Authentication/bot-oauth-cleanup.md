@@ -7,9 +7,11 @@ In the Bot Framework, two broad authentication categories exist: **bot authentic
 ![bot auth architecture](../../Media/Authentication/bot-auth-architecture-2.PNG)
 
 To help understanding the previous figure, notice the following:
-
- - **Channel connector services**. They are **web services** separate from the bot, running on different servers and hosted by Microsoft. They forward messages from third-party **channels** to the bot. When using channel connector services the bot receives Bot Framework activities. The Bot (Framework) adapter in this case does not translate the incoming messages into Bot Framework activities because the channel connector services already have done the translation. The Bot adapter just creates a turn context, and so forth. This is shown in the previous figure.
-- **Channel adapters**. They allow a bot to receive messages from third-party channels directly. The channel adapters do everything the Bot adapter does and also translate the incoming messages into Bot Framework activities.
+ - **Host platform**. A bot can be dployed in Azure or on any host platform chosen by the customer.
+ - **Bot connector service**. It represents **web services** separate from the bot, running on different servers and hosted by Microsoft. They forward messages from third-party **channels** to the bot. This is shown in the previous figure.
+- **Bot adapter**. There are two kinds of adapters:
+    - **Bot Framework adapter**. When using channel connector services the bot receives Bot Framework activities. The Bot Framework adapter in this case does not translate the incoming messages into Bot Framework activities because the channel connector services already have done the translation. The Bot adapter just creates a turn context, and so forth. This is shown in the previous figure.
+    - **Custom adapter**. A custom adapter allows a bot to receive messages from third-party channels directly. The channel adapter does everything the Bot Framework adapter does and also translates the incoming messages into Bot Framework activities.
 
 ## Bot authentication
 

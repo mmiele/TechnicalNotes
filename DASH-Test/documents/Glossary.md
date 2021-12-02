@@ -1,14 +1,8 @@
 ---
 title: Glossary
-description: Disaggregated APIs for SONiC Hosts terms
-keywords: 
-author: tbd
-ms.author: tbd
-manager: tbd
-ms.topic: article
-ms.service: dash
+description: Disaggregated APIs for SONiC Hosts terms 
+author: michael
 ms.date: 11/29/2021
-
 ---
 
 # Glossary #

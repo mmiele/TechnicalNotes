@@ -147,7 +147,7 @@ A network switch is a multiport network bridge that uses MAC addresses to forwar
 - [Microsoft showcases “Software for Open Networking in the Cloud (SONiC)](https://azure.microsoft.com/en-us/blog/microsoft-showcases-software-for-open-networking-in-the-cloud-sonic/)
 
 
-
+---
 <style>
 
 /* Dashed colored border */
@@ -159,6 +159,5 @@ hr.type-blue {
 hr.type-yellow {
   border-top: 2px dashed yellow;
 }
-
 
 </style>

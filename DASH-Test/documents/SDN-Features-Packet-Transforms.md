@@ -250,7 +250,6 @@ Etc…
 	- 20.0.0.0/24
 
 
-
 **VNET Mapping Table**
 | | V4 underlay| V6 underlay| Mac-Address| Mapping Action | VNI
 |:----------|:----------|:----------|:----------|:----------|:----------
@@ -258,21 +257,19 @@ Etc…
 | 10.0.0.2| 100.0.0.2| 3ffe :: 2| Mac2| VXLAN_ENCAP_WITH_DMAC_DE-WRITE| 200
 | 10.0.0.3| 100.0.0.3| 3ffe :: 3| Mac3| VXLAN_ENCAP_WITH_DMAC_DE-WRITE| 300
 | | | | | | 
-| | | | | | 
  
 
-
-
 **Packet Transforms**
-| SRC -> DST | Out-ACL1| Out-ACL2| Out-ACL3| Routing| Final
+
+| SRC -> DST <img width=1000/>| Out-ACL1| Out-ACL2| Out-ACL3| Routing <img width=1000/>| Final <img width=1000/>|
 |:----------|:----------|:----------|:----------|:----------|:----------
-| | Block 10.0.0.10 Allow *| Block 10.0.0.11 Allow * | Allow *| 10.0.0.0/24 - Route Action = VNET 20.0.0.0/24 - Route Action = VNET| 
-| 10.0.0.1 -> 10.0.0.10 SMAC1-> DMAC_FAKE| Block| | | | Blocked
-| 10.0.0.1 -> 10.0.0.11 SMAC1-> DMAC_FAKE| Allow| Block| | | Blocked
-| 10.0.0.1 -> 10.0.0.2 SMAC1-> DMAC_FAKE Outer:SRC: [Physical IP of host] DST: [Physical IP of SDN Appliance] VXLAN VNI: custom Inner Mac:SRC - SMAC1 DST - DMAC_FAKE Inner IP: [10.0.0.1] -> [10.0.0.2]| Allow| Allow| Allow| Matched LPM route 10.0.0.0/24 Execute action VNET - which will lookup in mapping table and take mapping action.| Highlighted the changes in packet Outer:SRC: [100.0.0.2] DST: [100.0.0.1] VXLAN VNI: 200 Inner Mac: SRC - SMAC1 DST - Mac1 Inner IP: [10.0.0.1] -> [10.0.0.2]
+| | Block 10.0.0.10 Allow *| Block 10.0.0.11 Allow * | Allow*| 10.0.0.0/24 - Route Action = VNET 20.0.0.0/24 - Route Action = VNET| 
+| 10.0.0.1 -> 10.0.0.10 <br/>SMAC1-> DMAC_FAKE| Block| | | | Blocked
+| 10.0.0.1 -> 10.0.0.11 <br/>SMAC1-> DMAC_FAKE| Allow| Block| | | Blocked
+| 10.0.0.1 -> 10.0.0.2 <br/>SMAC1-> DMAC_FAKE <br/>Outer:<br/>SRC: [Physical IP of host] <br/>DST: [Physical IP of SDN Appliance] <br/>VXLAN <br/>&nbsp;&nbsp;&nbsp;&nbsp;VNI: custom <br/>Inner Mac: <br/>&nbsp;&nbsp;&nbsp;&nbsp;SRC - SMAC1 DST - DMAC_FAKE <br/>Inner IP: <br/>&nbsp;&nbsp;&nbsp;&nbsp;[10.0.0.1] -> [10.0.0.2]| Allow| Allow| Allow| Matched LPM route 10.0.0.0/24 Execute action VNET - which will lookup in mapping table and take mapping action.| Highlighted the changes in packet <br/>Outer:<br/>SRC: [100.0.0.2] <br/>DST: [100.0.0.1] <br/>VXLAN <img width=1000/>VNI: 200 <br/>Inner Mac: <img width=1000/>SRC - SMAC1 DST - Mac1 <br/>Inner IP: <img width=1000/>[10.0.0.1] -> [10.0.0.2]
 | 10.0.0.1 -> 10.0.0.3 SMAC1-> DMAC_FAKE| | | | | 
 | | | | | | 
-| | | | | | 
+
 
 
 ### VNET to Internet - TBD

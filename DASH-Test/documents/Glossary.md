@@ -8,6 +8,22 @@ manager: tbd
 ms.topic: article
 ms.service: dash
 ms.date: 11/29/2021
+
+---
+<style>
+
+/* Dashed colored border */
+
+hr.type-blue {
+  border-top: 2px dashed blue;
+}
+
+hr.type-yellow {
+  border-top: 2px dashed yellow;
+}
+
+</style>
+
 ---
 
 # Glossary #
@@ -147,18 +163,3 @@ A network switch is a multiport network bridge that uses MAC addresses to forwar
 - [Microsoft showcases “Software for Open Networking in the Cloud (SONiC)](https://azure.microsoft.com/en-us/blog/microsoft-showcases-software-for-open-networking-in-the-cloud-sonic/)
 
 
----
-<style>
-
-/* Dashed colored border */
-
-hr.type-blue {
-  border-top: 2px dashed blue;
-}
-
-hr.type-yellow {
-  border-top: 2px dashed yellow;
-}
-
-</style>
----

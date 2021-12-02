@@ -84,11 +84,11 @@ An SDN appliance in a multi-tenant network appliance (meaning 1 SDN appliance wi
 
 		- If ‘terminate’ is not used here, the last line is the most important in ACL Level1 
 
-	- Soft Block (general block, with specific permits, non\-terminating, proceed to next group) \- or think of this as a Block, and then a ‘no’ for ‘termination’
+	- Soft Block (general block, with specific permits, non-terminating, proceed to next group) or think of this as a Block, and then a ‘no’ for ‘termination’.
 
-	- Allow (non\-terminate, proceed to next, continue to FW rules)  
+	- Allow (non-terminate, proceed to next, continue to FW rules)  
 
-	- Default action = Deny
+	- Default action = Deny (This is the default value if no rules are matched; traffic should be dropped.  This is the default action of firewalls, however it is OK to be configurable.  If not, we want to default Deny/Drop if no rules are matched).
 
 - ACL Group:  evaluate rules based on Priority (within an ACL Group); Terminate vs non\-Terminate pertains to the Pipeline
 
@@ -212,7 +212,7 @@ Etc…
 | 10.0.0.1 -> 10.0.0.2 <br/> SMAC1-> DMAC_FAKE </br> Outer: <br/> SRC: [Physical IP of host] <br/> DST: [Physical IP of SDN Appliance] <br/> VXLAN <br/> &nbsp; &nbsp; &nbsp;VNI: custom <br/>Inner Mac: <br/> &nbsp; &nbsp; &nbsp; SRC - SMAC1 DST - DMAC_FAKE <br/>Inner IP:<br/>&nbsp; &nbsp; &nbsp;[10.0.0.1] -> [10.0.0.2]| Route Id = 1| Outer: <br/>SRC: [SDN Appliance IP] <br/>DST: [100.0.0.2] # Came from mapping table lookup <br/>VXLAN <br/> &nbsp; &nbsp; &nbsp;VNI: 10001 <br/>Inner Mac: <br/>&nbsp; &nbsp; &nbsp;SRC - SMAC1 DST - E4-A7-A0-99-0E-18 <br/>Inner IP: <br/>&nbsp; &nbsp; &nbsp;[10.0.0.1] -> [10.0.0.2]| Encap_with_lookup_V4_underlay
 | 10.0.0.1 -> 10.0.0.100 <br/> SMAC1-> DMAC_FAKE <br/> Outer: <br/> SRC: [Physical IP of host] <br/> DST: [Physical IP of SDN Appliance] <br/> VXLAN <br/>&nbsp; &nbsp; &nbsp;VNI: custom <br/> Inner Mac: <br/>&nbsp; &nbsp; &nbsp;SRC - SMAC1 DST - DMAC_FAKE <br/>Inner IP: <br/>&nbsp; &nbsp; &nbsp;[10.0.0.1] -> [10.0.0.2]| Route Id = 2| Outer: <br/>SRC: [SDN Appliance IP] DST: [23.0.0.1] # Came from mapping table lookup <br/>VXLAN VNI: 90000 <br/>Inner Mac:<br/>&nbsp; &nbsp; &nbsp;SRC - SMAC1 DST - E4-A7-A0-99-0E-28 <br/>Inner IP: <br/>&nbsp; &nbsp; &nbsp;[10.0.0.1] -> [10.0.0.100]| Encap_with_Provided_data
 | 10.0.0.1 -> 10.0.0.101 <br/>SMAC1-> DMAC_FAKE <br/>Outer: <br/>SRC: [Physical IP of host] <br/>DST: [Physical IP of SDN Appliance] <br/>VXLAN <br/>&nbsp; &nbsp; &nbsp;VNI: custom <br/>Inner Mac: <br/>&nbsp; &nbsp; &nbsp;SRC - SMAC1 DST - DMAC_FAKE <br/>Inner IP: <br/>&nbsp; &nbsp; &nbsp;[10.0.0.1] -> [10.0.0.2]| Route Id = 3| Outer: <br/>SRC: [SDN Appliance IP] <br/>DST: ECMP on <br/>[23.0.0.10, 23.0.0.11, 23.0.0.13, 23.0.0.14] <br/># Came from mapping table lookup <br/>VXLAN <br/>&nbsp; &nbsp; &nbsp;VNI: 90000 <br/>Inner Mac:<br/>&nbsp; &nbsp; &nbsp;SRC - SMAC1 DST - E4-A7-A0-99-0E-29 <br/>Inner IP: <br/>&nbsp; &nbsp; &nbsp; [10.0.0.1] -> [10.0.0.100]| Encap_with_Provided_data_ECMP
-| 10.0.0.1 -> 8.8.8.8  <br/>SMAC1-> DMAC_FAKE <br/>Outer: <br/>SRC: [Physical IP of host] <br/>DST: [Physical IP of SDN Appliance] VXLAN VNI: custom Inner Mac: SRC - SMAC1 DST - DMAC_FAKE Inner IP: [10.0.0.1] -> [8.8.8.8]| Route Id = 4| | 
+| 10.0.0.1 -> 8.8.8.8 <br/>SMAC1-> DMAC_FAKE <br/>Outer: <br/>SRC: [Physical IP of host] <br/>DST: [Physical IP of SDN Appliance] <br/> VXLAN <br/>&nbsp; &nbsp; &nbsp;VNI: custom <br/> Inner Mac: <br/>&nbsp; &nbsp; &nbsp; SRC - SMAC1 DST - DMAC_FAKE <br/>Inner IP: <br/>&nbsp; &nbsp; &nbsp;[10.0.0.1] -> [8.8.8.8]| Route Id = 4| | 
 | | | | 
 
 

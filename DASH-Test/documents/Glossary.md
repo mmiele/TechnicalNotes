@@ -78,6 +78,14 @@ The [Open Systems Interconnection](https://en.wikipedia.org/wiki/OSI_model#Layer
 
 The **Switch Abstraction Interface** (SAI), on which SONiC is built, defines a standard API. Network hardware vendors can use it to develop innovative hardware platforms that can achieve great speeds while keeping the programming interface to ASIC (application-specific integrated circuit) consistent. Microsoft open sourced SAI in 2015. This approach enables operators to take advantage of the rapid innovation in silicon, CPU, power, port density, optics, and speed, while preserving their investment in one unified software solution across multiple platforms.
 
+### SDN ### 
+
+The **Software-defined networking** (SDN) technology is an approach to network management that enables dynamic, programmatically efficient network configuration in order to improve network performance and monitoring, making it more like cloud computing than traditional network management. SDN is meant to address the fact that the static architecture of traditional networks is decentralized and complex while current networks require more flexibility and easy troubleshooting. SDN attempts to centralize network intelligence in one network component by **disassociating the forwarding process of network packets (data plane) from the routing process (control plane)**. 
+
+The **control plane consists of one or more controllers, which are considered the brain of the SDN network where the whole intelligence is incorporated**. However, the intelligent centralization has its own drawbacks when it comes to security, scalability and elasticity and this is the main issue of SDN.
+
+SDN was commonly associated with the OpenFlow protocol (for remote communication with network plane elements for the purpose of determining the path of network packets across network switches) since the latter's emergence in 2011. However, since 2012 OpenFlow for many companies is no longer an exclusive solution, they added proprietary techniques. These include Cisco Systems' Open Network Environment and Nicira's network virtualization platform. For more information, see [Software-defined networking](https://en.wikipedia.org/wiki/Software-defined_networking).
+
 ### Stateful L4 ###
 
 The stateful layer-4 (L4) load balancers scale out services hosted in cloud datacenters by mapping packets destined to a service with a virtual IP address (VIP) to a pool of servers with multiple direct IP addresses (DIPs or DIP pool). L4 load balancing is a critical function for inbound trac to the cloud and trac across tenants. A study reports that an average of 44% of cloud trac is VIP trac and thus needs load balancing function. For more information see [Making Stateful Layer-4 Load Balancing Fast and

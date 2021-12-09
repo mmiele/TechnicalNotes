@@ -19,14 +19,6 @@ ms.date: 11/29/2021
 
 An **[Application Specific Integrated Circuit](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit)** (ASIC) is an integrated circuit (IC) chip customized for a particular use, rather than intended for general-purpose use. For example, a chip designed to run in a digital voice recorder is an ASIC. ASIC chips are typically built using metal-oxide-semiconductor (MOS) technology, as MOS integrated circuit chips. 
 
-
-## F ##
-
-### FPGA ###  
-
-A **[Field Programmable Gate Array](https://en.wikipedia.org/wiki/Field-programmable_gate_array)** (FPGA) is an integrated circuit designed to be configured by a customer or a designer after manufacturing, hence the term field-programmable. The FPGA configuration is generally specified using a hardware description language (HDL), similar to that used for an application-specific integrated circuit (ASIC). 
-
-
 ## D ##
 
 ### DASH ###  
@@ -35,6 +27,27 @@ Microsoft Azure has created a sub-group of [SONiC](#sonic) (Software for Open Ne
 
 - With the help of network hardware vendors, create an open forum that capitalizes on the use of **programmable networking hardware** including [SmartNICs](https://blogs.nvidia.com/blog/2021/10/29/what-is-a-smartnic/), SmartToRs, SmartAppliances. 
 - Optimize [Stateful L4](#stateful-l4) performance and connection scale by 10x or even 100x when compared to implementations that make extensive use of software. As host networking in the cloud is performed at L4 the resulting performance improvements should be truly significant.
+
+
+### Decap ###
+Data De-encapsulation is the reverse process of data [encapsulation](#encap). The encapsulated information is removed from the received data to obtain the original data. This process takes place at the receiver’s end. The data is de-encapsulated at the same layer at the receiver’s end to the encapsulated layer at the sender’s end. The added header and trailer information are removed from the data in this process. For more information, see [What is Data Encapsulation and de-encapsulation in networking?](https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in-networking).
+
+
+## E ##
+
+### Encap ###
+Data Encapsulation is the process in which some extra information is added to the data item to add some features to it. The OSI or the TCP/IP model for data transmission in a netowr which takes place through various layers in these models. Data encapsulation adds the protocol information to the data so that data transmission can take place properly through the layers. 
+
+The data is encapsulated on the sender’s side, starting from the application layer to the physical layer. Each layer takes the encapsulated data from the previous layer and adds some more information to encapsulate it and some more functionalities with the data. These functionalities may include proper data sequencing, error detection and control, flow control, congestion control, routing information, etc. For more information, see [What is Data Encapsulation and de-encapsulation in networking?](https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in-networking).
+
+
+
+## F ##
+
+### FPGA ###  
+
+A **[Field Programmable Gate Array](https://en.wikipedia.org/wiki/Field-programmable_gate_array)** (FPGA) is an integrated circuit designed to be configured by a customer or a designer after manufacturing, hence the term field-programmable. The FPGA configuration is generally specified using a hardware description language (HDL), similar to that used for an application-specific integrated circuit (ASIC). 
+
 
 ## L ##
 
@@ -85,6 +98,13 @@ The **Software-defined networking** (SDN) technology is an approach to network m
 The **control plane consists of one or more controllers, which are considered the brain of the SDN network where the whole intelligence is incorporated**. However, the intelligent centralization has its own drawbacks when it comes to security, scalability and elasticity and this is the main issue of SDN.
 
 SDN was commonly associated with the OpenFlow protocol (for remote communication with network plane elements for the purpose of determining the path of network packets across network switches) since the latter's emergence in 2011. However, since 2012 OpenFlow for many companies is no longer an exclusive solution, they added proprietary techniques. These include Cisco Systems' Open Network Environment and Nicira's network virtualization platform. For more information, see [Software-defined networking](https://en.wikipedia.org/wiki/Software-defined_networking).
+
+### NBI ###
+
+In computer networking and computer architecture, a northbound interface (NBI) of a component is an **interface that allows the component to communicate with a higher level component, using the latter component's southbound interface**. The northbound interface conceptualizes the lower level details (e.g., data or functions) used by, or in, the component, allowing the component to interface with higher level layers.
+
+In architectural overviews, the northbound interface is normally drawn at the top of the component it is defined in; hence the name northbound interface. A southbound interface decomposes concepts in the technical details, mostly specific to a single component of the architecture. **Southbound interfaces are drawn at the bottom of an architectural overview**.
+
 
 ### Stateful L4 ###
 

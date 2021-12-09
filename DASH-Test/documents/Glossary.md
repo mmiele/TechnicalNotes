@@ -57,6 +57,13 @@ The [OSI](#osi) model partitions the flow of data in a communication system into
 
 This [list of network protocols](https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model)) article categorize the network protoocol by the nearest layer in the Open Systems Interconnection model. This list is not exclusive to only the OSI protocol family. Many of these protocols are originally based on the Internet Protocol Suite (TCP/IP) and other models and they often do not fit neatly into the OSI layers.
 
+### NBI ###
+
+In computer networking and computer architecture, a northbound interface (NBI) of a component is an **interface that allows the component to communicate with a higher level component, using the latter component's southbound interface**. The northbound interface conceptualizes the lower level details (e.g., data or functions) used by, or in, the component, allowing the component to interface with higher level layers.
+
+In architectural overviews, the northbound interface is normally drawn at the top of the component it is defined in; hence the name northbound interface. A southbound interface decomposes concepts in the technical details, mostly specific to a single component of the architecture. **Southbound interfaces are drawn at the bottom of an architectural overview**.
+
+
 ## O ##
 
 ### OCP ###
@@ -98,12 +105,6 @@ The **Software-defined networking** (SDN) technology is an approach to network m
 The **control plane consists of one or more controllers, which are considered the brain of the SDN network where the whole intelligence is incorporated**. However, the intelligent centralization has its own drawbacks when it comes to security, scalability and elasticity and this is the main issue of SDN.
 
 SDN was commonly associated with the OpenFlow protocol (for remote communication with network plane elements for the purpose of determining the path of network packets across network switches) since the latter's emergence in 2011. However, since 2012 OpenFlow for many companies is no longer an exclusive solution, they added proprietary techniques. These include Cisco Systems' Open Network Environment and Nicira's network virtualization platform. For more information, see [Software-defined networking](https://en.wikipedia.org/wiki/Software-defined_networking).
-
-### NBI ###
-
-In computer networking and computer architecture, a northbound interface (NBI) of a component is an **interface that allows the component to communicate with a higher level component, using the latter component's southbound interface**. The northbound interface conceptualizes the lower level details (e.g., data or functions) used by, or in, the component, allowing the component to interface with higher level layers.
-
-In architectural overviews, the northbound interface is normally drawn at the top of the component it is defined in; hence the name northbound interface. A southbound interface decomposes concepts in the technical details, mostly specific to a single component of the architecture. **Southbound interfaces are drawn at the bottom of an architectural overview**.
 
 
 ### Stateful L4 ###
@@ -161,6 +162,15 @@ A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC
 A network switch is a multiport network bridge that uses MAC addresses to forward data at the data link layer (layer 2) of the OSI model. Some switches can also forward data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches. For more information, see [Network switch](https://en.wikipedia.org/wiki/Network_switch). 
 
 
+## V ##
+
+### VNET ###
+
+Azure Virtual Network (VNET) is a basic building block of the Azure Virtual Networking. VNET is an collection of address space in datacenter networking which is very critical for proper Network design. You need VNET to deploy VMs in Azure. VMs deployed in same VNET can talk to each other. You don’t need to enable any routing to make it work. In other words, routing is configured by default between subnets created in the same VNET. However, if you need to connect to the services outside a VNET, you need to establish site to site VPN. It needs a component called as Azure Virtual Network Gateway. For more information, see [Key terminology for Azure Networking](https://www.vembu.com/blog/key-terminology-azure-networking/).
+
+
+<br/><br/>
+
 <hr style="border-top: 2px dashed yellow"/>
 
 ## References ##
@@ -168,5 +178,6 @@ A network switch is a multiport network bridge that uses MAC addresses to forwar
 - [SONiC Wiki](https://azure.github.io/SONiC/)
 - [SONiC Source Repositories](https://github.com/Azure/SONiC/blob/master/sourcecode.md)
 - [Microsoft showcases “Software for Open Networking in the Cloud (SONiC)](https://azure.microsoft.com/en-us/blog/microsoft-showcases-software-for-open-networking-in-the-cloud-sonic/)
+- [Network Basics](https://www.cloudflare.com/learning/network-layer/what-is-the-network-layer/)
 
 

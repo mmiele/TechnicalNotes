@@ -84,6 +84,16 @@ In computer networking and computer architecture, a northbound interface (NBI) o
 In architectural overviews, the northbound interface is normally drawn at the top of the component it is defined in; hence the name northbound interface. A southbound interface decomposes concepts in the technical details, mostly specific to a single component of the architecture. **Southbound interfaces are drawn at the bottom of an architectural overview**.
 
 
+### NIC ###
+
+The **network interface controller (NIC)**, also known as a network interface card, network adapter, LAN adapter or physical network interface, is the hardware component that connects a computer to a computer network.
+
+Early network interface controllers were commonly implemented on expansion cards that plugged into a computer bus. The low cost and ubiquity of the Ethernet standard means that most newer computers have a network interface built into the motherboard, or is contained into a USB-connected dongle.
+
+Modern network interface controllers offer advanced features such as interrupt and DMA interfaces to the host processors, support for multiple receive and transmit queues, partitioning into multiple logical interfaces, and on-controller network traffic processing such as the TCP offload engine.
+
+For more information, see [Network interface controller ](https://en.wikipedia.org/wiki/Network_interface_controller). 
+
 ## O ##
 
 ### OCP ###

@@ -1,8 +1,8 @@
 ---
 title: Glossary
-description: Disaggregated APIs for SONiC Hosts terms 
+description: Network terminlogy definitions 
 author: michael
-date: 12/09/2021
+last update: 12/10/2021
 ---
 
 # Glossary #

@@ -246,5 +246,6 @@ A VPN is created by establishing a virtual point-to-point connection through the
 - [SONiC Source Repositories](https://github.com/Azure/SONiC/blob/master/sourcecode.md)
 - [Microsoft showcases “Software for Open Networking in the Cloud (SONiC)](https://azure.microsoft.com/en-us/blog/microsoft-showcases-software-for-open-networking-in-the-cloud-sonic/)
 - [Network Basics](https://www.cloudflare.com/learning/network-layer/what-is-the-network-layer/)
+- [Gartner technology glossary ](https://www.gartner.com/en/information-technology/glossary?glossaryletter=A)
 
 

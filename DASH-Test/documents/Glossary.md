@@ -33,6 +33,17 @@ Microsoft Azure has created a sub-group of [SONiC](#sonic) (Software for Open Ne
 Data De-encapsulation is the reverse process of data [encapsulation](#encap). The encapsulated information is removed from the received data to obtain the original data. This process takes place at the receiver’s end. The data is de-encapsulated at the same layer at the receiver’s end to the encapsulated layer at the sender’s end. The added header and trailer information are removed from the data in this process. For more information, see [What is Data Encapsulation and de-encapsulation in networking?](https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in-networking).
 
 
+### DPU ###
+
+A **Data Procssing Unit** (DPU) is a new class of programmable processor that combines three key elements. A DPU is a system on a chip, or **SoC**, that combines:
+- An industry-standard, high-performance, software-programmable, multi-core CPU, typically based on the widely used Arm architecture, tightly coupled to the other SoC components.
+- A high-performance network interface capable of parsing, processing and efficiently transferring data at line rate, or the speed of the rest of the network, to GPUs and CPUs.
+- A rich set of flexible and programmable acceleration engines that offload and improve applications performance for AI and machine learning, security, telecommunications and storage, among others.
+
+The DPU can be used as a stand-alone embedded processor. But it’s more often incorporated into a SmartNIC, a network interface controller used as a critical component in a next-generation server.
+
+For more information, see [What Is a DPU?](https://blogs.nvidia.com/blog/2020/05/20/whats-a-dpu-data-processing-unit/).
+
 ## E ##
 
 ### Encap ###
@@ -91,6 +102,12 @@ Adopted by the [OCP](#ocp) in 2014, ONL is the reference Network Operating Syste
 ### OSI ###
 
 The [Open Systems Interconnection](https://en.wikipedia.org/wiki/OSI_model#Layer_4:_Transport_layer) (OSI) model is a conceptual model that characterizes and standardizes the communication functions of a telecommunication or computing system without regard to its underlying internal structure and technology. Its goal is the interoperability of diverse communication systems with standard communication protocols.
+
+
+## RDMA ##
+
+
+The **Remote Direct Memory Access** (RDMA) is a direct memory access from the memory of one computer into that of another without involving either one's operating system. This permits high-throughput, low-latency networking, which is especially useful in massively parallel computer clusters. For more information, see [Remote Direct Memory Access](https://en.wikipedia.org/wiki/Remote_direct_memory_access).
 
 ## S ##
 

@@ -17,7 +17,8 @@ last update: 12/10/2021
 
 ### ASIC ###  
 
-An **[Application Specific Integrated Circuit](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit)** (ASIC) is an integrated circuit (IC) chip customized for a particular use, rather than intended for general-purpose use. For example, a chip designed to run in a digital voice recorder is an ASIC. ASIC chips are typically built using metal-oxide-semiconductor (MOS) technology, as MOS integrated circuit chips. 
+An **Application specific integrated circuit (ASIC)** is an integrated circuit (IC) chip customized for a particular use, rather than intended for general-purpose use. For example, a chip designed to run in a digital voice recorder is an ASIC. ASIC chips are typically built using metal-oxide-semiconductor (MOS) technology, as MOS integrated circuit chips. For more information, see [Application specific integrated circuit](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit).
+
 
 ## D ##
 
@@ -68,6 +69,14 @@ The [OSI](#osi) model partitions the flow of data in a communication system into
 
 This [list of network protocols](https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model)) article categorize the network protoocol by the nearest layer in the Open Systems Interconnection model. This list is not exclusive to only the OSI protocol family. Many of these protocols are originally based on the Internet Protocol Suite (TCP/IP) and other models and they often do not fit neatly into the OSI layers.
 
+## N ##
+
+### NAT ###
+
+The **Network address translation (NAT)** is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device. The technique was originally used to avoid the need to assign a new address to every host when a network was moved, or when the upstream Internet service provider was replaced, but could not route the networks address space. It has become a popular and essential tool in conserving global address space in the face of IPv4 address exhaustion. One Internet-routable IP address of a NAT gateway can be used for an entire private network.
+
+As network address translation modifies the IP address information in packets, NAT implementations may vary in their specific behavior in various addressing cases and their effect on network traffic. The specifics of NAT behavior are not commonly documented by vendors of equipment containing NAT implementations. For more information, see [Network address translation](https://en.wikipedia.org/wiki/Network_address_translation). 
+
 ### NBI ###
 
 In computer networking and computer architecture, a northbound interface (NBI) of a component is an **interface that allows the component to communicate with a higher level component, using the latter component's southbound interface**. The northbound interface conceptualizes the lower level details (e.g., data or functions) used by, or in, the component, allowing the component to interface with higher level layers.
@@ -104,10 +113,27 @@ Adopted by the [OCP](#ocp) in 2014, ONL is the reference Network Operating Syste
 The [Open Systems Interconnection](https://en.wikipedia.org/wiki/OSI_model#Layer_4:_Transport_layer) (OSI) model is a conceptual model that characterizes and standardizes the communication functions of a telecommunication or computing system without regard to its underlying internal structure and technology. Its goal is the interoperability of diverse communication systems with standard communication protocols.
 
 
-## RDMA ##
+## P ##
 
+### Plane ###
+
+In networking, a **plane** is an abstract conception of where certain processes take place. The term is used in the sense of "plane of existence." The two most commonly referenced planes in networking are the **control plane** and the **data plane** (also known as the **forwarding plane**).
+
+- The **control plane** controls how data packets are forwarded, that is how data is sent from one place to another. A **routing table** is part of the control plane. Routers use various protocols to identify network paths, and they store these paths in routing tables.
+- The **data plane** actually forwards the packets. The data plane is also called the **forwarding plane**.
+
+Think of the control plane as being like the stoplights, while the data plane is more like the cars that drive on the roads, which stop at the intersections, and obey the stoplights.
+
+For more information, see [Control and data plane](https://www.cloudflare.com/learning/network-layer/what-is-the-control-plane/).
+
+## R ##
+
+### RDMA ###
 
 The **Remote Direct Memory Access** (RDMA) is a direct memory access from the memory of one computer into that of another without involving either one's operating system. This permits high-throughput, low-latency networking, which is especially useful in massively parallel computer clusters. For more information, see [Remote Direct Memory Access](https://en.wikipedia.org/wiki/Remote_direct_memory_access).
+
+
+
 
 ## S ##
 
@@ -170,14 +196,18 @@ The following are highlights of the ecosystem in which SONiC operates.
 
 ##### Network switch ASICs #####
 
-An Application Specific Integrated Circuit (ASIC) is purpose built for a particular use. In this case, these are built to provide as much network throughput as possible. They are two orders of magnitude faster than general purpose CPUs for forwarding packets. While these ASICs can do x Billion PPS, with careful software work, CPUs can do x 10s of Millions PPS. For more information, see [A summary of High Speed Ethernet ASICs](https://medium.com/the-elegant-network/a-summary-of-high-speed-ethernet-asics-260637c50583).
+An **Application specific integrated circuit (ASIC)** is purpose built for a particular use. In this case, these are built to provide as much network throughput as possible. They are two orders of magnitude faster than general purpose CPUs for forwarding packets. While these ASICs can do x Billion PPS, with careful software work, CPUs can do x 10s of Millions PPS. For more information, see [ASIC](#asic).
 
 ##### Network switch hardware #####
 
-A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
+A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device. For more information, see [Switch](#switch). 
+
+
+### Switch ###
+
+A **network switch** (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
 
 A network switch is a multiport network bridge that uses MAC addresses to forward data at the data link layer (layer 2) of the OSI model. Some switches can also forward data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches. For more information, see [Network switch](https://en.wikipedia.org/wiki/Network_switch). 
-
 
 ## V ##
 

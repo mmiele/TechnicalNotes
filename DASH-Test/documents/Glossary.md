@@ -249,3 +249,10 @@ A VPN is created by establishing a virtual point-to-point connection through the
 - [Gartner technology glossary ](https://www.gartner.com/en/information-technology/glossary?glossaryletter=A)
 
 
+[LPM](https://en.wikipedia.org/wiki/Longest_prefix_match)
+[DPDK](https://blog.selectel.com/introduction-dpdk-architecture-principles/)
+
+
+
+
+

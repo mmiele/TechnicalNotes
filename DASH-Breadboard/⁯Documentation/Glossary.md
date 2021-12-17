@@ -178,7 +178,7 @@ Microsoft has pioneered the **Software for Open Networking in the Cloud** (SONiC
 Microsoft open-sourced this innovation to the community, making it available on [SONiC GitHub](https://azure.github.io/SONiC/) repository.  It can **run on various switching platforms conformant to the [SAI](#sai) Switch Abstraction Interface specification**. SONiC enables cloud operators to take advantage of hardware innovation while giving them a **framework to build upon an open source code for network switch apps and the ability to integrate with multiple platforms**.  For more information, see [SONiC: The networking switch software that powers the Microsoft Global Cloud](https://azure.microsoft.com/en-us/blog/sonic-the-networking-switch-software-that-powers-the-microsoft-global-cloud/). 
 
 
-![Sonic-context](../media/generic/SONiC-context.jpg)
+![Sonic-context](images/generic/SONiC-context.jpg)
 <figcaption><i>Simplified view of the SONiC context</i></figcaption><br/>
 
 #### SONiC and the OCP community ####
@@ -201,7 +201,7 @@ Both SAI and SONiC are available in binary and source code for vendor supported 
 
 The following are highlights of the ecosystem in which SONiC operates.
 
-![Sonic-ecosystem](../media/generic/SONiC-ecosystem.jpg)
+![Sonic-ecosystem](images/generic/SONiC-ecosystem.jpg)
 <figcaption><i>Simplified view of the SONiC ecosystem</i></figcaption><br/>
 
 ##### Network switch ASICs #####

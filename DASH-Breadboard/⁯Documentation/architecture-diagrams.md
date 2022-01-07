@@ -4,4 +4,4 @@
 
 Testing
 
-<!-- ![DASH Architecture Draft on Single DPU](images\architecture\dash-architecture-draft-single-DPU.svg) -->
+![DASH Architecture Draft on Single DPU](images/architecture/dash-architecture-draft-single-DPU.svg)

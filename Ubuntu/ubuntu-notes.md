@@ -37,5 +37,12 @@ sudo gdebi GitHubDesktop-linux-2.6.3-linux1.deb
 To acctivate the app, go to the **Applications** window and search for `github`. 
 Select the app.  
 
-For mmore information, see [Install GitHub Desktop on Ubuntu 20.04 or Ubuntu-based distributions](https://meshworld.in/install-github-desktop-on-ubuntu-20-04-or-ubuntu-based-distributions/) and 
+For mmore information, see [Install GitHub Desktop on Ubuntu 20.04 or Ubuntu-based distributions](https://meshworld.in/install-github-desktop-on-ubuntu-20-04-or-ubuntu-based-distributions/).
 
+> [!NOTE]
+> I had login problems when trying to access my GitHub repo. To solve the issue, I created a personal access token (PAT) and use it instead of the password to login. For more information, see [Creating a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
+
+## Miscellanea
+
+- [How to Uninstall An Application In Ubuntu](https://techwiser.com/uninstall-applications-ubuntu/)

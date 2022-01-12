@@ -63,7 +63,7 @@ In order to install the latest VirtualBox, you need to have the **Multiverse** r
 ```cmd
 sudo add-apt-repository multiverse && sudo apt-get update
 ```
-When running the previous command you get the error `add-apt-repository` command not found, execute the following command first:
+When running the previous command, if you get the error `add-apt-repository` command not found, execute the following command first:
 
 ```cmd
 sudo apt install software-properties-common

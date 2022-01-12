@@ -8,7 +8,6 @@ last update: 01/09/2022
 # Ubuntu notes
 
 
-
 ## Install Visual Studio Code
 
 Open your terminal (`Ctrl + Alt + T`). Then perform the steps below.

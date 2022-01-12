@@ -44,7 +44,7 @@ For mmore information, see [Install GitHub Desktop on Ubuntu 20.04 or Ubuntu-bas
 
 
 
-## How to Install VirtualBox on Ubuntu 20.04 LTS
+## How to Install VirtualBox on Ubuntu 
 
 ### What is VirtualBox?
 VirtualBox is a free, open-source and cross-platform software that lets you create, run, and manage **virtual machines** (VMs) on your computer.  
@@ -56,46 +56,114 @@ VirtualBox is a free, open-source and cross-platform software that lets you crea
 Below we'll explain how to install a VirtualBox on Ubuntu 20.04 LTS  system using the CLI commands.
 
 
-Open a terminal window and execute the commands shown below.
+Open a terminal and execute the commands shown below.
 
-In order to install the latest VirtualBox, you need to have the **Multiverse** repository enabled on your system. By default this repository is disabled. Enter the following command as root in order to enable the repository and also update your system’s repository index with that on the internet. 
+
+1. Install repository GPG key:
+
+    ```cmd
+    wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add 
+    ```
+    ```cmd
+    wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add 
+    ```
+
+1. Open the follwoing file for editing:
+
+    ```cmd
+        nano /etc/apt/sources.list
+    ```
+    Add the following line to the file:
+
+    ```cmd
+    deb https://download.virtualbox.org/virtualbox/debian hirsute contrib
+    ```
+
+1. Update the package index:
+
+    ```cmd
+    sudo apt-get update
+    ```
+
+1. Install virtualbox-6.1 deb package:
+
+    ```cmd
+    sudo apt-get install virtualbox-6.1
+    ```
+
+1. Launch the VirtualBox interface by entering the following:
+
+    ```cmd
+    virtualbox
+    ```
+
+1. Install VirtualBox extension pack
 
 ```cmd
-sudo add-apt-repository multiverse && sudo apt-get update
+wget https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
 ```
-When running the previous command, if you get the error `add-apt-repository` command not found, execute the following command first:
 
 ```cmd
-sudo apt install software-properties-common
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
 ```
-Now, enter the following command to install VirtualBox:
+
+For more information, see [How to Install VirtualBox on Ubuntu](https://phoenixnap.com/kb/install-virtualbox-on-ubuntu).
+
+If you get and error saying that the Kernel modules do not match the version of the VirtualBox, follow the steps described [here](https://askubuntu.com/questions/837427/virtualbox-kernel-modules-do-not-match-this-version-of-virtualbox). 
+
+
+### Install C header Linux Kernel on Debian or Ubuntu
+
+In case the virtualbox does not start you may need to install Linux headers as shown next. 
+
+
+To install the Linux Kernel headers on Ubuntu or Debian Linux run this command to install the sources for your kernel specific version.
 
 ```cmd
-sudo apt install virtualbox
+sudo apt-get install linux-headers-$(uname -r)
 ```
-You can launch VirtualBox directly through the terminal by entering the following command:
+
+And this command to install the generic package, and keep your sources up to date. Every time you run
 
 ```cmd
-virtualbox
+sudo apt-get update && sudo apt-get upgrade
 ```
-Exit the Terminal by entering this command:
+
+Your kernel and kernel headers will upgrade if an upgrade is available.
 
 ```cmd
-exit
+    aptitude install linux-headers-2.6-686
+```
+Replace the "-686" for "-(xen	vserver	openvz)-686" or "-amd64" or "-686-bigmem", if you need to. That depends on your architecture. To check yours, use this command: 
+
+```cmd
+uname -a 
 ```
 
+For more information, see [How to install Linux Kernel headers on Debian or Ubuntu](https://www.garron.me/en/go2linux/how-install-linux-kernel-headers-debian-or-ubuntu.html).
 
 
 
+## How to Uninstall VirtualBox on Ubuntu 
 
+To uninstall VirtualBox from your system without removing any configurations you might have made, enter the following command as sudo:
+
+```cmd
+sudo apt remove virtualbox
+```
+
+If you have made any configurations, such as installing an extension package, you can remove VirtualBox and all those by using the following command:
+
+``` 
+sudo apt purge virtualbox
+```
 
 
 For more information, see [How to Install VirtualBox on Ubuntu 20.04 LTS](https://vitux.com/how-to-install-virtualbox-on-ubuntu/).
 
 
 
-
-
 ## Miscellanea
 
 - [How to Uninstall An Application In Ubuntu](https://techwiser.com/uninstall-applications-ubuntu/)
+- [How to Install Deb Files (Packages) on Ubuntu](https://linuxize.com/post/how-to-install-deb-packages-on-ubuntu/)

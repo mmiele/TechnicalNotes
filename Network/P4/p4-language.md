@@ -15,7 +15,7 @@ Programming Protocol-independent Packet Processors (P4, in other word PPPP that 
 
 Suggested by Chris
 
-1.  Hi Michael, you \'ll need a Linux machine - I installed Virtualbox
+1.  Hi Michael, you'll need a Linux machine - I installed Virtualbox
     hypervisor under Windows and then install an Ubuntu 20.04 VM. it\'s
     a bit of a process. All the p4 stuff runs exclusively on Linux
     AFAIK.
@@ -44,13 +44,11 @@ snappi]{.underline}](https://opennetworking.org/wp-content/uploads/2021/05/2021-
 
 References
 
--   [[p4lang/tutorials: P4 language tutorials
-    (github.com)]{.underline}](https://github.com/p4lang/tutorials)
-    Start here.
+- [p4lang/tutorials: P4 language tutorials](https://github.com/p4lang/tutorials) Start here
+- [Getting Started with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/) It needs cloud deployment.
 
--   [[Getting Started with
-    P4]{.underline}](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/)
-    (it needs cloud deployment).
+- [education/GettingStarted.md at master · p4lang/education](https://github.com/p4lang/education/blob/master/GettingStarted.md)
 
--   [[education/GettingStarted.md at master · p4lang/education
-    (github.com)]{.underline}](https://github.com/p4lang/education/blob/master/GettingStarted.md)
+- [P4 Language Tutorial](https://opennetworking.org/wp-content/uploads/2020/12/P4_tutorial_01_basics.gslide.pdf)
+
+- [Ubuntu download](https://ubuntu.com/download/desktop/thank-you?version=20.04.3&architecture=amd64)

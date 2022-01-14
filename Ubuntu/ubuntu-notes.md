@@ -157,12 +157,29 @@ If you have made any configurations, such as installing an extension package, yo
 sudo apt purge virtualbox
 ```
 
-
 For more information, see [How to Install VirtualBox on Ubuntu 20.04 LTS](https://vitux.com/how-to-install-virtualbox-on-ubuntu/).
 
+
+## Install Linux on a Virtual Machine using VirtualBox
+
+This section explains how to create a Linux VM using VirtualBox. The first thing you do is to create a virtual machine. Then you install the operating system of your choice on the virtual machine. 
+
+For a crisp explanation of the steps involved, see this video: [Install Linux on a Virtual Machine using VirtualBox](https://www.youtube.com/watch?app=desktop&v=hvkJv71PsCs).
+
+The steps described next are foirm here: [How To Setup a Linux Virtual Machine with VirtualBox](https://www.techjunkie.com/setup-linux-virtual-machine-virtualbox/)
+
+### Create a virtual machine
+1. Assure that you have the VirtualBox installed on your computer. See the section [## How to Install VirtualBox on Ubuntu ](#how-to-install-virtualbox-on-ubuntu). 
+1. Open the **VirtualBox** application to create a **Virtual Machine** (VM). 
+1. In the right pane select the **New** icon.  
+
+### Install the operating system on the virtual machine
+1. Download the ISO for the virtual machine operating system. We choose Ubuntu, which you can download [ubuntu desktop download](https://ubuntu.com/#download) for free.
+1. Once you have the ISO downloaded, you’ll want to mount it to your virtual machine. Select on Settings.
 
 
 ## Miscellanea
 
 - [How to Uninstall An Application In Ubuntu](https://techwiser.com/uninstall-applications-ubuntu/)
 - [How to Install Deb Files (Packages) on Ubuntu](https://linuxize.com/post/how-to-install-deb-packages-on-ubuntu/)
+- [Install Linux on a Virtual Machine using VirtualBox](https://www.youtube.com/watch?app=desktop&v=hvkJv71PsCs)

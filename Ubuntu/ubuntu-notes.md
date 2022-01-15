@@ -171,7 +171,51 @@ The steps described next are foirm here: [How To Setup a Linux Virtual Machine w
 ### Create a virtual machine
 1. Assure that you have the VirtualBox installed on your computer. See the section [## How to Install VirtualBox on Ubuntu ](#how-to-install-virtualbox-on-ubuntu). 
 1. Open the **VirtualBox** application to create a **Virtual Machine** (VM). 
-1. In the right pane select the **New** icon.  
+1. In the right pane select the **New** icon.
+
+    ![vb-new-icon](images/vb-new-icon.png)
+
+1. In the displayed wizard select a name for the new virtual machine, select the operating system you want.
+
+    ![vb-select-os](images/vb-select-os.png)
+
+1. Select **Next**.
+
+1. Select the RAM size, we suggest 4GB.
+
+    ![vb-select-os-ram](images/vb-select-os-ram.png)
+
+1. Select **Next**.
+
+1. Create the virtual hard disk.
+
+    ![vb-create-os-hd](images/vb-create-os-hd.png)
+
+1. Select **Create**.
+
+1. Select hard disk type.
+
+    ![vb-select-os-hd-type](images/vb-select-os-hd-type.png)
+
+1. Select **Next**.
+
+1. Select hard disk type of allocation. We slected *dynamic*. 
+
+    ![vb-select-os-hd-dynamic](images/vb-select-os-hd-dynamic.png)
+
+1. Click **Next**. 
+
+1. Select hard disk size. We suggest 60GB.
+
+    ![vb-select-os-hd-size](images/vb-select-os-hd-size.png)
+
+1. Click **Create**. 
+
+You should have settings similar to the following:
+
+![vb-os-settings](images/vb-os-settings.png)
+
+
 
 ### Install the operating system on the virtual machine
 1. Download the ISO for the virtual machine operating system. We choose Ubuntu, which you can download [ubuntu desktop download](https://ubuntu.com/#download) for free.
@@ -183,3 +227,5 @@ The steps described next are foirm here: [How To Setup a Linux Virtual Machine w
 - [How to Uninstall An Application In Ubuntu](https://techwiser.com/uninstall-applications-ubuntu/)
 - [How to Install Deb Files (Packages) on Ubuntu](https://linuxize.com/post/how-to-install-deb-packages-on-ubuntu/)
 - [Install Linux on a Virtual Machine using VirtualBox](https://www.youtube.com/watch?app=desktop&v=hvkJv71PsCs)
+- [7 Open Source Paint Applications for Linux Users](https://itsfoss.com/open-source-paint-apps/)
+- [How to Take Screenshots on Ubuntu? 4 Different Methods](https://www.makeuseof.com/how-to-take-screenshots-on-ubuntu/)

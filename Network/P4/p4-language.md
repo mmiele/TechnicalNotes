@@ -5,7 +5,6 @@ author: michael
 last update: 01/10/2022
 ---
 
-
 # P4 language
 
 Programming Protocol-independent Packet Processors (P4, in other word PPPP that is P4) is a domain-specific language for network devices, specifying how data plane devices (switches, NICs, routers, filters, etc.) process packets. For more information, see P4 Open-Source Programming Language.

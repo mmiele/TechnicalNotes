@@ -228,12 +228,12 @@ You should have settings similar to the following:
      ![vb-select-ubuntu-os-iso-image](images/vb-select-ubuntu-os-iso-image.png)
 
 1. Select **Choose**. 
-1. Select **OK**. T1. This is the result:
+1. Select **OK**. 
+1. Now you can start the virtual machine with the installed Ubuntu OS. Select the **Start** icon.  
     
-    ![vb-ubuntu-installed-run](images/vb-ubuntu-installed-run.png)ng)
+    ![vb-ubuntu-installed-start](images/vb-ubuntu-installed-start.png)
 
-     
-
+    
 
 ## Miscellanea
 

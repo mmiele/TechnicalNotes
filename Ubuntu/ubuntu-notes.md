@@ -218,8 +218,39 @@ You should have settings similar to the following:
 
 
 ### Install the operating system on the virtual machine
-1. Download the ISO for the virtual machine operating system. We choose Ubuntu, which you can download [ubuntu desktop download](https://ubuntu.com/#download) for free.
-1. Once you have the ISO downloaded, you’ll want to mount it to your virtual machine. Select on Settings.
+
+1. Download the ISO for the virtual machine operating system. We choose Ubuntu, which you can download [ubuntu desktop download](https://ubuntu.com/#download) for free. Once you have the ISO downloaded, you’ll want to mount it to your virtual machine. 
+1. In the VirtualBox, in the the left pane, select the virtual machine you created. 
+1. In the right pane, select the **Settings** icon.
+
+    ![vb-mount-ubuntu-os](images/vb-mount-ubuntu-os.png)
+
+1. In the displayed wizard, in the left pane, select **Storage**. In the right pane, select **Controller IDE**, and then select the **Adds Optical Drive** icon. 
+
+     ![vb-mount-ubuntu-os-optical-drive](images/vb-mount-ubuntu-os-optical-drive.png)
+
+1. Select the ***Add* icon. Then search for the file Ubuntu image file you downloaded and select it. It will show in the wizard. 
+
+     ![vb-select-ubuntu-os-iso-image](images/vb-select-ubuntu-os-iso-image.png)
+
+1. Select **Choose**. 
+1. Select **OK**. T
+1. Select the **Start** icon. Your virtual machine should start booting up. Now all you need to do is go through the Ubuntu setup wizard inside the virtual machine. This will be the result:
+
+    ![vb-ubuntu-installed](images/vb-ubuntu-installed.png)
+
+> [!WARNING] The insatllation of the Ubuntu OS may take a few hours. So be prepared to take a long break. 
+
+1. Now you can start the virtual machine with the installed Ubuntu OS. Select the **Start** icon.
+
+     ![vb-ubuntu-installed-start](images/vb-ubuntu-installed-start.png)
+
+1. This is the result:
+    
+    ![vb-ubuntu-installed-run](images/vb-ubuntu-installed-run.png)
+
+
+     
 
 
 ## Miscellanea

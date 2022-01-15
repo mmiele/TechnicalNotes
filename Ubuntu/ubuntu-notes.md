@@ -2,7 +2,7 @@
 title: Ubuntu 
 description: Collect notes about Ubuntu
 author: michael
-last update: 01/09/2022
+last update: 01/15/2022
 ---
 
 # Ubuntu notes
@@ -72,15 +72,9 @@ Open a terminal and execute the commands shown below.
     ```cmd
         nano /etc/apt/sources.list
     ```
-    Add the following line to the file:
-
-    ```cmd
-    deb https://download.virtualbox.org/virtualbox/debian hirsute contrib
-    ```
-
-1. Update the package index:
-
-    ```cmd
+    Add the following line to the file:1. This is the result:
+    
+    ![vb-ubuntu-installed-run](images/vb-ubuntu-installed-run.png)
     sudo apt-get update
     ```
 
@@ -234,16 +228,9 @@ You should have settings similar to the following:
      ![vb-select-ubuntu-os-iso-image](images/vb-select-ubuntu-os-iso-image.png)
 
 1. Select **Choose**. 
-1. Select **OK**. T
-1. Select the **Start** icon. Your virtual machine should start booting up. Now all you need to do is go through the Ubuntu setup wizard inside the virtual machine. This will be the result:
-
-    ![vb-ubuntu-installed](images/vb-ubuntu-installed.png)
-
-> [!WARNING] The insatllation of the Ubuntu OS may take a few hours. So be prepared to take a long break. 
-
-1. Now you can start the virtual machine with the installed Ubuntu OS. Select the **Start** icon.
-
-     ![vb-ubuntu-installed-start](images/vb-ubuntu-installed-start.png)
+1. Select **OK**. T1. This is the result:
+    
+    ![vb-ubuntu-installed-run](images/vb-ubuntu-installed-run.png)ng)
 
      
 

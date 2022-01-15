@@ -245,11 +245,6 @@ You should have settings similar to the following:
 
      ![vb-ubuntu-installed-start](images/vb-ubuntu-installed-start.png)
 
-1. This is the result:
-    
-    ![vb-ubuntu-installed-run](images/vb-ubuntu-installed-run.png)
-
-
      
 
 

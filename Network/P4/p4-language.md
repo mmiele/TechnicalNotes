@@ -43,11 +43,9 @@ snappi]{.underline}](https://opennetworking.org/wp-content/uploads/2021/05/2021-
 
 References
 
-- [p4lang/tutorials: P4 language tutorials](https://github.com/p4lang/tutorials) Start here
-- [Getting Started with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/) It needs cloud deployment.
+- [Getting started](https://github.com/p4lang/education/blob/master/GettingStarted.md)
+- [Tutorials](https://github.com/p4lang/tutorials) Official tutorials
+- [P4 Language presentation](https://opennetworking.org/wp-content/uploads/2020/12/P4_tutorial_01_basics.gslide.pdf)
+- [Example of startjng with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/) It needs cloud deployment.
+- [Fingerhut p4-guide](https://github.com/jafingerhut/p4-guide)
 
-- [education/GettingStarted.md at master · p4lang/education](https://github.com/p4lang/education/blob/master/GettingStarted.md)
-
-- [P4 Language Tutorial](https://opennetworking.org/wp-content/uploads/2020/12/P4_tutorial_01_basics.gslide.pdf)
-
-- [Ubuntu download](https://ubuntu.com/download/desktop/thank-you?version=20.04.3&architecture=amd64)

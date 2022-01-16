@@ -72,10 +72,10 @@ Open a terminal and execute the commands shown below.
     ```cmd
         nano /etc/apt/sources.list
     ```
-    Add the following line to the file:1. This is the result:
+    Add the following line to the file:
     
-    ![vb-ubuntu-installed-run](images/vb-ubuntu-installed-run.png)
-    sudo apt-get update
+    ```cmd
+    deb https://download.virtualbox.org/virtualbox/debian hirsute contrib
     ```
 
 1. Install virtualbox-6.1 deb package:

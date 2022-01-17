@@ -29,6 +29,7 @@ The specificatons say P4 is a language for describing **how packets are processe
 
 Next we are going to highlight some of the main P4 characteristics. 
 
+![t](./images/traditional-vs-p4-switch.svg)
 
 
 Suggested by Chris

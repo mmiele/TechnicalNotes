@@ -241,6 +241,12 @@ Enter `Host + C`. Where `Host` is the right `Ctrl` key. For more information, se
 
 Refer to this [VirtualBox 6.0 keyboard shortcuts](https://defkey.com/oracle-vm-virtualbox-shortcuts). 
 
+
+## Tools
+
+- Install **LibreOffice**. Follow the instructions described in this article: [LibreOffice installation on Ubuntu](https://wiki.ubuntu.com/LibreOffice). 
+- Install **draw.io**. Follow the instructions described in this article: [Install the draw.io Desktop diagram generator on Ubuntu](https://ubunlog.com/en/draw-io-desktop-install-ubuntu-diagram-generator/).
+
 ## Miscellanea
 
 - [How to Uninstall An Application In Ubuntu](https://techwiser.com/uninstall-applications-ubuntu/)

@@ -12,6 +12,25 @@ The Programming Protocol-independent Packet Processors (P4, in other word PPPP t
 
 ## Getting started with P4
 
+1. Go to [P4 Open-Source Programming Language](https://p4.org/), then select the **Learn More** button. This takes you to the [Learn](https://p4.org/learn/) section.
+1. Scroll to the end of the page. IN the *Educational Working Group* section select the [Getting Started](https://github.com/p4lang/education/blob/master/GettingStarted.md) link.  This takes you to the GitHub **education** repository. 
+1. Select the link [P4 Language and Related Specifications](https://p4.org/specs/) and read it or at least some of it. 
+1. Then we suggest to watch the videos, specifically the **P4 tutorial in four parts**.
+1. Finally you can go to the [tutorials](https://github.com/p4lang/tutorials) to start playing with the code examples. 
+
+## Reading the P4 language specicications
+
+Go to the [P4 Language and Related Specifications](https://p4.org/specs/) page, scroll to the end of the page and select the link of the language specification and the format you desire, for example [Working draft](https://p4.org/p4-spec/docs/P4-16-working-spec.html).
+
+The specificatons say P4 is a language for describing **how packets are processed by the data plane of a programmable forwarding element such as a hardware or software switch, network interface card, router, or network appliance**. The name P4 comes from the original paper that introduced the language, [Programming Protocol-independent Packet Processors](https://​arxiv.​org/​pdf/​1312.​1719.​pdf). While P4 was initially designed for programming switches, its scope has been broadened to cover a large variety of devices. 
+
+> [!NOTE] 
+> P4 is designed to **specify only the data plane functionality of the target**. P4 programs also **partially define the interface by which the control plane and the data-plane communicate**, but P4 cannot be used to describe the control-plane functionality of the target.
+
+Next we are going to highlight some of the main P4 characteristics. 
+
+
+
 Suggested by Chris
 
 1.  Hi Michael, you'll need a Linux machine - I installed Virtualbox

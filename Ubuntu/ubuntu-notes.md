@@ -136,7 +136,6 @@ uname -a
 For more information, see [How to install Linux Kernel headers on Debian or Ubuntu](https://www.garron.me/en/go2linux/how-install-linux-kernel-headers-debian-or-ubuntu.html).
 
 
-
 ## How to Uninstall VirtualBox on Ubuntu 
 
 To uninstall VirtualBox from your system without removing any configurations you might have made, enter the following command as sudo:
@@ -156,7 +155,10 @@ For more information, see [How to Install VirtualBox on Ubuntu 20.04 LTS](https:
 
 ## Install Linux on a Virtual Machine using VirtualBox
 
-This section explains how to create a Linux VM using VirtualBox. The first thing you do is to create a virtual machine. Then you install the operating system of your choice on the virtual machine. 
+This section explains how to create a Linux VM using VirtualBox. You do this in two phases:
+
+1. [Create a virtual machine](#create-a-virtual-machine).
+1. [Install the operating system on the virtual machine](#install-the-operating-system-on-the-virtual-machine). 
 
 For a crisp explanation of the steps involved, see this video: [Install Linux on a Virtual Machine using VirtualBox](https://www.youtube.com/watch?app=desktop&v=hvkJv71PsCs).
 
@@ -210,7 +212,6 @@ You should have settings similar to the following:
 ![vb-os-settings](images/vb-os-settings.png)
 
 
-
 ### Install the operating system on the virtual machine
 
 1. Download the ISO for the virtual machine operating system. We choose Ubuntu, which you can download [ubuntu desktop download](https://ubuntu.com/#download) for free. Once you have the ISO downloaded, you’ll want to mount it to your virtual machine. 
@@ -233,7 +234,12 @@ You should have settings similar to the following:
     
     ![vb-ubuntu-installed-start](images/vb-ubuntu-installed-start.png)
 
-    
+## VirtualBox keyboard shortcuts
+
+- Hide and unhide the VirtualBox menu bar in a virtual machine. 
+Enter `Host + C`. Where `Host` is the right `Ctrl` key. For more information, see [I hid the menu bar in virtual box, how to show it again?](https://superuser.com/questions/1176587/i-hid-the-menu-bar-in-virtual-box-how-to-show-it-again)
+
+Refer to this [VirtualBox 6.0 keyboard shortcuts](https://defkey.com/oracle-vm-virtualbox-shortcuts). 
 
 ## Miscellanea
 

@@ -18,7 +18,7 @@ The Programming Protocol-independent Packet Processors (P4, in other word PPPP t
 1. Then we suggest to watch the videos, specifically the **P4 tutorial in four parts**.
 1. Finally you can go to the [tutorials](https://github.com/p4lang/tutorials) to start playing with the code examples. 
 
-## Reading the P4 language specicications
+## Reading the P4 language specifications
 
 Go to the [P4 Language and Related Specifications](https://p4.org/specs/) page, scroll to the end of the page and select the link of the language specification and the format you desire, for example [Working draft](https://p4.org/p4-spec/docs/P4-16-working-spec.html).
 

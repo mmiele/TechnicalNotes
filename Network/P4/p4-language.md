@@ -2,16 +2,14 @@
 title: P4 language 
 description: Learning P4 language
 author: michael
-last update: 01/10/2022
+last update: 01/17/2022
 ---
 
 # P4 language
 
 The **Programming Protocol-independent Packet Processors** (P4, in other word PPPP that is P4) is a domain-specific language for network devices, specifying how data plane devices (switches, NICs, routers, filters, etc.) process packets. For more information, see [P4 Open-Source Programming Language](https://p4.org/).
 
-P4 is a domain-specific language that is designed to be implementable on a large variety of targets including programmable **network interface cards** (NIC), **FPGAs**, **software switches**, and **hardware ASICs**. As such, the language is restricted to constructs that can be efficiently implemented on all of these platforms.
-
-The following ae some of the main core abstractions provided by the P4 lanaguage:
+P4 is a domain-specific language that is designed to be implementable on a large variety of targets including programmable **network interface cards** (NIC), **FPGAs**, **software switches**, and **hardware ASICs**. As such, the language is restricted to constructs that can be efficiently implemented on all of these platforms. The following are some of the main core constructs provided by the P4 lanaguage:
 
 - **Header types** describe the format (the set of fields and their sizes) of each header within a packet.
 - **Parsers** describe the permitted sequences of headers within received packets, how to identify those header sequences, and the headers and fields to extract from packets.
@@ -85,25 +83,50 @@ Compiling a set of P4 programs produces two artifacts:
 > The computational complexity of a P4 program is linear in the total size of all headers, and never depends on the size of the state accumulated while processing data (e.g., the number of flows, or the total number of packets processed). 
 
 
-Suggested steps
+### Archietcture model
 
-1.  Hi Michael, you'll need a Linux machine - I installed Virtualbox
-    hypervisor under Windows and then install an Ubuntu 20.04 VM. it\'s
-    a bit of a process. All the p4 stuff runs exclusively on Linux
-    AFAIK.
+The P4 architecture identifies the P4-programmable blocks (e.g., parser, ingress control flow, egress control flow, deparser, etc.) and their data plane interfaces.
 
-2.  Once you have a VM, you might visit
-    [https://github.com/jafingerhut/p4-guide](https://github.com/jafingerhut/p4-guide),
-    it's one of the best resources I'm aware of. Andy Fingerhut put it
-    together as a personal project. He's a big player in the P4 community and attends DASH meetings.
+![p4-arch-model](./images/p4-arch-model.svg)
 
-3.  If you follow Andy's instructions, you'll end up installing a huge
-    pile of tools with one convenient script.
+The previous figure shows the **data plane interfaces between P4-programmable blocks**. It shows a target that has two programmable blocks. 
+- Each block is programmed through a separate fragment of P4 code. 
+- The target interfaces with the P4 program through a set of control registers (TRL) or signals. 
+- Input controls provide information to P4 programs (e.g., the input port that a packet was received from), while output controls can be written to by P4 programs to influence the target behavior (e.g., the output port where a packet has to be directed). 
+- Control registers/signals are represented in P4 as intrinsic metadata. 
+- P4 programs can also store and manipulate data pertaining to each packet as user-defined metadata.
+
+Each manufacturer must provide both a P4 compiler as well as an accompanying architecture definition for their target. The architecture definition does not have to expose the entire programmable surface of the data plane. A manufacturer may even choose to provide multiple definitions for the same hardware device, each with different capabilities (e.g., with or without multicast support).
+
+#### Data plane interfaces
+
+
+``` c++
+control MatchActionPipe<H>(in bit<4> inputPort, 
+                           inout H parsedHeaders,
+                           out bit<4> outputPort);
+```
+
+
+
+
+
+
+
+**Suggested steps**
+
+1.  You'll need a Linux machine - I installed Virtualbox hypervisor and then installed an Ubuntu 20.04 VM. it's
+    a bit of a process. All the p4 stuff runs exclusively on Linux.
+
+2.  Once you have a VM, you might visit [https://github.com/jafingerhut/p4-guide](https://github.com/jafingerhut/p4-guide),
+    it's one of the best resources I'm aware of. Andy Fingerhut put it together as a personal project. 
+    He's a big player in the P4 community and attends DASH meetings.
+
+3.  If you follow Andy's instructions, you'll end up installing a huge pile of tools with one convenient script.
 
     a.  You need more than just the compiler to do anything useful.
 
-    b.  You need something to run the output on - e.g., the bmv2
-        simulator. Then you'll need example programs, which Andy's
+    b.  You need something to run the output on - e.g., the bmv2 simulator. Then you'll need example programs, which Andy's
         repo has in abundance.
 
 Listen to video: [Goodbye Scapy, Hello Snappi (DEMO) - Chris Sommers & Ankur Sheth, Keysight technologies](https://www.youtube.com/watch?v=Db7Cx1hngVY)

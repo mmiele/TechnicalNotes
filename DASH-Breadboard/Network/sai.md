@@ -115,7 +115,9 @@ Interface** (SAI). The figure below shows the traditional network stack
 on the left vs. the disaggregated network stack (using SAI) on the
 right.
 
-![sai-in-stack](images/sdn/sai-in-stack.png)
+![sai-in-stack](../Documentation/images/sdn/sai-in-stack.png)
+
+
 
 See the article [Switch Abstraction Interface (SAI) - Breaking the
 Network Aggregation](https://www.design-reuse.com/articles/44519/switch-abstraction-interface-sai.html).

@@ -100,6 +100,7 @@ Each manufacturer must provide both a P4 compiler as well as an accompanying arc
 
 #### Data plane interfaces
 
+To describe a **functional block that can be programmed in P4**, the architecture includes a type declaration that specifies the interfaces between the block and the other components in the architecture. For example, the architecture might contain a declaration such as the following:
 
 ``` c++
 control MatchActionPipe<H>(in bit<4> inputPort, 
@@ -107,7 +108,29 @@ control MatchActionPipe<H>(in bit<4> inputPort,
                            out bit<4> outputPort);
 ```
 
+The previous code snippet declares a block named `MatchActionPipe` that can be programmed using a data dependent sequence of match-action unit invocations and other imperative constructs (indicated by the `control` keyword). 
 
+The interface between the `MatchActionPipe` block and the other components of the architecture can be read from this declaration:
+
+- The first parameter is a 4-bit value named `inputPort`. The direction `in` indicates that this parameter **is an input that cannot be modified**.
+- The second parameter is an object of type `H` named parsedHeaders, where **H is a type variable representing the headers** that will be defined later by the P4 programmer. The direction `inout` indicates that this parameter is both an input and an output.
+- The third parameter is a 4-bit value named `outputPort`. The direction out indicates that this parameter is an output whose value is undefined initially but can be modified.
+
+#### Extern objects and functions
+
+P4 programs can also interact with objects and functions provided by the architecture. Such objects are described using the `extern` construct, which describes the interfaces that such objects expose to the data-plane.
+
+An `extern` object describes a set of methods that are implemented by an object, but not the implementation of these methods (it is similar to an abstract class in an object-oriented language). For example, the following construct could be used to describe the operations offered by an incremental checksum unit:
+
+```c++
+extern Checksum16 {
+    Checksum16();              // constructor
+    void clear();              // prepare unit for computation
+    void update<T>(in T data); // add data to checksum
+    void remove<T>(in T data); // remove data from existing checksum
+    bit<16> get(); // get the checksum for the data added since last clear
+}
+```
 
 
 

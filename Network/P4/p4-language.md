@@ -9,6 +9,23 @@ last update: 01/10/2022
 
 The **Programming Protocol-independent Packet Processors** (P4, in other word PPPP that is P4) is a domain-specific language for network devices, specifying how data plane devices (switches, NICs, routers, filters, etc.) process packets. For more information, see [P4 Open-Source Programming Language](https://p4.org/).
 
+P4 is a domain-specific language that is designed to be implementable on a large variety of targets including programmable **network interface cards** (NIC), **FPGAs**, **software switches**, and **hardware ASICs**. As such, the language is restricted to constructs that can be efficiently implemented on all of these platforms.
+
+The following ae some of the main core abstractions provided by the P4 lanaguage:
+
+- **Header types** describe the format (the set of fields and their sizes) of each header within a packet.
+- **Parsers** describe the permitted sequences of headers within received packets, how to identify those header sequences, and the headers and fields to extract from packets.
+- **Tables** associate user-defined keys with actions. P4 tables **generalize traditional switch tables**. They can be used to implement **routing tables**, **flow lookup tables**, **access-control lists**, and other user-defined table types, including complex multi-variable decisions.
+- **Actions** are code fragments that describe how packet header fields and metadata are manipulated. Actions can include data, which is supplied by the control-plane at runtime.
+- **Match-action units** perform the following sequence of operations:
+    - Construct lookup keys from packet fields or computed metadata.
+    - Perform table lookup using the constructed key, choosing an action (including the associated data) to execute.
+    - Finally, execute the selected action.
+- **Control flow** expresses an **imperative program that describes packet-processing on a target**, including the data-dependent sequence of match-action unit invocations. **Deparsing** (packet reassembly) can also be performed using a control flow.
+- **Extern objects** are **architecture-specific constructs** that can be manipulated by P4 programs through well-defined APIs, but **whose internal behavior is hard-wired** (e.g., checksum units) and **hence not programmable using P4**.
+- **User-defined metadata** are user-defined data structures associated with each packet.
+- **Intrinsic metadata** is metadata **provided by the architecture associated with each packet** (e.g., the input port where a packet has been received).
+
 
 ## Getting started with P4
 
@@ -53,9 +70,19 @@ Hence, P4 can be said to be **protocol independent**, but it enables programmers
 
 P4 is protocol independent, but it enables programmers to **express a rich set of protocols and other data plane behaviors**.
 
-The following figure shows the workflow when programming a switch (target) via P4. 
+The following figure shows the workflow when programming a target via P4. 
 
 ![pgm-target-via-p4](./images/pgm-target-via-p4.svg)
+
+- Target manufacturers provide the **hardware or software implementation framework**, an **architecture definition**, and a **P4 compiler** for that target. 
+- P4 programmers write **programs for a specific architecture**, which defines a **set of P4-programmable components on the target** as well as **their external data plane interfaces**.
+
+Compiling a set of P4 programs produces two artifacts:
+- A **data plane configuration** that implements the forwarding logic described in the input program.
+- An **API** for managing the state of the data plane objects from the control plane.
+
+> [!NOTE]
+> The computational complexity of a P4 program is linear in the total size of all headers, and never depends on the size of the state accumulated while processing data (e.g., the number of flows, or the total number of packets processed). 
 
 
 Suggested steps

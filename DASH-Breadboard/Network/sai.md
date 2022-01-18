@@ -23,7 +23,7 @@ API for programming network switching ASICs, of the Open Compute Project
 framework allows for disaggregating the switch software from the switch
 hardware
 
-![ACS Stack](images/sdn/asc.png)
+![ACS Stack](../%E2%81%AFDocumentation/images/sdn//asc.png)
 
 **Applications**. These include open-source applications such as Quagga,
 Microsoft specific applications that could relate to an entire
@@ -115,8 +115,7 @@ Interface** (SAI). The figure below shows the traditional network stack
 on the left vs. the disaggregated network stack (using SAI) on the
 right.
 
-![sai-in-stack](../Documentation/images/sdn/sai-in-stack.png)
-
+![sai-in-stack](../%E2%81%AFDocumentation/images/sdn/sai-in-stack.png)
 
 
 See the article [Switch Abstraction Interface (SAI) - Breaking the

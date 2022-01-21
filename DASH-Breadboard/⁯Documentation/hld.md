@@ -13,7 +13,7 @@ last update: 01/21/2022
 
 ## Overview
 
-The following is a high level view of the DASH architecture main layers. 
+The following is a high level view of the DASH architecture layers. 
 
 ![draft-simple-layered-architecture](images/architecture/draft-simple-layered-architecture.svg)
 
@@ -30,8 +30,14 @@ The SDN controller controls the overlay built on top of the physical layer of th
 
 Microsoft will spearhead the development of the SDN Agent (container) and solicit Community participation. In particular 
 - The **SONiC orchagent** will be enhanced to translate these objects into SAI_DB objects, including the new DASH-specific SAI objects. 
-- An enhanced syncd will then configure the dataplane using the vendor-specific SAI library.
+- An **enhanced syncd** will then configure the dataplane using the vendor-specific SAI library.
 
+A **gNMI schema** (TODO - provide URL) will be created for managing the following DASH services: 
+- Elastic Network Interface (ENI)
+- Access Control Lists (ACLs) 
+- Routing and mappings
+- Encapsulations 
+- Other  
 
 ## Switch State Service (SWSS)
 

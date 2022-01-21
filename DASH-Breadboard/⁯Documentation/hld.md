@@ -21,7 +21,7 @@ The following is a high level view of the DASH architecture main layers.
 
 ## SDN controller
 
-The SDN controller is **primarily responsible for controlling the DASH overlay services** as oposed to the traditional SONiC stack is used to manage the underlay (L3 routing) and hardware platform. 
+The SDN controller is **primarily responsible for controlling the DASH overlay services** as opposed to the traditional SONiC stack is used to manage the underlay (L3 routing) and hardware platform. 
 The **SDN controller communicates with a DASH device through a gNMI endpoint served by a new SDN agent running inside a new SONiC DASH container**. 
 
 ## DASH container
@@ -34,9 +34,9 @@ This container **translates SDN configuration modeled in gNMI into SONiC APPL_DB
 ## Switch State Service (SWSS)
 
 
-
 ## Switch Abstraction Interface (SAI) DASH
 
+An **enhanced syncd** configures the dataplane using the vendor-specific SAI library.
 
 ## ASIC Drivers
 

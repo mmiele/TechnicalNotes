@@ -15,7 +15,7 @@ last update: 01/21/2022
 
 The following is a high level view of the DASH architecture main layers. 
 
-![](images/architecture/draft-simple-layered-architecture.png)
+![draft-simple-layered-architecture](images/architecture/draft-simple-layered-architecture.svg)
 
 
 

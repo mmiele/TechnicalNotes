@@ -234,12 +234,21 @@ You should have settings similar to the following:
     
     ![vb-ubuntu-installed-start](images/vb-ubuntu-installed-start.png)
 
-## VirtualBox keyboard shortcuts
+## Miscellanea
 
 - Hide and unhide the VirtualBox menu bar in a virtual machine. 
-Enter `Host + C`. Where `Host` is the right `Ctrl` key. For more information, see [I hid the menu bar in virtual box, how to show it again?](https://superuser.com/questions/1176587/i-hid-the-menu-bar-in-virtual-box-how-to-show-it-again)
+Enter `Host + C`. Where `Host` is the right `Ctrl` key. For more information, see [I hid the menu bar in virtual box, how to show it again?](https://superuser.com/questions/1176587/i-hid-the-menu-bar-in-virtual-box-how-to-show-it-again). For more information, see [VirtualBox 6.0 keyboard shortcuts](https://defkey.com/oracle-vm-virtualbox-shortcuts). 
 
-Refer to this [VirtualBox 6.0 keyboard shortcuts](https://defkey.com/oracle-vm-virtualbox-shortcuts). 
+- Create shared folder between a virtual machine and the host computer. Follow the steps described in [You do not have the permissions necessary to view the content of the shared folder](https://darrenma.wordpress.com/2012/07/18/you-do-not-have-the-permissions-necessary-to-view-the-contents-of-shared_folder/).
+The following is an example of the command to run on the virtual 
+machine:
+
+```bash
+    sudo usermod -G vboxsf -a michael
+```
+
+Where `vboxsf` is the VirtualBox group (Ubuntu). You need to replace michael with the user name of your virtual machine.
+The command takes effect after restarting the virtual machine. 
 
 
 ## Tools

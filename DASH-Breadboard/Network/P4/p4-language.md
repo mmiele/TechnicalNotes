@@ -144,9 +144,12 @@ extern Checksum16 {
 }
 ```
 
+## Vscode support
+
+Install the extension: Name: [p4 language support in vscode](https://marketplace.visualstudio.com/items?itemName=ZhanghanWang.p4-lang)
 
 
-References
+## References
 
 - [Getting started](https://github.com/p4lang/education/blob/master/GettingStarted.md)
 - [Tutorials](https://github.com/p4lang/tutorials) Official tutorials

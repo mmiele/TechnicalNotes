@@ -28,10 +28,22 @@ P4 is a domain-specific language that is designed to be implementable on a large
 ## Getting started with P4
 
 1. Go to [P4 Open-Source Programming Language](https://p4.org/), then select the **Learn More** button. This takes you to the [Learn](https://p4.org/learn/) section.
-1. Scroll to the end of the page. IN the *Educational Working Group* section select the [Getting Started](https://github.com/p4lang/education/blob/master/GettingStarted.md) link.  This takes you to the GitHub **education** repository. 
+1. Scroll to the end of the page. In the *Educational Working Group* section select the [Getting Started](https://github.com/p4lang/education/blob/master/GettingStarted.md) link.  This takes you to the GitHub **education** repository. 
 1. Select the link [P4 Language and Related Specifications](https://p4.org/specs/) and read it or at least some of it. 
 1. Then we suggest to watch the videos, specifically the **P4 tutorial in four parts**.
-1. Finally you can go to the [tutorials](https://github.com/p4lang/tutorials) to start playing with the code examples. 
+1. Finally you can go to the [tutorials](https://github.com/p4lang/tutorials) to start playing with the code examples. We suggest the alternative as described next.
+
+### Suggested steps
+
+1. You'll need a Linux machine - I installed Virtualbox hypervisor and then installed an Ubuntu 20.04 VM. it's
+    a bit of a process. All the p4 stuff runs exclusively on Linux.  For more information, see [How to Install VirtualBox on Ubuntu ](../../Ubuntu/ubuntu-notes.md#how-to-install-virtualbox-on-ubuntu).
+1. Once you have a VM, you might visit [https://github.com/jafingerhut/p4-guide](https://github.com/jafingerhut/p4-guide), it's one of the best resources I'm aware of. Andy Fingerhut put it together as a personal project. He's a big player in the P4 community and attends DASH meetings.
+1. If you follow Andy's instructions, you'll end up installing a huge pile of tools with one convenient script.
+    > [!NOTE]
+    > You need more than just the compiler to do anything useful.
+    > You need something to run the output on - e.g., the bmv2 simulator. Then you'll need example programs, which Andy's repo has in abundance.
+1. Listen to video: [Goodbye Scapy, Hello Snappi (DEMO) - Chris Sommers & Ankur Sheth, Keysight technologies](https://www.youtube.com/watch?v=Db7Cx1hngVY)
+1. See related slides: [Goodbye Scapy,Hello snappi](https://opennetworking.org/wp-content/uploads/2021/05/2021-P4-WS-Chris-Sommers-Ankur-Sheth-Slides.pdf)
 
 ## P4 language specifications
 
@@ -133,28 +145,6 @@ extern Checksum16 {
 ```
 
 
-
-
-
-**Suggested steps**
-
-1.  You'll need a Linux machine - I installed Virtualbox hypervisor and then installed an Ubuntu 20.04 VM. it's
-    a bit of a process. All the p4 stuff runs exclusively on Linux.
-
-2.  Once you have a VM, you might visit [https://github.com/jafingerhut/p4-guide](https://github.com/jafingerhut/p4-guide),
-    it's one of the best resources I'm aware of. Andy Fingerhut put it together as a personal project. 
-    He's a big player in the P4 community and attends DASH meetings.
-
-3.  If you follow Andy's instructions, you'll end up installing a huge pile of tools with one convenient script.
-
-    a.  You need more than just the compiler to do anything useful.
-
-    b.  You need something to run the output on - e.g., the bmv2 simulator. Then you'll need example programs, which Andy's
-        repo has in abundance.
-
-Listen to video: [Goodbye Scapy, Hello Snappi (DEMO) - Chris Sommers & Ankur Sheth, Keysight technologies](https://www.youtube.com/watch?v=Db7Cx1hngVY)
-
-See related slides: [Goodbye Scapy,Hello snappi](https://opennetworking.org/wp-content/uploads/2021/05/2021-P4-WS-Chris-Sommers-Ankur-Sheth-Slides.pdf)
 
 References
 

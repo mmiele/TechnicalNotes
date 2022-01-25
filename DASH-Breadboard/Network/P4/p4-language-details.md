@@ -29,7 +29,8 @@ From [Programming Protocol-Independent Packet Processors](https://www.cs.princet
 
 The **Programming Protocol-independent Packet Processors** (P4) is a domain-specific language that is designed to be implementable on a large variety of targets including programmable **network interface cards** (NIC), **FPGAs**, **software switches**, and **hardware ASICs**. As such, the language is restricted to constructs that can be efficiently implemented on all of these platforms. 
 
-The following are some of the main core constructs provided by the P4 lanaguage:
+The P4 language itself is meant to implement an abstraction on top of compliant hardware. This abstraction will support the dual modes of hardware operation: **configuration** and **population**. 
+In order to do so, a P4 program contains definitions of the following key components:
 
 - **Header types** describe the format (the set of fields and their sizes) of each header within a packet.
 - **Parsers** describe the permitted sequences of headers within received packets, how to identify those header sequences, and the headers and fields to extract from packets.
@@ -69,6 +70,61 @@ A machine that runs a P4 program is called **target**. Although a target may dir
 For example, currently, P4 does not expose the functionality of the queuing Mechanism and does not specify the semantics of the egress specification beyond what is mentioned above. Currently they are defined in target specific input to the compiler and exposed in conjunction with other interfaces that provide run time system management and configuration. 
 Future versions of P4 may expose configuration of these mechanisms allowing consistent management of such resources from the P4 program.
 
+
+## Hardware assumptions
+
+P4 is intended to be target-independent so that one P4 program can be compiled to switches supplied by multiple
+different vendors. Compliant hardware platforms will have to satisfy some basic requirements:
+
+1. The switch must support two modes of execution:
+    1. A **configuration mode** in which information about **packet formats** and the **structure of match+action tables** 
+    is communicated to the switch for planning purposes.
+    1. A **population mode** in which **rules** conforming to the specifications are **added and removed from the tables**. 
+    
+1. To implement P4 in its full generality, it must be possible to **configure the hardware’s packet parser** to identify and 
+extract new fields from a packet. 
+1. Tables within the target must support matching of all defined fields. 
+1. The target must support implementation of a range of protocol-independent packet-processing primitives, 
+including **copying**, **addition**, **removal**, and **modification** of both old and new fields as well as metadata.
+
+This model makes more requirements of the underlying hardware than conventional OpenFlow. In particular, 
+
+- OpenFlow assumes a fixed parser, whereas P4 model supports a **programmable parser** that allows new headers to be defined.
+- OpenFlow assumes the **match+action tables** are laid out in sequence whereas P4 supports both sequential and parallel
+processing units. 
+- Finally, P4 requires **actions to be defined using reusable, protocol-independent primitives**.
+
+
+## P4 language example
+
+This section shows how each of the components described above contributes to the definition of an **idealized mTag processor** in P4.
+
+### Header formats
+
+A P4 program design begins with the **specification of header formats**.
+Several domain-specific languages have been proposed and P4 borrows a number of ideas from them.
+In general, each header is specified by declaring an **ordered list of field names along with their widths**. 
+Optional field annotations allow constraints on value ranges or maximum lengths for variable-sized fields. 
+For example, standard **Ethernet** and **VLAN** headers are specified as follows:
+
+```p4
+    header ethernet {
+        fields {
+            dst_addr : 48; // width in bits
+            src_addr : 48;
+            ethertype : 16;
+        }
+    }
+
+    header vlan {
+        fields {
+            pcp : 3;
+            cfi : 1;
+            vid : 12;
+            ethertype : 16;
+        }
+    }
+```
 
 
 ## References

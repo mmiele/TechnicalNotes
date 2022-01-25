@@ -7,6 +7,26 @@ last update: 01/24/2022
 
 # P4 language details
 
+
+## Background
+
+
+The P4 languaeg was created based on the following main goals:
+
+1. **Reconfigurability**. Programmers should be able
+to change the way switches process packets once they are
+deployed. 
+1. **Protocol independence**. Switches should not be tied to any specific network protocols.
+1. **Target independence**. Programmers should be able to describe packet processing functionality independently of the specifics of the underlying hardware. 
+
+
+We'll show an example on how to use P4 to configure a switch to add a new hierarchical label.
+
+From [Programming Protocol-Independent Packet Processors](https://www.cs.princeton.edu/~jrex/papers/of2.pdf)
+
+
+## Overview
+
 The **Programming Protocol-independent Packet Processors** (P4) is a domain-specific language that is designed to be implementable on a large variety of targets including programmable **network interface cards** (NIC), **FPGAs**, **software switches**, and **hardware ASICs**. As such, the language is restricted to constructs that can be efficiently implemented on all of these platforms. 
 
 The following are some of the main core constructs provided by the P4 lanaguage:
@@ -44,9 +64,8 @@ change (though the packet may be dropped or its headers further modified).
 is formed from the **parsed representation** (as modified by match+action processing) and the resulting packet is transmitted.
 Although not shown in this diagram, P4 supports recirculation and cloning of packets.
 
-P4 focuses on the **specification of the parser**, **match+action tables** and the **control flow** through the pipelines. Programmers control this by writing a P4 program which **specifies the switch configuration as shown at the top of the figure**.
-A machine that runs a P4 program is called **target**. Although a target may directly
-execute a P4 program, it is assumed that the program is compiled into a suitable configuration for the target. 
+P4 focuses on the **specification of the parser**, **match+action tables** and the **control flow** through the pipelines. Programmers control this by writing a P4 program which **specifies the switch configuration** as shown at the top of the figure.
+A machine that runs a P4 program is called **target**. Although a target may directly execute a P4 program, it is assumed that the program is compiled into a suitable configuration for the target. 
 For example, currently, P4 does not expose the functionality of the queuing Mechanism and does not specify the semantics of the egress specification beyond what is mentioned above. Currently they are defined in target specific input to the compiler and exposed in conjunction with other interfaces that provide run time system management and configuration. 
 Future versions of P4 may expose configuration of these mechanisms allowing consistent management of such resources from the P4 program.
 
@@ -55,6 +74,7 @@ Future versions of P4 may expose configuration of these mechanisms allowing cons
 ## References
 - [P4 Network Programming Language—what is it all about?](https://codilime.com/blog/p4-network-programming-language-what-is-it-all-about/). This is a very good starting point; step by step intro. 
 - [P4 Language Specification](https://p4.org/p4-spec/p4-14/v1.0.5/tex/p4.pdf#:~:text=The%20P4%20language%20uses%20a%20%EF%AC%82at%20typing%20structure%2C,expressed%20in%20P4%20in%20binary%2C%20decimal%20and%20hexadecimal) PDF format with good diagrams and definitions about the P4 langauge structure. 
+- From [Programming Protocol-Independent Packet Processors](https://www.cs.princeton.edu/~jrex/papers/of2.pdf). A white paper and another good intro to the lanaguage and the underlying principles. 
 - [P4 Language Tutorial](https://cs344-stanford.github.io/lectures/Lecture-2-P4-tutorial.pdf) Power point and diagrams.
 - [BEHAVIORAL MODEL (bmv2)](https://github.com/p4lang/behavioral-model)
 - [Why Does the Internet Need a Programmable Forwarding Plane with Nick McKeown](https://www.youtube.com/watch?v=zR88Nlg3n3g)

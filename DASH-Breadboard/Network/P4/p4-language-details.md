@@ -11,7 +11,7 @@ last update: 01/24/2022
 ## Background
 
 
-The P4 languaeg was created based on the following main goals:
+The P4 language was desogned based on the following main requirements:
 
 1. **Reconfigurability**. Programmers should be able
 to change the way switches process packets once they are
@@ -95,9 +95,18 @@ processing units.
 - Finally, P4 requires **actions to be defined using reusable, protocol-independent primitives**.
 
 
-## P4 language example
+## Analyzing P4 language through an example
 
-This section shows how each of the components described above contributes to the definition of an **idealized mTag processor** in P4.
+This section shows how each of the components described above contributes to the definition of an **idealized mTag packet processor** in P4
+mTag combines the hierarchical routing with simple tags. In particular
+
+- The routes through the core are encoded by a **32-bit tag** composed of **four single-byte fields**. 
+- The 32-bit tag can carry a **source route** or a **destination locator** (like a Pseudo MAC). 
+- Each core switch need only examine one byte of the tag and switch on that information.
+
+In the example, the tag is added by the first ToR switch, although it could also be added by the end-host NIC.
+
+
 
 ### Header formats
 
@@ -108,23 +117,127 @@ Optional field annotations allow constraints on value ranges or maximum lengths 
 For example, standard **Ethernet** and **VLAN** headers are specified as follows:
 
 ```p4
-    header ethernet {
-        fields {
-            dst_addr : 48; // width in bits
-            src_addr : 48;
-            ethertype : 16;
-        }
+header ethernet {
+    fields {
+        dst_addr : 48; // width in bits
+        src_addr : 48;
+        ethertype : 16;
     }
+}
 
-    header vlan {
-        fields {
-            pcp : 3;
-            cfi : 1;
-            vid : 12;
-            ethertype : 16;
-        }
+header vlan {
+    fields {
+        pcp : 3;
+        cfi : 1;
+        vid : 12;
+        ethertype : 16;
     }
+}
 ```
+
+The **mTag** (custom) header can be added without altering existing declarations. 
+
+- The **field names indicate that the core has two layers of aggregation**. 
+- Each **core switch** is programmed with rules to examine one of the specified bytes depending on its location in the hierarchy 
+and the direction of travel (up or down).
+
+```p4
+header mTag {
+    fields {
+        up1 : 8;
+        up2 : 8;
+        down1 : 8;
+        down2 : 8;
+        ethertype : 16;
+    }
+}
+```
+
+### Packet parser
+
+P4 assumes the following:
+
+- The underlying switch can implement a **state machine** that **traverses packet headers** from start to finish,
+**extracting field values** as it goes. 
+- The **extracted field values** are sent to the **match+action tables for processing**.
+
+P4 **describes this state machine** directly as the **set of transitions from one header to the next**. 
+Each transition may be triggered by values in the preceding header. 
+
+The following example describes the **mTag state machine**. The parser for mTag is very simple—it has just four different states. Parsers in real networks require many more states.
+
+```p4
+// start state
+parser start{
+    ethernet;
+}
+
+// ethernet state
+parser ethernet {
+    switch(ethertype) {
+        case 0x8100: vlan;
+        case 0x9100: vlan;
+        case 0x800: ipv4;
+        // Other cases
+    }
+}
+
+// vlan state
+parser vlan {
+    switch(ethertype) {
+        case 0xaaaa: mTag;
+        case 0x800: ipv4;
+        // Other cases
+    }
+}
+
+// mTag state
+parser mTag {
+    switch(ethertype) {
+        case 0x800: ipv4;
+        // Other cases
+    }
+}
+```
+The folllowing are the state machine steps:
+
+1. Parsing begins in the **start state** and proceeds until an explicit **stop state** is reached or an unhandled case is encountered (which may be marked as an error). 
+1. Upon reaching a state for a new header, the state machine extracts the header
+using its specification and proceeds to compute its next transition. 
+1. The extracted header is **forwarded to match+action processing** in the back-half of the switch pipeline.
+
+![p4-mtag-pipeline](./images/p4-mtag-pipeline.png)
+
+### Table Specification
+
+The programmer describes how the defined **header fields are to be matched in the match+action stages**. For example, should they be 
+exact matches, ranges, or wildcards?, and what actions should be performed when a match occurs.
+
+In the simple mTag example, the edge switch matches on the L2 destination and VLAN ID, and picks an mTag to add to the header. 
+
+The programmer therefore specifies a table to match on these fields (see below), with the action to add the mTag header. 
+
+The reads attribute declares which fields to match, qualified by the match type (exact, ternary, etc).
+The actions attribute lists the possible actions which may
+be applied to a packet by the table. Actions are explained in
+the following section. The max size attribute specifies how
+many entries the table should support.
+The table specification allows a compiler to decide how
+much memory it needs, and the type (e.g., TCAM or SRAM)
+to implement the table.
+table mTag_table {
+reads {
+ethernet.dst_addr : exact;
+vlan.vid : exact;
+}
+actions {
+// At runtime, entries are programmed with params
+// for the mTag action. See below.
+add_mTag;
+}
+max_size : 20000;
+}
+
 
 
 ## References

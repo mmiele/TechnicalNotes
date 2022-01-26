@@ -99,6 +99,22 @@ processing units.
 
 From [Programming Protocol-Independent Packet Processors](https://www.cs.princeton.edu/~jrex/papers/of2.pdf). 
 
+
+The P4 language implements an abstraction on top of compliant hardware. 
+This abstraction supports the dual modes of hardware operation: switch **configuration** and **population**. 
+In order to do so, a P4 program contains definitions of the following key components:
+
+- **Headers**. A header definition describes the sequence and structure of a series of fields. It includes information
+about field width, as well as constraints on field values.
+- **Parsers**. A parser definition determines the presence and order of headers within a packet.
+- **Tables**. **Match+action tables** are the mechanism for packet processing. The P4 program defines the fields on which a
+table may match and the actions it may execute.
+- **Actions**. P4 supports construction of complex actions from simpler protocol-independent primitives. 
+These complex actions are available within **match+action tables**.
+- **Control Program**. The control program determines the order of matches and actions that are applied to a packet. 
+Simple imperative programs describe the flow of control between match+action tables.
+
+
 This section shows how each of the components described above contributes to the definition of an **idealized mTag packet processor** in P4.
 The mTag combines the hierarchical routing with simple tags. In particular
 

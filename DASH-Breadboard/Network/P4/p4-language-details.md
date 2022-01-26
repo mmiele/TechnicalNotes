@@ -95,7 +95,9 @@ processing units.
 - Finally, P4 requires **actions to be defined using reusable, protocol-independent primitives**.
 
 
-## Analyzing P4 language through an example
+## Analyzing P4 program structure 
+
+From [Programming Protocol-Independent Packet Processors](https://www.cs.princeton.edu/~jrex/papers/of2.pdf). 
 
 This section shows how each of the components described above contributes to the definition of an **idealized mTag packet processor** in P4.
 The mTag combines the hierarchical routing with simple tags. In particular
@@ -105,7 +107,6 @@ The mTag combines the hierarchical routing with simple tags. In particular
 - Each core switch need only examine one byte of the tag and switch on that information.
 
 In the example, the tag is added by the first ToR switch, although it could also be added by the end-host NIC.
-
 
 
 ### Header formats
@@ -239,7 +240,7 @@ table mTag_table {
 ## References
 - [P4 Network Programming Language—what is it all about?](https://codilime.com/blog/p4-network-programming-language-what-is-it-all-about/). This is a very good starting point; step by step intro. 
 - [P4 Language Specification](https://p4.org/p4-spec/p4-14/v1.0.5/tex/p4.pdf#:~:text=The%20P4%20language%20uses%20a%20%EF%AC%82at%20typing%20structure%2C,expressed%20in%20P4%20in%20binary%2C%20decimal%20and%20hexadecimal) PDF format with good diagrams and definitions about the P4 langauge structure. 
-- From [Programming Protocol-Independent Packet Processors](https://www.cs.princeton.edu/~jrex/papers/of2.pdf). A white paper and another good intro to the lanaguage and the underlying principles. 
+- [Programming Protocol-Independent Packet Processors](https://www.cs.princeton.edu/~jrex/papers/of2.pdf). A white paper and another good intro to the language and the underlying principles. 
 - [P4 Language Tutorial](https://cs344-stanford.github.io/lectures/Lecture-2-P4-tutorial.pdf) Power point and diagrams.
 - [BEHAVIORAL MODEL (bmv2)](https://github.com/p4lang/behavioral-model)
 - [Why Does the Internet Need a Programmable Forwarding Plane with Nick McKeown](https://www.youtube.com/watch?v=zR88Nlg3n3g)

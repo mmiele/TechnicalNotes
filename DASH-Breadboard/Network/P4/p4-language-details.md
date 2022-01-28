@@ -221,9 +221,8 @@ The folllowing are the state machine steps:
 1. Upon reaching a state for a new header, the state machine extracts the header using its specification and proceeds to compute its next transition. 
 1. The extracted header is **forwarded to match+action processing** in the back-half of the switch pipeline.
 
-![p4-mtag-pipeline](./images/p4-mtag-pipeline.png)
 
-### Table Specification
+### Table specification
 
 The programmer describes how the defined **header fields are to be matched in the match+action stages**. For example, should they be 
 exact matches, ranges, or wildcards?, and what actions should be performed when a match occurs.
@@ -251,6 +250,126 @@ table mTag_table {
     max_size : 20000;
 }
 ```
+
+For completeness and for later discussion, we present brief definitions of other tables that are referenced by the control program (control plane).
+
+```p4
+table source_check {
+    // Verify mtag only on ports to the core
+    reads {
+    mtag : defined; // Was mtag parsed?
+    metadata.ingress_port;
+    }
+    actions {
+    // If inappropriate mTag, send to CPU
+    fault_to_cpu;
+    // If mtag found, strip and record in metadata
+    strip_mtag;
+    // Otherwise, allow the packet to continue
+    pass;
+    }
+    max_size : 64; // One rule per port
+}
+```
+
+```p4
+    table local_switching {
+    // Reads destination and checks if local
+    // If miss occurs, goto mtag table.
+    }
+    table egress_check {
+    // Verify egress is resolved
+    // Do not retag packets received with tag
+    // Reads egress and whether packet was mTagged
+}
+```
+
+### Action specifications
+P4 defines a collection of primitive actions from which more complex actions are built. 
+To keep the table specification simple, actions are defined in action functions. 
+Each P4 program declares **its own action functions**.
+
+The add mTag action referred above is implemented as follows:
+
+```p4
+action add_mTag(up1, up2, down1, down2, egr_spec) {
+    add_header(mTag);
+    // Copy VLAN ethertype to mTag
+    copy_field(mTag.ethertype, vlan.ethertype);
+    // Set VLAN’s ethertype to signal mTag
+    set_field(vlan.ethertype, 0xaaaa);
+    set_field(mTag.up1, up1);
+    set_field(mTag.up2, up2);
+    set_field(mTag.down1, down1);
+    set_field(mTag.down2, down2);
+    // Set the destination egress port as well
+    set_field(metadata.egress_spec, egr_spec);
+}
+```
+If an action needs parameters (e.g., the up1 value for the mTag), it is supplied **from the match table at runtime**.
+
+In this example, the switch performs the following actions:
+
+- Inserts the mTag after the VLAN tag.
+- Copies the VLAN tag’s ethertype into the mTag to indicate what follows.
+- Sets the VLAN tag’s ethertype to `0xaaaa` to signal mTag. 
+
+The programmer would also define a table and action to strip mTags from packets in
+the egress edge switch. This action would copy the mTag’s ethertype back to the VLAN tag.
+
+P4’s primitive actions include:
+- set field: Set a specific field in a header to a value. Masked sets are supported.
+- copy field: Copy one field to another.
+- add header: Set a specific header instance (and all its fields) as valid.
+- remove header: Delete (“pop”) a header (and all its fields) from a packet.
+- increment: Increment or decrement the value in a field.
+- checksum: Calculate a checksum over some set of header fields (e.g., an IPv4 checksum).
+
+It is expected that most switch implementations would restrict action processing to permit only header modifications that are consistent with the specified packet format.
+
+### Control program
+
+Once **tables** and **actions** are defined, the only remaining task is to specify the **flow of control from one table to the next**. 
+**Control flow** is specified as a program via a collection of:
+- functions
+- conditionals
+- table references
+
+**mTag control flow**
+![p4-mtag-control-flow](./images/p4-mtag-control-flow.png)
+
+The previous figure shows the control flow for the **mTag implementation on edge switches**. 
+After parsing, the `source_check` table verifies consistency between the received packet and the ingress port. 
+For example, mTags should only be seen on ports connected to core switches. This table also strips mTags from the packet, but records whether the packet had an mTag in metadata. 
+Tables later in the pipeline may analyze the metadata to avoid retagging the packet.
+A `local_switching` table is then executed. If this table *misses*, it indicates that the packet is not destined for a locally connected host. 
+In that case, the `mTag-table` is applied to the packet. 
+Both **local** and **core forwarding** control can be processed by the `egress_check` table which handles the case of an unknown destination by
+sending a notification up the SDN control stack. 
+The imperative representation of this packet processing pipeline is as follows:
+
+
+```P4
+control main() {
+    // Verify mTag state and port are consistent
+    table(source_check);
+    // If no error from source_check, continue
+    if (!defined(metadata.ingress_error)) {
+        // Attempt to switch to end hosts
+        table(local_switching);
+        if (!defined(metadata.egress_spec)) {
+        // Not a known local host; try mtagging
+        table(mTag_table);
+        }
+    // Check for unknown egress state or
+    // bad retagging with mTag.
+    table(egress_check);
+    }
+}
+
+```
+
+
 
 
 ## References

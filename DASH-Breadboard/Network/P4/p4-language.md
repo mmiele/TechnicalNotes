@@ -143,4 +143,8 @@ Install the extension: Name: [p4 language support in vscode](https://marketplace
 - [P4 Language presentation](https://opennetworking.org/wp-content/uploads/2020/12/P4_tutorial_01_basics.gslide.pdf)
 - [Example of startjng with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/) It needs cloud deployment.
 - [Fingerhut p4-guide](https://github.com/jafingerhut/p4-guide)
+- [P4PI Introduction](https://youtu.be/UdQh38SCBKA) - Interesting experimental environment that includes a specific designed hardware.
+- [P4 Language Tutorial](https://youtu.be/U3Mn6o2j4zQ)
+- [P4 programming language - introduction to network programming with P4](https://youtu.be/UEMAvXXNWsY)
+- [P4 Tutorial](https://youtu.be/pk_s53l6-Ec)
 

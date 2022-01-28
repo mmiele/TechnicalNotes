@@ -277,6 +277,9 @@ table source_check {
     // Reads destination and checks if local
     // If miss occurs, goto mtag table.
     }
+```
+
+```p4
     table egress_check {
     // Verify egress is resolved
     // Do not retag packets received with tag
@@ -336,6 +339,7 @@ Once **tables** and **actions** are defined, the only remaining task is to speci
 - table references
 
 **mTag control flow**
+
 ![p4-mtag-control-flow](./images/p4-mtag-control-flow.png)
 
 The previous figure shows the control flow for the **mTag implementation on edge switches**. 
@@ -369,8 +373,58 @@ control main() {
 
 ```
 
+## Compiling a program 
+
+For a network to implement a P4 program, you need a compiler to **map the target-independent description** onto
+the **target switch’s specific hardware or software platform**.
+
+This involves **allocating the target’s resources** and **generating appropriate configuration** for the device.
+
+### Compiling packet parser
+
+For devices with programmable parsers, the compiler **translates the parser description into a parsing state machine**.
+For fixed parsers, the compiler merely verifies that the parser description is **consistent with the target’s parser**. 
+
+The following table shows state table entries for the vlan and mTag
+sections of the parser. Each entry specifies the current state, the field value to match, and a next state. 
+Other columns are omitted for brevity.
+
+**Parser state table entries for the mTag**
+
+|current state|lookup value|next state|
+|-------------|------------|----------|
+| vlan | 0xaaaa| mTag|
+| vlan | 0x800 | ipv4|
+| vlan| * | stop |
+| mTag | 0x800 | ipv4 |
+| mTag | * | stop |
 
 
+
+3.2 Compiling Control Programs
+The imperative control-flow representation in a convenient way to specify the logical forwarding behavior of a switch, but does not explicitly 
+call out dependencies between tables or opportunities for concurrency. We therefore eemploy a compiler to analyze the control program to identify
+dependencies and look for opportunities to process header fields in parallel. 
+Finally, the compiler generates the target configuration for the switch. There are many potential targets: for example, 
+a software switch, a multicore software switch, an NPU, a fixed function switch, or a reconfigurable match table (RMT) pipeline.
+
+We follow a two-stage compilation process. First, we convert the control program to an intermediate table graph representation. 
+The table graph is an extension of the tables declared in the P4 program. 
+The nodes of the graph are the table declarations, and the edges indicate the order of processing. 
+Conditional tests in the control program (e.g., if defined(mTag)) are replaced with “static” table instances with fixed entries whose 
+actions determine the next table to execute, rather than populated at runtime.
+Second, the compiler analyzes the table graph to generate a device-specific configuration for the target switch. 
+Each target supporting P4 requires a dedicated compiler (or compiler back-end) with knowledge of the table resources and
+supported parallelism of the target to enable the correct mapping of tables. 
+We briefly examine how the mTag example would be implemented in different kinds of switches:
+- Software switches: A software switch provides complete flexibility: the table count, table configuration, and parsing
+are under software control. The compiler directly maps the mTag table graph to switch tables. 
+The compiler uses table type information to constrain table widths, heights, and matching criterion (e.g., exact, prefix, or wildcard) of each
+table. The compiler might also optimize ternary or prefix matching with software data structures.
+- Hardware switches with RAM and TCAM: A compiler can configure hashing to perform efficient exact-matching using RAM, for the mTag table in edge switches. 
+In contrast, the core mTag forwarding table that matches on a subset of tag bits would be mapped to TCAM.
+- Switches supporting parallel tables: The compiler can detect data dependencies and arrange tables in parallel or in series. In the mTag example, the tables `local_switching`
+and `mTag_table` can execute in parallel up to the execution of the action of setting an mTag. 
 
 ## References
 - [P4 Network Programming Language—what is it all about?](https://codilime.com/blog/p4-network-programming-language-what-is-it-all-about/). This is a very good starting point; step by step intro. 

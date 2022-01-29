@@ -10,7 +10,6 @@ last update: 01/24/2022
 
 ## Background
 
-
 The P4 language was desogned based on the following main requirements:
 
 1. **Reconfigurability**. Programmers should be able
@@ -93,6 +92,108 @@ This model makes more requirements of the underlying hardware than conventional 
 - OpenFlow assumes the **match+action tables** are laid out in sequence whereas P4 supports both sequential and parallel
 processing units. 
 - Finally, P4 requires **actions to be defined using reusable, protocol-independent primitives**.
+
+## Analyzing P4 program structure 
+
+[P4 Network Programming Language—what is it all about?](https://codilime.com/blog/p4-network-programming-language-what-is-it-all-about/).
+
+P4 allows a programmer to fully **arbitrarily define how packets traversing programmable dataplane blocks will be processed**. The commonly used term in P4 is a **target**, which represents a variety of devices—switch, router, Network Interface Card (NIC) inserted into the server, a software switch—which in general can be programmed using P4. The great advantage of P4 is that it allows for processing not only standard well-known protocol headers (e.g. Ethernet, IP, TCP, etc.) like traditional switches or routers normally do, but also **fully custom ones**, as presented in the example P4 code below:
+
+```p4
+// Ethernet header definition
+header ethernet_t {
+    bit<48>     dst_addr;
+    bit<48>     src_addr;
+    bit<16>     ethertype;
+}
+// IPv4 header definition
+header ipv4_t {
+    bit<4>       ver;
+    bit<4>       ihl;
+    bit<8>       diffserv;
+    bit<16>      totlen;
+    bit<16>      identification;
+    bit<3>       flags;
+    bit<13>      frag_offset;
+    bit<8>       ttl;
+    bit<8>       proto;
+    bit<16>      hdrCSM;
+    bit<32>      src_addr;
+    bit<32>      dst_addr;
+}
+ 
+// custom protocol header definition
+header myCustomProtocol_t {
+    bit<16>      proto_id;
+    bit<8>       vrtual_connection_id
+    bit<8>       flags
+    bit<16>      src_node_id;
+    bit<16>      dst_node_id;
+}
+ 
+// a struct combining all headers
+struct headers {
+    ethernet_t     ethernet;
+    myCustomProtocol_t myCustomProtocol;
+    ipv4_t             ipv4;
+}
+
+```
+
+It is the programmer's responsisbility to perform the folloeing tasks:
+
+- Explicitly define in the P4 program the **header types**,both well-known and custom, as well as the **way they are parsed**. 
+- Design a **match-action pipeline** within the **given dataplane block**. This pipeline can be composed of one or multiple tables where **matching against parsed header fields** takes place.
+
+![match-action-tables-pipeline](./images/match-action-tables-pipeline.png)
+
+
+The example below the key section of the `my_table` table includes two match fields: `hdr.ipv4.dst_addr` and `hdr.tcp.dst_port`, corresponding to destination IP address and destination TCP port, respectively. 
+
+```p4
+action drop() {
+        mark_to_drop();
+}
+     
+action my_action_1(some_type_t arg1, bit<16> arg2) {
+ 
+    //my_action_1 behaviour implementation here
+    //(...)
+}
+ 
+action my_action_2(bit<8> arg1) {
+ 
+    //my_action_2 behaviour implementation here
+    //(...)
+}
+     
+table my_table {
+    key = {
+        ph_hdr.ipv4.dst_addr: lpm;
+        ph_hdr.tcp.dst_port: exact;    
+    }
+    actions = {
+        my_action_1;
+        my_action_2;
+        drop;
+        NoAction;
+    }
+    size = 1024;
+    default_action = drop();
+}
+```
+For each table, one or more actions can be assigned to be executed at runtime. 
+
+Actions define what to do with the packet: 
+
+- modify the values of selected header fields
+- drop the packet
+- forward the packet to the chosen physical port
+- etc. 
+
+Moreover, not only can packet header fields be processed in the tables, but so can standard or user-defined metadata assigned to packets. 
+
+All the aspects related to tables and their internal structure (like number of tables, match fields and actions for each table, action’s behaviour, etc.) are left to the P4 programmer. This makes P4 a powerful solution.
 
 
 ## Analyzing P4 program structure 

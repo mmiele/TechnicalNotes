@@ -196,7 +196,156 @@ Moreover, not only can packet header fields be processed in the tables, but so c
 All the aspects related to tables and their internal structure (like number of tables, match fields and actions for each table, action’s behaviour, etc.) are left to the P4 programmer. This makes P4 a powerful solution.
 
 
-## Analyzing P4 program structure 
+### P4 architecture model
+
+P416 language specification introduces the architecture model. 
+
+The P4 architecture model (in short, P4 architecture) does the following: 
+
+- Identifies the **function blocks** that are present for a given dataplane target. 
+- Specifies the **interfaces between them**. 
+
+Both fixed-function blocks and programmable blocks can exist for a given target. 
+The behavior of the fixed-function blocks is determined by the target manufacturer, 
+leaving this fixed behavior outside of the P4 programmer’s control. 
+Programmable blocks in turn are left to be programmer using P4. 
+It is worth noting that **P4 programs are not expected to be portable across different architecture models**. 
+However, **programs created for the same architecture should be portable across all targets that conform to the architecture model**.
+
+
+The **detailed specification of the architecture must be provided by the target manufacturer**.  
+For that purpose **the manufacturer provides a library P4 file** (`some_architecture_model.p4`) containing 
+- All necessary declarations of functional blocks existing in the target pipeline.
+- Their types as well as other data types, constants, externs, etc. 
+- Only declarations of **programmable blocks** are included in the architecture definition model since, on principle, 
+no single fixed-function block (if they are present in the target processing pipeline) can be manipulated by any P4 program. 
+- The programmable block has to be **marked as a parser or control function**. 
+
+
+The role of the **parser is to correctly identify the headers present in each incoming packet**. 
+- As mentioned above, the header types, their structures as well as parser’s behavior must be defined in the P4 program (this responsibility falls to the P4 program developer, not the architecture model provider). 
+- For each packet, the parser produces a parsed representation of all relevant headers, which is then passed to the first control block. 
+- The sequence of control blocks in turn further processes the packet. This includes match-action table chain execution, checksum verification and recalculation, deparsing etc. 
+
+The architecture file must contain at least one declaration for a package. 
+This is where the most high-level functional declaration of the architectural model takes place, since all references to previously declared function blocks are grouped together here.
+
+The following snippet of code (source: official P416 Language Specification v.1.2.0) presents declaration of programmable function blocks and package declarations for an example architecture:
+
+```p4
+// Very Simple Switch P4 declaration
+// (...)
+/**
+ * Programmable parser.
+ * @param <H> type of headers; defined by user
+ * @param b input packet
+ * @param parsedHeaders headers constructed by parser
+ */
+parser Parser<H>(packet_in b, out H parsedHeaders);
+/**
+* Match-action pipeline
+* @param <H> type of input and output headers
+* @param headers headers received from the parser and sent to the deparser
+* @param parseError error that may have surfaced during parsing
+* @param inCtrl information from architecture, accompanying input packet
+* @param outCtrl information for architecture, accompanying output packet
+*/
+control Pipe<H>(inout H headers,
+    in error parseError, // parser error
+    in InControl inCtrl,// input port
+    out OutControl outCtrl); // output port
+/**
+* VSS deparser.
+* @param <H> type of headers; defined by user
+* @param b output packet
+* @param outputHeaders headers for output packet
+*/
+control Deparser<H>(inout H outputHeaders, packet_out b);
+/**
+* Top-level package declaration - must be instantiated by user.
+* The arguments to the package indicate blocks that
+* must be instantiated by the user.
+* @param <H> user-defined type of the headers processed.
+*/
+package VSS<H>(Parser<H> p,
+    Pipe<H> map,
+    Deparser<H> d);
+
+```
+
+For P4 programs to operate on a given target an **architecture model description must be provided by a target manufacturer** in order to 
+- Indicate all the capabilities. 
+- Define architectural constraints. 
+
+However, standard architecture specifications also exist.
+
+#### Portable Switch Architecture (PSA)
+
+The **Portable Switch Architecture** (PSA) is intended for **multi-port Ethernet targets** like a switch with multiple Ethernet interfaces. As stated in the [PSA specification](https://p4.org/p4-spec/docs/PSA.html), *the PSA is to the P416 language as the C standard library is to the C programming language*. 
+It defines a set of standard data types, externs, counters, meters, etc. that can be used by P4 programmers according to their needs. The assumption is that such P4 programs will be **portable across different targets supporting PSA**. Moreover, the [P4.org](https://p4.org/) *Architecture working Group*, which owns the PSA specification, believes some of those standard PSA constructs could be supported in other architectural models as well.
+
+The PSA model specifies **six programmable blocks** and **two fixed-function blocks**, as depicted in the figure below.
+
+![psa-arch](./images/psa-arch.png)
+
+- The **Buffer Queuing Engine** (BQE) and  the Packet buffer and **Replication Engine** (PRE) are target dependent blocks. Configurations of those two blocks may vary for different devices. 
+- The six remaining blocks are fully programmable using P4. 
+    - Three of them are designated to provide an implementation of **ingress packet processing** (with parser, match-action treatment and deparser blocks). 
+    - The other three blocks represent **egress processing** based on the same principle.
+
+Another quasi-standard architecture is **v1.0 switch model**, also known as **V1Model**. V1Model was introduced to propose a kind of interim architecture until the PSA standard is ready and properly defined. V1Model is in fact a P416 switch architecture that models a fixed switch architecture from the P414 specification. In that context, V1Model facilitates the translation of P4 programs originally written in P414 to the P416 version. 
+An example target that supports V1model is a **software switch** called **BMv2**, a popular tool for testing P4 programs, e.g. in **emulated network environments like mininet**.
+
+### How to make it work?
+
+P4 is a relatively simple language but the entire P4 environment may seem complex at first glance. If you want to write a P4 program for a given target, you must do the following:
+
+1. Check which architecture model the target supports. Your P4 code must be in line with the architecture, i.e. with the limitations it introduces and capabilities it offers. 
+1. The target manufacturer provides the compiler, which takes your P4 program code as an input and generates a target-specific configuration binary, which is then loaded into the target. 
+1. At this oint, tables and other objects defined in your P4 code are present in the **data plane**. 
+1. The only entity that is still missing is the **control plane**. 
+    1. You can either build it on your own. 
+    1. Or use software. like an **SDN controller**, by extending it with a set of functions enabling effective communication with your newly created dataplane. 
+This gives you the whole picture. The data plane can now be manipulated by the control plane during runtime as shown in the figure below.
+
+![p4-compile-execute](./images/p4-compile-execute.png)
+
+
+The **SDN controller** is the center of the most important component of the SDN architecture. It controls all the data plane devices. It also controls the applications in the **application layer**. The SDN controller communicates and controls these upper and lower layers with northbound and southebound APIs respectivley as shown in the figure below.
+
+![sdn-controller](./images/sdn-controller.svg)
+
+### P4 use cases
+
+There are interesting use cases for both datacenter networks, enterprise networks and telco networks. Some examples have been grouped into categories below.
+
+#### Flexible leaf-spine fabric
+
+P4 can help in building flexible multi-purpose **leaf-spine fabric**. It could be based on white box switches, for instance, and thanks to using a P4-programmable data plane, the fabric would be easily reconfigured when needed. Such a fabric can serve various workloads related to web-scale, enterprise or telco applications whilst allowing for effective processing of different traffic patterns like flat IP/Ethernet, VLAN-tagged flows (including QinQ), MPLS flows, tunnelled traffic (VXLAN, GRE) etc. at the same time.
+
+#### VNF-offloading
+
+Deploying VNFs on x86 servers follows general NFV principles and as such can provide a lot of benefits. However, in many scenarios this may be not the optimal way to execute some network functions. Recently, the concept of CUPS (Control and User Plane Separation) has been gaining popularity. CUPS decomposes a given network function into control and user plane parts. An example might be a vBNG or vSPGW. 
+In such a case, protocol-specific headers like PPPoE and GTP, respectively are processed by the P4 fabric switch while the control plane part is still deployed as a virtual appliance on the server. Another interesting example of VNF offloading would be to execute some typical network functions directly on a programmable HW like a switch or smartNIC in the DC environment. An example of such functions would be a firewall, a NAT or a load balancer.
+
+#### Service chaining
+
+This use case can be relevant for a wide variety of targets like **physical switches**, **NIC**, **software switches**, etc. The idea is to employ a P4-defined data plane in the process of creating service chains between virtual or physical service appliances (or mixed). Thanks to the high flexibility P4 offers, sophisticated forwarding rules can be defined and executed for the traffic flows. The matching can be handled using a combination of protocol header fields and user-defined metadata.
+
+#### Inband Network Telemetry (INT)
+
+Some people believe this use case is the **P4 killer-app**. This is because **P4 allows you to program data plane to gather much more information about the network state** than what we can determine today using traditional tools, with the simplest of those being the well-known ping and traceroute. The idea of INT is to gather telemetry metadata for each packet such as 
+- packet routing paths 
+- ingress and egress timestamps 
+- latency the packet has experienced 
+- queue occupancy in a given node
+- egress port link utilization etc. 
+
+Those metrics can be generated by each network node and sent to the monitoring system in the form of a report. 
+
+Another method is to embed them into packets at every node the packet visits on its routing path and finally remove them in designated nodes that will send them aggregated to the monitoring system.
+
+## Analyzing P4 program structure take two 
 
 From [Programming Protocol-Independent Packet Processors](https://www.cs.princeton.edu/~jrex/papers/of2.pdf). 
 

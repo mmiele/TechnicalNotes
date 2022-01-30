@@ -9,7 +9,7 @@ Learning while drinking from the fire hose
 ## Learning about network
 
 
-**Learning about Programming Protocol-independent Packet Processors (P4)**
+## Learning about Programming Protocol-independent Packet Processors (P4)
 
 ![pgm-target-via-p4](P4/images/pgm-target-via-p4.svg)
 

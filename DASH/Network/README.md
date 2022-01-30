@@ -6,10 +6,10 @@ Learning while drinking from the fire hose
 
 ![robot icon](../../Media/Generic/firehose.PNG)
 
-## Learning about network
+## Network concepts and definitions
 
 
-## Learning about Programming Protocol-independent Packet Processors (P4)
+## Programming Protocol-independent Packet Processors (P4)
 
 ![pgm-target-via-p4](P4/images/pgm-target-via-p4.svg)
 

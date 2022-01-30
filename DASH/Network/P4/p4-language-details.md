@@ -10,7 +10,7 @@ last update: 01/24/2022
 
 ## Background
 
-The P4 language was desogned based on the following main requirements:
+The P4 language was designed based on the following main requirements:
 
 1. **Reconfigurability**. Programmers should be able
 to change the way switches process packets once they are

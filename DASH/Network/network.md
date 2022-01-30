@@ -1,6 +1,6 @@
 ---
 title: Network notes
-description: Notes on network
+description: Learning about networks
 author: michael
 last update: 01/11/2022
 ---

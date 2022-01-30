@@ -1,5 +1,8 @@
 # Switch Abstraction Interface (SAI) 
 
+> [!WARNING] 
+> The **Switch Abstraction Interface** (SAI) has been replaced by [SONiC](https://github.com/Azure/Sonic).
+
 The **Switch Abstraction Interface** (SAI) is a hardware abstraction
 model for switching silicon (ASICs). It is an open-source framework that
 allows ASICs to be represented in software. This means you can use a

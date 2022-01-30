@@ -305,11 +305,13 @@ P4 is a relatively simple language but the entire P4 environment may seem comple
 1. At this oint, tables and other objects defined in your P4 code are present in the **data plane**. 
 1. The only entity that is still missing is the **control plane**. 
     1. You can either build it on your own. 
-    1. Or use software. like an **SDN controller**, by extending it with a set of functions enabling effective communication with your newly created dataplane. 
+    1. Or use software, like an [SDN controller](#sdn-controller), by extending it with a set of functions enabling effective communication with your newly created dataplane. 
 This gives you the whole picture. The data plane can now be manipulated by the control plane during runtime as shown in the figure below.
 
 ![p4-compile-execute](./images/p4-compile-execute.png)
 
+
+#### SDN controller
 
 The **SDN controller** is the center of the most important component of the SDN architecture. It controls all the data plane devices. It also controls the applications in the **application layer**. The SDN controller communicates and controls these upper and lower layers with northbound and southebound APIs respectivley as shown in the figure below.
 

@@ -26,7 +26,16 @@ The following topology is used, which is a **single pod of a fat-tree topology**
 ![pod-topo](images/pod-topo.svg)
 
 
-The P4 example is written for the **V1Model architecture** implemented on **P4.org's bmv2 software switch**. The architecture file for the V1Model can be found at: /usr/local/share/p4c/p4include/v1model.p4. This file desribes the interfaces of the P4 programmable elements in the architecture, the supported externs, as well as the architecture's standard metadata fields. We encourage you to take a look at it.
+The P4 example is written for the **V1Model architecture** implemented on **P4.org's bmv2 software switch**. The architecture file for the V1Model can be found at: [v1model.p4](https://github.com/p4lang/p4c/blob/main/p4include/v1model.p4). This file desribes the interfaces of the P4 programmable elements in the architecture, the supported externs, as well as the architecture's standard metadata fields. Take a look at it.
+
+
+## About the control plane
+A P4 program defines a packet-processing pipeline (match-action tables) for the data plane, but the rules within each table are inserted by the **control plane**. When a **rule matches a packet**, its action is invoked with **parameters supplied by the control plane as part of the rule**.
+
+In this exercise, the control plane logic is already implemented. As part of bringing up the Mininet instance, the **make run** command will **install packet-processing rules in the tables of each switch**. These are defined in the `sX-runtime.json` files, where X corresponds to the switch number.
+
+Important: We use P4Runtime to install the control plane rules. The content of files sX-runtime.json refer to specific names of tables, keys, and actions, as defined in the P4Info file produced by the compiler (look for the file build/basic.p4.p4info.txt after executing make run). Any changes in the P4 program that add or rename tables, keys, or actions will need to be reflected in these sX-runtime.json files.
+
 
 ## References
 

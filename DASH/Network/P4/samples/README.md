@@ -9,7 +9,7 @@ Follow the steps described in the related documentation for each example.
 
 ## Programming Protocol-independent Packet Processors (P4)
 
-![pgm-target-via-p4](P4/images/pgm-target-via-p4.svg)
+![pgm-target-via-p4](../images/pgm-target-via-p4.svg)
 
 
 |Example|Description|

@@ -5,7 +5,9 @@ author: michael
 last update: 01/30/2022
 ---
 
-This example implements basic forwarding for IPv4.
+# P4 basic forawarding
+
+This article describes how to build and test a P4 example that implements **basic forwarding for IPv4**. The example derives from the one shown in the public repository [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic). 
 
 In IPv4 forwarding, the **switch performs the following actions for every packet**: 
 
@@ -20,3 +22,11 @@ In IPv4 forwarding, the **switch performs the following actions for every packet
 1. The control plane rules have already been defined, you only need to implement the **data plane** logic of the P4 program.
 
 The following topology is used, which is a **single pod of a fat-tree topology** referred to as **pod-topo**.
+
+![pod-topo](images/pod-topo.svg))
+
+
+
+## References
+
+- [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic)

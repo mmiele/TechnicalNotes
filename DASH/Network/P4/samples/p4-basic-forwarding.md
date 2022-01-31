@@ -1,11 +1,11 @@
 ---
-title: P4 basic forawarding
-description: P4 basic forawarding example
+title: P4 basic forwarding
+description: P4 basic forwarding example
 author: michael
 last update: 01/30/2022
 ---
 
-# P4 basic forawarding
+# P4 basic forwarding
 
 This article describes how to build and test a P4 example that implements **basic forwarding for IPv4**. The example derives from the one shown in the public repository [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic). 
 

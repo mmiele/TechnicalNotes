@@ -34,7 +34,9 @@ A P4 program defines a packet-processing pipeline (match-action tables) for the 
 
 In this exercise, the control plane logic is already implemented. As part of bringing up the Mininet instance, the **make run** command will **install packet-processing rules in the tables of each switch**. These are defined in the `sX-runtime.json` files, where X corresponds to the switch number.
 
-Important: We use P4Runtime to install the control plane rules. The content of files sX-runtime.json refer to specific names of tables, keys, and actions, as defined in the P4Info file produced by the compiler (look for the file build/basic.p4.p4info.txt after executing make run). Any changes in the P4 program that add or rename tables, keys, or actions will need to be reflected in these sX-runtime.json files.
+### Important
+
+**P4Runtime** is used to install the **control plane rules**. The content of files **sX-runtime.json** refer to specific names of tables, keys, and actions, as defined in the **P4Info** file produced by the compiler (look for the file build/basic.p4.p4info.txt after executing make run). Any changes in the P4 program that add or rename tables, keys, or actions will need to be reflected in these sX-runtime.json files.
 
 
 ## References

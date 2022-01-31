@@ -40,4 +40,5 @@ Important: We use P4Runtime to install the control plane rules. The content of f
 ## References
 
 - [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic)
-- [Working with P4 in Mininet on BMV2](https://usi-advanced-networking.github.io/deliverables/p4-mininet/)
+- [Using P4 in Mininet on BMV2](bmv2.md)
+

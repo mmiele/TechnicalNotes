@@ -14,4 +14,4 @@ Follow the steps described in the related documentation for each example.
 
 |Example|Description|
 |--------|-----------|
-|[basic forwarding](samples/p4-basic-forwarding.md)|Implements basic forwarding for IPv4.|
+|[basic forwarding](p4-basic-forwarding.md)|Implements basic forwarding for IPv4.|

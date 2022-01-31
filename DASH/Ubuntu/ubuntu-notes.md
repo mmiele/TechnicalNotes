@@ -246,9 +246,13 @@ machine:
 ```bash
     sudo usermod -G vboxsf -a michael
 ```
-
 Where `vboxsf` is the VirtualBox group (Ubuntu). You need to replace michael with the user name of your virtual machine.
 The command takes effect after restarting the virtual machine. 
+
+- [How To Kill A Process On Ubuntu Using The Command Line](https://coderrocketfuel.com/article/how-to-kill-a-process-on-ubuntu-using-the-command-line). 
+
+
+[How to take screenshots](https://www.makeuseof.com/how-to-take-screenshots-on-ubuntu/)
 
 
 ## Tools

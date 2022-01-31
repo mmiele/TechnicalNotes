@@ -23,9 +23,10 @@ In IPv4 forwarding, the **switch performs the following actions for every packet
 
 The following topology is used, which is a **single pod of a fat-tree topology** referred to as **pod-topo**.
 
-![pod-topo](images/pod-topo.svg))
+![pod-topo](images/pod-topo.svg)
 
 
+The P4 example is written for the **V1Model architecture** implemented on **P4.org's bmv2 software switch**. The architecture file for the V1Model can be found at: /usr/local/share/p4c/p4include/v1model.p4. This file desribes the interfaces of the P4 programmable elements in the architecture, the supported externs, as well as the architecture's standard metadata fields. We encourage you to take a look at it.
 
 ## References
 

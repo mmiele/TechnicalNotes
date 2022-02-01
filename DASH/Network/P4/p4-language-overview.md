@@ -175,8 +175,8 @@ extern Checksum16 {
 ## References
 
 - [Getting started](https://github.com/p4lang/education/blob/master/GettingStarted.md)
-- [Tutorials](https://github.com/p4lang/tutorials) Official tutorials
-- [P4 Language presentation](https://opennetworking.org/wp-content/uploads/2020/12/P4_tutorial_01_basics.gslide.pdf)
+- [Tutorials](https://github.com/p4lang/tutorials) Official tutorials.
+- [P4 Language presentation](https://opennetworking.org/wp-content/uploads/2020/12/P4_tutorial_01_basics.gslide.pdf) Good pictures and and P4 introduction.
 - [Example of startjng with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/) It needs cloud deployment.
 - [Fingerhut p4-guide](https://github.com/jafingerhut/p4-guide)
 - [P4PI Introduction](https://youtu.be/UdQh38SCBKA) - Interesting experimental environment that includes a specific designed hardware.

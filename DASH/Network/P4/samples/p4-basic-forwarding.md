@@ -41,6 +41,32 @@ In this exercise, the control plane logic is already implemented. As part of bri
 **P4Runtime** is used to install the **control plane rules**. The content of files **sX-runtime.json** refer to specific names of tables, keys, and actions, as defined in the **P4Info** file produced by the compiler (look for the file build/basic.p4.p4info.txt after executing make run). Any changes in the P4 program that add or rename tables, keys, or actions will need to be reflected in these sX-runtime.json files.
 
 
+## How to handle the example
+
+Follow the steps described in [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic). 
+
+- You can go along and modify the progran the way you see fit. 
+- You can also use the provided solution to have a quick view of how to things work. 
+
+Either way, perform these steps to run the program:
+
+- Activate yoour virtual machine.
+- Open a terminal window and change directory to where the downloaded example is.
+- run `make run`. This will:
+    - **Compile** `basic.p4`.
+    - **Start** the `pod-topo` in **Mininet**.
+    - **Configure** all switches with the appropriate **P4 program + table entries**.
+    - **Configure** all hosts with the commands listed in `pod-topo/topology.json`.
+- You should now see a **Mininet command prompt**. Try to ping between hosts in the topology, for example:
+    - `mininet> h1 ping h2`
+    - `mininet> pingall`
+- Type `exit` (cntrl C) to leave each xterm and the Mininet command line.
+- Then, to stop mininet enter: `make stop`.
+- To delete all pcaps, build files, and logs enter: `make clean`.
+
+
+
+
 ## References
 
 - [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic)

@@ -1,10 +1,16 @@
 
 # P4 samples
 
-The samples shown here can be found in the public GitHub repository: [P4 Tuorials](https://github.com/p4lang/tutorials).
-Activate the virtual machine and clone the repository.
+The samples shown here can be found in the public GitHub repository: [P4 Tuorials](https://github.com/p4lang/tutorials) and also [Guide to the included demo programs](https://github.com/jafingerhut/p4-guide/blob/master/README-demos.md#guide-to-the-included-demo-programs) by jafingerhut. 
+We'll note it in the examples related documentation as appropriate.
 
-Follow the steps described in the related documentation for each example.
+C:\Users\v-mimiele\aWork\GitHub\TechnicalNotes\DASH\Ubuntu\ubuntu-notes.md 
+
+## Prerequisites
+
+- Create a virtual machine to run the examples. For related information, see [How to Install VirtualBox on Ubuntu](../../../Ubuntu/ubuntu-notes.md#how-to-install-virtualbox-on-ubuntu). 
+- Activate the virtual machine and clone the sample repositories.
+- Follow the steps described in the related documentation for each example.
 
 
 ## Programming Protocol-independent Packet Processors (P4)

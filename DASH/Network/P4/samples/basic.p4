@@ -253,8 +253,6 @@ control MyVerifyChecksum(inout headers hdr, inout metadata meta) {
                 hdr.ipv4.dstAddr },
             hdr.ipv4.hdrChecksum, HashAlgorithm.csum16);
         }
-
-    }
 }
 
 

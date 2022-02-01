@@ -24,5 +24,5 @@ Learning while drinking from the fire hose
 
 ## References
 
-- [Using P4 in Mininet on BMV2](samples/bmv2.md)
+- [Using P4 in Mininet on BMV2](P4/samples/bmv2.md)
 - [P4 guide](https://github.com/jafingerhut/p4-guide) by jafingerhut

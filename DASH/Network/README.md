@@ -20,3 +20,9 @@ Learning while drinking from the fire hose
 |[P4 language getting started](P4/p4-language-getting-started.md)| How to start using P4: setting the environment, tools, etc.|
 |[P4 language details](P4/p4-language-details.md)| Getting into the P4 weeds|
 |[Using P4 in Mininet on BMV2](P4/samples/bmv2.md)| Software switch called **behavioral model version 2** (BMV2)|
+
+
+## References
+
+- [Using P4 in Mininet on BMV2](bmv2.md)
+- [P4 guide](https://github.com/jafingerhut/p4-guide) by jafingerhut

@@ -44,5 +44,5 @@ In this exercise, the control plane logic is already implemented. As part of bri
 - [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic)
 - [Using P4 in Mininet on BMV2](bmv2.md)
 - [heavily commented P4_16 program](https://github.com/jafingerhut/p4-guide/blob/master/demo1/demo1-heavily-commented.p4_16.p4)
-
-
+- [Guide to the included demo programs](https://github.com/jafingerhut/p4-guide/blob/master/README-demos.md#guide-to-the-included-demo-programs)
+- [P4 guide](https://github.com/jafingerhut/p4-guide) by jafingerhut

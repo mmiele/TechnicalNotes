@@ -46,7 +46,7 @@ In this exercise, the control plane logic is already implemented. As part of bri
 Follow the steps described in [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic). 
 
 - You can go along and modify the progran the way you see fit. 
-- You can also use the provided solution to have a quick view of how to things work. 
+- You can also use the provided solution to have a quick view of how the things work. 
 
 Either way, perform these steps to run the program:
 

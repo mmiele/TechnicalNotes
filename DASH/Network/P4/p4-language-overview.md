@@ -184,3 +184,11 @@ extern Checksum16 {
 - [P4 programming language - introduction to network programming with P4](https://youtu.be/UEMAvXXNWsY)
 - [P4 Tutorial](https://youtu.be/pk_s53l6-Ec)
 
+
+### Videos
+
+| Title | Description |
+|-------|-------------|
+| [P4 language consortium](https://www.youtube.com/results?search_query=P4+LANGUAGE+CONSORTIUM)| Youtube search |
+| [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w) | Paet 1 with diagrams and details |
+| [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ) | Paet 2 with diagrams and details |

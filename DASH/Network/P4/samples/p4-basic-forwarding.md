@@ -9,6 +9,8 @@ last update: 01/30/2022
 
 This article describes how to build and test a P4 example that implements **basic forwarding for IPv4**. The example is from in the public repository at [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic). 
 
+See code sample [basic.p4](basic/basic.p4).
+
 In IPv4 forwarding, the **switch performs the following actions for every packet**: 
 
 1. **Update** the **source** and **destination** MAC addresses.

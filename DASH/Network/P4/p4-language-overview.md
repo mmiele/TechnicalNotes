@@ -176,7 +176,6 @@ extern Checksum16 {
 
 - [Getting started](https://github.com/p4lang/education/blob/master/GettingStarted.md)
 - [Tutorials](https://github.com/p4lang/tutorials) Official tutorials.
-- [P4 Language presentation](https://opennetworking.org/wp-content/uploads/2020/12/P4_tutorial_01_basics.gslide.pdf) Good pictures and and P4 introduction.
 - [Example of startjng with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/) It needs cloud deployment.
 - [Fingerhut p4-guide](https://github.com/jafingerhut/p4-guide)
 - [P4PI Introduction](https://youtu.be/UdQh38SCBKA) - Interesting experimental environment that includes a specific designed hardware.
@@ -190,5 +189,6 @@ extern Checksum16 {
 | Title | Description |
 |-------|-------------|
 | [P4 language consortium](https://www.youtube.com/results?search_query=P4+LANGUAGE+CONSORTIUM)| Youtube search |
-| [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w) | Paet 1 with diagrams and details |
-| [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ) | Paet 2 with diagrams and details |
+| [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w) | Part 1 with diagrams and details |
+| [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ) | Part 2 with diagrams and details |
+| [ Introduction to P4_16 presentation](https://opennetworking.org/wp-content/uploads/2020/12/Nov-2015-P4-Bootcamp-P4-Tutorial.pdf)] | Good pictures and and P4 introduction |

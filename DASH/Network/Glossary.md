@@ -13,16 +13,16 @@ last update: 12/10/2021
 
 <hr style="border-top: 2px dashed blue"/>
 
-## A ##
+## A 
 
-### ASIC ###  
+### ASIC  
 
 An **Application specific integrated circuit (ASIC)** is an integrated circuit (IC) chip customized for a particular use, rather than intended for general-purpose use. For example, a chip designed to run in a digital voice recorder is an ASIC. ASIC chips are typically built using metal-oxide-semiconductor (MOS) technology, as MOS integrated circuit chips. For more information, see [Application specific integrated circuit](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit).
 
 
-## D ##
+## D 
 
-### DASH ###  
+### DASH  
 
 Microsoft Azure has created a sub-group of [SONiC](#sonic) (Software for Open Networking in the Cloud) that extends SONiC’s functionality to stateful workloads also known as **Disaggregated APIs for SONiC Hosts** or SONiC DASH. The goals are the following:
 
@@ -30,11 +30,12 @@ Microsoft Azure has created a sub-group of [SONiC](#sonic) (Software for Open Ne
 - Optimize [Stateful L4](#stateful-l4) performance and connection scale by 10x or even 100x when compared to implementations that make extensive use of software. As host networking in the cloud is performed at L4 the resulting performance improvements should be truly significant.
 
 
-### Decap ###
+### Decap 
+
 Data De-encapsulation is the reverse process of data [encapsulation](#encap). The encapsulated information is removed from the received data to obtain the original data. This process takes place at the receiver’s end. The data is de-encapsulated at the same layer at the receiver’s end to the encapsulated layer at the sender’s end. The added header and trailer information are removed from the data in this process. For more information, see [What is Data Encapsulation and de-encapsulation in networking?](https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in-networking).
 
 
-### DPU ###
+### DPU 
 
 A **Data Procssing Unit** (DPU) is a new class of programmable processor that combines three key elements. A DPU is a system on a chip, or **SoC**, that combines:
 - An industry-standard, high-performance, software-programmable, multi-core CPU, typically based on the widely used Arm architecture, tightly coupled to the other SoC components.
@@ -45,25 +46,25 @@ The DPU can be used as a stand-alone embedded processor. But it’s more often i
 
 For more information, see [What Is a DPU?](https://blogs.nvidia.com/blog/2020/05/20/whats-a-dpu-data-processing-unit/).
 
-## E ##
+## E 
 
-### Encap ###
+### Encap 
 Data Encapsulation is the process in which some extra information is added to the data item to add some features to it. The OSI or the TCP/IP model for data transmission in a netowr which takes place through various layers in these models. Data encapsulation adds the protocol information to the data so that data transmission can take place properly through the layers. 
 
 The data is encapsulated on the sender’s side, starting from the application layer to the physical layer. Each layer takes the encapsulated data from the previous layer and adds some more information to encapsulate it and some more functionalities with the data. These functionalities may include proper data sequencing, error detection and control, flow control, congestion control, routing information, etc. For more information, see [What is Data Encapsulation and de-encapsulation in networking?](https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in-networking).
 
 
 
-## F ##
+## F 
 
-### FPGA ###  
+### FPGA 
 
 A **[Field Programmable Gate Array](https://en.wikipedia.org/wiki/Field-programmable_gate_array)** (FPGA) is an integrated circuit designed to be configured by a customer or a designer after manufacturing, hence the term field-programmable. The FPGA configuration is generally specified using a hardware description language (HDL), similar to that used for an application-specific integrated circuit (ASIC). 
 
 
-## L ##
+## L 
 
-### Layers ###
+### Layers 
 
 The [OSI](#osi) model partitions the flow of data in a communication system into **seven abstraction layers**, from the physical implementation of transmitting bits across a communications medium to the highest-level representation of data of a distributed application. **Each intermediate layer serves a class of functionality to the layer above it and is served by the layer below it**. Classes of functionality are realized in software by standardized communication protocols.
 
@@ -218,6 +219,13 @@ A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC
 A **network switch** (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
 
 A network switch is a multiport network bridge that uses MAC addresses to forward data at the data link layer (layer 2) of the OSI model. Some switches can also forward data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches. For more information, see [Network switch](https://en.wikipedia.org/wiki/Network_switch). 
+
+
+## U ###
+
+### Underlay
+The underlay network is the physical infrastructure upon which the overlay network is built. It is the underlying network responsible for delivery of packets across networks. In our implementation, it is controlled by SONiC via SAI. The underlay deals with (for example) packet forwarding, setup of DEST MAC correctly, setup initializations (in a switch) such as 'how many ports available, port speed, FEC settings,', router interfaces, default route, etc... these underlay header files are NOT automatically generated.
+
 
 ## V ##
 

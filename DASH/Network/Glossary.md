@@ -5,6 +5,8 @@ author: michael
 last update: 12/10/2021
 ---
 
+[go](http://stackoverflow.com){:target="_blank"}
+
 # Glossary #
 
 <p style="font-size:1.5em;">

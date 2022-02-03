@@ -5,6 +5,8 @@ author: michael
 last update: 12/10/2021
 ---
 
+<a href="http://example.com" target="_blank" rel="noopener noreferrer" title="***Please middle click on mouse to open in new tab***&#013Github Markdown does not support opening new pages (github.com/mojombo/github-flavored-markdown/issues/28)">example.com</a>
+
 # Glossary #
 
 <p style="font-size:1.5em;">

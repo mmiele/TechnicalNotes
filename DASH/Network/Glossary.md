@@ -5,10 +5,6 @@ author: michael
 last update: 12/10/2021
 ---
 
-<head>
-    <base target="_blank">
-</head> 
-
 # Glossary #
 
 <p style="font-size:1.5em;">
@@ -34,7 +30,7 @@ Microsoft Azure has created a sub-group of [SONiC](#sonic) (Software for Open Ne
 - Optimize [Stateful L4](#stateful-l4) performance and connection scale by 10x or even 100x when compared to implementations that make extensive use of software. As host networking in the cloud is performed at L4 the resulting performance improvements should be truly significant.
 
 
-[DPDK](https://blog.selectel.com/introduction-dpdk-architecture-principles/)
+[DPDK](https://blog.selectel.com/introduction-dpdk-architecture-principles/?target=_blank)
 
 
 ### Decap 

@@ -5,6 +5,10 @@ author: michael
 last update: 12/10/2021
 ---
 
+<head>
+    <base target="_blank">
+</head> 
+
 # Glossary #
 
 <p style="font-size:1.5em;">

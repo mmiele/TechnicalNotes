@@ -174,12 +174,12 @@ extern Checksum16 {
 
 ## References
 
-- [Getting started](https://github.com/p4lang/education/blob/master/GettingStarted.md)
-- [Tutorials](https://github.com/p4lang/tutorials) Official tutorials.
-- [Example of startjng with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/) It needs cloud deployment.
-- [Fingerhut p4-guide](https://github.com/jafingerhut/p4-guide)
-- [P4PI Introduction](https://youtu.be/UdQh38SCBKA) - Interesting experimental environment that includes a specific designed hardware.
-- [P4 Language Tutorial](https://youtu.be/U3Mn6o2j4zQ)
+- [Getting started](https://github.com/p4lang/education/blob/master/GettingStarted.md "Ctrl + Left Click to open link in a new window")
+- [Tutorials](https://github.com/p4lang/tutorials "Ctrl + Left Click to open link in a new window") Official tutorials.
+- [Example of startjng with P4](https://opennetworking.org/news-and-events/blog/getting-started-with-p4/ "Ctrl + Left Click to open link in a new window") It needs cloud deployment.
+- [Fingerhut p4-guide](https://github.com/jafingerhut/p4-guide "Ctrl + Left Click to open link in a new window")
+- [P4PI Introduction](https://youtu.be/UdQh38SCBKA "Ctrl + Left Click to open link in a new window") - Interesting experimental environment that includes a specific designed hardware.
+- [P4 Language Tutorial](https://youtu.be/U3Mn6o2j4zQ "Ctrl + Left Click to open link in a new window")
 - [P4 programming language - introduction to network programming with P4](https://youtu.be/UEMAvXXNWsY)
 
 
@@ -188,7 +188,7 @@ extern Checksum16 {
 | Title | Description |
 |-------|-------------|
 | [P4 language consortium](https://www.youtube.com/results?search_query=P4+LANGUAGE+CONSORTIUM)| Youtube search |
-| [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w) | Part 1 with diagrams and details |
-| [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ) | Part 2 with diagrams and details |
-| [P4 Tutorial](https://youtu.be/pk_s53l6-Ec title="Ctrl + Left Click to open link in a new window") | By Andy Fingerhut and Antonin Bas|
-| [ Introduction to P4_16 presentation](https://opennetworking.org/wp-content/uploads/2020/12/Nov-2015-P4-Bootcamp-P4-Tutorial.pdf) | Good pictures and and P4 introduction |
+| [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w "Ctrl + Left Click to open link in a new window") | Part 1 with diagrams and details |
+| [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ "Ctrl + Left Click to open link in a new window") | Part 2 with diagrams and details |
+| [P4 Tutorial](https://youtu.be/pk_s53l6-Ec "Ctrl + Left Click to open link in a new window") | By Andy Fingerhut and Antonin Bas|
+| [ Introduction to P4_16 presentation](https://opennetworking.org/wp-content/uploads/2020/12/Nov-2015-P4-Bootcamp-P4-Tutorial.pdf "Ctrl + Left Click to open link in a new window") | Good pictures and and P4 introduction |

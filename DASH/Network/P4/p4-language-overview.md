@@ -181,7 +181,6 @@ extern Checksum16 {
 - [P4PI Introduction](https://youtu.be/UdQh38SCBKA) - Interesting experimental environment that includes a specific designed hardware.
 - [P4 Language Tutorial](https://youtu.be/U3Mn6o2j4zQ)
 - [P4 programming language - introduction to network programming with P4](https://youtu.be/UEMAvXXNWsY)
-- [P4 Tutorial](https://youtu.be/pk_s53l6-Ec)
 
 
 ### Videos
@@ -191,4 +190,5 @@ extern Checksum16 {
 | [P4 language consortium](https://www.youtube.com/results?search_query=P4+LANGUAGE+CONSORTIUM)| Youtube search |
 | [Introduction to P4_16. Part 1](https://www.youtube.com/watch?v=GslseT4hY1w) | Part 1 with diagrams and details |
 | [Introduction to P4_16. Part 2](https://www.youtube.com/watch?v=yqxpypXIOtQ) | Part 2 with diagrams and details |
+| [P4 Tutorial](https://youtu.be/pk_s53l6-Ec; tile="test") | By Andy Fingerhut and Antonin Bas|
 | [ Introduction to P4_16 presentation](https://opennetworking.org/wp-content/uploads/2020/12/Nov-2015-P4-Bootcamp-P4-Tutorial.pdf) | Good pictures and and P4 introduction |

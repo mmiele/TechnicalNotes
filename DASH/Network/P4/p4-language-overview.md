@@ -180,7 +180,7 @@ extern Checksum16 {
 - [Fingerhut p4-guide](https://github.com/jafingerhut/p4-guide "Ctrl + Left Click to open link in a new window")
 - [P4PI Introduction](https://youtu.be/UdQh38SCBKA "Ctrl + Left Click to open link in a new window") - Interesting experimental environment that includes a specific designed hardware.
 - [P4 Language Tutorial](https://youtu.be/U3Mn6o2j4zQ "Ctrl + Left Click to open link in a new window")
-- [P4 programming language - introduction to network programming with P4](https://youtu.be/UEMAvXXNWsY)
+- [P4 programming language - introduction to network programming with P4](https://youtu.be/UEMAvXXNWsY "Ctrl + Left Click to open link in a new window")
 
 
 ### Videos

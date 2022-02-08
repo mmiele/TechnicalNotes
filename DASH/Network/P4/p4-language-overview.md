@@ -5,6 +5,30 @@ author: michael
 last update: 01/30/2022
 ---
 
+- [P4 language overview](#p4-language-overview)
+  - [Why P4?](#why-p4)
+  - [P4 language specifications](#p4-language-specifications)
+    - [P4 language overview](#p4-language-overview-1)
+      - [arget independence](#arget-independence)
+      - [Protocol independence](#protocol-independence)
+      - [Reconfigurability](#reconfigurability)
+    - [Components](#components)
+      - [Parsing logic](#parsing-logic)
+      - [Headers](#headers)
+      - [Parsers](#parsers)
+      - [Stateful processing](#stateful-processing)
+      - [Generic match action tables](#generic-match-action-tables)
+      - [Match-action processing](#match-action-processing)
+      - [Tables](#tables)
+      - [Actions](#actions)
+      - [Traditonal switch](#traditonal-switch)
+      - [P4 programmable switch](#p4-programmable-switch)
+    - [Archietcture model](#archietcture-model)
+      - [Data plane interfaces](#data-plane-interfaces)
+      - [Extern objects and functions](#extern-objects-and-functions)
+  - [References](#references)
+    - [Videos](#videos)
+
 # P4 language overview
 
 The **Programming Protocol-independent Packet Processors** (P4, in other word PPPP that is P4) is a domain-specific language for network devices, specifying how data plane devices (switches, NICs, routers, filters, etc.) process packets. For more information, see [P4 Open-Source Programming Language](https://p4.org/).

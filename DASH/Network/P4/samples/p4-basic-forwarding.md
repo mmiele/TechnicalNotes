@@ -5,6 +5,15 @@ author: michael
 last update: 02/08/2022
 ---
 
+**Table of contents**
+- [P4 basic forwarding](#p4-basic-forwarding)
+  - [Requirements](#requirements)
+  - [About the control plane](#about-the-control-plane)
+    - [Important](#important)
+  - [How to handle the example](#how-to-handle-the-example)
+  - [References](#references)
+
+
 # P4 basic forwarding
 
 This article describes how to build and test a P4 example that implements **basic forwarding for IPv4**. The example is based on the public repository tutorial [Implementing Basic Forwarding](https://github.com/p4lang/tutorials/tree/master/exercises/basic). 

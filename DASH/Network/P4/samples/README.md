@@ -2,6 +2,8 @@
 - [P4 samples](#p4-samples)
   - [Prerequisites](#prerequisites)
   - [P4 samples collection](#p4-samples-collection)
+    - [P4 tutorial samples](#p4-tutorial-samples)
+    - [P4 fingerhut's samples](#p4-fingerhuts-samples)
   - [References](#references)
 
 # P4 samples
@@ -22,10 +24,17 @@ The following is a colelction of P4 samples.
 
 ![pgm-target-via-p4](../images/pgm-target-via-p4.svg)
 
+### P4 tutorial samples  
 
 |Example|Description|Area|
 |--------|-----------|---|
 |[basic forwarding](p4-basic-forwarding.md)|Implements basic forwarding for IPv4|Language basics|
+
+### P4 fingerhut's samples  
+
+|Example <img width=200/>|Description|Area <img width=200/>|
+|------------------------|-----------|---------------------|
+|[simple demo 1](p4-simple-demo1.md)|Compile and execute the program, add table entries to the running program (in real time), send packets to the running program|Language basics|
 
 
 ## References

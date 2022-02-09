@@ -2,11 +2,37 @@
 title: P4 language details
 description: Learning P4 language
 author: michael
-last update: 01/24/2022
+last update: 02/08/2022
 ---
 
-# P4 language details
+- [P4 language details](#p4-language-details)
+  - [Background](#background)
+  - [Overview](#overview)
+  - [P4 language abstract model](#p4-language-abstract-model)
+  - [Hardware assumptions](#hardware-assumptions)
+  - [Analyzing P4 program structure](#analyzing-p4-program-structure)
+    - [P4 architecture model](#p4-architecture-model)
+      - [Portable Switch Architecture (PSA)](#portable-switch-architecture-psa)
+    - [How to make it work?](#how-to-make-it-work)
+      - [SDN controller](#sdn-controller)
+    - [P4 use cases](#p4-use-cases)
+      - [Flexible leaf-spine fabric](#flexible-leaf-spine-fabric)
+      - [VNF-offloading](#vnf-offloading)
+      - [Service chaining](#service-chaining)
+      - [Inband Network Telemetry (INT)](#inband-network-telemetry-int)
+  - [Analyzing P4 program structure take two](#analyzing-p4-program-structure-take-two)
+    - [Header formats](#header-formats)
+    - [Packet parser](#packet-parser)
+    - [Table specification](#table-specification)
+    - [Action specifications](#action-specifications)
+    - [Control program](#control-program)
+  - [Compiling a program](#compiling-a-program)
+    - [Compiling packet parser](#compiling-packet-parser)
+    - [Compiling control programs](#compiling-control-programs)
+  - [References](#references)
 
+
+# P4 language details
 
 ## Background
 

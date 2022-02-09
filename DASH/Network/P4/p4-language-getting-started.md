@@ -2,8 +2,16 @@
 title: P4 language getting started
 description: Getting started with the P4 language
 author: michael
-last update: 01/30/2022
+last update: 02/08/2022
 ---
+
+**Table of contents**
+- [P4 language getting started](#p4-language-getting-started)
+  - [Getting started with P4](#getting-started-with-p4)
+    - [Suggested steps](#suggested-steps)
+  - [Vscode support](#vscode-support)
+  - [References](#references)
+  
 
 # P4 language getting started
 

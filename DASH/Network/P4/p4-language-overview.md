@@ -2,9 +2,10 @@
 title: P4 language overview
 description: Provide a quick overview of the P4 language
 author: michael
-last update: 01/30/2022
+last update: 02/08/2022
 ---
 
+**Table of contents**
 - [P4 language overview](#p4-language-overview)
   - [Why P4?](#why-p4)
   - [P4 language specifications](#p4-language-specifications)

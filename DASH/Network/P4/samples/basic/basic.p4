@@ -341,12 +341,8 @@ control MyIngress(inout headers hdr,
      * control of packet processing, including applying the tables you
      * wish, in the order you wish.
      *
-     * This one is particularly simple -- always apply the ipv4_da_lpm
-     * table, and regardless of the result, always apply the mac_da
-     * table.  It is definitely possible to have 'if' statements in
-     * apply blocks that handle many possible cases differently from
-     * each other, based upon the values of packet header fields or
-     * metadata fields. */
+     * This one is particularly simple. If the packet is valid, then apply
+     * the ipv4_lpm table. */
     apply {
         if (hdr.ipv4.isValid()) {
             ipv4_lpm.apply();

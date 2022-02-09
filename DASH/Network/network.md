@@ -29,3 +29,5 @@ The **network layer** (aka packet level, layer 3 of the OSI model) provides serv
 - [Difference between Underlay Network and Overlay Network](https://ipwithease.com/difference-between-underlay-network-and-overlay-network/)
 - [https://ipwithease.com/](https://ipwithease.com/)
 - [Learning about Software Defined Networks (SDN)](https://www.coursera.org/)
+- [IPv4 - Packet Structure](https://www.tutorialspoint.com/ipv4/ipv4_packet_structure.htm)
+- 

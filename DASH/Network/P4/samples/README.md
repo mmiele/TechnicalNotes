@@ -1,3 +1,8 @@
+**Table of contents**
+- [P4 samples](#p4-samples)
+  - [Prerequisites](#prerequisites)
+  - [P4 samples collection](#p4-samples-collection)
+  - [References](#references)
 
 # P4 samples
 
@@ -11,14 +16,16 @@ We'll note it in the examples related documentation as appropriate.
 - Follow the steps described in the related documentation for each example.
 
 
-## Programming Protocol-independent Packet Processors (P4)
+## P4 samples collection
+
+The following is a colelction of P4 samples. 
 
 ![pgm-target-via-p4](../images/pgm-target-via-p4.svg)
 
 
-|Example|Description|
-|--------|-----------|
-|[basic forwarding](p4-basic-forwarding.md)|Implements basic forwarding for IPv4.|
+|Example|Description|Area|
+|--------|-----------|---|
+|[basic forwarding](p4-basic-forwarding.md)|Implements basic forwarding for IPv4|Language basics|
 
 
 ## References

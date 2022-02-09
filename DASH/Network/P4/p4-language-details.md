@@ -4,7 +4,7 @@ description: Learning P4 language
 author: michael
 last update: 02/08/2022
 ---
-
+**Table of contents**
 - [P4 language details](#p4-language-details)
   - [Background](#background)
   - [Overview](#overview)

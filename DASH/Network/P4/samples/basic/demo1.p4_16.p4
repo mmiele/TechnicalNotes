@@ -336,6 +336,7 @@ control egressImpl(inout headers_t hdr,
         mark_to_drop(stdmeta);
     }
     
+    // Reassign the mac address.
     action rewrite_mac(bit<48> smac) {
         hdr.ethernet.srcAddr = smac;
     }

@@ -1,6 +1,5 @@
 
 # Sirius notes
 
-![robot icon](images/canis-major-costellation.png)
-
+<img src="images/canis-major-costellation.png" style="width:300; height:300"/>
 

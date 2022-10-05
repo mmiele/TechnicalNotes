@@ -1,0 +1,6 @@
+pears
+apples
+bananas
+cherries
+strawberies
+pineapples

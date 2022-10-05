@@ -13,4 +13,4 @@ Start your journey using Visual Studio Code with [some introductory videos](http
 ## References
 
 - [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks?s=04)
-- 
+- [Markdown and Visual Studio Code](https://code.visualstudio.com/Docs/languages/markdown#_markdown-preview)

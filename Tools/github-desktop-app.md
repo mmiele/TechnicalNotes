@@ -5,7 +5,7 @@ last update: 10/04/22
 
 # GitHub dektop app
 
-## Install GitHub Desktop with deb using `dpkg` command
+## Install GitHub desktop on Ubuntu using `dpkg` command
 
 1. Go to [GitHub Desktop Release](https://github.com/shiftkey/desktop/releases) page to download `deb` format file, provided via direct link.
 

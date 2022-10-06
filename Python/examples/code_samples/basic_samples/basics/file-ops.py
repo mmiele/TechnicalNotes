@@ -53,7 +53,7 @@ def writefile(r_file, w_file):
     with (open(w_file, "w")) as write_file:
         write_file.write(r_file_content[:97])
     
-    # Open the newly created file.
+    # Open the newly created file and read its content.
     with (open(w_file, "r")) as read_file:
         r_file_content = read_file.read()
         
@@ -62,11 +62,33 @@ def writefile(r_file, w_file):
     print("*****File content*****")
     print(r_file_content)
     
-# See http://realpython.com/python-main-function.
+def appendfile(word, w_file):
+    """
+    Append a word to an existing file.
+    :param word: word to append
+    :type word: string
+    :param w_file: path of the file to append the word
+    :type w_file: string
+    """
+    # Open the file and append the word.
+    with (open(w_file, "a")) as write_file:
+        write_file.write("\n" + word)
+    
+     # Open the updated file and read its content.
+    with (open(w_file, "r")) as read_file:
+        r_file_content = read_file.read()
+        
+    # Display the file content.
+    print("\n*****Executing writefile*****\n")
+    print("*****File content*****")
+    print(r_file_content)
+    
+    
 def main():
     readfile("files/fruits.txt")
     word_occurence("spider", "files/spider.txt")
     writefile("files/spider.txt", "files/mini-spider.txt")
+    appendfile("plums", "files/fruits.txt")
     
 if __name__ == "__main__":
     main()

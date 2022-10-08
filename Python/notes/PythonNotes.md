@@ -1,7 +1,16 @@
+---
+author: michael
+last update: 10/06/2022
+---
+
 # Python notes
 
+- [Basic file operations](#basic-file-operations)
+- [References](#references)
 
+## Basic file operations
 
+See [File operations](./file-ops.md)
 
 
 ## References

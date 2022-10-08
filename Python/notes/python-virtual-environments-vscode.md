@@ -1,6 +1,14 @@
 # Python environments in Visual Studio code
 
-An **environment** in Python is the **context** in which a program runs. An environment consists of an interpreter and any number of installed packages. The Python extension for VS Code provides helpful integration features for working with different environments.
+- [Overview](#overview)
+- [Select and activate an environment](#select-and-activate-an-environment)
+- [Where the extension looks for environments](#where-the-extension-looks-for-environments)
+- [Global, virtual, and conda environments](#global-virtual-and-conda-environments)
+- [References](#references)
+
+## Overview 
+
+An **environment** in Python is the **context** in which a program runs. An environment consists of an interpreter and any number of installed packages. The Python extension for VS Code provides helpful integration features for working with different environments. To create a virtual environment, see [Python virtual environments](python-virtual-environments.md).
 
 > **Note**. If you're looking to get started with Python in Visual Studio Code, see [Getting Started with Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial).
 

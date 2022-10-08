@@ -1,5 +1,12 @@
  # Python virtual environments
 
+- [Overview](#overview)
+- [Create a virtual environment](#create-a-virtual-environment)
+- [Install packages](#install-packages)
+- [References](#references)
+  
+## Overview 
+
 A **virtual environment** is a Python tool for **dependency management** and **project isolation**. It allows Python **packages** (third party libraries) to be installed in isolation for particular project(s), instead of being installed globally (i.e., as part of a machine-wide environment).
 The physical underlying of a virtual environment is a directory with 3 important components:
 

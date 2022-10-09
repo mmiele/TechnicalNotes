@@ -96,6 +96,8 @@ This is the result:
 ![default venv packages](../../Media/Python/env/default-venv-packages.PNG)
 
 
+For equivalent Linux commands, see [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/).
+
 ## References
 
 - [A Guide to Python’s Virtual Environments](https://towardsdatascience.com/virtual-environments-104c62d48c54) - What they are, how to use them, and how they really work.

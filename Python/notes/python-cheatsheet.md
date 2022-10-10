@@ -46,4 +46,4 @@ with open("file.txt", "a+") as file:
 
 
 ## References
-
+- [Practical python projects](https://practicalpython.yasoob.me/toc.html)

@@ -16,7 +16,11 @@ To individually find the version number you can grep on this output. For example
 pip freeze | findstr botbuilder-dialogs
 ```
 
-## \__init__.py
+
+## \_\_init__.py
+
+> [!NOTE] Improve, see [Python Class Constructors: Control Your Object Instantiation](https://realpython.com/python-class-constructor/) and [Package Initialization](https://realpython.com/lessons/package-initialization/). See also [search __init__](https://realpython.com/search?q=__init__)
+
 
 From [What is __init__.py ?](https://pythontips.com/2013/07/28/what-is-__init__-py/).
 
@@ -46,6 +50,10 @@ be an empty file, but it can also execute initialization code
 for the package or set the `__all__` variable, described later.
 
 Source : http://effbot.org/pyfaq/what-is-init-py-used-for.htm
+
+
+## \_\_main__
+See [What does if \_\_name__ == "\_\_main__" do in Python?](https://realpython.com/if-name-main-python/)
 
 
 ## requirements.txt

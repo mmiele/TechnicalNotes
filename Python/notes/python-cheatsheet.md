@@ -1,9 +1,9 @@
 ---
 author: michael
-last update: 10/06/2022
+last update: 10/09/2022
 ---
 
-# File operations
+# Python cheatsheet  
 
 - [Basic file operations](#basic-file-operations)
   - [Read an existing file](#read-an-existing-file)
@@ -46,4 +46,4 @@ with open("file.txt", "a+") as file:
 
 
 ## References
-
+- [Practical python projects](https://practicalpython.yasoob.me/toc.html)

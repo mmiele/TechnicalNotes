@@ -5,7 +5,7 @@ last update: 10/06/2022
 
 # Python notes
 
-- [Basic file operations](#basic-file-operations)
+- [Basic file operations](python-cheatsheet.md#basic-file-operations)
 - [References](#references)
 
 ## Basic file operations
